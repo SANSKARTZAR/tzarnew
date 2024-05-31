@@ -1,0 +1,177 @@
+.main-menu .main-menu__list>li+li,
+.stricky-header .main-menu__list>li+li {
+  margin-left: 30px !important;
+}
+
+.main-menu .main-menu__list,
+.main-menu .main-menu__list ul,
+.stricky-header .main-menu__list,
+.stricky-header .main-menu__list ul {
+  margin-left: -143px !important;
+}
+
+.main-menu .main-menu__list li ul,
+.stricky-header .main-menu__list li ul {
+
+  left: 131px !important;
+}
+
+.bannertxthero {
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  z-index: 11;
+}
+
+.banner-heading {
+  width: 350px;
+  height: 150px;
+}
+
+.btntxt-hero-btn {
+  display: flex;
+  vertical-align: middle;
+
+}
+
+.btnContainerdiv {
+  margin: 0 10px;
+}
+
+.heroBtn {
+  padding: 10px 20px !important;
+  border-radius: 50px !important;
+}
+
+.banner-heading h2 {
+  font-size: 35px;
+  color: #f6f6f6;
+  padding-bottom: 50px;
+}
+
+.box1 {
+  width: 100%;
+  background-color: #fff;
+  margin: 5px 0;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+
+.hero-form {
+  position: absolute;
+  z-index: 11;
+  width: 25%;
+}
+
+.form-dev {
+  margin-top: 30%;
+  padding: 25px;
+  background-color: #fff;
+}
+
+.form-inputs {
+  width: 100%;
+  padding: 10px 10px;
+  color: #fff;
+}
+.form-inputs::placeholder {
+  color: red;
+  opacity: 1; 
+}
+.checkbox-div {
+  display: flex;
+}
+
+.form-checkbox {
+  width: 18px;
+}
+
+.checkbox-div label {
+  font-size: 12px;
+  margin: 10px;
+}
+
+.btn-submit {
+  background-color: #05377a !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  padding: 5px 15px !important;
+}
+
+.btn-submit:hover {
+  background-color: #274c7c !important;
+  color: #fff !important;
+}
+
+.tclink {
+  color: rgb(255, 174, 0);
+}
+
+.CardWDnew {
+  height: 280px;
+  text-align: center;
+  border: 1.5px solid #023878;
+  background-color: #ffffff;
+  margin: 5px;
+  padding: 10px;
+}
+
+.wdiconsnew {
+  width: 282px;
+  height: 120px;
+  color: #023878;
+}
+
+.boxContainerMainSEOservnew .boxContainerSEOservnew {
+  width: 100%;
+  color: #100f12;
+  border: 1.5px solid #023878;
+  box-shadow: rgb(50 50 93 / 25%) 0px 6px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.boxContainerSEOservnew h1 {
+  font-size: 22px;
+  color: #023878;
+}
+
+.ImgTxtSecSeoinfonew {
+  width: 100%;
+  text-align: justify;
+}
+
+.ImgTxtSecSeo-pagenew {
+  width: 100%;
+}
+
+.ImgTxtSecSeo-pagenew h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 3px solid #023878;
+  margin: 20px 0;
+}
+.seoweb{
+  text-align: justify;
+}
+/* --------------form start---------------- */
+
+.EnquiryForm input[type=email],
+.EnquiryForm input[type=tel],
+.EnquiryForm input[type=text],
+.EnquiryForm select {
+  height: auto;
+  width: 100%;
+  border: none;
+  background-color: #023878;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* margin-bottom: 20px; */
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2);
+  font-size: 16px;
+  color: #fff;
+  display: block;
+}
+/* --------------form end---------------- */
