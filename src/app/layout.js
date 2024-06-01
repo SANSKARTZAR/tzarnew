@@ -3,6 +3,7 @@ import "./globals.css";
 import "../assets/styles/mibooz.css";
 import "../assets/styles/mibooz-responsive.css";
 import "../assets/styles/custom.css";
+import "../assets/styles/uicons-regular-rounded.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
