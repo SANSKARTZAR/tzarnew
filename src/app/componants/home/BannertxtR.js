@@ -20,7 +20,6 @@ function BannertxtR() {
       <Row>
         <Col xl={8} md={6} sm={12}>
           <div className="bannertxt">
-
             <TypeAnimation
               sequence={['Over a 1000+ Satisfied Clients were Served in the Year 2023.', 1000, '']}
               speed={25}
@@ -47,7 +46,6 @@ function BannertxtR() {
       <Col xl={4} md={4} sm={4}>
         <ContactForm />
       </Col>
-
     </>
   )
 }

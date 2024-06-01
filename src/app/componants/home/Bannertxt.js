@@ -56,8 +56,10 @@ function Bannertxt() {
               </div>
             </Col>
             <Col xl={4} md={6}>
+              {/* <HomeContact /> */}
               <div className="hero-form">
                 <ContactForm />
+                {/* <ContactUs/> */}
               </div>
             </Col>
           </Row>
