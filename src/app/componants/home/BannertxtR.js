@@ -45,7 +45,6 @@ function BannertxtR() {
 
       </Row>
       <Col xl={4} md={4} sm={4}>
-        {/* <HomeContact /> */}
         <ContactForm />
       </Col>
 

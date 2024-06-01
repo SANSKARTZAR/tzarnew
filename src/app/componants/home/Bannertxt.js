@@ -1,15 +1,11 @@
 import React from 'react'
 import { Button, Col, Row } from 'react-bootstrap'
 import { TypeAnimation } from 'react-type-animation';
-// import {Slide} from 'react-reveal/Slide';
 import { useWindowSize } from "@react-hook/window-size/throttled";
 // import ContactForm from "@/components/ContactPage copy/ContactForm";
 // import ServicesOne from "@/components/ServicesOne/ServicesOne";
 import BannertxtR from './BannertxtR';
 import ContactForm from '../contact/ContactForm';
-// import EnquiryForm from '../ContactForm/Enquiry';
-// import ContactUs from '../ContactForm/ContactUs';
-// import HomeContact from '../ContactPage/HomeContact';
 
 function handleButtonClick() {
   const element = document.getElementById('Contactform');
@@ -60,11 +56,8 @@ function Bannertxt() {
               </div>
             </Col>
             <Col xl={4} md={6}>
-              {/* <HomeContact /> */}
               <div className="hero-form">
-                {/* <EnquiryForm /> */}
-                {/* <ContactUs/> */}
-                <ContactForm/>
+                <ContactForm />
               </div>
             </Col>
           </Row>

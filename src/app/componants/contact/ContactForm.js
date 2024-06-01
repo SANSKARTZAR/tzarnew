@@ -5,67 +5,75 @@ import { submitContact } from "../../models/action";
 
 const ContactForm = () => {
 
-  const [status, setStatus] = useState();
+    const [status, setStatus] = useState();
 
-  const handleSubmit = async (formData) => {
-    try {
-      const response = await submitContact({
-        fullname: formData.get("fullname"),
-        email: formData.get("email"),
-        message: formData.get("message")
-      })
-      if (response.status === 200) {
-        setStatus("success");
-      } else {
-        setStatus("error");
-      }
-    } catch (e) {
-      console.log(e)
+    const handleSubmit = async (formData) => {
+        try {
+            const response = await submitContact({
+                fullname: formData.get("fullname"),
+                email: formData.get("email"),
+                message: formData.get("message")
+            })
+            if (response.status === 200) {
+                setStatus("success");
+            } else {
+                setStatus("error");
+            }
+        } catch (e) {
+            console.log(e)
+        }
     }
-  }
 
-  return (
-    <>
-    <h1>changes/ new form</h1>
-      <form
-        action={handleSubmit}
-        className="py-4 mt-4 border-t flex flex-col gap-5"
-      >
-        <div>
-          <label htmlFor="fullname">Full Name</label>
-          <input
-            type="text"
-            id="fullname"
-            name="fullname"
-            placeholder="John Doe"
-          />
-        </div>
+    return (
+        <>
+            {/* <h1>changes/ new form</h1> */}
+            <div className="form-dev">
+                <div>
+                    <h5>From Concept to Capture: We Do It All</h5>
+                </div>
+                {/* <div className="home-boxForm"> */}
+                    <form
+                        action={handleSubmit}
+                        className="EnquiryForm"
+                    >
+                        <div className="form-div">
+                            <label htmlFor="fullname" className="col-12">
+                                <input
+                                    type="text"
+                                    id="fullname"
+                                    name="fullname"
+                                    placeholder="John Doe"
+                                    className="form-control form-inputs"
+                                />
+                            </label>
+                            <label htmlFor="email" className="col-12">
+                                <input
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    placeholder="john@gmail.com"
+                                    className="form-control form-inputs"
+                                />
+                            </label>
+                            <label htmlFor="message" className="col-12">
+                                <textarea
+                                    className="h-32 form-control form-inputs"
+                                    id="message"
+                                    name="message"
+                                    placeholder="Type your message here..."
 
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="john@gmail.com"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="message">Your Message</label>
-          <textarea
-            className="h-32"
-            id="message"
-            name="message"
-            placeholder="Type your message here..."
-          ></textarea>
-        </div>
-
-        <button className="bg-green-700 p-3 text-white font-bold" type="submit">
-          Send
-        </button>
-      </form>
-    </>
-  );
+                                ></textarea>
+                            </label>
+                            <label htmlFor="submit" className="col-12">
+                                <button className="btn btn-submit" type="submit">
+                                    Send
+                                </button>
+                            </label>
+                        </div>
+                    </form>
+                {/* </div> */}
+            </div>
+        </>
+    );
 }
 export default ContactForm;
