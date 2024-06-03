@@ -2,17 +2,13 @@
 import projectOne from "@/app/data/projectOne";
 import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Masonry from "react-masonry-component";
+import Masonry from "react-masonry-css";
 import SingleProject from "./SingleProject";
 import Link from "next/link";
 import { useWindowSize } from "@react-hook/window-size/throttled";
 import FilterImagesSlider from "./ProjectOneSlider/FilterImagesSlider";
 
 const { title, tagline, projects, filters } = projectOne;
-
-const masonryOptions = {
-  transitionDuration: 500,
-};
 
 const getFilteredProjects = (filterData) =>
   filterData === "all"
@@ -38,6 +34,12 @@ const ProjectOne = ({ projectPage = true }) => {
   if (!isClient) {
     return null;
   }
+
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 2,
+    700: 1
+  };
 
   return (
     <>
@@ -67,8 +69,9 @@ const ProjectOne = ({ projectPage = true }) => {
               </Col>
             </Row>
             <Masonry
-              options={masonryOptions}
+              breakpointCols={breakpointColumnsObj}
               className="row filter-layout filterGrid position-relative"
+              columnClassName="my-masonry-grid_column"
             >
               {filteredProjects.map((project) => (
                 <SingleProject project={project} key={project.id} />
