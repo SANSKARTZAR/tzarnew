@@ -2,7 +2,6 @@ import CounterOne from "./CounterOne";
 import DesignStudio from "./DesignStudio";
 import MainHerobanner from "./MainHerobanner";
 import OurServices from "./OurServices";
-import ProjectOne from "./ProjectOne";
 import WelcomeOne from "./WelCome";
 
 
