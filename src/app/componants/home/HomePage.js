@@ -1,3 +1,4 @@
+import CounterOne from "./CounterOne";
 import DesignStudio from "./DesignStudio";
 import MainHerobanner from "./MainHerobanner";
 import OurServices from "./OurServices";
@@ -11,6 +12,7 @@ export default function about() {
             <OurServices/>
             <WelcomeOne/>
             <DesignStudio/>
+            <CounterOne/>
         </>
     )
 }
