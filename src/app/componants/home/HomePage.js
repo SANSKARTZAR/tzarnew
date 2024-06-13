@@ -4,6 +4,7 @@ import MainHerobanner from "./MainHerobanner";
 import OurServices from "./OurServices";
 import WebDesignMock from "./WebDesignMock";
 import WelcomeOne from "./WelCome";
+import WhyChoose from "./WhyChoose";
 
 
 export default function about() {
@@ -15,6 +16,7 @@ export default function about() {
             <DesignStudio/>
             <CounterOne/>
             <WebDesignMock/>
+            <WhyChoose/>
         </>
     )
 }
