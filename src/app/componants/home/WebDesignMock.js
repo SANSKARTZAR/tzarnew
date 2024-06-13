@@ -12,9 +12,9 @@ import MobileSlide4 from "@/assets/images/MobileShowcase/Home/Showcase-10.png"
 import MobileSlide5 from "@/assets/images/MobileShowcase/Home/Showcase-11.png" 
 import MobileSlide6 from "@/assets/images/MobileShowcase/Home/Showcase-13.png" 
 import MobileSlide7 from "@/assets/images/MobileShowcase/Home/Showcase-14.png" 
-import MobileSlide8 from "@/assets/images/MobileShowcase/Home/Showcase-15.png" 
-import MobileSlide9 from "@/assets/images/MobileShowcase/Home/Showcase-16.png" 
-import MobileSlide10 from "@/assets/images/MobileShowcase/Home/Showcase-17.png" 
+// import MobileSlide8 from "@/assets/images/MobileShowcase/Home/Showcase-15.png" 
+// import MobileSlide9 from "@/assets/images/MobileShowcase/Home/Showcase-16.png" 
+// import MobileSlide10 from "@/assets/images/MobileShowcase/Home/Showcase-17.png" 
 import MobileSlide11 from "@/assets/images/MobileShowcase/Home/MahaaRajass.png" 
 import MobileSlide12 from "@/assets/images/MobileShowcase/Home/CabeoChavess.png" 
 import MobileSlide13 from "@/assets/images/MobileShowcase/Home/blue7vets.png" 
@@ -81,7 +81,7 @@ export default class WebDesignMock extends Component {
           <div className= "mobileSlidebox" >
             <img src={MobileSlide7.src} alt=""  className="mobileSlidemk"  />  
           </div>
-          <div className= "mobileSlidebox" >
+          {/* <div className= "mobileSlidebox" >
             <img src={MobileSlide8.src} alt=""  className="mobileSlidemk"  />  
           </div>
           <div className= "mobileSlidebox" >
@@ -89,7 +89,7 @@ export default class WebDesignMock extends Component {
           </div>
           <div className= "mobileSlidebox" >
             <img src={MobileSlide10.src} alt=""  className="mobileSlidemk"  />  
-          </div>
+          </div> */}
         </Slider>
       </div>
     );
