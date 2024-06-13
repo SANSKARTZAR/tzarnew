@@ -46,7 +46,7 @@ export default class WebDesignMock extends Component {
 
         <Slider {...settings} className="ContainerWebContainer">
         <div className= "mobileSlidebox" >
-            <img src={MobileSlide.src} alt=""  className="mobileSlidemk"  />  
+            <img src={MobileSlide.src} alt=""  className="mobileSlidemk n"  />  
           </div>
           <div className= "mobileSlidebox" >
             <img src={MobileSlide11.src} alt=""  className="mobileSlidemk"  />  
