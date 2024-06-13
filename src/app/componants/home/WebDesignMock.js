@@ -2,7 +2,7 @@
 'use client';
 import React, { Component } from "react";
 import Slider from "react-slick";
-// import MobileSlide from "@/assets/images/MobileShowcase/Home/Showcase-06.png" 
+import MobileSlide from "@/assets/images/MobileShowcase/Home/Showcase-06.png" 
 import MobileMock from "@/assets/images/MobileShowcase/Home/Showcase-12.png"
 import MobileMockmob from "@/assets/images/MobileShowcase/Home/Showcase-12mob.png"  
 import MobileSlide1 from "@/assets/images/MobileShowcase/Home/Showcase-07.png" 
@@ -45,9 +45,9 @@ export default class WebDesignMock extends Component {
           <img src={MobileMockmob.src} alt=""  className="mobileContmob" /> 
 
         <Slider {...settings} className="ContainerWebContainer">
-        {/* <div className= "mobileSlidebox" >
+        <div className= "mobileSlidebox" >
             <img src={MobileSlide.src} alt=""  className="mobileSlidemk n"  />  
-          </div> */}
+          </div>
           {/* <div className= "mobileSlidebox" >
             <img src={MobileSlide11.src} alt=""  className="mobileSlidemk"  />  
           </div>
