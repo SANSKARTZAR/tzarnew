@@ -13,7 +13,6 @@ export default function about() {
             <WelcomeOne/>
             <DesignStudio/>
             <CounterOne/>
-            {/* <ProjectOne/> */}
         </>
     )
 }
