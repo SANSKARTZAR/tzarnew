@@ -115,8 +115,8 @@ export default function PlanShopify() {
                                     <li><span className="S1PPyQ">Assistance In Shopify Apps Setup</span></li></ul>
                                 <hr />
                                 <h5>TALK TO US<br />
-                                    +91-9972-318-316</h5>
-                            </div>
+                                    +91-9972-318-316 </h5>
+                            </div> 
                         </div>
                     </div>
                 </div>
