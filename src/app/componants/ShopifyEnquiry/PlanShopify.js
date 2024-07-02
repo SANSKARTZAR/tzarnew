@@ -18,27 +18,27 @@ export default function PlanShopify() {
                                 <p>E-Commerce Website</p>
                                 <h2>₹99,000</h2>
                                 <ul>
-                                    <li><span class="S1PPyQ">Shopify Website Creation and Setup</span></li>
-                                    <li><span class="S1PPyQ">Upto 200 Products Upload By Our Team</span></li>
-                                    <li><span class="S1PPyQ">SEO Ready Website</span></li>
-                                    <li><span class="S1PPyQ">SSL Certificate</span></li>
-                                    <li><span class="S1PPyQ">Responsive Website</span></li>
-                                    <li><span class="S1PPyQ">Content 2000 Words</span></li>
-                                    <li><span class="S1PPyQ">Social Media Integration</span></li>
-                                    <li><span class="S1PPyQ">Google Analytics Integration</span></li>
+                                    <li><span className="S1PPyQ">Shopify Website Creation and Setup</span></li>
+                                    <li><span className="S1PPyQ">Upto 200 Products Upload By Our Team</span></li>
+                                    <li><span className="S1PPyQ">SEO Ready Website</span></li>
+                                    <li><span className="S1PPyQ">SSL Certificate</span></li>
+                                    <li><span className="S1PPyQ">Responsive Website</span></li>
+                                    <li><span className="S1PPyQ">Content 2000 Words</span></li>
+                                    <li><span className="S1PPyQ">Social Media Integration</span></li>
+                                    <li><span className="S1PPyQ">Google Analytics Integration</span></li>
                                 </ul>
                                 <ul>
-                                    <li><span class="S1PPyQ">Google Maps Embed</span></li>
-                                    <li><span class="S1PPyQ">Whatsapp Integration</span></li>
-                                    <li><span class="S1PPyQ">High Speed Optimization</span></li>
-                                    <li><span class="S1PPyQ">Search Console Integration</span></li>
-                                    <li><span class="S1PPyQ">Contact Form Integration</span></li>
-                                    <li><span class="S1PPyQ">Custom Favicon</span></li>
-                                    <li><span class="S1PPyQ">Website Policies Drafting</span></li>
-                                    <li><span class="S1PPyQ">Shopify Portal Training Session</span></li>
-                                    <li><span class="S1PPyQ">Payment Gateway Integration</span></li>
-                                    <li><span class="S1PPyQ">Shipping Gateway Setup &amp; Integration</span></li>
-                                    <li><span class="S1PPyQ">Assistance In Shopify Apps Setup</span></li>
+                                    <li><span className="S1PPyQ">Google Maps Embed</span></li>
+                                    <li><span className="S1PPyQ">Whatsapp Integration</span></li>
+                                    <li><span className="S1PPyQ">High Speed Optimization</span></li>
+                                    <li><span className="S1PPyQ">Search Console Integration</span></li>
+                                    <li><span className="S1PPyQ">Contact Form Integration</span></li>
+                                    <li><span className="S1PPyQ">Custom Favicon</span></li>
+                                    <li><span className="S1PPyQ">Website Policies Drafting</span></li>
+                                    <li><span className="S1PPyQ">Shopify Portal Training Session</span></li>
+                                    <li><span className="S1PPyQ">Payment Gateway Integration</span></li>
+                                    <li><span className="S1PPyQ">Shipping Gateway Setup &amp; Integration</span></li>
+                                    <li><span className="S1PPyQ">Assistance In Shopify Apps Setup</span></li>
                                 </ul>
                                 <hr />
                                 <h5>TALK TO US<br />
