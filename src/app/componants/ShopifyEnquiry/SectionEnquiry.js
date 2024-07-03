@@ -10,12 +10,17 @@ export default function SectionEnquiry() {
                     <div>
                         <h1 className="title-head">Let's build an e-commerce masterpiece together! Drop us a line for Shopify website development.</h1>
                     </div>
+                    <br/><br/>
                     <div className="row">
-                        <div className="col-lg-4 col-md-4 col-12">
-                            
+                        <div className="col-lg-6 col-md-6 col-12">
+                            <div>
+                                <div> <i className="fa fa-phone" aria-hidden="true"></i>+ 91 730-405-6607,  + 91 776-077-5875</div><br/>
+                                <div><i className="fa fa-envelope" aria-hidden="true"></i> corporate@tzar.co</div><br/>
+                                <div> <i className="fa fa-map-marker" aria-hidden="true"></i> WeWork K. Raheja Platinum, Sag Baug Road, off Andheri - Kurla Rd, Marol
+                                    Andheri East Mumbai, Maharashtra 400093</div>
+                            </div>
                         </div>
-                        <div className="col-lg-8 col-md-8 col-12">
-                            <h2 className="hero-form-head">SUBMIT DETAILS BELOW TO GET A CALL BACK</h2>
+                        <div className="col-lg-6 col-md-6 col-12">
                             <div>
                                 <form>
                                     <label htmlFor="fullname" className="col-6">
@@ -49,6 +54,8 @@ export default function SectionEnquiry() {
                                         <button type="submit" value="Submit" className="btn btn-submit" >GET A CALL BACK</button>
                                     </label>
                                 </form>
+                                <br/>
+                                <a type="button" className="hero-whapp-btn">SEND A WHATSAPP MESSAGE</a>
                             </div>
                         </div>
                     </div>
