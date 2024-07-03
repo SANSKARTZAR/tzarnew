@@ -8,8 +8,8 @@ export default function ClientShopify() {
             <section className="Shopifyabout">
                 <div className="container herocontent">
                     <div>
-                        <h1 className="hero-title-head">Our Shopify Clients</h1>
-                        <p>Driving technology for leading brands</p>
+                        <h1 className="title-head">Our Shopify Clients</h1>
+                        <p className="title-paraclient">Driving technology for leading brands</p>
                     </div>
                 </div>
             </section>
