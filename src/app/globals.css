@@ -87,12 +87,9 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 a {
@@ -116,16 +113,19 @@ a {
   height: auto;
   padding: 50px 10px;
 }
-.herocontent{
+
+.herocontent {
   padding: 50px !important;
 }
-.hero-title-head{
-    color: #000000;
-    font-family: "Montserrat", Sans-serif;
-    font-size: 45px;
-    font-weight: 700;
-    text-transform: uppercase;
+
+.hero-title-head {
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
+
 .hero-whapp-btn {
   font-family: "Roboto", Sans-serif;
   font-size: 16px;
@@ -135,38 +135,88 @@ a {
   border-color: #61CE70;
   background-color: #61CE70;
   border-radius: 4px 4px 4px 4px;
-  padding: 10px 50px;
+  padding: 10px 30px;
   text-decoration: none;
   color: #fff;
+  margin: 5px;
+  text-align: center;
 }
-.hero-form-head{
+
+.hero-whapp-btn2 {
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #61CE70;
+  background-color: #61CE70;
+  border-radius: 4px 4px 4px 4px;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  margin: 5px;
+  text-align: center;
+}
+
+.hero-form-head {
   text-align: center;
   font-weight: 500;
   font-size: 30px;
 }
 
-.para-title-head{
-    color: #000000;
-    font-family: "Montserrat", Sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-style: normal;
-    text-align: center;
+.para-title-head {
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  text-align: center;
 }
-.about-head-content{
-    color: #000000;
-    font-family: "Montserrat", Sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 30px;
+
+.about-head-content {
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
 }
-.about-para-content{
-    text-align: justify;
-    color: #000000;
-    font-size: 19px;
+
+.about-para-content {
+  text-align: justify;
+  color: #000000;
+  font-size: 19px;
 }
+
+
+.form-control-shopify {
+  width: 100%;
+  margin: 5px;
+  background: transparent;
+  border: solid 1px #000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.shopify-btn-submit {
+  width: 100%;
+  background: transparent;
+  border: solid 1px #000;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 5px;
+}
+
+.shopify-btn-submit:hover {
+  background: #000;
+  color: #fff;
+}
+
 
 .title-paraclient {
   color: #bfbfbf;
@@ -174,52 +224,62 @@ a {
   font-weight: 300;
   text-align: center;
 }
-.ShopifyPlan{
+
+.ShopifyPlan {
   background-color: #ECECEC;
   padding: 50px 10px;
 }
-.plan-card{
-    border-style: solid;
-    border-width: 2px 2px 2px 2px;
-    border-color: #98D3E5;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    margin: 0px 20px 0px 0px;
-    --e-column-margin-right: 20px;
-    --e-column-margin-left: 0px;
-    border-radius: 10px;
-    padding: 20px;
+
+.plan-card {
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #98D3E5;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin: 0px 20px 0px 0px;
+  --e-column-margin-right: 20px;
+  --e-column-margin-left: 0px;
+  border-radius: 10px;
+  padding: 20px;
 }
-.plan-card-heading{
-    color: #232323;
-    font-size: 28px;
-    font-weight: 700;
-    text-align: center;
+
+.plan-card-heading {
+  color: #232323;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
 }
-.plan-card-para{
+
+.plan-card-para {
   font-size: 19px;
   text-align: center;
 }
-.plan-card-price{
+
+.plan-card-price {
   font-size: 56px;
   text-align: center;
   font-weight: 600;
 }
+
 .contact-card {
   color: #232323;
   font-size: 15px;
   font-weight: 700;
 }
-.Shopifyfaq{
+
+.Shopifyfaq {
   padding: 50px 10px;
 }
-.droptitle{
-    color: #232323;
-    font-size: 19px;
-    font-weight: 700;
+
+.droptitle {
+  color: #232323;
+  font-size: 19px;
+  font-weight: 700;
 }
+
 .droptitle:before {
   content: "\f0da";
 }
+
 .faq-mini-head {
   color: #000000;
   font-size: 12px;
@@ -227,17 +287,19 @@ a {
   text-transform: uppercase;
   letter-spacing: 12px;
 }
+
 .faq-title-head {
   color: #000000;
   font-size: 35px;
   font-weight: 700;
   line-height: 1.3em;
 }
-.faq-para-head{
-    color: #212020;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.8em;
+
+.faq-para-head {
+  color: #212020;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8em;
 }
 
 .title-head {
@@ -246,10 +308,11 @@ a {
   font-weight: 600;
   text-align: center;
 }
-.Service-para{
-    text-align: center;
-    color: #5F5D5D;
-    /* font-family: "Roboto", Sans-serif; */
-    font-size: 15px;
-    font-weight: 400;
+
+.Service-para {
+  text-align: center;
+  color: #5F5D5D;
+  /* font-family: "Roboto", Sans-serif; */
+  font-size: 15px;
+  font-weight: 400;
 }
