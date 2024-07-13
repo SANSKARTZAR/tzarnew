@@ -41,7 +41,7 @@ return (
     <section className="page-header">
       <div
         className="page-header-bgAu"
-        style={{ backgroundImage: `url(${bg7.src})` }}
+        style={{ backgroundImage: `url(${bg71.src})` }}
       ></div>
       <Container>
         <div className="page-header__innerAu">
