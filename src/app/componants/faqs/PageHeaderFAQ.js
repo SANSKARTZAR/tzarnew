@@ -40,12 +40,12 @@ const PageHeaderFAQ = ({ page = "", title = "", parent = "" }) => {
 return (
     <section className="page-header">
       <div
-        className="page-header-bgFaq"
-        style={{ backgroundImage: `url(${bg71.src})` }}
+        className="page-header-bgAu"
+        style={{ backgroundImage: `url(${bg7.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerFaq">
-          <ul className="thm-breadcrumb list-unstyledFaq">
+        <div className="page-header__innerAu">
+          <ul className="thm-breadcrumb list-unstyledAu">
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}
