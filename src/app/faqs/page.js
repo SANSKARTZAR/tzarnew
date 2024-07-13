@@ -13,7 +13,7 @@ const Page = () => {
   return (
     <>
       <PageHeaderFAQ title="FAQs" />
-      <FaqPage />
+      {/* <FaqPage /> */}
       <ContactForm/>
       <CTAOne />
     </>
