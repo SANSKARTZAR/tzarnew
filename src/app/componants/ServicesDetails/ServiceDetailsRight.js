@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Button, Col, Image, Row } from "react-bootstrap";
-import Faq from "../faq/Faq";
+import Faq from "../website-dev-services/faq/Faq";
 // import PointSMM from "../Points/PointSMM";
 // import ContactFormR from "../ContactPage copy/ContactFormR";
 // import ContactForm from "@/components/ContactPage copy/ContactForm";

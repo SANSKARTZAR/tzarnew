@@ -3,7 +3,7 @@ import servicesDetails from "@/app/data/servicesDetails";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import TextSplit from "../../Reuseable/TextSplit";
+import TextSplit from "../Reuseable/TextSplit";
 
 const {
   categories,
