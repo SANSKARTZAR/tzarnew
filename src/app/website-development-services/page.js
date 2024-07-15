@@ -8,6 +8,11 @@ import PageHeaderWebsiteD from "../componants/website-dev-services/PageHeaderWeb
 import ServicesDetails from "../componants/website-dev-services/ServicesDetails/ServicesDetails";
 import { websiteDevelopmentService } from "@/app/data/servicesDetails";
 import WebsiteDesignCardsR from "../componants/website-dev-services/WebsiteDesignCardsR";
+import TestimonialFour from "../componants/website-dev-services/TestimonialFour";
+import TestimonialFive from "../componants/website-dev-services/TestimonialFive";
+import BenefitsWD from "../componants/website-dev-services/BenefitsWD";
+import ContactForm from "../componants/home/ContactForm";
+import WdService from "../componants/website-dev-services/WdService";
 
 const Page = () => {
   return (
@@ -19,11 +24,11 @@ const Page = () => {
       />
       <ServicesDetails service={websiteDevelopmentService} />
       <WebsiteDesignCardsR/>
-      {/* <WebsiteDesignCardsR/>
       <TestimonialFour/>
       <TestimonialFive/>
       <BenefitsWD/>
-      <WdService/> */}
+      <ContactForm/>
+      <WdService/>
     </>
   );
 };
