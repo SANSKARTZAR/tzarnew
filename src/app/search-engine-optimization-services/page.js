@@ -4,6 +4,11 @@ import ServicesDetails from "../componants/ServicesDetails/ServicesDetails";
 import { LeadGenerationService1 } from "@/app/data/servicesDetails";
 import SeoServiceCards from "../componants/SEOServices/SeoServiceCards";
 import ImgTxtSecSeo from "../componants/SEOServices/ImgTxtSecSeo";
+import BenefitsSEO from "../componants/SEOServices/BenefitsSEO";
+import CTATwoSeo from "../componants/SEOServices/CTAOneSeo";
+import WhatWeDoLG from "../componants/SEOServices/WhatWeDoSEO";
+import SeoServices from "../componants/SEOServices/SeoServices";
+import ContactForm from "../componants/home/ContactForm";
 
 export const metadata = { 
   title:"Search Enigne optimization services | Tzar Digital Marketing Agency in Mumbai",
@@ -17,11 +22,11 @@ const Page = () => {
      <ServicesDetails service={LeadGenerationService1}/>
      <SeoServiceCards/>
      <ImgTxtSecSeo/>
-     {/* 
-      <BenefitsSEO/>
-      <CTATwoSeo/>
-      <WhatWeDoLG/>
-      <SeoServices/> */}
+     <BenefitsSEO/>
+     <CTATwoSeo/>
+     <WhatWeDoLG/>
+     <ContactForm/>
+     <SeoServices/>
     </>
   );
 };
