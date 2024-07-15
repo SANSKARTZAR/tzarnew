@@ -1,6 +1,9 @@
 import React from "react";
 import PageHeaderGraphicD from "../componants/graphicdesign/PageHeaderGraphicD";
 import GraphicDesigning from "../componants/graphicdesign/GraphicDesigning";
+import LogoDesigningR from "../componants/graphicdesign/LogoDesigningR";
+import WebDesignR from "../componants/graphicdesign/WebDesignR";
+import PrintDesignR from "../componants/graphicdesign/PrintDesignR";
 // import PageHeaderGraphicD from "../components/PageHeader/PageHeaderGraphicD";
 // import GraphicDesigning from "../components/ServicesPG/GraphicDesigning";
 // import LogoDesigningR from "../components/ServicesPG/GraphicDesing/LogoDesigningR";
@@ -24,9 +27,10 @@ const Page = () => {
         title="Graphic Designing"
         page="Graphic Designing" />
 <GraphicDesigning/>
-      {/* <LogoDesigningR/>
-      <WebsiteDesignCardsR/>
-      <PrintDesignR/>
+<LogoDesigningR/>
+<WebDesignR/>
+<PrintDesignR/>
+      {/* 
       <GraphicDesigR/>
       <ProductMerchandiseDesignR/>
       <ArtIllustrationR/>

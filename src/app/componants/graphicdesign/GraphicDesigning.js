@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import graphicdesignt from "@/app/data/graphicdesignt";
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
