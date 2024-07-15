@@ -4,6 +4,11 @@ import GraphicDesigning from "../componants/graphicdesign/GraphicDesigning";
 import LogoDesigningR from "../componants/graphicdesign/LogoDesigningR";
 import WebDesignR from "../componants/graphicdesign/WebDesignR";
 import PrintDesignR from "../componants/graphicdesign/PrintDesignR";
+import GraphicDesigR from "../componants/graphicdesign/GraphicDesigR";
+import ProductMerchandiseDesignR from "../componants/graphicdesign/ProductMerchandiseDesignR";
+import ArtIllustrationR from "../componants/graphicdesign/ArtIllustrationR";
+import TestimonialThree from "../componants/home/Testimonial/TestimonialThree";
+import ContactForm from "../componants/home/ContactForm";
 // import PageHeaderGraphicD from "../components/PageHeader/PageHeaderGraphicD";
 // import GraphicDesigning from "../components/ServicesPG/GraphicDesigning";
 // import LogoDesigningR from "../components/ServicesPG/GraphicDesing/LogoDesigningR";
@@ -15,27 +20,26 @@ import PrintDesignR from "../componants/graphicdesign/PrintDesignR";
 // import TestimonialThree from "../components/HomePG/Testimonial/TestimonialThree";
 // import ContactForm from "../components/ContactForm/ContactForm";
 
-export const metadata = { 
-  title:"Graphic designing services | Tzar Digital Marketing Agency in Mumbai",
-  description:"Tzar Digital Marketing Agency",
+export const metadata = {
+  title: "Graphic designing services | Tzar Digital Marketing Agency in Mumbai",
+  description: "Tzar Digital Marketing Agency",
 }
 
 const Page = () => {
   return (
     <>
-   <PageHeaderGraphicD parent="Services"
+      <PageHeaderGraphicD parent="Services"
         title="Graphic Designing"
         page="Graphic Designing" />
-<GraphicDesigning/>
-<LogoDesigningR/>
-<WebDesignR/>
-<PrintDesignR/>
-      {/* 
-      <GraphicDesigR/>
-      <ProductMerchandiseDesignR/>
-      <ArtIllustrationR/>
-     <TestimonialThree/>
-     <ContactForm/> */}
+      <GraphicDesigning />
+      <LogoDesigningR />
+      <WebDesignR />
+      <PrintDesignR />
+      <GraphicDesigR />
+      <ProductMerchandiseDesignR />
+      <ArtIllustrationR />
+      <TestimonialThree />
+      <ContactForm />
     </>
   );
 };
