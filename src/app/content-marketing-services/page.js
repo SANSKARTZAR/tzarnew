@@ -1,6 +1,9 @@
 import React from "react";
 import PageHeaderCmm from "../componants/CMMservices/PageHeaderCmm";
 import ContentMarketing from "../componants/CMMservices/ContentMarketing";
+import ContentmarketingcardsR from "../componants/CMMservices/ContentmarketingcardsR";
+import WhyusCM from "../componants/CMMservices/WhyusCM";
+import ContactForm from "../componants/home/ContactForm";
 // import PageHeaderCmm from "../components/PageHeader/PageHeaderCmm";
 // import ContactForm from "../components/ContactForm/ContactForm";
 // import ContentMarketing from "../components/ServicesPG/ContentMarketing/ContentMarketing";
@@ -17,10 +20,9 @@ const Page = () => {
     <>
     <PageHeaderCmm title="content Marketing" />
     <ContentMarketing/>
-      {/* 
-      <ContentmarketingcardsR/>
-      <WhyusCM/>
-      <ContactForm/> */}
+    <ContentmarketingcardsR/>
+    <WhyusCM/>
+    <ContactForm/>
     </>
   );
 };
