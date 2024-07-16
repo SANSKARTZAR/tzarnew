@@ -1,16 +1,16 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { Button, Col, Image, Row } from "react-bootstrap";
 import Faq from "../website-dev-services/faq/Faq";
-// import PointSMM from "../Points/PointSMM";
-// import ContactFormR from "../ContactPage copy/ContactFormR";
+import ContactForm from "../home/ContactForm";
 // import ContactForm from "@/components/ContactPage copy/ContactForm";
 
 
-// function handleButtonClick() {
-//   const element = document.getElementById('Contactform');
-//   element.scrollIntoView({ behavior: 'smooth' });
-// }
+function handleButtonClick() {
+  const element = document.getElementById('Contactform');
+  element.scrollIntoView({ behavior: 'smooth' });
+}
 
 
 
@@ -46,8 +46,8 @@ const ServiceDetailsRight = ({ service = {} }) => {
 
       </div>
 
-        {/* <button type="button" className="btn   service_details_btn" onClick={handleButtonClick} >{Btntxt}</button>
-             {!<ContactForm/> } */}
+        <button type="button" className="btn   service_details_btn" onClick={handleButtonClick} >{Btntxt}</button>
+             {!<ContactForm/> }
 
 
         {/* <Button className="service_details_btn " component={Link} to={ContactForm}  >{Btntxt}</Button>  */}

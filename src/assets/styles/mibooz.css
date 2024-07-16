@@ -11956,8 +11956,8 @@ testimonial-one__carousel
   margin-top: 30px;
   width: 300px;
   height: 50px;
-  background-color: #023878;
-  color: #FEFFFE;
+  background-color: #023878 !important;
+  color: #FEFFFE !important;
   border: none;
 
 }
@@ -11967,8 +11967,8 @@ testimonial-one__carousel
   margin-top: 30px;
   width: 300px;
   height: 50px;
-  background-color: #FEFFFE;
-  color: #023878;
+  background-color: #FEFFFE !important;
+  color: #023878 !important;
   border: none;
 
 }

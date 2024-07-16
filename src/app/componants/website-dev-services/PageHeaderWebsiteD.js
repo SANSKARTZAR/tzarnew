@@ -12,10 +12,6 @@ const PageHeaderWebsiteD = ({ page = "", title = "", parent = "" }) => {
   if (width > breakpoint) { 
   return (
     <section className="page-header">
-      {/* <div
-        className="page-header-bgLd1 "
-        style={{ backgroundImage: `url(${bg5.src})` }}
-      ></div> */}
       <div
         className="page-header-bgAu"
         style={{ backgroundImage: `url(${bg12.src})` }}
@@ -44,7 +40,7 @@ return (
     <section className="page-header ">
       <div
         className="page-header-bgWd "
-        style={{ backgroundImage: `url(${bg121.src})` }}
+        style={{ backgroundImage: `url(${bg12.src})` }}
       ></div>
       <Container>
         <div className="page-header__innerAuW">

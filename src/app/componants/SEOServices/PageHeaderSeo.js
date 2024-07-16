@@ -18,8 +18,8 @@ const PageHeaderSeo = ({ page = "", title = "", parent = "" }) => {
         style={{ backgroundImage: `url(${bg11.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerSeo">
-          <ul className="thm-breadcrumb list-unstyledSeo">
+        <div className="page-header__innerAuW">
+          <ul className="thm-breadcrumb list-unstyledAuW">
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}
@@ -40,11 +40,11 @@ return (
   <section className="page-header">
     <div
       className="page-header-bgSeo"
-      style={{ backgroundImage: `url(${bg111.src})` }}
+      style={{ backgroundImage: `url(${bg11.src})` }}
     ></div>
     <Container>
-      <div className="page-header__innerSeo">
-        <ul className="thm-breadcrumb list-unstyledSeo">
+      <div className="page-header__innerAuW">
+        <ul className="thm-breadcrumb list-unstyledAuW">
           <li>
             <Link href="/">Home</Link>/
           </li>{" "}
