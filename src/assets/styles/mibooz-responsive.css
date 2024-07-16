@@ -23691,8 +23691,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     padding: 0 0 43px;
-    height: 679px;
-    /* height: auto; */
+    height: auto;
   }
 
 
@@ -23706,8 +23705,8 @@ margin-top: 161px;
 
   .GapimgContainer {
     display: block;
-    width: 1813px;
-    margin-right: -1306px;
+    width: 100%;
+    margin: 0;
   }
 
   .text-centerMU {
@@ -23733,11 +23732,11 @@ margin-top: 161px;
   }
 
   .Gapimag {
-    width: 39%;
-    padding: 20px 199px 102px 21px;
-    margin-top: 11px;
-    margin-left: -55px;
-    margin-bottom: -126px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /* margin-left: -55px; */
+    /* margin-bottom: 0; */
   }
 
 

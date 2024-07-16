@@ -39,12 +39,12 @@ return (
   <>
     <section className="page-header ">
       <div
-        className="page-header-bgLd "
+        className="page-header-bgAu "
         style={{ backgroundImage: `url(${bg51.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerLd">
-          <ul className="thm-breadcrumb list-unstyledLd">
+      <div className="page-header__innerAuW">
+      <ul className="thm-breadcrumb list-unstyledAuW">
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}
