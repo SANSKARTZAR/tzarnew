@@ -20,7 +20,7 @@ function SocialMediaMktcardsR({ className = "" }) {
   return (
     <>
       <section className="SMMCards-page">
-        <div className="container">
+        <div className="container-fluid">
           <div className="mainSmm">
             <h1>{HeadTitle}</h1>
             <p>{text2}</p>
