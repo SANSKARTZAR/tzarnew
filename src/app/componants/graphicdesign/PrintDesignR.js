@@ -11,7 +11,7 @@ const PrintDesignR = () => {
           className="counter-one-pattern"
           style={{ backgroundImage: `url(${bg.src})` }}
         ></div> */}
-      <div className="container">
+      <div className="container-fluid">
 
 
         <div className="mainPDR">

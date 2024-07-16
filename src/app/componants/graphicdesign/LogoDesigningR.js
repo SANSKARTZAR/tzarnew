@@ -11,8 +11,8 @@ const LogoDesigningR = () => {
           className="counter-one-pattern"
           style={{ backgroundImage: `url(${bg.src})` }}
         ></div> */}
-      <div className="mainLd">
-        <div className="container">
+      <div className="mainLds">
+        <div className="container-fluid">
           <div className="LogoDesigningR__center">
             {/* <Title title={title} tagline={tagline} className="text-left section-title1__titleLd" /> */}
             <h1 className="section-title1__titleLd">{title}</h1>

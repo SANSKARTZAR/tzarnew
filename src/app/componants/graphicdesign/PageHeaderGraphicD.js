@@ -13,12 +13,12 @@ const PageHeaderGraphicD = ({ page = "", title = "", parent = "" }) => {
   return (
     <section className="page-header">
       <div
-        className="page-header-bgGd"
+        className="page-header-bgAu"
         style={{ backgroundImage: `url(${bg6.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerGd">
-          <ul className="thm-breadcrumb list-unstyledGd">
+        <div className="page-header__innerAuW">
+          <ul className="thm-breadcrumb list-unstyledAuW">
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}
@@ -39,12 +39,12 @@ const PageHeaderGraphicD = ({ page = "", title = "", parent = "" }) => {
 return (
   <section className="page-header">
     <div
-      className="page-header-bgGd"
+      className="page-header-bgWd"
       style={{ backgroundImage: `url(${bg61.src})` }}
     ></div>
     <Container>
-      <div className="page-header__innerGd">
-        <ul className="thm-breadcrumb list-unstyledGd">
+    <div className="page-header__innerAuW">
+    <ul className="thm-breadcrumb list-unstyledAuW">
           <li>
             <Link href="/">Home/</Link>
           </li>{" "}

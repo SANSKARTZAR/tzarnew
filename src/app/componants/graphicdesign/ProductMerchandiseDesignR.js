@@ -8,7 +8,7 @@ const ProductMerchandiseDesignR = () => {
   return (
     <section className="ProductMerchandiseDesignR-page">
       <div className="container">
-        <div className="mainPMD">
+        <div className="mainPMDs">
           <div className="ProductMerchandiseDesignR__center">
             {/* <Title title={title} tagline={tagline} className="text-left section-title1__titlePDMR" /> */}
             <h1 className="section-title1__titlePDMR" >{title}</h1>

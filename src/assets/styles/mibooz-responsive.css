@@ -23458,6 +23458,8 @@ margin-top: 161px;
     margin: 0px;
     margin-top: 70px;
     margin-bottom: 50px;
+    padding:50px;
+    gap:30px;
   }
 
   .titleHeadSEO {
@@ -23570,10 +23572,10 @@ margin-top: 161px;
     height: 680px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     margin-top: 23px;
     margin-left: 0px;
-    padding-top: 33px;
+    padding: 33px;
   }
 
   .boxContainerSeo {
@@ -24729,7 +24731,7 @@ margin-top: 161px;
     grid-template-rows: repeat(2, 1fr);
     width: 100%;
     list-style: none;
-    margin-left: -64px;
+    margin-left: 0px;
   }
 
   .cardsWd {
@@ -24761,8 +24763,8 @@ margin-top: 161px;
 
   .cardsPMD {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     width: 100%;
     list-style: none;
     margin: 0px;
@@ -25806,9 +25808,10 @@ margin-top: 161px;
 
 
   .section-title1__titlePDMR {
-    margin-left: -303px;
+    margin-left: 0;
     font-size: 50px;
     line-height: 60px;
+    text-align: center;
     text-transform: uppercase;
   }
 
@@ -25824,13 +25827,13 @@ margin-top: 161px;
   }
 
   .ProductMerchandiseDesignR__right-text-1 {
-    margin-left: 17px;
-    width: 964px;
+    margin-left: 0;
+    width: 100%;
     margin-top: 9px;
     line-height: 22px;
     margin-bottom: 20px;
     color: #100f12;
-    margin-left: -29px;
+    text-align: center;
   }
 
   .ArtIllustration__right-text-1 {
@@ -25851,7 +25854,7 @@ margin-top: 161px;
   }
 
   .section-title1__titlePDMR {
-    margin-left: -323px;
+    margin-left: 0;
     font-size: 50px;
     line-height: 60px;
     text-transform: uppercase;
@@ -28589,7 +28592,7 @@ margin-top: 161px;
 
   .cardsPMD {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
     width: 1219px;
     list-style: none;
