@@ -18,8 +18,8 @@ const PageHeaderFAQ = ({ page = "", title = "", parent = "" }) => {
         style={{ backgroundImage: `url(${bg7.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerAu">
-          <ul className="thm-breadcrumb list-unstyledAu">
+      <div className="page-header__innerAuW">
+      <ul className="thm-breadcrumb list-unstyledAuW">
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}
@@ -40,12 +40,12 @@ const PageHeaderFAQ = ({ page = "", title = "", parent = "" }) => {
 return (
     <section className="page-header">
       <div
-        className="page-header-bgAu"
+        className="page-header-bgWd"
         style={{ backgroundImage: `url(${bg71.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerAu">
-          <ul className="thm-breadcrumb list-unstyledAu">
+      <div className="page-header__innerAuW">
+      <ul className="thm-breadcrumb list-unstyledAuW">
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}

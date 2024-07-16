@@ -16,12 +16,12 @@ const PageHeaderCli = ({ page = "", title = "", parent = "" }) => {
     return (
       <section className="page-header">
         <div
-          className="page-header-bgCli"
+          className="page-header-bgAu"
           style={{ backgroundImage: `url(${bg4.src})` }}
         ></div>
         <Container>
-          <div className="page-header__innerCli">
-            <ul className="thm-breadcrumb list-unstyledCli">
+        <div className="page-header__innerAuW">
+        <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
                 <Link href="/">Home</Link>/
               </li>{" "}
@@ -43,12 +43,12 @@ const PageHeaderCli = ({ page = "", title = "", parent = "" }) => {
     <>
       <section className="page-header">
         <div
-          className="page-header-bgCli"
+          className="page-header-bgWd"
           style={{ backgroundImage: `url(${bg41.src})` }}
         ></div>
         <Container>
-          <div className="page-header__innerCli">
-            <ul className="thm-breadcrumb list-unstyledCli">
+        <div className="page-header__innerAuW">
+        <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
                 <Link href="/">Home</Link>/
               </li>{" "}

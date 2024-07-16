@@ -10,6 +10,7 @@ const { title, tagline, socials, teams } = teamTwo;
 
 const TeamTwo4 = ({ className = "" }) => {
   return (
+    <>
     <section className={`team-one ${className}`}>
     <Container>
       {!className && (
@@ -44,6 +45,7 @@ const TeamTwo4 = ({ className = "" }) => {
 
 
     </section>
+    </>
   );
 };
 
