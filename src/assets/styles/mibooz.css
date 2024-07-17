@@ -7669,11 +7669,10 @@ testimonial-one__carousel
 
 .BoxPPCmgmt1 {
   width: 315px;
-  height: 403px;
+  height: auto;
   border: 1.5px solid #023878;
   background-color: #ffffff;
-  margin-top: 50px;
-  margin-left: 77px;
+  margin: 0px;
   box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
 }
 
@@ -7684,29 +7683,27 @@ testimonial-one__carousel
   text-align: center;
   font-size: 1.5 rem;
   font-weight: 800;
-  margin-left: -7px;
-  padding-top: 176px;
-  padding-bottom: -120px;
+  margin: 0px;
+  padding: 10px;
   color: #100f12;
 
 }
 
 .BoxPPCmgmt1 .PPCmgmt__text1 {
   text-align: center;
-  margin-left: 29px;
-  width: 261px;
+  margin: 0;
   line-height: 23px;
-  padding-top: 11px;
+  padding: 10px;
   color: #100f12;
 }
 
-.BoxPPCmgmt1 .Iconsppcmgmt {
+/* .BoxPPCmgmt1 .Iconsppcmgmt {
   width: 90px;
   height: 90px;
   margin-top: 40px;
   margin-left: 83px;
   margin-bottom: -108px;
-}
+} */
 
 
 .BoxPPCmgmt2 {
@@ -22747,7 +22744,7 @@ text-align: center;
 }
 
 
-.BoxPPCmgmt1 .PPCmgmt__text {
+/* .BoxPPCmgmt1 .PPCmgmt__text {
   text-align: center;
   font-size: 1.5 rem;
   font-weight: 800;
@@ -22765,14 +22762,11 @@ text-align: center;
   line-height: 23px;
   padding-top: 11px;
   color: #100f12;
-}
+} */
 
 .BoxPPCmgmt1 .Iconsppcmgmt {
-  width: 90px;
-  height: 90px;
-  margin-top: 40px;
-  margin-left: 83px;
-  margin-bottom: -108px;
+  margin: 0px;
+  text-align: center;
 }
 
 

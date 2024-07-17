@@ -22527,20 +22527,18 @@ margin-top: 161px;
   .PPCmgmt-page {
     position: relative;
     display: inline-block;
-    margin-left: 80px;
-    padding-top: 100px;
-    padding-left: -10px;
-    margin-top: -90px;
+    margin: 0px;
+    padding: 50px 50px;
     width: 100%;
-    height: 668px;
+    height: auto;
   }
 
   .PPCmgmt-page h1 {
     text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
-    width: 910px;
-    margin-left: 286px;
+    width: 100%;
+    margin: 0;
   }
 
   .BoxPPCmgmtCMain {
@@ -22554,9 +22552,10 @@ margin-top: 161px;
 
   .BoxPPCmgmt1 {
     width: 100%;
-    height: 403px;
+    height: auto;
     border: 1.5px solid #023878;
     background-color: #ffffff;
+    padding: 15px;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
 
@@ -22609,18 +22608,16 @@ margin-top: 161px;
   .PPCmgmtSer-page {
     position: relative;
     display: inline-block;
-    margin-left: -268px;
-    padding-top: 100px;
-    padding-left: -10px;
-    margin-top: 277px;
+    margin: 0px;
+    padding: 10px;
     width: 100%;
-    height: 769px;
+    height: auto;
   }
 
   .BoxPPCmgmtMain {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     margin-left: 0;
     width: 100%;
 
@@ -22659,10 +22656,9 @@ margin-top: 161px;
   }
 
   .BoxPPCmgmtSer1 {
-    width: 315px;
-    height: 403px;
-    margin-top: 50px;
-    margin-left: 77px;
+    width: 100%;
+    height: auto;
+    margin: 0px;
   }
 
   .BoxPPCmgmtSer1 .CirclePPCmgmtSer1 {
@@ -22735,13 +22731,12 @@ margin-top: 161px;
   }
 
   .boxTextPPCmgmtSer {
-    width: 933px;
+    width: 100%;
     height: 80px;
     border: 3px solid #100f12;
-    margin-top: -631px;
-    margin-left: 610px;
+    margin: 10px;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
-    padding-left: 50px;
+    padding: 0px;
   }
 
   .boxTextPPCmgmtSer h1 {
@@ -22754,7 +22749,7 @@ margin-top: 161px;
 
   .PPCmgmtSer-page .BtnPPCmgmtSer {
     margin-top: 50px;
-    margin-left: 866px;
+    margin-left: 30%;
     width: 500px;
     background-color: #f6f6f6;
     color: #100f12;
@@ -22766,19 +22761,17 @@ margin-top: 161px;
   .BenefitsPPCContainer {
     position: relative;
     display: block;
-    height: 516px;
-    margin-top: -4px;
+    height: auto;
+    margin: 0px;
     z-index: 1;
-    margin-bottom: -20px;
   }
 
   .titleHeadPPC {
     text-align: center;
     font-size: 60px;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: -800px;
-    margin-left: 100px;
+    padding: 10px;
+    margin: 0px;
   }
 
 
@@ -22794,8 +22787,7 @@ margin-top: 161px;
   .BenefitsPPCContainer .ppcicons {
     width: 110px;
     height: 84px;
-    margin-left: 231px;
-    margin-top: -50px;
+    margin: 0px;
     color: #023878;
   }
 
@@ -22804,11 +22796,9 @@ margin-top: 161px;
 
 
   .boxContainerPPC1 {
-    width: 310px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: -214px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    margin: 0px;
   }
 
   .boxContainerPPC2 {
@@ -22832,9 +22822,8 @@ margin-top: 161px;
 
   .boxContainerPPC1 h1 {
     text-align: center;
-    width: 385px;
-    margin-left: 101px;
-    margin-top: 26px;
+    width: 100%;
+    margin: 0px;
     font-size: 30px;
     color: #100f12;
   }
