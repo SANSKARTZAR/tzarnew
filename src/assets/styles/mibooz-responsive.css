@@ -22961,8 +22961,8 @@ margin-top: 161px;
   }
 
   .BoxFact {
-    width: 1152px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     background-color: #023878;
     color: #E8F0F5;
     margin-bottom: 20px;
