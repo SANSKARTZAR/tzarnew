@@ -1,6 +1,10 @@
 import React from "react";
 import PageHeaderLeadG from "../componants/LeadGServices/PageHeaderLeadG";
 import LeadGeneration from "../componants/LeadGServices/LeadGeneration";
+import WhatWeDoLG from "../componants/LeadGServices/WhatWeDoLG";
+import ImgTxtSecLG from "../componants/LeadGServices/ImgTxtSecLG";
+import SomeFacts from "../componants/LeadGServices/SomeFacts";
+import ContactForm from "../componants/home/ContactForm";
 // import PageHeaderLeadG from "../components/PageHeader/PageHeaderLeadG";
 // import ContactForm from "../components/ContactForm/ContactForm";
 // import LeadGeneration from "../components/ServicesPG/LeadGeneration/LeadGeneration";
@@ -19,11 +23,10 @@ const Page = () => {
     <>
     <PageHeaderLeadG page="Lead Generation" title="Lead Generation"/>
     <LeadGeneration/>
-     {/* <LeadGeneration/>
-      <WhatWeDoLG/>
-      <ImgTxtSecLG/>
-      <SomeFacts/>
-      <ContactForm/> */}
+    <WhatWeDoLG/>
+    <ImgTxtSecLG/>
+    <SomeFacts/>
+    <ContactForm/>
     </>
   );
 };
