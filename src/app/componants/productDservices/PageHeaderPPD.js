@@ -1,6 +1,6 @@
 "use client";
 import bg7 from "@/assets/images/backgrounds/page-header-bgProduct-design-&-Packaging.jpg";
-import bg71 from "@/assets/images/MobileTopbanners/FAQ.jpg";
+import bg71 from "@/assets/images/MobileTopbanners/Contact-us.gif";
 import Link from "next/link";
 import React from "react";
 import { useWindowSize } from "@react-hook/window-size/throttled";
