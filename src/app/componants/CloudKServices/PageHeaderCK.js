@@ -1,6 +1,6 @@
 "use client";
 import bg7 from "@/assets/images/backgrounds/page-header-bgFAQ.jpg";
-import bg71 from "@/assets/images/MobileTopbanners/Cloude-kitchen.jpg";
+import bg71 from "@/assets/images/MobileTopBanners/Cloude-kitchen.jpg";
 import Link from "next/link";
 import React from "react";
 import { useWindowSize } from "@react-hook/window-size/throttled";
