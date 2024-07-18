@@ -7,7 +7,7 @@ import { useWindowSize } from "@react-hook/window-size/throttled";
 // import VideoBg121 from "../../assets/video/Comp 1_3.mp4"
 import StudioBanner from "./StudioBanner";
 // import BannertxtSEO from '../BannerText/BannertxtSEO';
-import StudioTab from './StudioTab';
+// import StudioTab from './StudioTab';
 
 function BStudioSlider() {
   const [width, height] = useWindowSize({ fps: 60 });
@@ -31,7 +31,7 @@ function BStudioSlider() {
     return (
       <>
         <StudioBanner />
-        <StudioTab />
+        {/* <StudioTab /> */}
       </>
     )
   }
@@ -40,7 +40,7 @@ function BStudioSlider() {
 
       <div>
         <StudioBanner />
-        <StudioTab />
+        {/* <StudioTab /> */}
       </div>
     </Slider>
   );
