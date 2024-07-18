@@ -3,7 +3,6 @@
 import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import { TypeAnimation } from 'react-type-animation';
-import Slide from 'react-reveal/Slide';
 import { useWindowSize } from "@react-hook/window-size/throttled";
 // import ContactForm from "@/components/ContactPage copy/ContactForm";
 // import ServicesOne from "@/components/ServicesOne/ServicesOne";
