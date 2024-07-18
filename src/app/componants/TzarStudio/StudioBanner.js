@@ -26,7 +26,7 @@ function StudioBanner() {
                             <div className="lense">
                                 <span className='banner-text'>LIGHTS</span>
                                 <div className='studio-lense-color'>
-                                    <img className='my-img' src="/camlense.png" alt="description of image" width="400" height="400" />
+                                    <img className='my-img' src="/camlense.png" alt="description of image" width="350" height="350" />
                                 </div>
                                 <span className='banner-text'>IMAGINATION</span>
                             </div>
