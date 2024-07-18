@@ -3,11 +3,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import { useWindowSize } from "@react-hook/window-size/throttled";
-// import VideoBg11 from "../../assets/video/Hero_Banner_Small.mp4"
-// import VideoBg121 from "../../assets/video/Comp 1_3.mp4"
 import StudioBanner from "./StudioBanner";
-// import BannertxtSEO from '../BannerText/BannertxtSEO';
-// import StudioTab from './StudioTab';
 
 function BStudioSlider() {
   const [width, height] = useWindowSize({ fps: 60 });
@@ -16,7 +12,7 @@ function BStudioSlider() {
     infinite: true,
     slidesToShow: 1,
     autoplay: false,
-    slidesToScroll: 1,
+    slidesToScroll: 1, 
     fadeSpeed: 100,
     speed: 500,
     lazyLoad: true,
@@ -31,7 +27,6 @@ function BStudioSlider() {
     return (
       <>
         <StudioBanner />
-        {/* <StudioTab /> */}
       </>
     )
   }
@@ -40,9 +35,8 @@ function BStudioSlider() {
 
       <div>
         <StudioBanner />
-        {/* <StudioTab /> */}
       </div>
     </Slider>
   );
 }
-export default BStudioSlider
+export default BStudioSlider;
