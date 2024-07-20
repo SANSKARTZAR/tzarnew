@@ -175,3 +175,18 @@
   display: block;
 }
 /* --------------form end---------------- */
+
+/* components/Carousel.module.css */
+.carouselContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slide {
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}

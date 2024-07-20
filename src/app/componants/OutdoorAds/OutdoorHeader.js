@@ -6,6 +6,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 // import AdsContact from '../ContactPage/AdsContact';
 import AdsHeroslider from './AdsHeroslider';
 import { TypeAnimation } from 'react-type-animation';
+import Carousel from './OutadsCarousel';
 
 function OutdoorHeader() {
     const [width, height] = useWindowSize({ fps: 60 });
@@ -31,6 +32,7 @@ function OutdoorHeader() {
                                     /> 
                                     <h1 className="banner-sec_heading2">WE MAKE ICONIC BRANDS</h1>
                                     {/* <AdsHeroslider /> */}
+                                    <Carousel/>
                                 </div>
                             </Col>
                             <Col xl={5} md={5} sm={12}>
