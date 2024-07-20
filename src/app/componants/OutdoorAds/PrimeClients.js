@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { Row, Col, Container } from 'react-bootstrap';
-import PrimeClientsMock from './PrimeClientsMock';
 
 function PrimeClients() {
     return (
@@ -17,7 +16,7 @@ function PrimeClients() {
                         </Col>
                         <Col xl={8} md={8} sm={12} >
                             <div>
-                                {/* <PrimeClientsMock/> */}
+                                {/* <PrimeClientCarousel/> */}
                             </div>
                         </Col>
                     </Row>

@@ -15,8 +15,8 @@ const FoodShoot = () => {
                 <Row>
                     <Col xl={6}>
                         <div className="GraphicDesigning__left">
-                             <ul className="GraphicDesigning__images">
-                               {images.map((image, i) => (
+                            <ul className="GraphicDesigning__images">
+                                {images.map((image, i) => (
                                     <li key={i}>
                                         <div className={`GraphicDesigning__img-${i + 1}`}>
                                             <Image
@@ -27,7 +27,7 @@ const FoodShoot = () => {
                                         </div>
                                     </li>
                                 ))}
-                            </ul> 
+                            </ul>
                             <div className="GraphicDesigning__badge">
                             </div>
                         </div>
@@ -42,6 +42,7 @@ const FoodShoot = () => {
                     </Col>
                 </Row>
             </Container>
+
             <StudioFoodSlide />
 
         </section>
