@@ -4,6 +4,7 @@ import React from 'react'
 import { useWindowSize } from "@react-hook/window-size/throttled";
 import Bannertxt from "./Bannertxt";
 import { useEffect, useState } from 'react';
+import ContactForm from '../contact/ContactForm';
 
 function MainHerobanner() {
   const [width, height] = useWindowSize({ fps: 60 });
@@ -30,6 +31,8 @@ function MainHerobanner() {
   return (
       <>
         <Bannertxt />
+        <video autoPlay loop muted src='https://ik.imagekit.io/xhgygdewi6/Bgvideo.mp4?updatedAt=1710580577029'></video>
+        <ContactForm />
       </>
   );
 }

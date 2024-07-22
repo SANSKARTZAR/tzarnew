@@ -43,9 +43,9 @@ function BannertxtR() {
         </Col>
 
       </Row>
-      <Col xl={4} md={4} sm={4}>
+      {/* <Col xl={4} md={4} sm={4}>
         <ContactForm />
-      </Col>
+      </Col> */}
     </>
   )
 }

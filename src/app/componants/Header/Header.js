@@ -1,5 +1,5 @@
 "use client"
-import { useRootContext } from "../context/context";
+import { useRootContext } from "@/app/componants/context/context";
 import header from "@/app/data/header";
 import useScroll from "@/app/componants/hooks/useScroll";
 import Link from "next/link";
@@ -20,7 +20,7 @@ const Header = ({ pageTitle }) => {
   const customStyles = {
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
-      zindex:'999999'
+      zindex: '999999'
     },
     content: {
       top: '50%',
@@ -29,10 +29,14 @@ const Header = ({ pageTitle }) => {
       bottom: 'auto',
       marginRight: '-16%',
       transform: 'translate(-50%, -50%)',
-      zindex:'999999',
-      borderradius:'none'
+      zindex: '999999',
+      borderradius: 'none'
     }
   };
+
+
+
+
   return (
     <header
       className={`main-header${pageTitle === "Home Two"
@@ -62,17 +66,19 @@ const Header = ({ pageTitle }) => {
         >
           <div className="main-menu-wrapper__logo">
             <Link href="/">
-                <Image
-                  src={pageTitle === "Home Two" ? logo2.src : logo1.src}
-                  alt=""
-                  width="85px"
-                />
+              <Image
+                src={pageTitle === "Home Two" ? logo2.src : logo1.src}
+                alt=""
+                width="85px"
+              />
             </Link>
           </div>
           <div className="main-menu-wrapper__main-menu">
-            <span onClick={() => toggleMenu()} className="mobile-nav__toggler">
+            <span onClick={() => toggleMenu()}  className="mobile-nav__toggler">
               <i className="fa fa-bars"></i>
             </span>
+            
+
             <ul className="main-menu__list">
               {navItems.map((navItem) => (
                 <NavItem key={navItem.id} navItem={navItem} />
@@ -96,20 +102,20 @@ const Header = ({ pageTitle }) => {
                 </h5>
               </div>
             </div>
-            {/* <div className="main-menu-wrapper__search-box">
+            <div className="main-menu-wrapper__search-box">
               <span
                 onClick={toggleSearch}
                 style={{ cursor: "pointer" }}
                 className="main-menu-wrapper__search search-toggler icon-magnifying-glass"
               ></span>
-            </div> */}
+            </div>
 
             <div className="header-form">
               <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
-               
+
                 <button onClick={() => setIsOpen(false)} className="close-form">×</button>
 
-                 {/* <PopupHireUs/> */}
+                {/* <PopupHireUs/> */}
 
               </Modal>
             </div>

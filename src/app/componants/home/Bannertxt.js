@@ -70,10 +70,7 @@ function Bannertxt() {
   return (
 
     <>
-
       <BannertxtR />
-      <video autoPlay loop muted src='https://ik.imagekit.io/xhgygdewi6/Bgvideo.mp4?updatedAt=1710580577029'></video>
-
     </>
   )
 }

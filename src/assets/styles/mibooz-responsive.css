@@ -134788,6 +134788,13 @@ margin-top: 161px;
 
 
 @media only screen and (min-width: 360px) and (max-width:393px) {
+ 
+  .heroBtn{
+    font-size: 10px !important;
+  }
+  /* .form-dev{
+    margin: 0;
+  } */
 
   .Cm-page {
     position: relative;
@@ -154191,6 +154198,14 @@ margin-top: 161px;
 }
 
 @media(max-width:768px) {
+
+.heroBtn{
+  font-size: 10px;
+}
+.form-dev{
+  margin: 0!important;
+}
+
   .singupform-btn {
     text-align: center;
   }

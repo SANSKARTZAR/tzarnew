@@ -1,3 +1,4 @@
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import "../assets/styles/mibooz.css";
@@ -14,6 +15,12 @@ import "../assets/vendors/reey-font/stylesheet.css";
 import "../assets/vendors/the-sayinistic-font/stylesheet.css";
 import SiteFooter from "./componants/FooterSection/SiteFooter";
 import Header from "./componants/Header/Header";
+
+import { useRootContext } from "@/app/componants/context/context";
+import MobileMenu from "./componants/MobileMenu/MobileMenu";
+
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -22,6 +29,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  const { menuStatus } = useRootContext;
+
   return (
     <html lang="en">
      <head>
@@ -107,6 +117,8 @@ export default function RootLayout({ children }) {
       <Header/>
       {children}
       <SiteFooter/>
+      {menuStatus && <MobileMenu/> }
+
       </body>
     </html>
   );
