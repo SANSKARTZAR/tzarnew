@@ -6,14 +6,14 @@ const contactSchema = new mongoose.Schema(
             type: String,
             required: true,
         }, 
-        address: {
-            type: String,
-            required: true,
-        }, 
-        // phone: {
+        // address: {
         //     type: String,
         //     required: true,
-        // },
+        // }, 
+        phone: {
+            type: String,
+            required: true,
+        },
         email: {
             type: String,
             required: true,
@@ -21,10 +21,6 @@ const contactSchema = new mongoose.Schema(
         message: {
             type: String,
             required: true,
-        },
-        date: {
-            type: Date,
-            required: Date.now,
         },
     },
     {

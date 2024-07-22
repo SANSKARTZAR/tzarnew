@@ -4,26 +4,32 @@ import { useState } from "react";
 import { submitContact } from "../../models/action";
 
 const ContactForm = () => {
+    const [status, setStatus] = useState(null);
 
-    const [status, setStatus] = useState();
-
-    const handleSubmit = async (formData) => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
         try {
             const response = await submitContact({
                 fullname: formData.get("fullname"),
-                address: formData.get("address"),
+                phone: formData.get("phone"),
                 email: formData.get("email"),
-                message: formData.get("message")
-            })
-            if (response.status === 200) {
+                message: formData.get("message"),
+            });
+            if (response.ok) { // Check if response status is 200-299
                 setStatus("success");
+                alert("Form submitted successfully!");
             } else {
                 setStatus("error");
+                alert("There was an error submitting the form.");
+                console.error('Submission error:', response.status, response.statusText);
             }
         } catch (e) {
-            console.log(e)
+            console.error('Error during form submission:', e);
+            setStatus("error");
+            alert("There was an error submitting the form.");
         }
-    }
+    };
 
     return (
         <>
@@ -31,82 +37,59 @@ const ContactForm = () => {
                 <div>
                     <h5>From Concept to Capture: We Do It All</h5>
                 </div>
-                <form
-                    action={handleSubmit}
-                    className="EnquiryForm"
-                >
+                <form onSubmit={handleSubmit} className="EnquiryForm">
                     <div className="form-div">
-                        <label htmlFor="fullname" >
+                        <label htmlFor="fullname">
                             <input
                                 type="text"
                                 id="fullname"
                                 name="fullname"
                                 placeholder="John Doe"
                                 className="form-control form-inputs"
+                                required
                             />
                         </label>
-                        <label htmlFor="address" >
-                            <input
-                                type="text"
-                                id="address"
-                                name="address"
-                                placeholder="your address"
-                                className="form-control form-inputs"
-                            />
-                        </label>
-                        {/* <label htmlFor="phone" >
+                        <label htmlFor="phone">
                             <input
                                 type="tel"
                                 id="phone"
                                 name="phone"
                                 placeholder="Add phone no."
                                 className="form-control form-inputs"
+                                required
                             />
-                        </label> */}
-                        <label htmlFor="email" >
+                        </label>
+                        <label htmlFor="email">
                             <input
-                                type="text"
+                                type="email"
                                 id="email"
                                 name="email"
                                 placeholder="john@gmail.com"
                                 className="form-control form-inputs"
+                                required
                             />
                         </label>
-                       
-                        <label htmlFor="message" >
+                        <label htmlFor="message">
                             <textarea
                                 className="form-control form-inputs"
                                 id="message"
                                 name="message"
                                 placeholder="Type your message here..."
-
+                                required
                             ></textarea>
                         </label>
-                        <label htmlFor="submit" >
-                            <button className="btn btn-submit" type="submit">Send </button>
+                        <label htmlFor="submit">
+                            <button className="btn btn-submit" type="submit">
+                                Send
+                            </button>
                         </label>
                     </div>
                 </form>
-
+                {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
+                {status === "error" && <div className="alert alert-danger">There was an error submitting the form.</div>}
             </div>
         </>
     );
-}
-export default ContactForm; 
-{/* <label htmlFor="services" className="col-12">
-                            <select type="select"
-                                name="services" id="services" placeholder="Select Services" className="form-control form-inputs"
-                                autoComplete="off" required>
-                                <option name="selectedOpti" value="">Services</option>
-                                <option value="Websites Desing &amp; Development">Websites Desing &amp; Development</option>
-                                <option value="Social Media (SMO | SMM)">Social Media (SMO | SMM)</option>
-                                <option value="Perfomance Marketing">Perfomance Marketing </option>
-                                <option value="Influencer Marketing">Influencer Marketing  </option>
-                                <option value="Brand Marketing"> Brand Marketing</option>
-                                <option value="Content &amp; SEO ">Content &amp; SEO </option>
-                                <option value="Product Shoot">Product Shoot</option>
-                                <option value="2D&3D Animation">2D&amp;3D&nbsp;Animation</option>
-                                <option value="Logo Design">Logo Design</option>
-                                <option value="Product Packaging">Product Packaging</option>
-                            </select>
-                        </label> */}
+};
+
+export default ContactForm;
