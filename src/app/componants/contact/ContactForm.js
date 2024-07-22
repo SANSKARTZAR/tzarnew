@@ -14,6 +14,7 @@ const ContactForm = () => {
                 fullname: formData.get("fullname"),
                 phone: formData.get("phone"),
                 email: formData.get("email"),
+                services: formData.get("services"),
                 message: formData.get("message"),
             });
             if (response.ok) { // Check if response status is 200-299
@@ -68,6 +69,21 @@ const ContactForm = () => {
                                 className="form-control form-inputs"
                                 required
                             />
+                        </label>
+                        <label htmlFor="services">
+                            <select id="services" name="services" className="form-control form-inputs" >
+                                <option name="selectedOpti">Services</option>
+                                <option>Websites Desing & Development</option>
+                                <option>Social Media (SMO | SMM)</option>
+                                <option>Perfomance Marketing </option>
+                                <option>Influencer Marketing  </option>
+                                <option> Brand Marketing</option>
+                                <option>Content & SEO </option>
+                                <option>Product Shoot</option>
+                                <option>2D&3D Animation</option>
+                                <option>Logo Design</option>
+                                <option>Product Packaging</option>
+                            </select>
                         </label>
                         <label htmlFor="message">
                             <textarea

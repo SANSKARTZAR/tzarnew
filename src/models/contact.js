@@ -6,10 +6,6 @@ const contactSchema = new mongoose.Schema(
             type: String,
             required: true,
         }, 
-        // address: {
-        //     type: String,
-        //     required: true,
-        // }, 
         phone: {
             type: String,
             required: true,
@@ -18,6 +14,10 @@ const contactSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
+        services: {
+            type: String,
+            required: true,
+        }, 
         message: {
             type: String,
             required: true,
