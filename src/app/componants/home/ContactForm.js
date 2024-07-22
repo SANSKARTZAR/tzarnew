@@ -2,11 +2,11 @@
 import React, { useEffect, useRef } from 'react'
 import contactForm from "@/app/data/contactForm";
 import { Col, Container, Row } from "react-bootstrap";
-// import ContactUs from './ContactUs';
+import ContactForm from '../contact/ContactForm';
 
 
 const { bg, Ftitle, tagline, inputs } = contactForm;
-function ContactForm() {
+function ContactFormSection() {
   return (
     <>
       <section id="Contactform" className="ContactForm-page">
@@ -17,7 +17,7 @@ function ContactForm() {
         <Container>
           <Row>
             <Col xl={6} md={12}>
-              {/* <ContactUs /> */}
+              <ContactForm />
             </Col>
             <Col xl={6} md={12}>
               <div className="ContactForm-page__right">
@@ -42,4 +42,4 @@ function ContactForm() {
   )
 }
 
-export default ContactForm;
+export default ContactFormSection;

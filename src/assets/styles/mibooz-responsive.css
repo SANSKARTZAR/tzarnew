@@ -154199,6 +154199,10 @@ margin-top: 161px;
 
 @media(max-width:768px) {
 
+  .EnquiryForm input[type=email], .EnquiryForm input[type=tel], .EnquiryForm input[type=text], .EnquiryForm select{
+    margin-bottom: 10px;
+  }
+
 .heroBtn{
   font-size: 10px;
 }

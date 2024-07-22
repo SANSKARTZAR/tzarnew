@@ -168,6 +168,17 @@
   color: #fff;
   display: block;
 }
+label{
+  width:100%;
+}
+
+.form-group.formlefttxt {
+  width: auto;
+  height: auto;
+  display: block;
+  margin-top: 13px !important;
+  margin-bottom: 0px;
+}
 /* --------------form end---------------- */
 
 /* components/Carousel.module.css */

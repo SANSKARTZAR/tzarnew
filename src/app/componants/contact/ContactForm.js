@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import { submitContact } from "../../models/action";
 
@@ -15,7 +15,8 @@ const ContactForm = () => {
                 phone: formData.get("phone"),
                 email: formData.get("email"),
                 services: formData.get("services"),
-                message: formData.get("message"),
+                // message: formData.get("message"),
+                checkbox: formData.get("checkbox"),
             });
             if (response.status === 200) {
                 setStatus("success");
@@ -80,18 +81,26 @@ const ContactForm = () => {
                                 <option>Product Packaging</option>
                             </select>
                         </label>
-                        <label htmlFor="message">
+                        {/* <label htmlFor="message">
                             <textarea
                                 className="form-control form-inputs"
                                 id="message"
                                 name="message"
                                 placeholder="Type your message here..."
-                                required
                             ></textarea>
-                        </label>
+                        </label> */}
+                        <div className="form-group formlefttxt">
+                            <label className="checkbox">
+                                <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link></h6>
+                                <div className="form-studiocheck">
+                                    <input type="checkbox" name="checkbox" required value="I agree to T&C and Privacy Policy" />
+                                    <h6 className="homeformtext">Yes, I would like to receive updates viaWhatsApp.</h6>
+                                </div>
+                            </label>
+                        </div>
                         <label htmlFor="submit">
                             <button className="btn btn-submit" type="submit">
-                                Send
+                                Submit
                             </button>
                         </label>
                     </div>

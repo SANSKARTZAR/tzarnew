@@ -102,13 +102,13 @@ const Header = ({ pageTitle }) => {
                 </h5>
               </div>
             </div>
-            <div className="main-menu-wrapper__search-box">
+            {/* <div className="main-menu-wrapper__search-box">
               <span
                 onClick={toggleSearch}
                 style={{ cursor: "pointer" }}
                 className="main-menu-wrapper__search search-toggler icon-magnifying-glass"
               ></span>
-            </div>
+            </div> */}
 
             <div className="header-form">
               <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
