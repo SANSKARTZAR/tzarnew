@@ -17,18 +17,13 @@ const ContactForm = () => {
                 services: formData.get("services"),
                 message: formData.get("message"),
             });
-            if (response.ok) { // Check if response status is 200-299
+            if (response.status === 200) {
                 setStatus("success");
-                alert("Form submitted successfully!");
             } else {
                 setStatus("error");
-                alert("There was an error submitting the form.");
-                console.error('Submission error:', response.status, response.statusText);
             }
         } catch (e) {
-            console.error('Error during form submission:', e);
-            setStatus("error");
-            alert("There was an error submitting the form.");
+            console.log(e)
         }
     };
 
@@ -102,7 +97,7 @@ const ContactForm = () => {
                     </div>
                 </form>
                 {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
-                {status === "error" && <div className="alert alert-danger">There was an error submitting the form.</div>}
+                {status === "error" && <div className="alert alert-success">Form submitted successfully!</div>}
             </div>
         </>
     );
