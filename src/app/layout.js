@@ -13,7 +13,7 @@ import "../assets/vendors/animate/custom-animate.css";
 import "../assets/vendors/reey-font/stylesheet.css";
 import "../assets/vendors/the-sayinistic-font/stylesheet.css";
 import SiteFooter from "./componants/FooterSection/SiteFooter";
-
+import Header from "./componants/Header/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -104,8 +104,8 @@ export default function RootLayout({ children }) {
 
       </head>
       <body className={inter.className}>
+      <Header/>
       {children}
-      
       <SiteFooter/>
       </body>
     </html>
