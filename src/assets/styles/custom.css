@@ -7,18 +7,12 @@
 .main-menu .main-menu__list ul,
 .stricky-header .main-menu__list,
 .stricky-header .main-menu__list ul {
-  margin-left: -143px !important;
-}
-
-.main-menu .main-menu__list li ul,
-.stricky-header .main-menu__list li ul {
-
-  left: 131px !important;
+  margin-left: 0px !important;
 }
 
 .bannertxthero {
   position: absolute;
-  top: 50%;
+  top: 38%;
   left: 5%;
   z-index: 11;
 }
