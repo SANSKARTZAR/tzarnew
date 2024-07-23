@@ -55,22 +55,22 @@ const footerData = {
     {
       id: 3,
       title: "Our Portfolio",
-      href: "/project",  //Our Portfolio
+      href: "/portfolio",  //Our Portfolio
     },
     {
       id: 11,
       title: "Career",
-      href: "/jobs",  //Our Portfolio
+      href: "/career",  //Our Portfolio
     },
     {
       id: 12,
-      title: "Intership",
-      href: "/intership",  //Our Portfolio
+      title: "Internship",
+      href: "/internship",  //Our Portfolio
     },
     {
       id: 13,
       title: "Blog",
-      href: "/blog",  //Our Portfolio
+      href: "/",  //Our Portfolio
     },
     {
       id: 4,
@@ -80,12 +80,12 @@ const footerData = {
     {
       id: 5,
       title: "News",
-      href: "/blog",
+      href: "/",
     },
     {
       id: 6,
       title: "FAQs",
-      href: "/faq",
+      href: "/faqs",
     },
     {
       id: 7,
@@ -100,7 +100,7 @@ const footerData = {
     {
       id: 9,
       title: "Consultancy",
-      href: "/about",
+      href: "/",
     },
     {
       id: 10,
