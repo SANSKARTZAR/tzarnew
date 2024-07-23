@@ -4,6 +4,7 @@ import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import { TypeAnimation } from 'react-type-animation';
 import { useWindowSize } from "@react-hook/window-size/throttled";
+import ContactForm from '../contact/ContactForm';
 
 function handleButtonClick() {
     const element = document.getElementById('Contactform');
@@ -53,7 +54,9 @@ function StudioBanner() {
                             </div>
                         </Col>
                         <Col xl={4} md={12} sm={12}>
-                            {/* <StudioContact /> */}
+                            <div className="hero-form">
+                                <ContactForm />
+                            </div>
                         </Col>
                     </Row>
                 </div>

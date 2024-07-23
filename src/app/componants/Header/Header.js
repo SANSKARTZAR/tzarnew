@@ -8,7 +8,7 @@ import { Image } from "react-bootstrap";
 import NavItem from "./NavItem";
 import React, { useState } from 'react'
 import Modal from 'react-modal'
-// import PopupHireUs from "@/components/ContactPage/PopupHireUs";
+import PopupHireUs from "../home/PopupHireUs";
 
 const { logo1, logo2, phone, phone1, phoneIcon, navItems } = header;
 
@@ -115,7 +115,8 @@ const Header = ({ pageTitle }) => {
 
                 <button onClick={() => setIsOpen(false)} className="close-form">×</button>
 
-                {/* <PopupHireUs/> */}
+               
+                <PopupHireUs/>
 
               </Modal>
             </div>

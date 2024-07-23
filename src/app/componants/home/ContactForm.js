@@ -17,7 +17,9 @@ function ContactFormSection() {
         <Container>
           <Row>
             <Col xl={6} md={12}>
-              <ContactForm />
+              <div className="form-dev-enquiry">
+                <ContactForm />
+              </div>
             </Col>
             <Col xl={6} md={12}>
               <div className="ContactForm-page__right">

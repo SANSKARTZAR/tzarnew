@@ -171,6 +171,13 @@
 label{
   width:100%;
 }
+.form-dev h5{
+  text-align: center;
+}
+.form-dev-enquiry .form-dev{
+  margin-top: 10%!important;
+}
+
 
 .form-group.formlefttxt {
   width: auto;

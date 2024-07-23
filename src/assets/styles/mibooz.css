@@ -25235,7 +25235,8 @@ img {
 
 .comment-form__input-boxpop input[type="text"],
 .comment-form__input-boxpop input[type="mobile"],
-.comment-form__input-boxpop input[type="email"] {
+.comment-form__input-boxpop input[type="email"],
+.comment-form__input-boxpop input[type="tel"] {
   background: #f5f6f7;
   border: 1px solid #e5e6e7;
   display: block;
