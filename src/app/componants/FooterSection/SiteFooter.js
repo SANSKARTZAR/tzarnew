@@ -104,7 +104,7 @@ const SiteFooter = () => {
                       <br />
                       <li>
                         <div className="button-header-btn">
-                          <Link href="/Singup-Form" className="footer-widget__contact-text footerenq-btn">Enquiry Now</Link>
+                          <Link href="/singup-form" className="footer-widget__contact-text footerenq-btn">Enquiry Now</Link>
                         </div>
                       </li>
                     </ul>
