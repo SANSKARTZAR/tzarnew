@@ -102,11 +102,11 @@ const SiteFooter = () => {
 
                       ))}
                       <br />
-                      <li>
+                      {/* <li>
                         <div className="button-header-btn">
                           <Link href="/singup-form" className="footer-widget__contact-text footerenq-btn">Enquiry Now</Link>
                         </div>
-                      </li>
+                      </li> */}
                     </ul>
 
                   </div>
