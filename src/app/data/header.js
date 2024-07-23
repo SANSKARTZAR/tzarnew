@@ -5,7 +5,7 @@ const navItems = [
   {
     id: 1,
     name: "Our Agency",
-    href: "/OurAgency",
+    href: "/about-us",
     subNavItems: [
       {
         id: 1,
