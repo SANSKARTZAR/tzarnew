@@ -2,7 +2,7 @@
 
 import React from "react";
 import PageHeaderPrivacyPolicy from "@/app/componants/TermsConditions/PageHeaderPrivacyPolicy";
-import Privacypolicy from "@/app/componants/TermsConditions/Terms_Conditions";
+import Privacypolicy from "@/app/componants/TermsConditions/Privacypolicy";
 
 
 export const metadata = {
@@ -15,7 +15,7 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      <PageHeaderPrivacyPolicy page="Terms & Conditions" title="Terms & Conditions" />
+      <PageHeaderPrivacyPolicy page="privacy policy" title="privacy policy" />
       <Privacypolicy />
     </>
   );

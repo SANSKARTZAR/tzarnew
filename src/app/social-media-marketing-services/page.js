@@ -9,8 +9,8 @@ import ContactForm from "../componants/home/ContactForm";
 import SmmService from "../componants/SMMservices/SmmService";
 
 export const metadata = {
-  title: "Social media marketing services | Tzar Digital Marketing Agency in Mumbai",
-  description: "Tzar Digital Marketing Agency",
+  title:"Terms & Conditions - Tzar Venture Online Digital Marketing Services - Tzar Venture",
+  description:"Terms & Conditions - End to End Digital Marketing Services Online." ,
 }
 
 
