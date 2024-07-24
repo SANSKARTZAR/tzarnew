@@ -7,15 +7,10 @@ import PayperClickmgmtS from "../componants/payperclickservice/PayperClickmgmtS"
 import BenefitsPPC from "../componants/payperclickservice/BenefitsPPC";
 import TestimonialThree from "../componants/home/Testimonial/TestimonialThree";
 import ContactForm from "../componants/home/ContactForm";
-// import PayperClickMgmt from "../components/ServicesPG/PayPerClick/PayperClickMgmt";
-// import PayperClickmgmtS from "../components/ServicesPG/PayPerClick/PayperClickmgmtS";
-// import TestimonialThree from "../components/HomePG/Testimonial/TestimonialThree";
-// import ContactForm from "../components/ContactForm/ContactForm";
-// import BenefitsPPC from "../components/ServicesPG/PayPerClick/BenefitsPPC";
 
 export const metadata = {
-  title: "Pay per clicks services | Tzar Digital Marketing Agency in Mumbai",
-  description: "Tzar Digital Marketing Agency",
+   title:"Pay Per Click Management Services - Online Pay Per Click Management Services to boost sales. | Tzar Venture",
+    description:"Pay-Per-Click (PPC) Management Services Online - Pay per click marketing is a paid search model used to build brand awareness, promote brand offerings throung  text ads, display ads, youtube ads and gain immediate traction from specific audience. Tzar venture."
 }
 
 

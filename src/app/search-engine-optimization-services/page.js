@@ -10,23 +10,23 @@ import WhatWeDoLG from "../componants/SEOServices/WhatWeDoSEO";
 import SeoServices from "../componants/SEOServices/SeoServices";
 import ContactForm from "../componants/home/ContactForm";
 
-export const metadata = { 
-  title:"Search Enigne optimization services | Tzar Digital Marketing Agency in Mumbai",
-  description:"Tzar Digital Marketing Agency",
+export const metadata = {
+  title: "Search Engine Optimization - SEO Services Online, SEO On page & SEO Off page Optimization, SEO Agency in India. | Tzar Venture",
+  description: "SEO Agency - 100% Guaranteed Result in 6 Month. Grow Organic Traffic online through On page and Off page Search Engine Optimization technique. | Tzar Venture"
 }
 
 const Page = () => {
   return (
     <>
-<PageHeaderSeo page="Search Engine Optimization" title="Search Engine Optimization"  />
-     <ServicesDetails service={LeadGenerationService1}/>
-     <SeoServiceCards/>
-     <ImgTxtSecSeo/>
-     <BenefitsSEO/>
-     <CTATwoSeo/>
-     <WhatWeDoLG/>
-     <ContactForm/>
-     <SeoServices/>
+      <PageHeaderSeo page="Search Engine Optimization" title="Search Engine Optimization" />
+      <ServicesDetails service={LeadGenerationService1} />
+      <SeoServiceCards />
+      <ImgTxtSecSeo />
+      <BenefitsSEO />
+      <CTATwoSeo />
+      <WhatWeDoLG />
+      <ContactForm />
+      <SeoServices />
     </>
   );
 };

@@ -9,6 +9,11 @@ import BenefitsWD from "../componants/website-dev-services/BenefitsWD";
 import ContactForm from "../componants/home/ContactForm";
 import WdService from "../componants/website-dev-services/WdService";
 
+export const metadata = {
+  title:"Website Development Services  - Custom Website Development Services Online @ Tzar venture",
+    description:"Website Development Services  -  Responsive custom website development service provider at Tzar venture."
+}
+
 const Page = () => {
   return (
     <>

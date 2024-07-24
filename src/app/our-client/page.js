@@ -2,9 +2,9 @@ import React from "react";
 import Client from "../componants/ClientPG/Client";
 import PageHeaderCli from "../componants/ClientPG/PageHeaderCli";
 
-export const metadata = { 
-  title:"Client | Tzar Digital Marketing Agency in Mumbai",
-  description:"Tzar Digital Marketing Agency",
+export const metadata = {
+  title: "Our Client  - Our Digital Marketing Online Clients in India | Tzar Venture",
+  description: "Our Digital Marketing Clients : Tzar Venture has generated leads online for our B2B | B2C clients at provides them unconceivable results through website development, digital marketing and online social media channels."
 }
 
 const Page = () => {

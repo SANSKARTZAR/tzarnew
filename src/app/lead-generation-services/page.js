@@ -12,21 +12,21 @@ import ContactForm from "../componants/home/ContactForm";
 // import ImgTxtSecLG from "../components/ServicesPG/LeadGeneration/ImgTxtSecLG";
 // import SomeFacts from "../components/ServicesPG/LeadGeneration/SomeFacts";
 
-export const metadata = { 
-  title:"Lead generation services | Tzar Digital Marketing Agency in Mumbai",
-  description:"Tzar Digital Marketing Agency",
+export const metadata = {
+  title: "Lead Generation Services - Get 100% Qualified Leads for B2B and B2C Companies | Tzar Venture",
+  description: "Lead Generation Services - Get 100% Qualified leads for B2B, B2C, Edu tech & Startups - Tzar Venture"
 }
 
 
 const Page = () => {
   return (
     <>
-    <PageHeaderLeadG page="Lead Generation" title="Lead Generation"/>
-    <LeadGeneration/>
-    <WhatWeDoLG/>
-    <ImgTxtSecLG/>
-    <SomeFacts/>
-    <ContactForm/>
+      <PageHeaderLeadG page="Lead Generation" title="Lead Generation" />
+      <LeadGeneration />
+      <WhatWeDoLG />
+      <ImgTxtSecLG />
+      <SomeFacts />
+      <ContactForm />
     </>
   );
 };

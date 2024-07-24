@@ -6,17 +6,10 @@ import PackagingDesignServ from "../componants/productDservices/PackagingDesignS
 import SomeFacts from "../componants/LeadGServices/SomeFacts";
 import CountsLG from "../componants/LogoDService/Counts/CountsLG";
 import ContactForm from "../componants/home/ContactForm";
-// import PageHeaderPPD from "../components/PageHeader/PageHeaderFAQ";
-// import ServicesDetails from "../components/ServicesPG/ServicesDetails/ServicesDetails";
-// import { LeadGenerationService2 } from "@/app/data/servicesDetails";
-// import PackagingDesignServ from "../components/ServicesPG/ProductDesign/PackagingDesignServ";
-// import CountsLG from "../components/ServicesPG/LogoDesing/Counts/CountsLG";
-// import SomeFacts from "../components/ServicesPG/LeadGeneration/SomeFacts";
-// import ContactForm from "../components/ContactForm/ContactForm";
 
 export const metadata = { 
-  title:"Product design packaging services | Tzar Digital Marketing Agency in Mumbai",
-  description:"Tzar Digital Marketing Agency",
+  title:"Tzar Digital Agency: Expert In Product Packaging Design Services",
+    description:"Tzar Digital's packaging design services elevate your brand. Specialists create compelling, customized packaging boosting visibility and differentiation. Complimentary consultations discuss first impressions and solutions tailored to your business goals."
 }
 
 

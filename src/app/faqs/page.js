@@ -4,9 +4,9 @@ import CTAOne from "../componants/home/CTAOne";
 import PageHeaderFAQ from "../componants/faqs/PageHeaderFAQ";
 import ContactForm from "../componants/home/ContactForm";
 
-export const metadata = { 
-  title:"FAQs | Tzar Digital Marketing Agency in Mumbai",
-  description:"Tzar Digital Marketing Agency",
+export const metadata = {
+  title: "FAQs - Custom Logo Design. Business logos design by professionls online - Tzar venture",
+  description: "Custom Services Online FAQs - Tzar Venture do not sell products we make ICONIC Brands. "
 }
 
 const Page = () => {
@@ -14,7 +14,7 @@ const Page = () => {
     <>
       <PageHeaderFAQ title="FAQs" />
       <FaqPage />
-      <ContactForm/>
+      <ContactForm />
       <CTAOne />
     </>
   );

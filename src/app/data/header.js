@@ -39,7 +39,7 @@ const navItems = [
       {
         id: 5,
         name: "FAQs",
-        href: "/faq",
+        href: "/faqs",
       },
 
     ],

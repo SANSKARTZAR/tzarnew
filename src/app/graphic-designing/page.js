@@ -21,8 +21,8 @@ import ContactForm from "../componants/home/ContactForm";
 // import ContactForm from "../components/ContactForm/ContactForm";
 
 export const metadata = {
-  title: "Graphic designing services | Tzar Digital Marketing Agency in Mumbai",
-  description: "Tzar Digital Marketing Agency",
+  title: "Graphic Design Services - Creative Banners, Logo Design, Custom Design Online services | Agency in Indian - Tzar Venture",
+  description: "Online Graphic Design Services - Print Design Services · Flyer Design · Postcard Design · Brochure Design · Poster Design · Advertisement Design · Catalogue Design · Envelope Design · Magazine Design Online - Tzar Venture."
 }
 
 const Page = () => {

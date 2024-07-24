@@ -8,8 +8,8 @@ import AdsSingup from "../componants/OutdoorAds/AdsSingup";
 import PrimeClients from "../componants/OutdoorAds/PrimeClients";
 
 export const metadata = { 
-  title:"Outdoor ads services | Tzar Digital Marketing Agency in Mumbai",
-  description:"Tzar Digital Marketing Agency",
+  title:"Outdoor ads Services - Custom Logo Design. Business logos design by professionls online - Tzar venture",
+  description:"Outdoor ads - Tzar Venture do not sell products we make ICONIC Brands. " 
 }
 
 const Outdoorads = ()=> {

@@ -9,8 +9,8 @@ import ContactForm from "../componants/home/ContactForm";
 import SmmService from "../componants/SMMservices/SmmService";
 
 export const metadata = {
-  title:"Terms & Conditions - Tzar Venture Online Digital Marketing Services - Tzar Venture",
-  description:"Terms & Conditions - End to End Digital Marketing Services Online." ,
+  title:"Social Media Marketing Services - Upscale your Brand & Sale with Social Media Marketing Service | Tzar Venture",
+    description:"Social Media Paid Marketing Services - Social Media Ad Agency for celebrities, B2B, B2C, EduTect, Ecommerce, Politicians Online. | Tzar Venture"
 }
 
 

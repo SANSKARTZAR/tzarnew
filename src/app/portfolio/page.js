@@ -3,8 +3,8 @@ import ProtfoiloGalleryTab from "../componants/PortfolioPG/ProtfoiloGalleryTab";
 import PageHeaderportfolio from "../componants/PortfolioPG/PageHeaderportfolio";
 
 export const metadata = {
-  title: "Portfolio | Tzar Digital Marketing Agency in Mumbai",
-  description: "Tzar Digital Marketing Agency",
+  title:"Tzar Digital Agency | Expert Solutions for Creative Web Design & Digital Marketing",
+        description:"Browse Tzar Digital's portfolio featuring cutting-edge websites and impactful campaigns. Boost your online brand with our strategic and creative expertise. Reach out to discuss customized plans proven to engage customers, increase sales and take your business to new heights."
 }
 
 const Page = () => {
