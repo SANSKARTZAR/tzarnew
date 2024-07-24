@@ -94,7 +94,7 @@ const WelcomeOne = () => {
                         <h4 className="welcome-one__bottom-right-title">
                           {bottomRightTitle}
                         </h4>
-                        <Link className="thm-btn welcome-one__btn" href="/about">read more
+                        <Link className="thm-btn welcome-one__btn" href="/about-us">read more
                         </Link>
                       </div>
                     </div>

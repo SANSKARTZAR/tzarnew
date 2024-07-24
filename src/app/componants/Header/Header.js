@@ -116,7 +116,7 @@ const Header = ({ pageTitle }) => {
                 <button onClick={() => setIsOpen(false)} className="close-form">×</button>
 
                
-                <PopupHireUs/>
+                {/* <PopupHireUs/> */}
 
               </Modal>
             </div>
