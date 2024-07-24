@@ -6,6 +6,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 // import AdsContact from '../ContactPage/AdsContact';
 import AdsHeroslider from './AdsHeroslider';
 import { TypeAnimation } from 'react-type-animation';
+import ContactForm from '../contact/ContactForm';
 
 function OutdoorHeader() {
     const [width, height] = useWindowSize({ fps: 60 });
@@ -35,7 +36,7 @@ function OutdoorHeader() {
                                 </div>
                             </Col>
                             <Col xl={5} md={5} sm={12}>
-                                {/* <AdsContact /> */}
+                                <ContactForm/>
                             </Col>
                         </Row>
                     </Container>
@@ -57,7 +58,7 @@ function OutdoorHeader() {
                             </div>
                         </Col>
                         <Col xl={12} md={12} sm={12}>
-                            {/* <AdsContact /> */}
+                        <ContactForm/>
                         </Col>
                     </Row>
                 </Container>
