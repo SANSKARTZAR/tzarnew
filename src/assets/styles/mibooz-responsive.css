@@ -136598,8 +136598,8 @@ margin-top: 161px;
     position: relative;
     display: block;
     padding: 0px 0 97px;
-    margin-top: -77px;
-    margin-bottom: -76px;
+    margin-top: 0;
+    margin-bottom: 0;
     z-index: 1;
   }
 
@@ -139385,8 +139385,8 @@ margin-top: 161px;
 
   .mainEc {
     max-width: 1920px;
-    height: 400px;
-    margin-left: -23px;
+    height: auto;
+    margin-left: 0;
   }
 
   .section-title5 {
