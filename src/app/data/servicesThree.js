@@ -17,7 +17,7 @@ const servicesThree = {
       id: 1,
       title: "Website \n development",
       icon: "icon-front-end",
-      link: "/WebsiteDevelopment",
+      link: "/website-development-services",
       text: "We create user friendly websites which showcase your product in best possible manner.",
 
     },
@@ -25,7 +25,7 @@ const servicesThree = {
       id: 2,
       title: "Logo Design",
       icon: "icon-front-end",
-      link: "/logodesign",
+      link: "/logo-design-services",
       text: "We create logo which can speak for your brand.",
 
     },
@@ -33,7 +33,7 @@ const servicesThree = {
       id: 3,
       title: "Search Engine Optimization",
       icon: "icon-growth",
-      link: "/searchengineoptimization",
+      link: "/search-engine-optimization-services",
       text: "On page, off page optimization and link building strategies.",
 
     },
@@ -41,7 +41,7 @@ const servicesThree = {
       id: 4,
       title: "Lead Generation",
       icon: "icon-front-end",
-      link: "/leadgeneration",
+      link: "/lead-generation-services",
       text: "Generating qualified leads for your business with mix of strategies.",
 
     },
@@ -49,7 +49,7 @@ const servicesThree = {
       id: 5,
       title: "Pay-Per-Click ",
       icon: "icon-front-end",
-      link: "/payperclick",
+      link: "/pay-per-click-services",
       text: "Just pay for results. We can bring clients to your business tomorrow!.",
 
     },
@@ -57,7 +57,7 @@ const servicesThree = {
       id: 6,
       title: "Product Design & Packaging ",
       icon: "icon-front-end",
-      link: "/productdesignpackaging",
+      link: "/product-design-packaging-services",
       text: "It plays a cucial role in sale of product. We are curator of customised package design.",
 
     },
@@ -65,7 +65,7 @@ const servicesThree = {
       id: 7,
       title: "Social Media Marketing ",
       icon: "icon-front-end",
-      link: "/social-marketing",
+      link: "/social-media-marketing-services",
       text: "Get a stronger presence and customer base on social media channels.",
 
     },
@@ -73,7 +73,7 @@ const servicesThree = {
       id: 8,
       title: "Graphic Designing",
       icon: "icon-front-end",
-      link: "/graphicdesigning",
+      link: "/graphic-designing",
       text: "Creative banners to display your product beautifully.",
 
     },
@@ -81,7 +81,7 @@ const servicesThree = {
       id: 9,
       title: "Content Marketing ",
       icon: "icon-front-end",
-      link: "/content-marketing",
+      link: "/content-marketing-services",
       text: "One of the most effective and long-term tools to date to enhance loyalty",
 
     },

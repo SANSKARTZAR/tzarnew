@@ -41,7 +41,7 @@ function PopupHireUs() {
 
   return (
     <>
-      <div id="Contactform" className="popup-form-hireus">
+      <section id="Contactform" className="popup-form-hireus">
         <Container>
           <div className="hireus-form">
 
@@ -49,7 +49,7 @@ function PopupHireUs() {
               <form onSubmit={handleSubmit} target="_blank" className="comment-one__form contact-form-validated">
 
                 <div className="pophead">
-                  <img src="TzarLogo-09.png" alt='logo' width="80" />
+                  {/* <img src="TzarLogo-09.png" alt='logo' width="80" /> */}
                   <h2 className="poptitle">{poptitle}</h2>
                   <p>{popdec}</p>
                 </div>
@@ -136,7 +136,7 @@ function PopupHireUs() {
             </div>
           </div>
         </Container>
-      </div>
+      </section>
 
     </>
   )
