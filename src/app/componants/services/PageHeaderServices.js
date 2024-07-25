@@ -20,18 +20,18 @@ const PageHeaderServices = ({ page = "", title = "", parent = "" }) => {
       ></div>
       <Container>
         <div className="page-header__innerSer">
-          <ul className="thm-breadcrumb list-unstyledSer">
-            <li>
-              <Link href="/">Home</Link>/
-            </li>{" "}
-            {parent && (
+        <h2>{title || page}</h2>
+            <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
-                <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>
-              </li>
-            )}{" "}
-            <li>{page || title}</li>
-          </ul>
-          <h2>{title || page}</h2>
+                <Link href="/">Home</Link>/
+              </li>{" "}
+              {parent && (
+                <li>
+                  <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>/
+                </li>
+              )}{" "}
+              <li>{page || title}</li>
+            </ul>
         </div>
       </Container>
     </section>
@@ -47,18 +47,18 @@ const PageHeaderServices = ({ page = "", title = "", parent = "" }) => {
         ></div>
         <Container>
           <div className="page-header__innerSer">
-            <ul className="thm-breadcrumb list-unstyledSer">
+          <h2>{title || page}</h2>
+            <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
-                <Link href="/">Home</Link> /
+                <Link href="/">Home</Link>/
               </li>{" "}
               {parent && (
                 <li>
-                  <Link href={`/${parent.toLowerCase()}`}>{parent}/</Link>
+                  <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>/
                 </li>
               )}{" "}
               <li>{page || title}</li>
             </ul>
-            <h2>{title || page}</h2>
           </div>
         </Container>
       </section>

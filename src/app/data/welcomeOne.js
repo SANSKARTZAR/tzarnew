@@ -8,7 +8,7 @@ const welcomeOne = {
   person,
   personName: "R.Rastogi",
   experience: 10,
-  tagline: "Our introduction",
+  tagline: "Introduction",
   title: "A LEADING DIGITAL MARKETING AGENCY",
   text: "TZAR is a Digital agency that combines creativity, strategy and execution to help businesses reach their online goals.",
   bottomTitle: "Empowering Through \n Seamless Digital Strategies ",

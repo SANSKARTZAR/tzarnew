@@ -19,18 +19,18 @@ const PageHeaderCK = ({ page = "", title = "", parent = "" }) => {
       ></div>
       <Container>
       <div className="page-header__innerAuW">
-      <ul className="thm-breadcrumb list-unstyledAuW">
-            <li>
-              <Link href="/">Home</Link>/
-            </li>{" "}
-            {parent && (
+      <h2>{title || page}</h2>
+            <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
-                <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>
-              </li>
-            )}{" "}
-            <li>{page || title}</li>
-          </ul>
-          <h2>{title || page}</h2>
+                <Link href="/">Home</Link>/
+              </li>{" "}
+              {parent && (
+                <li>
+                  <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>/
+                </li>
+              )}{" "}
+              <li>{page || title}</li>
+            </ul>
         </div>
       </Container>
     </section>
@@ -45,18 +45,18 @@ return (
       ></div>
       <Container>
       <div className="page-header__innerAuW">
-      <ul className="thm-breadcrumb list-unstyledAuW">
-            <li>
-              <Link href="/">Home</Link>/
-            </li>{" "}
-            {parent && (
+      <h2>{title || page}</h2>
+            <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
-                <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>
-              </li>
-            )}{" "}
-            <li>{page || title}</li>
-          </ul>
-          <h2>{title || page}</h2>
+                <Link href="/">Home</Link>/
+              </li>{" "}
+              {parent && (
+                <li>
+                  <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>/
+                </li>
+              )}{" "}
+              <li>{page || title}</li>
+            </ul>
         </div>
       </Container>
     </section>

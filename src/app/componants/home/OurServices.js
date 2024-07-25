@@ -42,7 +42,7 @@ const OurServices = () => {
             {services.map((service) => (
               <SingleService key={service.id} service={service} />
             ))}
-            <Col xl={4} lg={4} className="animated fadeInUp">
+            {/* <Col xl={4} lg={4} className="animated fadeInUp">
               <div className="services-one__view-all">
                 <div className="services-one__view-all-title-box">
                   <h3 className="services-one__view-all-title">
@@ -61,8 +61,13 @@ const OurServices = () => {
                   </Link>
                 </div>
               </div>
-            </Col>
+            </Col> */}
           </Row>
+          <div className="viewallservice-btn">
+            <Link href="/services" className="BtnStudio GraphicDesigning__studiobtn">
+              View All Services
+            </Link>
+          </div>
         </div>
       </Container>
     </section>

@@ -9,57 +9,57 @@ import { useWindowSize } from "@react-hook/window-size/throttled";
 const PageHeaderInternship = ({ page = "", title = "", parent = "" }) => {
   const [width, height] = useWindowSize({ fps: 60 });
   const breakpoint = 500;
-  if (width > breakpoint) { 
-  return (
-    <section className="page-header">
-      <div
-        className="page-header-bgAu"
-        style={{ backgroundImage: `url(${bg2.src})` }}
-      ></div>
-      <Container>
-      <div className="page-header__innerAuW">
-      <ul className="thm-breadcrumb list-unstyledAuW">
-            <li>
-              <Link href="/">Home</Link>/
-            </li>{" "}
-            {parent && (
+  if (width > breakpoint) {
+    return (
+      <section className="page-header">
+        <div
+          className="page-header-bgAu"
+          style={{ backgroundImage: `url(${bg2.src})` }}
+        ></div>
+        <Container>
+          <div className="page-header__innerAuW">
+            <h2>{title || page}</h2>
+            <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
-                <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>
-              </li>
-            )}{" "}
-            <li>{page || title}</li>
-          </ul>
-          <h2>{title || page}</h2>
-        </div>
-      </Container>
-    </section>
-  )
-}
+                <Link href="/">Home</Link>/
+              </li>{" "}
+              {parent && (
+                <li>
+                  <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>/
+                </li>
+              )}{" "}
+              <li>{page || title}</li>
+            </ul>
+          </div>
+        </Container>
+      </section>
+    )
+  }
 
-return (
+  return (
     <section className="page-header">
       <div
         className="page-header-bgWd"
         style={{ backgroundImage: `url(${bg31.src})` }}
       ></div>
       <Container>
-      <div className="page-header__innerAuW">
-      <ul className="thm-breadcrumb list-unstyledAuW">
+        <div className="page-header__innerAuW">
+          <h2>{title || page}</h2>
+          <ul className="thm-breadcrumb list-unstyledAuW">
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}
             {parent && (
               <li>
-                <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>
+                <Link href={`/${parent.toLowerCase()}`}>{parent}</Link>/
               </li>
             )}{" "}
             <li>{page || title}</li>
-          </ul> 
-          <h2>{title}</h2>
+          </ul>
         </div>
       </Container>
     </section>
-   )
+  )
 }
 
 

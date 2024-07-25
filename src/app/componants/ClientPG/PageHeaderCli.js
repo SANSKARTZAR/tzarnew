@@ -21,7 +21,8 @@ const PageHeaderCli = ({ page = "", title = "", parent = "" }) => {
         ></div>
         <Container>
         <div className="page-header__innerAuW">
-        <ul className="thm-breadcrumb list-unstyledAuW">
+        <h2>{title || page}</h2>
+            <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
                 <Link href="/">Home</Link>/
               </li>{" "}
@@ -32,7 +33,6 @@ const PageHeaderCli = ({ page = "", title = "", parent = "" }) => {
               )}{" "}
               <li>{page || title}</li>
             </ul>
-            <h2>{title || page}</h2>
           </div>
         </Container>
       </section>
@@ -48,7 +48,8 @@ const PageHeaderCli = ({ page = "", title = "", parent = "" }) => {
         ></div>
         <Container>
         <div className="page-header__innerAuW">
-        <ul className="thm-breadcrumb list-unstyledAuW">
+        <h2>{title || page}</h2>
+            <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
                 <Link href="/">Home</Link>/
               </li>{" "}
@@ -59,7 +60,6 @@ const PageHeaderCli = ({ page = "", title = "", parent = "" }) => {
               )}{" "}
               <li>{page || title}</li>
             </ul>
-            <h2>{title || page}</h2>
           </div>
         </Container>
       </section>
