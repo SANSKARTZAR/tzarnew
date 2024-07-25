@@ -21,9 +21,9 @@ const Sidebar = () => {
           {categories.map(({ id, title, href }) => (
             <li key={id} className={pathname === href ? "current" : ""}>
               <Link href={href}>
-                
-                  {title} <span className="icon-arrow-right"></span>
-                                
+
+                {title} <span className="icon-arrow-right"></span>
+
               </Link>
             </li>
           ))}
@@ -40,13 +40,21 @@ const Sidebar = () => {
         <h2 className="service-details__need-help-title">
           <TextSplit text={title} />
         </h2>
-        <div className="service-details__need-help-contact">
+        <p className="sidebar-para"> Hi there! I'm committed to helping businesses grow. Will yours be next?</p>
+
+        <Link href="/tzar-studio" className="BtnStudio GraphicDesigning__studiobtn">
+          Enquire Now
+        </Link>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <Link href="/tzar-studio" className="BtnStudio GraphicDesigning__studiobtn">
+          Hire Us
+        </Link>
+        {/* <div className="service-details__need-help-contact">
           <p>Call us Anytime</p>
           <Link href={`tel:${phone}`}>+ {phone}</Link>
           <br></br>
           <Link href={`tel:${phone1}`}>+ {phone1}</Link>
-
-        </div>
+        </div> */}
       </div>
     </div>
   );

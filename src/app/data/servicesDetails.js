@@ -72,7 +72,7 @@ const servicesDetails = {
   needHelp: {
     bg: NeedHelpBg,
     icon: "icon-phone-call",
-    title: "Best Quality \n services",
+    title: "Want to increase your traffic?",
     phone: "91 730-405-6607", 
     phone1:"91 776-077-5875",
   },
