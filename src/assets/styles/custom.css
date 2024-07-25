@@ -33,6 +33,9 @@
 }
 
 .heroBtn {
+  color: #000 !important;
+  background: rgb(251, 158, 61);
+  background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%);
   padding: 10px 20px !important;
   border-radius: 50px !important;
 }
@@ -68,10 +71,12 @@
   padding: 10px 10px;
   color: #fff;
 }
+
 .form-inputs::placeholder {
   color: red;
-  opacity: 1; 
+  opacity: 1;
 }
+
 .checkbox-div {
   display: flex;
 }
@@ -86,8 +91,10 @@
 }
 
 .btn-submit {
-  background-color: #05377a !important;
-  color: #fff !important;
+  /* background-color: #05377a !important; */
+  background: rgb(251, 158, 61);
+  background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%);
+  color: #000000 !important;
   border-radius: 20px !important;
   padding: 5px 15px !important;
 }
@@ -146,9 +153,11 @@
   border-bottom: 3px solid #023878;
   margin: 20px 0;
 }
-.seoweb{
+
+.seoweb {
   text-align: justify;
 }
+
 /* --------------form start---------------- */
 
 .EnquiryForm input[type=email],
@@ -168,14 +177,17 @@
   color: #fff;
   display: block;
 }
-label{
-  width:100%;
+
+label {
+  width: 100%;
 }
-.form-dev h5{
+
+.form-dev h5 {
   text-align: center;
 }
-.form-dev-enquiry .form-dev{
-  margin-top: 10%!important;
+
+.form-dev-enquiry .form-dev {
+  margin-top: 10% !important;
 }
 
 
@@ -186,6 +198,7 @@ label{
   margin-top: 13px !important;
   margin-bottom: 0px;
 }
+
 /* --------------form end---------------- */
 
 /* components/Carousel.module.css */
@@ -202,4 +215,3 @@ label{
   width: 100%;
   height: auto;
 }
-

@@ -21683,6 +21683,8 @@ margin-top: 161px;
   .site-footer__top-left-phone {
     font-size: 24px;
     color: #f5f5f5;
+    background: rgb(251, 158, 61);
+    background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%);
     padding: 5px 10px;
     border-radius: 15px;
     background-color: var(--mibooz-primary);
@@ -22940,11 +22942,12 @@ margin-top: 161px;
     display: inline-block;
     vertical-align: middle;
     outline: none !important;
-    background-color: transparent;
+    /* background-color: transparent; */
+    color: #000;
+    background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%);
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
-    /* padding: 14px 58px 14px; */
     padding: 12px 32px;
     transition: all 0.3s linear;
     overflow: hidden;
@@ -23445,8 +23448,8 @@ margin-top: 161px;
     margin: 0px;
     margin-top: 70px;
     margin-bottom: 50px;
-    padding:50px;
-    gap:30px;
+    padding: 50px;
+    gap: 30px;
   }
 
   .titleHeadSEO {
@@ -134788,10 +134791,11 @@ margin-top: 161px;
 
 
 @media only screen and (min-width: 360px) and (max-width:393px) {
- 
-  .heroBtn{
+
+  .heroBtn {
     font-size: 10px !important;
   }
+
   /* .form-dev{
     margin: 0;
   } */
@@ -154155,8 +154159,10 @@ margin-top: 161px;
 }
 
 .BtnStudio {
-  /* background: linear-gradient(95deg, rgba(6,100,210,1) 0%, rgba(248,0,255,1) 100%); */
-  background-color: #023878;
+  /* background-color: #023878; */
+  color: #000;
+  background: rgb(251, 158, 61);
+  background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%);
   border: none;
   border-radius: 50px;
   padding: 7px 15px;
@@ -154199,16 +154205,20 @@ margin-top: 161px;
 
 @media(max-width:768px) {
 
-  .EnquiryForm input[type=email], .EnquiryForm input[type=tel], .EnquiryForm input[type=text], .EnquiryForm select{
+  .EnquiryForm input[type=email],
+  .EnquiryForm input[type=tel],
+  .EnquiryForm input[type=text],
+  .EnquiryForm select {
     margin-bottom: 10px;
   }
 
-.heroBtn{
-  font-size: 10px;
-}
-.form-dev{
-  margin: 0!important;
-}
+  .heroBtn {
+    font-size: 10px;
+  }
+
+  .form-dev {
+    margin: 0 !important;
+  }
 
   .singupform-btn {
     text-align: center;
