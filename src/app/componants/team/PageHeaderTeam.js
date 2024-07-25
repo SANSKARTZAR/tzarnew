@@ -15,11 +15,11 @@ const PageHeaderTeam = ({ page = "", title = "", parent = "" }) => {
   return (
     <section className="page-header">
       <div
-        className="page-header-bgSer"
+        className="page-header-bgAu"
         style={{ backgroundImage: `url(${bg1.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerSer">
+      <div className="page-header__innerAuW">
         <h2>{title || page}</h2>
             <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
@@ -42,11 +42,11 @@ const PageHeaderTeam = ({ page = "", title = "", parent = "" }) => {
     <>
       <section className="page-header">
         <div
-          className="page-header-bgSer"
+          className="page-header-bgWd"
           style={{ backgroundImage: `url(${bg11.src})`, width: '100%', height: '100%' }}
         ></div>
         <Container>
-          <div className="page-header__innerSer">
+        <div className="page-header__innerAuW">
           <h2>{title || page}</h2>
             <ul className="thm-breadcrumb list-unstyledAuW">
               <li>
