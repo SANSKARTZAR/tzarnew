@@ -9946,7 +9946,7 @@
     position: relative;
     display: block;
     display: flex;
-    height: 85px;
+    height: 100px;
   }
 
   .section-title5 span {
@@ -137206,7 +137206,8 @@ margin-top: 161px;
   .section-titlemk {
     padding-top: 120px;
     margin-bottom: -180px;
-    margin-left: -1541px;
+    margin-left: 0;
+    width:100%;
   }
 
   .section-title__taglinemk {
@@ -154205,6 +154206,10 @@ margin-top: 161px;
 }
 
 @media(max-width:768px) {
+
+  /* .tns-outer{
+    margin-left:-74px;
+  } */
 
   .EnquiryForm input[type=email],
   .EnquiryForm input[type=tel],
