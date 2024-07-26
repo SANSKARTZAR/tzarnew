@@ -139938,8 +139938,8 @@ margin-top: 161px;
     display: inline-block;
     color: var(--mibooz-base);
     font-size: 11px;
-    margin-left: -428px;
-    margin-top: -50px;
+    margin-left: 0px;
+    margin-top: 0px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: all 500ms ease;
@@ -140586,18 +140586,26 @@ margin-top: 161px;
     height: 1948px;
     z-index: 1;
   }
-
+  .service-details {
+    padding: 10px 0;
+    margin: 0px;
+}
   .ServiceSEOContainer {
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 709px;
-    margin-top: 50px;
+    grid-template-rows: repeat(1, 1fr);
+    height: auto;
+    margin-top: 0px;
     background-color: #f6f6f6;
     z-index: 1;
   }
-
+  .service-details__need-help-title {
+    font-size: 30px;
+}
+.ImgTxtSecSeo-pagenew h1 {
+  font-size: 30px!important;
+}
   .SEOservicons {
     width: 90px;
     height: 90px;
@@ -140683,9 +140691,9 @@ margin-top: 161px;
     color: #100f12;
     font-weight: 400;
     text-align: justify;
-    width: 449px;
-    max-width: 102%;
-    margin-left: -10px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .ImgTxtSecSeo__right-text-13 {
@@ -140693,9 +140701,9 @@ margin-top: 161px;
     color: #100f12;
     font-weight: 400;
     text-align: justify;
-    width: 449px;
-    max-width: 102%;
-    margin-left: -10px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .ImgTxtSecSeo__right-text-14 {
@@ -140703,9 +140711,9 @@ margin-top: 161px;
     color: #100f12;
     font-weight: 400;
     text-align: justify;
-    width: 449px;
-    max-width: 102%;
-    margin-left: -10px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
 
@@ -140714,7 +140722,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     height: 1143px;
-    margin-top: 788px;
+    margin-top: 0;
     z-index: 1;
   }
 
@@ -140856,7 +140864,7 @@ margin-top: 161px;
   .cta-Three__btn {
     border: 1.5px solid #023878;
     color: #000000;
-    margin-left: 226px;
+    margin-left: 171px;
     margin-top: 70px;
     box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px, rgb(0 0 0 / 22%) 0px 10px 10px;
   }
@@ -141241,7 +141249,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     text-align: left;
-    margin-left: 380px;
+    margin-left: 0px;
     margin-top: -169px;
     z-index: 2;
   }
@@ -141249,9 +141257,9 @@ margin-top: 161px;
   .list-unstyledAuW {
     padding-left: 0;
     list-style: none;
-    margin-left: 90px;
-    margin-top: -54px;
-    width: 777px;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
   }
 
   .page-header__innerAuW h2 {
@@ -141259,10 +141267,10 @@ margin-top: 161px;
     color: var(--mibooz-base);
     line-height: 31px;
     text-transform: uppercase;
-    margin-top: -5px;
-    margin-left: -390px;
-    width: 358px;
-    text-align: center;
+    margin-top: 0;
+    margin-left: 0px;
+    width: 100%;
+    /* text-align: center; */
 
   }
 
@@ -144810,7 +144818,7 @@ margin-top: 161px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 1fr);
     height: 709px;
-    margin-top: 50px;
+    margin-top: 0px;
     background-color: #f6f6f6;
     z-index: 1;
   }
