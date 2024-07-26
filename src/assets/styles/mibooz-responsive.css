@@ -136629,8 +136629,8 @@ margin-top: 161px;
   .list-unstyledAuW {
     padding-left: 0;
     list-style: none;
-    margin-left: 53px;
-    margin-top: -54px;
+    margin-left: 45px;
+    margin-top: 0;
     width: 777px;
   }
 
@@ -137400,14 +137400,17 @@ margin-top: 161px;
     vertical-align: middle;
     /* -webkit-appearance: none; */
     outline: none !important;
-    background-color: transparent;
+    /* background-color: transparent; */
+    color:#000;
+    background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%);
+    border-radius: 50px;
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
     padding: 14px 27px 14px;
     transition: all 0.3s linear;
     overflow: hidden;
-    border: 2px solid var(--mibooz-primary);
+    border: 0px solid var(--mibooz-primary);
     z-index: 1;
     font-family: var(--mibooz-font-two);
     text-shadow: 0 0 0.25px currentColor;
