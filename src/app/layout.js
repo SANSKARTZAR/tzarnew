@@ -30,7 +30,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  const { menuStatus } = useRootContext;
 
   return (
     <html lang="en">
@@ -118,7 +117,6 @@ export default function RootLayout({ children }) {
       <Header/>
       {children}
       <SiteFooter/>
-      {menuStatus && <MobileMenu/> }
 
       </body>
     </html>

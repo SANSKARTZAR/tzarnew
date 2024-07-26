@@ -35,11 +35,7 @@ const MobileMenu = () => {
   // };
   return (
     <>
-    {/* <div 
-      className={`mobile-nav__wrapper  animated fadeInLeft${
-        menuStatus ? " expanded" : ""
-      }`}
-    > */}
+    {/* <div className="mobile-nav__wrapper  animated " > */}
       {/* <div
         onClick={() => toggleMenu()}
         className="mobile-nav__overlay mobile-nav__toggler"
