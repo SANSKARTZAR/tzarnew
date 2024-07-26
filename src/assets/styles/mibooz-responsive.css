@@ -141300,10 +141300,10 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 100px;
-    padding-left: -10px;
+    padding-left: 0px;
     margin-top: 10px;
     width: 100%;
-    height: 2329px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -141500,12 +141500,16 @@ margin-top: 161px;
   .BenefitsWDContainer {
     position: relative;
     display: block;
-    height: 863px;
-    margin-top: -50px;
+    height: auto;
+    margin-top: 0px;
     background-color: #023878;
     z-index: 1;
+    padding: 0;
   }
-
+  .GraphicDesigning-page {
+   
+    padding: 20px 0 20px;
+}
   .boxContainerMainBenefitsWD {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -141791,6 +141795,10 @@ margin-top: 161px;
     flex-wrap: wrap;
     list-style: none;
     margin-left: -8px;
+    gap:5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .cardsWd {
@@ -141798,6 +141806,10 @@ margin-top: 161px;
     flex-wrap: wrap;
     list-style: none;
     margin-left: -8px;
+    gap:5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .cardsPDR {
@@ -141805,6 +141817,10 @@ margin-top: 161px;
     flex-wrap: wrap;
     list-style: none;
     margin-left: -8px;
+    gap:5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .cardsGd {
@@ -141812,6 +141828,10 @@ margin-top: 161px;
     flex-wrap: wrap;
     list-style: none;
     margin-left: -8px;
+    gap:5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .cardsPMD {
@@ -141819,13 +141839,21 @@ margin-top: 161px;
     flex-wrap: wrap;
     list-style: none;
     margin-left: -8px;
+    gap:5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .cardsAi {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     list-style: none;
     margin-left: -8px;
+    gap:5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
 
@@ -143137,9 +143165,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: -96px;
+    margin-top: 0;
     width: 100%;
-    height: 1519px;
+    height: auto;
 
   }
 
@@ -143177,10 +143205,10 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 32px;
-    padding-left: -50px;
-    margin-top: 911px;
+    padding-left: 0px;
+    margin-top: 0;
     width: 100%;
-    height: 962px;
+    height: auto;
   }
 
   .mainGd {
@@ -143217,7 +143245,7 @@ margin-top: 161px;
     padding-top: 44px;
     margin-top: 100px;
     width: 100%;
-    height: 1770px;
+    height: auto;
     /* background-color: #023878; */
   }
 
@@ -143251,10 +143279,10 @@ margin-top: 161px;
     position: relative;
     display: inline-block;
     margin-left: 3px;
-    padding-top: -40px;
-    margin-top: 68px;
+    padding-top: 0px;
+    margin-top: 0px;
     width: 100%;
-    height: 1030px;
+    height: auto;
   }
 
 
@@ -143290,9 +143318,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 258px;
+    margin-top: 0;
     width: 100%;
-    height: 667px;
+    height: auto;
   }
 
 
@@ -143329,11 +143357,13 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 350px;
+    margin-top: 0;
     width: 100%;
-    height: 1510px;
+    height: auto;
   }
-
+  .cards_itemAi {
+    padding-left: 0px;
+}
   .mainAi {
     max-width: 1920px;
     margin-left: 9px;
@@ -147374,8 +147404,8 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 32px;
-    padding-left: -50px;
-    margin-top: 1058px;
+    padding-left: 0px;
+    margin-top: 0;
     width: 100%;
     height: 962px;
   }
@@ -147520,9 +147550,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 394px;
+    margin-top: 0;
     width: 100%;
-    height: 1607px;
+    height: auto;
   }
 
   .mainAi {

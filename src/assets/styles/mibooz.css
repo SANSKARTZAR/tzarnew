@@ -19932,6 +19932,9 @@ img {
   gap: 40px;
   padding: 18px;
 }
+.boxContainerWDnew h1,.boxContainerWDnew p {
+  color: #fff;
+}
 
 .cardsWDv1 {
   display: grid;
