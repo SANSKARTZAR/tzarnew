@@ -140977,7 +140977,7 @@ margin-top: 161px;
     padding-top: 100px;
     margin-top: 10px;
     width: 100%;
-    height: 1392px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -140990,16 +140990,16 @@ margin-top: 161px;
   .SMMCards-page h1 {
     text-align: center;
     font-size: 2.2rem;
-    margin-left: -165px;
+    margin-left: 0px;
     text-transform: uppercase;
   }
 
   .SMMCards-page p {
-    width: 533px;
+    width: 100%;
     font-size: 15px;
     line-height: 20px;
-    margin-left: -130px;
-    text-align: justify;
+    margin-left: 0px;
+    /* text-align: justify; */
     max-width: 144%;
     word-break: normal;
   }
@@ -141015,24 +141015,25 @@ margin-top: 161px;
   .cardSmm {
     background-color: white;
     border-radius: 0.25rem;
-    width: 160px;
-    height: 345px;
+    width: 100%;
+    height: auto;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     display: flex;
     border: 1px solid #023878;
     flex-direction: column;
     overflow: hidden;
+    margin: 5px 0;
   }
 
+  
   .Smmicons {
-    width: 282px;
-    height: 130px;
-    padding-top: 23px;
-    margin-left: -60px;
+    width: 100px;
+    height: 100px;
+    padding: 23px;
+    margin-left: 0;
     margin-top: 9px;
     color: #023878;
-  }
-
+}
 
   .cardSmm .ContantMarketingGoals__text {
     text-align: center;
@@ -141058,21 +141059,21 @@ margin-top: 161px;
   .BenefitsSMMContainer {
     position: relative;
     display: block;
-    height: 800px;
+    height: auto;
     margin-top: 121px;
     background-color: #f6f6f6;
     z-index: 1;
-    margin-left: -100px;
+    margin-left: 0px;
   }
 
   .titleHeadSMM {
     text-align: center;
     font-size: 44px;
     padding-top: 63px;
-    margin-bottom: -70px;
+    margin-bottom: 0;
     color: #023878;
-    margin-left: 171px;
-    width: 218px;
+    margin-left: 0;
+    width: 100%;
   }
 
   .boxContainerMain {
@@ -142610,7 +142611,7 @@ margin-top: 161px;
 
 
   .MainContainer {
-    width: 110%;
+    width: 100%;
     margin-left: 0px;
   }
 
@@ -142782,9 +142783,9 @@ margin-top: 161px;
     margin-left: 0px;
     padding-top: 65px;
     padding-left: 0px;
-    margin-top: 108px;
+    margin-top: 20px;
     width: 100%;
-    height: 1193px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -142804,25 +142805,25 @@ margin-top: 161px;
   }
 
   .BoxWCU1 {
-    Width: 332px;
-    height: 224px;
+    Width: 100%;
+    height: auto;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #023878;
     padding: 20px 20px 20px 20px;
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-    margin-left: 36px;
+    margin: 0px;
+    text-align: center;
   }
 
 
   .BoxWCU1 h1 {
-    text-align: right;
+    text-align: center;
     font-size: 19px;
-    width: 200px;
-    height: 71px;
-    margin-left: 104px;
+    width: 100%;
+    height: auto;
+    margin: 0px;
     font-weight: 900;
-    margin-top: -126px;
   }
 
   .BoxWCU1 p {
@@ -143213,7 +143214,7 @@ margin-top: 161px;
 
   .mainGd {
     max-width: 1920px;
-    margin-left: 9px;
+    margin-left: 0px;
   }
 
   .section-title1__titleGD {
@@ -143278,7 +143279,7 @@ margin-top: 161px;
   .PrintDesignR-page {
     position: relative;
     display: inline-block;
-    margin-left: 3px;
+    margin-left: 0px;
     padding-top: 0px;
     margin-top: 0px;
     width: 100%;
@@ -143288,7 +143289,7 @@ margin-top: 161px;
 
   .mainPDR {
     max-width: 529px;
-    margin-left: 5px;
+    margin-left: 0px;
   }
 
   .section-title1__titlePDR {
@@ -143800,7 +143801,9 @@ margin-top: 161px;
     width: 372px;
   }
 
-
+  .SmmsGoals__text{
+    text-align: center;
+  }
 
 
 
@@ -143906,7 +143909,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     padding: 0 0 43px;
-    height: 991px;
+    height: auto;
   }
 
   .text-centerMU {
@@ -143932,11 +143935,11 @@ margin-top: 161px;
   }
 
   .Gapimag {
-    width: 30%;
-    padding: 20px 199px 102px 21px;
+    width: 100%;
+    padding: 0;
     margin-top: 11px;
-    margin-left: -15px;
-    margin-bottom: -126px;
+    margin-left:0;
+    margin-bottom: 0;
   }
 
 
@@ -144186,13 +144189,6 @@ margin-top: 161px;
   .boxContainerMainPDS {
     grid-template-columns: repeat(1, 1fr);
   }
-
-
-
-
-
-
-
 
   .why-choose-one {
     position: relative;
@@ -145320,7 +145316,7 @@ margin-top: 161px;
     padding-top: 100px;
     margin-top: 10px;
     width: 100%;
-    height: 1392px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
