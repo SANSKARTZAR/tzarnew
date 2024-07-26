@@ -12,44 +12,45 @@ import Modal from 'react-modal'
 const { logo1, phone, email, socials, navItems } = header;
 
 const MobileMenu = () => {
-  const { toggleMenu, menuStatus } = useRootContext();
+  // const { toggleMenu, menuStatus } = useRootContext();
 
-  const [isOpen, setIsOpen] = useState(false)
-  const customStyles = {
-    overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.6)',
-      zindex:'999999'
-    },
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-16%',
-      transform: 'translate(-50%, -50%)',
-      zindex:'999999',
-      borderradius:'none',
-      width:'100%',
-      height: '100vh'
-    }
-  };
+  // const [isOpen, setIsOpen] = useState(false)
+  // const customStyles = {
+  //   overlay: {
+  //     backgroundColor: 'rgb(2 56 120)',
+  //     zindex:'999999'
+  //   },
+  //   content: {
+  //     top: '50%',
+  //     left: '50%',
+  //     right: 'auto',
+  //     bottom: 'auto',
+  //     marginRight: '-16%',
+  //     transform: 'translate(-50%, -50%)',
+  //     zindex:'999999',
+  //     borderradius:'none',
+  //     width:'100%',
+  //     height: '100vh'
+  //   }
+  // };
   return (
-    <div 
+    <>
+    {/* <div 
       className={`mobile-nav__wrapper  animated fadeInLeft${
         menuStatus ? " expanded" : ""
       }`}
-    >
-      <div
+    > */}
+      {/* <div
         onClick={() => toggleMenu()}
         className="mobile-nav__overlay mobile-nav__toggler"
-      ></div>
-      <div className="mobile-nav__content">
+      ></div> */}
+      {/* <div className="mobile-nav__content">
         <span
           onClick={() => toggleMenu()}
           className="mobile-nav__close mobile-nav__toggler"
         >
           <i className="fa fa-times"></i>
-        </span>
+        </span> */}
 
         <div className="logo-box">
           <Link href="/" aria-label="logo image">
@@ -64,16 +65,8 @@ const MobileMenu = () => {
                 
           </ul>
         </div>
-        <button type="button" onClick={() => setIsOpen(true)} className="button-header">Hire Us</button>
-        <div className="header-form">
-              <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
-               
-                <button onClick={() => setIsOpen(false)} className="close-form">×</button>
-
-                 {/* <PopupHireUs/> */}
-
-              </Modal>
-        </div>
+        {/* <button type="button" onClick={() => setIsOpen(true)} className="button-header">Hire Us</button> */}
+       
         <ul className="mobile-nav__contact list-unstyled">
           <li>
             <i className="fa fa-envelope"></i>
@@ -91,8 +84,9 @@ const MobileMenu = () => {
             ))}
           </div>
         </div>
-      </div>
-    </div>
+      {/* </div> */}
+    {/* </div> */}
+    </>
   );
 };
 

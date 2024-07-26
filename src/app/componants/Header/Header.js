@@ -9,6 +9,7 @@ import NavItem from "./NavItem";
 import React, { useState } from 'react'
 import Modal from 'react-modal'
 import PopupHireUs from "../home/PopupHireUs";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 const { logo1, logo2, phone, phone1, phoneIcon, navItems } = header;
 
@@ -19,7 +20,7 @@ const Header = ({ pageTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
   const customStyles = {
     overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      backgroundColor: '#023878',
       zindex: '999999'
     },
     content: {
@@ -74,10 +75,11 @@ const Header = ({ pageTitle }) => {
             </Link>
           </div>
           <div className="main-menu-wrapper__main-menu">
-            <span onClick={() => toggleMenu()}  className="mobile-nav__toggler">
+            <span onClick={() => setIsOpen(true)} className="mobile-nav__toggler">
               <i className="fa fa-bars"></i>
             </span>
-            
+
+
 
             <ul className="main-menu__list">
               {navItems.map((navItem) => (
@@ -114,9 +116,7 @@ const Header = ({ pageTitle }) => {
               <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
 
                 <button onClick={() => setIsOpen(false)} className="close-form">×</button>
-
-               
-                {/* <PopupHireUs/> */}
+                <MobileMenu/>
 
               </Modal>
             </div>
