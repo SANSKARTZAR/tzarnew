@@ -34,12 +34,9 @@ function BStudioSlider() {
     )
   }
   return (
-    <Slider {...settings}>
-
       <div>
         <StudioBanner />
       </div>
-    </Slider>
   );
 }
 export default BStudioSlider
