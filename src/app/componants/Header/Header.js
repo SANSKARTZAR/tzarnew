@@ -20,7 +20,7 @@ const Header = ({ pageTitle }) => {
   const [isOpen, setIsOpen] = useState(false)
   const customStyles = {
     overlay: {
-      backgroundColor: '#023878',
+      backgroundColor: 'transparent',
       zindex: '999999'
     },
     content: {
@@ -115,9 +115,19 @@ const Header = ({ pageTitle }) => {
             <div className="header-form">
               <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
 
-                <button onClick={() => setIsOpen(false)} className="close-form">×</button>
-                <MobileMenu/>
+                {/* <button onClick={() => setIsOpen(false)} className="close-form">×</button> */}
+                <div className="mobile-nav__wrapper  animated fadeInLeft">
+                  <div className="mobile-nav__content">
 
+                    <span
+                      onClick={() => setIsOpen(false)}
+                      className="mobile-nav__close mobile-nav__toggler"
+                    >
+                      <i className="fa fa-times"></i>
+                    </span>
+                    <MobileMenu />
+                  </div>
+                </div>
               </Modal>
             </div>
           </div>
