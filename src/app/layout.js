@@ -1,5 +1,6 @@
 
 import { Inter } from "next/font/google";
+import { Image } from "react-bootstrap";
 import "./globals.css";
 import "../assets/styles/mibooz.css";
 import "../assets/styles/mibooz-responsive.css";
@@ -15,6 +16,8 @@ import "../assets/vendors/reey-font/stylesheet.css";
 import "../assets/vendors/the-sayinistic-font/stylesheet.css";
 import SiteFooter from "./componants/FooterSection/SiteFooter";
 import Header from "./componants/Header/Header";
+
+import Whatsapp from "../assets/images/icons/whatsapp.png";
 
 import { useRootContext } from "@/app/componants/context/context";
 import MobileMenu from "./componants/MobileMenu/MobileMenu";
@@ -33,13 +36,13 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-     <head>
+      <head>
         <meta content="India's fastest growing digital marketing agency | company in India - Tzar Digital Agency Mumbai" property="og:title" />
         <meta content="https://www.tzar.co/" property="og:url" />
         <link rel="icon" href="tzar-favicon.jpg" />
         <meta name="description" content="Online digital marketing Agency -  Tzar Venture India's fatest growing company/agency in online digital marketing services. DMA is a web marketing agency that offers SEO services, PPC services, social media marketing services, web design services." />
         <meta name="next-head-count" content="8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow"></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -114,10 +117,14 @@ export default function RootLayout({ children }) {
 
       </head>
       <body className={inter.className}>
-      <Header/>
-      {children}
-      <SiteFooter/>
-
+        <Header />
+        {children}
+        <SiteFooter />
+        <div className="whatsapp">
+          <a href="https://api.whatsapp.com/send?phone=7304056607">
+            <Image src={Whatsapp.src} alt="whatsapp" width="50" />
+          </a>
+        </div>
       </body>
     </html>
   );

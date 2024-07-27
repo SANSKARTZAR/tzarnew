@@ -10259,11 +10259,11 @@
 
   .PDSHT1 {
     text-align: center;
-    margin-top: 38px;
+    margin-top: 10px;
     font-size: 25px;
-    padding-top: -104px;
+    padding-top:0;
     line-height: 20px;
-    width: 343px;
+    width: 100%;
     padding: 26px;
 
 
@@ -10285,12 +10285,11 @@
 
   .PDSPT1 {
     text-align: center;
-    margin-top: -16px;
+    margin-top: 0;
     font-size: 18px;
-    padding-top: -104px;
     line-height: 20px;
-    width: 369px;
-    padding: 26px;
+    width: 100%;
+    padding: 10px;
   }
 
   .PDSPT2 {
@@ -139924,7 +139923,17 @@ margin-top: 161px;
 
 @media only screen and (min-width: 330px) and (max-width:360px) {
 
-
+  .BenefitsLGContainer{
+    height: auto;
+  }
+.ImgTxtSeclg__img-1 img{
+  width: 100%;
+}
+.Lgicons {
+  width: 50px;
+  height: 50px;
+  color: #023878;
+}
 
   .thm-breadcrumb li a {
     color: var(--mibooz-base);
@@ -142611,9 +142620,9 @@ margin-top: 161px;
   .ImgTxtSecLG-page {
     position: relative;
     display: block;
-    height: 897px;
-    margin-top: -280px;
-    padding: 390px 0 45px;
+    height: auto;
+    margin-top: 0;
+    padding: 30px 0;
   }
 
 
@@ -142622,7 +142631,15 @@ margin-top: 161px;
     margin-left: 0px;
   }
 
-
+  .SomeFacts__inner {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+    z-index: 1;
+}
 
 
 
@@ -142630,30 +142647,46 @@ margin-top: 161px;
   .SomeFactsContainer {
     position: relative;
     display: block;
-    margin-top: 80px;
-    margin-left: -87px;
+    margin-top: 30px;
+    margin-left: 0;
     background-color: #023878;
-    height: 1600px;
+    height: auto;
     z-index: 1;
   }
 
   .SomeFacts__inner h1 {
     text-align: center;
     padding-top: 20px;
-    margin-bottom: 50px;
-    margin-left: 101px;
+    margin: 0;
     color: #F6f6f6;
   }
-
+  .SomeFacts__text {
+    color: #E8F0F5;
+    line-height: 22px;
+    width: 100%;
+    margin: 0px;
+}
   .list-unstyledFacts {
     padding-left: 0;
     list-style: none;
-    margin-left: 124px;
-    margin-top: -34px;
-    margin-bottom: -120px;
-    width: 777px;
+    margin: 0;
+    width: 100%;
   }
+  .titleHeadPDS {
+    text-align: center;
+    font-size: 32px;
+    text-align: center;
+    margin-left: 0px;
+    padding: 0px;
+}
 
+.boxcontainericonpds{
+  text-align: center;
+}
+.PDsicons{
+  width: 100px;
+  height: 100px;
+}
   .SomeFacts__list {
     position: relative;
     display: grid;
@@ -154202,15 +154235,13 @@ margin-top: 161px;
   /* width: 400px;
   margin-left: 20px;
   margin-top: -25px; */
+  margin: 0px 0 0 18px;
   color: #023878;
   font-family: "poppins";
   font-size: 12px;
 }
 
 .homeformtextcondition {
-  /* width: 400px;
-  margin-left: 20px;
-  margin-top: -25px; */
   color: #fff;
   font-family: "poppins";
   font-size: 12px;
