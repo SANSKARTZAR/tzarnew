@@ -25,7 +25,7 @@ const Page = () => {
       <LogoDesignMU />
       <TestimonialThree />
       <WhyChooseUSLogo />
-      <CountsLG />
+      {/* <CountsLG /> */}
       <ContactForm />
     </>
   );

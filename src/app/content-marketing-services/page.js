@@ -16,7 +16,7 @@ const Page = () => {
     <PageHeaderCmm title="content Marketing" />
     <ContentMarketing/>
     <ContentmarketingcardsR/>
-    <WhyusCM/>
+    {/* <WhyusCM/> */}
     <ContactForm/>
     </>
   );

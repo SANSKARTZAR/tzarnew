@@ -19,8 +19,8 @@ const Page = () => {
     <PageHeaderPPD title="PRODUCT DESIGN PACKAGING SERVICE"/>
     <ServicesDetails service={LeadGenerationService2} />
     <PackagingDesignServ/>
-    <SomeFacts/>
-    <CountsLG/>
+    {/* <SomeFacts/>
+    <CountsLG/> */}
     <ContactForm/>
     </>
   );

@@ -2409,7 +2409,7 @@
     display: block;
     width: 100%;
     height: auto;
-    margin-top: 88px;
+    margin-top: 10px;
     padding-top: 0px;
     margin-left: 0;
     background-color: #FFFFFF;
@@ -8917,6 +8917,15 @@
 
 @media only screen and (max-width: 1920px) {
 
+
+  .PDsicons{
+    width: 100px;
+    height: 100px;
+  }
+  .boxcontainericonpds{
+    text-align: center;
+  }
+
   .GraphicDesigning__right {
     position: relative;
     display: block;
@@ -10246,9 +10255,9 @@
     text-align: center;
     font-size: 60px;
     text-align: center;
-    margin-left: -830px;
-    padding-top: -10px;
-    padding-bottom: -800px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .borderPds {
@@ -21863,13 +21872,13 @@ margin-top: 161px;
   .cardscm {
 
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(1, 1fr);
     margin-left: 0px;
     margin-top: 50px;
     /* row-gap: 1em; */
     width: 100%;
-    gap: 28px;
+    gap: 20px;
     justify-content: center;
     /* column-gap: 0.5em; */
   }
@@ -21879,8 +21888,8 @@ margin-top: 161px;
   .cardcm {
     background-color: white;
     border-radius: 0.25rem;
-    width: 250px;
-    height: 447px;
+    width: 100%;
+    height: 400px;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     display: flex;
     border: 1px solid #023878;
@@ -21904,17 +21913,17 @@ margin-top: 161px;
     width: 100%;
     font-size: 30px;
     line-height: 31px;
-    padding-top: 77px;
+    padding-top: 20px;
     color: #100f12;
   }
 
   .cardcm .ContantMarketingGoals__text1 {
     text-align: center;
-    margin-left: 17px;
-    width: 219px;
+    margin: 0px;
+    width: 100%;
     font-size: 14px;
     line-height: 17px;
-    padding-top: 17px;
+    padding: 10px;
     color: #100f12;
   }
 
@@ -22220,7 +22229,7 @@ margin-top: 161px;
   .BenefitsLGContainer {
     position: relative;
     display: block;
-    height: 712px;
+    height: auto;
     margin-top: 16px;
     z-index: 1;
   }
@@ -22539,7 +22548,7 @@ margin-top: 161px;
     font-size: 3rem;
     text-transform: uppercase;
     width: 100%;
-    margin: 0;
+    margin-bottom: 20px;
   }
 
   .BoxPPCmgmtCMain {
@@ -26015,7 +26024,7 @@ margin-top: 161px;
   .titleHeadPDS {
     font-size: 60px;
     text-align: center;
-    margin-left: -60px;
+    margin-left: 0px;
   }
 
   .borderPds {
@@ -26115,7 +26124,7 @@ margin-top: 161px;
   .ContentmarketingCards-page h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-left: -83px;
+    margin-left: 0px;
     text-transform: uppercase;
   }
 
@@ -134809,7 +134818,7 @@ margin-top: 161px;
   .Cm__right {
     position: relative;
     display: block;
-    margin-left: 9px;
+    margin-left: 0px;
     margin-top: 50px;
   }
 
@@ -134817,8 +134826,8 @@ margin-top: 161px;
     line-height: 22px;
     text-align: justify;
     max-width: 100%;
-    width: 334px;
-    margin-left: -9px;
+    width: 100%;
+    margin-left: 0px;
     font-size: 17px;
   }
 
@@ -134872,14 +134881,14 @@ margin-top: 161px;
   .cardcm {
     background-color: white;
     border-radius: 0.25rem;
-    width: 290px !important;
+    width: 100% !important;
     height: 567px;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     display: flex !important;
     border: 1px solid #023878;
     flex-direction: column;
     overflow: hidden;
-    margin-left: 39px;
+    margin: 0px;
   }
 
   .slick-dots {
@@ -134891,20 +134900,20 @@ margin-top: 161px;
 
 
   .Cmicons {
-    width: 452px;
+    width: 100%;
     height: 194px;
     padding-top: 23px;
-    margin-left: -78px;
+    margin-left: 0px;
     margin-top: 25px;
-    margin-bottom: -60px;
+    margin-bottom: 0px;
     color: #023878;
 
   }
 
   .cardcm .ContantMarketingGoals__text {
     text-align: center;
-    margin-left: -13px;
-    width: 320px;
+    margin-left: 0;
+    width: 100%;
     font-size: 35px;
     line-height: 41px;
     padding-top: 87px;
@@ -134925,13 +134934,13 @@ margin-top: 161px;
 
   .cardcm .ContantMarketingGoals__text2 {
     text-align: justify;
-    margin-left: 18px;
-    width: 440px;
+    margin-left: 0;
+    width: 100%;
     font-size: 17px;
     line-height: 26px;
     padding-top: 46px;
     color: #100f12;
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .cardcm .ContantMarketingGoals__text3 {
@@ -135070,7 +135079,7 @@ margin-top: 161px;
   .BenefitsLGContainer {
     position: relative;
     display: block;
-    height: 1856px;
+    height: auto;
     margin-top: 17px;
     z-index: 1;
   }
@@ -135087,10 +135096,10 @@ margin-top: 161px;
   }
 
   .BenefitsLGContainer .Lgicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 232px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0;
     color: #023878;
   }
 
@@ -135329,26 +135338,25 @@ margin-top: 161px;
   .PPCmgmtSer-page {
     position: relative;
     display: inline-block;
-    margin-left: -80px;
-    padding-top: 100px;
-    padding-left: -10px;
-    margin-top: 1084px;
+    margin-left: 0px;
+    padding-top: 80px;
+    padding-left: 0px;
+    margin-top: 0;
     width: 100%;
-    height: 769px;
+    height: auto;
   }
 
   .BoxPPCmgmtMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: 80px;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmtSer1 {
-    width: 315px;
-    height: 403px;
-    margin-top: 50px;
-    margin-left: 77px;
+    width: 100%;
+    height: auto;
+    margin: 0px;
   }
 
   .BoxPPCmgmtSer2 {
@@ -135376,8 +135384,7 @@ margin-top: 161px;
     width: 360px;
     height: 180px;
     border: 3px solid #100f12;
-    margin-top: -450px;
-    margin-left: 100px;
+    margin: 0;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
     padding-left: 50px;
   }
@@ -135392,19 +135399,19 @@ margin-top: 161px;
 
   .PPCmgmtSer-page .BtnPPCmgmtSer {
     margin-top: 50px;
-    margin-left: 104px;
-    width: 340px;
+    margin-left: 0;
+    width: 100%;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #100f12;
-    height: 80px;
+    height: auto;
     margin-bottom: 50px;
   }
 
   .BenefitsPPCContainer {
     position: relative;
     display: block;
-    height: 1017px;
+    height: auto;
     margin-top: 50px;
     z-index: 1;
   }
@@ -135419,27 +135426,24 @@ margin-top: 161px;
   }
 
   .BenefitsPPCContainer .ppcicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 231px;
-    margin-top: -50px;
+    margin: 0px;
     color: #023878;
   }
 
 
 
   .boxContainerPPC1 {
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: 46px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
   }
 
   .boxContainerPPC1 h1 {
     text-align: center;
-    width: 375px;
-    margin-left: 81px;
+    width: 100%;
+    margin: 0px;
     margin-top: 26px;
     font-size: 30px;
     color: #100f12;
@@ -135629,8 +135633,8 @@ margin-top: 161px;
   }
 
   .BoxFact {
-    width: 360px;
-    height: 380px;
+    width: 100%;
+    height: auto;
     background-color: #023878;
     color: #E8F0F5;
     margin-bottom: 20px;
@@ -135640,26 +135644,26 @@ margin-top: 161px;
     width: 80px;
     height: 89px;
     margin-top: 50px;
-    margin-left: 2px;
-    margin-right: -20px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
-
   .BoxFact p {
-    width: 233px;
-    height: 50px;
+    width: 100%;
+    height: auto;
     line-height: 23px;
-    margin-left: 95px;
-    margin-right: 50px;
-    margin-top: -86px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0px;
     text-align: justify;
-    max-width: 67%;
+    max-width: 100%;
     font-size: 15px;
+    padding: 10px;
   }
 
   .BenefitsCKMContainer {
     position: relative;
     display: block;
-    height: 1280px;
+    height: auto;
     margin-top: 50px;
     z-index: 1;
   }
@@ -136362,10 +136366,10 @@ margin-top: 161px;
     position: relative;
     display: inline-block;
     margin-left: 0px;
-    padding-top: 100px;
+    padding-top: 10px;
     margin-top: 10px;
     width: 100%;
-    height: 1392px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -136378,17 +136382,17 @@ margin-top: 161px;
   .SMMCards-page h1 {
     text-align: center;
     font-size: 2.2rem;
-    margin-left: -165px;
+    margin-left: 0;
     text-transform: uppercase;
   }
 
   .SMMCards-page p {
-    width: 488px;
+    width: 100%;
     font-size: 14px;
     line-height: 20px;
-    margin-left: -123px;
-    text-align: justify;
-    max-width: 139%;
+    margin-left: 0;
+    text-align: center;
+    max-width: 100%;
     word-break: normal;
   }
 
@@ -136403,8 +136407,8 @@ margin-top: 161px;
   .cardSmm {
     background-color: white;
     border-radius: 0.25rem;
-    width: 168px;
-    height: 345px;
+    width: 100%;
+    height: auto;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     display: flex;
     border: 1px solid #023878;
@@ -136416,7 +136420,7 @@ margin-top: 161px;
     width: 282px;
     height: 130px;
     padding-top: 23px;
-    margin-left: -54px;
+    margin-left: 0;
     margin-top: 9px;
     color: #023878;
   }
@@ -136447,21 +136451,20 @@ margin-top: 161px;
   .BenefitsSMMContainer {
     position: relative;
     display: block;
-    height: 807px;
+    height: auto;
     margin-top: 110px;
     background-color: #f6f6f6;
     z-index: 1;
-    margin-left: -100px;
+    margin-left: 0px;
   }
 
   .titleHeadSMM {
     text-align: center;
     font-size: 44px;
     padding-top: 63px;
-    margin-bottom: -70px;
     color: #023878;
-    margin-left: 144px;
-    width: 341px;
+    margin: 0;
+    width: 100%;
   }
 
   .boxContainerMain {
@@ -136477,7 +136480,7 @@ margin-top: 161px;
     height: 81px;
     /* color: #100f12; */
     color: #023878;
-    margin-left: -22px;
+    margin-left: 0px;
   }
 
 
@@ -138213,14 +138216,14 @@ margin-top: 161px;
   }
 
   .BoxWCU1 {
-    Width: 356px;
+    Width: 100%;
     height: 224px;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #023878;
     padding: 20px 20px 20px 20px;
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-    margin-left: 33px;
+    margin-left: 0;
   }
 
   .BoxWCU1 h1 {
@@ -138236,7 +138239,7 @@ margin-top: 161px;
   .BoxWCU1 p {
     text-align: right;
     line-height: 21px;
-    width: 316px;
+    width: 100%;
     height: 90px;
     margin-top: 46px;
     margin-left: 10px;
@@ -139507,15 +139510,16 @@ margin-top: 161px;
     position: relative;
     display: block;
     padding: 0 0 43px;
-    height: 1054px;
+    height: auto;
   }
 
   .MainContainer {
-    width: 136px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, 1fr);
-    margin-left: 9px;
+    margin-left: 0px;
+    gap: 20px;
   }
 
   .text-centerMU {
@@ -139541,11 +139545,11 @@ margin-top: 161px;
   }
 
   .Gapimag {
-    width: 32%;
-    padding: 20px 199px 102px 21px;
-    margin-top: 11px;
-    margin-left: -26px;
-    margin-bottom: -126px;
+    width: 100%;
+    padding: 0;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
   }
 
 

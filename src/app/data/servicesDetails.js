@@ -113,7 +113,7 @@ const service = {
 
 const socialMarketing = {
   text:"Welcome to our social media marketing services! At TZAR, we understand the power of social media in building brand awareness, engaging with your audience, and driving conversions",
-  text1:"Our team of social media experts has the experience and expertise to develop customized social media strategies that align with your business goals and audience. We use a data-driven approach to identify the right social media platforms, create engaging content, and target the right audience to maximize your social media ROI. We understand that social media is constantly evolving, which is why we stay up-to-date with the latest trends, best practices, and algorithm changes to ensure that your social media campaigns are always optimized for maximum impact.",
+  text1:"Our team of social media experts has the experience and expertise to develop customized social media strategies that align with your business goals and audience.",
   Btntxt:"Contact our cosultant",
 
   // points: ["high quality project", "Fast & relaible service"],
@@ -380,7 +380,7 @@ const cloudkitchen = {
 };
 const logodesign = {
   text:"Welcome to our logo design services! At TZAR, we understand that your logo is the face of your brand - it's the first thing that people see and the foundation of your brand identity.",
-  text1:"Our team of talented logo designers has the creativity and expertise to develop a logo that represents your brand's values, personality, and unique selling proposition. We take the time to understand your business, target audience, and competitive landscape to create a logo that sets you apart from the competition and resonates with your audience.",
+  // text1:"Our team of talented logo designers has the creativity and expertise to develop a logo that represents your brand's values, personality, and unique selling proposition. We take the time to understand your business, target audience, and competitive landscape to create a logo that sets you apart from the competition and resonates with your audience.",
   Btntxt:"Contact our cosultant",
   // points51: ["high quality project", "Fast & relaible service"],
   // benefitsText:

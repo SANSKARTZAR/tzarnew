@@ -39,8 +39,8 @@ const ContentMarketing = () => {
               <h1 className="section-title__titleCm">{title}</h1>    
               <p className="Cm__right-text-1">{text1}</p>
               <p className="Cm__right-text-1">{text2}</p>
-              <Link href="/about" className="thm-btn Cm__btn">
-                Discover More
+              <Link href="#Contactform" className="thm-btn Cm__btn">
+                Enquiry Now
               </Link>
             </div>
           </Col>

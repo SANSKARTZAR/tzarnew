@@ -8240,8 +8240,7 @@ input[type=checkbox] {
   text-align: center;
   font-size: 60px;
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: -800px;
+  padding-top: 80px;
 }
 
 
@@ -17337,7 +17336,7 @@ img {
   font-size: 60px;
   text-align: center;
   padding-top: 100px;
-  padding-bottom: -800px;
+  padding-bottom: 0px;
   color: #023878;
 
 }
@@ -22488,7 +22487,7 @@ img {
   border: 1px solid #023878;
   flex-direction: column;
   overflow: hidden;
-  margin: 10px;
+  margin-top: 10px;
   align-items: center;
 }
 
