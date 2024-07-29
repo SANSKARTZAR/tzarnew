@@ -131081,12 +131081,12 @@ margin-top: 161px;
   }
 
   .BoxPPCmgmt1 {
-    width: 315px;
-    height: 403px;
+    width: 100%;
+    height: auto;
     border: 1.5px solid #023878;
     background-color: #ffffff;
     margin-top: 50px;
-    margin-left: 45px;
+    margin-left: 0;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
 
@@ -138843,12 +138843,12 @@ margin-top: 161px;
   }
 
   .BoxPPCmgmt1 {
-    width: 315px;
-    height: 403px;
+    width: 100%;
+    height: auto;
     border: 1.5px solid #023878;
     background-color: #ffffff;
     margin-top: 50px;
-    margin-left: 22px;
+    margin-left: 0px;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
 
@@ -140309,8 +140309,8 @@ margin-top: 161px;
   }
 
   .BoxFact {
-    width: 304px;
-    height: 480px;
+    width:100%;
+    height: auto;
     background-color: #023878;
     color: #E8F0F5;
     margin-bottom: 20px;
@@ -140327,21 +140327,23 @@ margin-top: 161px;
   }
 
   .BoxFact p {
-    width: 293px;
-    height: 50px;
+    width: 100%;
+    height: auto;
     line-height: 23px;
     margin-left: 18px;
-    margin-right: 50px;
+    margin-right: 18px;
     margin-top: 17px;
     text-align: justify;
     max-width: 89%;
     font-size: 16px;
   }
-
+.cardsWDv-ads{
+  padding: 0;
+}
   .BenefitsCKMContainer {
     position: relative;
     display: block;
-    height: 1280px;
+    height: auto;
     margin-top: 50px;
     z-index: 1;
   }
@@ -140577,7 +140579,9 @@ margin-top: 161px;
   }
 
 
-
+.ContainerWebprime .slick-slide{
+  width: 100% !important;
+}
   /* .embeddedvideoCont
   {
 

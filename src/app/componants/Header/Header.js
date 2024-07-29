@@ -94,7 +94,7 @@ const Header = ({ pageTitle }) => {
           <div className="main-menu-wrapper__right">
             <div className="main-menu-wrapper__call">
               <div className="main-menu-wrapper__call-icon">
-                <Image src={phoneIcon.src} alt="" />
+                <Image src={phoneIcon.src} alt="" width="34" height="34" />
               </div>
               <div className="main-menu-wrapper__call-number">
                 <p>Call Anytime</p>
