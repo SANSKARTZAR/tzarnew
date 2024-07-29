@@ -23444,9 +23444,9 @@ margin-top: 161px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
     width: 100%;
-    height: 935px;
+    height: auto;
     margin: 0px;
-    margin-top: 70px;
+    margin-top: 0px;
     margin-bottom: 50px;
     padding: 50px;
     gap: 30px;
@@ -24715,11 +24715,12 @@ margin-top: 161px;
   } */
   .cardsLd {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     width: 100%;
     list-style: none;
     margin-left: 0px;
+    gap: 15px;
   }
 
   .cardsWd {
@@ -24741,9 +24742,9 @@ margin-top: 161px;
   }
 
   .cardsGd {
-    /* display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr); */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     width: 100%;
     list-style: none;
     margin: 0;
@@ -24760,8 +24761,8 @@ margin-top: 161px;
 
   .cardsAi {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     width: 100%;
     list-style: none;
   }
@@ -25707,7 +25708,7 @@ margin-top: 161px;
     padding-top: 62px;
     margin-top: -96px;
     width: 100%;
-    height: 655px;
+    height: auto;
     /* background-color: #E8F0F5;
     background: #f5f5f5 url(./../assets/images/resources/counter-one-patternC-02.png); */
     /* background-color: #023878; */
@@ -25727,14 +25728,14 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 188px;
+    margin-top: 20px;
     width: 100%;
-    height: 685px;
+    height: auto;
   }
 
   .mainGd {
-    max-width: 1920px;
-    margin-left: 123px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .tgridContain {
@@ -135934,8 +135935,8 @@ margin-top: 161px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 709px;
+    /* grid-template-rows: repeat(5, 1fr); */
+    height: auto;
     margin-top: 50px;
     background-color: #f6f6f6;
     z-index: 1;
@@ -136097,8 +136098,8 @@ margin-top: 161px;
   .BenefitsSEOContainer {
     position: relative;
     display: block;
-    height: 1238px;
-    margin-top: 762px;
+    height: auto;
+    margin-top: 0;
     z-index: 1;
   }
 
@@ -136106,8 +136107,8 @@ margin-top: 161px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    width: 415px;
-    height: 935px;
+    width: 100%;
+    height: auto;
     margin-left: -106px;
     margin-top: 109px;
     margin-bottom: 50px;
@@ -136629,7 +136630,7 @@ margin-top: 161px;
     list-style: none;
     margin-left: 45px;
     margin-top: 0;
-    width: 777px;
+    width: 100%;
   }
 
   .page-header__innerAuW h2 {
@@ -136639,7 +136640,7 @@ margin-top: 161px;
     text-transform: uppercase;
     margin-top: -5px;
     margin-left: -384px;
-    width: 628px;
+    width: 100%;
   }
 
 
@@ -146124,7 +146125,7 @@ margin-top: 161px;
 
   .cardLd {
     border-radius: 0.25rem;
-    width: 137px;
+    width: 100%;
     height: 256px;
     display: flex;
     flex-direction: column;

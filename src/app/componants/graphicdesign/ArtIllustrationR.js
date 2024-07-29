@@ -11,7 +11,7 @@ const ArtIllustrationR = () => {
           className="counter-one-pattern"
           style={{ backgroundImage: `url(${bg.src})` }}
         ></div>
-        <div className="container">
+        <div className="container-fluid">
       <div className="mainAi">
           <div className="ArtIllustration__center">
             {/* <Title title={title} tagline={tagline} className="text-left section-title1__titleAi" /> */}

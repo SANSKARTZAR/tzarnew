@@ -8,6 +8,7 @@ import TestimonialFive from "../componants/website-dev-services/TestimonialFive"
 import BenefitsWD from "../componants/website-dev-services/BenefitsWD";
 import ContactForm from "../componants/home/ContactForm";
 import WdService from "../componants/website-dev-services/WdService";
+import WebDesignMock from "../componants/home/WebDesignMock";
 
 export const metadata = {
   title:"Website Development Services  - Custom Website Development Services Online @ Tzar venture",
@@ -25,6 +26,7 @@ const Page = () => {
       <ServicesDetails service={websiteDevelopmentService} />
       <WebsiteDesignCardsR/>
       <TestimonialFour/>
+      <WebDesignMock/>
       <TestimonialFive/>
       <BenefitsWD/>
       <ContactForm/>

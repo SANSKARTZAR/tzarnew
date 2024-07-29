@@ -11,7 +11,7 @@ const GraphicDesigR = () => {
         className="counter-one-pattern"
         style={{ backgroundImage: `url(${bg.src})` }}
       ></div>
-      <div className="container">
+      <div className="container-fluid">
         <div className="mainGd">
           <div className="GraphicdesignR__center">
             {/* <Title title={title} tagline={tagline} className="text-left section-title1__titleGD" /> */}
