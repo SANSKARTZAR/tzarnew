@@ -24093,8 +24093,8 @@ margin-top: 161px;
     position: relative;
     display: inline-block;
     margin-left: 0px;
-    padding-top: 100px;
-    padding-left: -10px;
+    padding-top: 70px;
+    padding-left: 0px;
     margin-top: 10px;
     width: 100%;
     height: auto;
@@ -24117,9 +24117,8 @@ margin-top: 161px;
     text-align: center;
     font-size: 3.8rem;
     text-transform: uppercase;
-    /* width: 1078px;
-    margin-left: 338px; */
-    font-weight: 600
+    font-weight: 600;
+    padding-bottom: 30px;
   }
 
   .cardsWDv-ads {
@@ -136668,7 +136667,7 @@ margin-top: 161px;
     padding-left: -10px;
     margin-top: 10px;
     width: 100%;
-    height: 2329px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -136866,10 +136865,11 @@ margin-top: 161px;
   .BenefitsWDContainer {
     position: relative;
     display: block;
-    height: 863px;
-    margin-top: -50px;
+    height: auto;
+    margin-top: 0;
     background-color: #023878;
     z-index: 1;
+    padding: 0;
   }
 
   .boxContainerMainBenefitsWD {
@@ -154575,6 +154575,17 @@ margin-top: 161px;
     position: absolute;
     z-index: 9999;
   }
+  .webdev-card5 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .wdiconsnew {
+    width: 50px!important;
+    height: 50px!important;
+}
 }
 
 @media(min-width:573px) {

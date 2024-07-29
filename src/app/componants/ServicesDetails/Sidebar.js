@@ -42,10 +42,7 @@ const Sidebar = () => {
         </h2>
         <p className="sidebar-para"> Hi there! I'm committed to helping businesses grow. Will yours be next?</p>
 
-        <Link href="/tzar-studio" className="BtnStudio GraphicDesigning__studiobtn">
-          Enquire Now
-        </Link>
-        &nbsp;&nbsp;&nbsp;&nbsp;
+      
         <Link href="/tzar-studio" className="BtnStudio GraphicDesigning__studiobtn">
           Hire Us
         </Link>
