@@ -85,9 +85,9 @@ const Header = ({ pageTitle }) => {
               {navItems.map((navItem) => (
                 <NavItem key={navItem.id} navItem={navItem} />
               ))}
-              {/* <li>
-                <button type="button" onClick={() => setIsOpen(true)} className="button-header">Hire Us</button>
-              </li> */}
+              <li>
+                <Link href="/" className="button-header">Hire Us</Link>
+              </li>
             </ul>
           </div>
 

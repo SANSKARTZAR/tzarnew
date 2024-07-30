@@ -22761,10 +22761,11 @@ margin-top: 161px;
     margin-top: 50px;
     margin-left: 30%;
     width: 500px;
-    background-color: #f6f6f6;
+    background: linear-gradient(106deg, #fb9e3d 19%, #ffc53c 74%);
     color: #100f12;
-    border: 1.5px solid #100f12;
-    height: 80px;
+    border: 0px solid #100f12;
+    border-radius: 50px;
+    height: 50px;
     margin-bottom: 50px;
   }
 
@@ -23678,7 +23679,7 @@ margin-top: 161px;
 
 
   .cta-Three__btn {
-    border: 1.5px solid #023878;
+    border: 0px solid #023878;
     color: #000000;
     margin-left: 938px;
     margin-top: -237px;
@@ -25609,7 +25610,7 @@ margin-top: 161px;
     display: block;
     width: auto;
     margin-left: 10%;
-    margin-top: 35px;
+    margin-top: 23px;
   }
 
   .main-menu-wrapper {

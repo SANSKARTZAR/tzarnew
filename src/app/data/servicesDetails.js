@@ -412,7 +412,7 @@ const logodesign = {
 };
 
 const productdesignpackaging = {
-   text: "Product packaging is a key factor for the success of any product as it serves the purpose of protecting, as well as presenting. A properly packaging design has a higher probability of being purchased and will also have a longer shelf life.  Identity creation is one of the most important aspects of successful marketing. Our Packaging designers use attractive designs to build consumer loyalty and recall value. they use sophisticated shapes, colorful images and original text to attract consumers attention and interest. We choose packaging in an eye-catching color to create an atmosphere that evokes memories of favorite products. For example, red packaging for hot dogs evokes visions of delicious hot dogs, while plain packaging lets the consumer make their own judgments./n At times we even use custom software to develop and create attractive package designs. The ultimate goal is to create appealing designs that would attract the target audience and yet must not interfere with the product’s ability to perform. Package designing plays a crucial role in developing product’s reputation and brand loyalty.",  
+   text: "Product packaging is a key factor for the success of any product as it serves the purpose of protecting, as well as presenting. A properly packaging design has a higher probability of being purchased and will also have a longer shelf life.  Identity creation is one of the most important aspects of successful marketing.",  
    Btntxt:"Contact our cosultant"
   // points51: ["high quality project", "Fast & relaible service"],
   // benefitsText:
@@ -508,7 +508,7 @@ const contentMarketing = {
 };
 
 // const productdesignpackaging = {
-//   text: "Product packaging is a key factor for the success of any product as it serves the purpose of protecting, as well as presenting. A properly packaging design has a higher probability of being purchased and will also have a longer shelf life.  Identity creation is one of the most important aspects of successful marketing. Our Packaging designers use attractive designs to build consumer loyalty and recall value. they use sophisticated shapes, colorful images and original text to attract consumers attention and interest. We choose packaging in an eye-catching color to create an atmosphere that evokes memories of favorite products. For example, red packaging for hot dogs evokes visions of delicious hot dogs, while plain packaging lets the consumer make their own judgments./n At times we even use custom software to develop and create attractive package designs. The ultimate goal is to create appealing designs that would attract the target audience and yet must not interfere with the product’s ability to perform. Package designing plays a crucial role in developing product’s reputation and brand loyalty.",  
+//   text: "Product packaging is a key factor for the success of any product as it serves the purpose of protecting, as well as presenting. A properly packaging design has a higher probability of being purchased and will also have a longer shelf life.  Identity creation is one of the most important aspects of successful marketing.",  
  
 //   image:"service-details-img-1.jpg",
 //   points41: ["high quality project", "Fast & relaible service"],

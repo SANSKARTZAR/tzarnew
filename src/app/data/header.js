@@ -99,12 +99,12 @@ const navItems = [
     href: "/portfolio",
     subNavItems: [],
   },
-  {
-    id: 5,
-    name: "Hire Us",
-    href: "/",
-    subNavItems: [],
-  },
+  // {
+  //   id: 5,
+  //   name: "Hire Us",
+  //   href: "/",
+  //   subNavItems: [],
+  // },
 
   //  {
   //     id: 7,

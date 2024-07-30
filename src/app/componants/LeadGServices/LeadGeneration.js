@@ -39,8 +39,8 @@ const LeadGeneration = () => {
               <p className="Lead_Generation__right-text-1">{text3}</p>
 
               {/* <h4 className="Lead_Generation__right-text-2">{text2}</h4> */}
-              <Link href="/about" className="thm-btn Lead_Generation__btn">
-                Discover More
+              <Link href="#Contactform" className="thm-btn Lead_Generation__btn">
+                Enquiry Now
               </Link>
             </div>
           </Col>
