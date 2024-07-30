@@ -5950,7 +5950,7 @@ input[type=checkbox] {
   /* Opera */
   transform: scale(2);
   padding: 10px;
-  /* margin: 0 10px; */
+  margin: 0 0 0 10px;
 }
 
 
@@ -9205,7 +9205,7 @@ input[type=checkbox] {
   position: relative;
   height: 106px;
   width: 106px;
-  background-color: var(--mibooz-extra);
+  /* background-color: var(--mibooz-extra); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13316,6 +13316,10 @@ input[type=checkbox] {
   position: relative;
   display: block;
   padding: 80px 0 120px;
+}
+
+.ContactForm-page .form-dev {
+  background-color: #efefef;
 }
 
 .ContactForm-Home {
@@ -19881,7 +19885,13 @@ img {
 .CardWDnew:hover{
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
-
+.CardWDnew .WDGoals__text{
+ font-size: 17px;
+ font-weight: bold;
+}
+.CardWDnew .WDGoals__text1{
+  font-size: 14px;
+}
 
 .WebsiteDevelopment-page h1 {
   text-align: center;
@@ -25155,7 +25165,7 @@ img {
 }
 
 .homeformtext a {
-  color: #ff9400 !important;
+  color: #000 !important;
 }
 
 .studiotab-btn a:hover {

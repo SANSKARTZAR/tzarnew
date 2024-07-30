@@ -21782,7 +21782,7 @@ margin-top: 161px;
   }
 
   .service_details_btn {
-    margin-top: 30px;
+    margin-top: 14px;
     width: 300px;
     height: 50px;
     background-color: #023878;
@@ -26060,12 +26060,12 @@ margin-top: 161px;
   }
 
   .PDSPT1 {
-    text-align: justify;
-    margin-top: 4px;
+    text-align: center;
+    margin-top: 0px;
     font-size: 18px;
     line-height: 20px;
     width: 100%;
-    padding: 26px;
+    padding: 0 26px;
   }
 
   .PDSPT2 {
@@ -154246,7 +154246,7 @@ margin-top: 161px;
   margin-left: 20px;
   margin-top: -25px; */
   margin: 0px 0 0 18px;
-  color: #023878;
+  color: #000;
   font-family: "poppins";
   font-size: 12px;
 }
@@ -154324,6 +154324,18 @@ margin-top: 161px;
   /* .tns-outer{
     margin-left:-74px;
   } */
+  .services-all-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr)!important;
+    grid-template-rows: repeat(10, 1fr)!important;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 20px;
+    row-gap: 20px;
+    grid-column-gap: 10px;
+    column-gap: 10px;
+}
+
 
   .EnquiryForm input[type=email],
   .EnquiryForm input[type=tel],

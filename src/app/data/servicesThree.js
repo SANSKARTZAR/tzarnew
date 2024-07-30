@@ -85,6 +85,14 @@ const servicesThree = {
       text: "One of the most effective and long-term tools to date to enhance loyalty",
 
     },
+    {
+      id: 10,
+      title: "Cloud Kitchen Marketing",
+      icon: "icon-front-end",
+      link: "/cloud-kitchen-marketing-services",
+      text: "A Cloud kitchen is simply a “virtual kitchen” as there is no seating arrangement",
+
+    },
   ],
 };
 

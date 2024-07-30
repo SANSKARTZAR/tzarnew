@@ -2,6 +2,7 @@ import React from "react";
 import ServicesThree from "../componants/services/ServicesThree";
 import PageHeaderServices from "../componants/services/PageHeaderServices";
 import ContactForm from "../componants/home/ContactForm";
+import ServicesThreeNew from "../componants/services/ServicesThreeNew";
 
 export const metadata = {
   title: "Services - Tzar Venture Online Digital Marketing Services - Tzar Venture",
@@ -13,7 +14,8 @@ const Page = () => {
   return (
     <>
       <PageHeaderServices title="Services" />
-      <ServicesThree />
+      {/* <ServicesThree /> */}
+      <ServicesThreeNew/>
       <ContactForm />
     </>
   );

@@ -285,8 +285,8 @@ const PayPerClick = {
 
 
 const WebsiteDevelopment = {
- text: "Welcome to our website development services! As a leading digital marketing agency, we understand the importance of having a strong online presence. A well-designed website not only enhances your brand's credibility but also plays a crucial role in attracting and retaining customers.",
-//  text1: "Our team of skilled developers has a wealth of experience in creating visually appealing and highly functional websites that cater to your specific business needs. Whether you need a simple brochure site or a complex e-commerce platform, we have the expertise to deliver a solution that exceeds your expectations. We use the latest web technologies and industry-standard practices to ensure that your website is responsive, user-friendly and optimized for search engines. We work closely with you to understand your vision, goals, and target audience to create a website that truly represents your brand and helps you achieve your business objectives. ",
+ text: "Welcome to our website development services! As a leading digital marketing agency, we understand the importance of having a strong online presence. A well-designed website not only enhances your brand's credibility but also plays a crucial role in attracting and retaining customers. Our team of skilled developers has a wealth of experience in creating visually appealing and highly functional websites that cater to your specific.",
+//  text1: " ",
  
  Btntxt:"Get your website now!",
 

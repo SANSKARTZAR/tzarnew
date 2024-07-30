@@ -91,11 +91,11 @@ const ContactForm = () => {
                         </label> */}
                         <div className="form-group formlefttxt">
                             <label className="checkbox">
-                                <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link></h6>
+                                {/* <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates viaWhatsApp.</h6> */}
                                 <div className="form-studiocheck">
                                     <input type="checkbox" name="checkbox" required value="I agree to T&C and Privacy Policy" />
-                                    <h6 className="homeformtext">Yes, I would like to receive updates viaWhatsApp.</h6>
-                                </div>
+                                    <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates viaWhatsApp.</h6>
+                              </div>
                             </label>
                         </div>
                         <label htmlFor="submit">
