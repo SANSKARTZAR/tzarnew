@@ -120,6 +120,11 @@ const WebDesignR = () => {
             </div>
           </li>
         </ul>
+        <div className="graphic-crd-btn">
+          <Link href="#Contactform" className="thm-btn GraphicDesigning__btn">
+            Enquiry Now
+          </Link>
+          </div>
       </div> 
     </section>
   );

@@ -3404,7 +3404,6 @@
     font-size: 1rem;
     line-height: 20px;
     margin: 0;
-    text-transform: uppercase;
   }
 
   .cardsSmm {
@@ -21767,16 +21766,16 @@ margin-top: 161px;
   }
 
   .BenefitsSMMContainer .smmicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
     color: #023878;
   }
 
   .Smmicons {
-    width: 282px;
+    width: 100%;
     height: 130px;
     padding-top: 23px;
-    margin-left: -16px;
+    margin-left: 0px;
     margin-top: 9px;
     color: #023878;
   }
@@ -21896,7 +21895,9 @@ margin-top: 161px;
     flex-direction: column;
     overflow: hidden;
   }
-
+  .cardcm:hover {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+}
   .Cmicons {
     width: 100%;
     height: 114px;
@@ -23770,7 +23771,7 @@ margin-top: 161px;
     font-size: 1rem;
     line-height: 20px;
     margin: 0px;
-    text-transform: uppercase;
+    text-transform: none;
   }
 
   .cardsSmm {
@@ -23783,8 +23784,8 @@ margin-top: 161px;
 
   .cardSmm {
     background-color: white;
-    border-radius: 0.25rem;
-    width: 225px;
+    border-radius: 10px;
+    width: 100%;
     height: 367px;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     display: flex;
@@ -23792,7 +23793,9 @@ margin-top: 161px;
     flex-direction: column;
     overflow: hidden;
   }
-
+  .cardSmm:hover {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  }
   .cardSmm .SmmsGoals__text {
     text-align: center;
     margin-left: 0px;
@@ -123135,8 +123138,8 @@ margin-top: 161px;
   .testimonial-three {
     position: relative;
     display: block;
-    padding: 106px 0 97px;
-    margin-top: -66px;
+    padding: 60px 0 97px;
+    margin-top: 0px;
     margin-bottom: 50px;
     z-index: 1;
   }
@@ -123674,9 +123677,10 @@ margin-top: 161px;
 
 
   .section-titlemk {
-    padding-top: 120px;
-    margin-bottom: -180px;
-    margin-left: -1478px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    width: 100%;
   }
 
   .section-title__taglinemk {
@@ -123728,12 +123732,12 @@ margin-top: 161px;
   }
 
   .ContainerWeb {
-    width: 1920px;
+    width: 100%;
     height: 773px;
     background-color: #023878;
     color: #F4F2F2;
-    margin-left: -10px;
-    margin-top: 62px;
+    margin-left: 0px;
+    margin-top:0px;
   }
 
   .containerSlider {
@@ -124183,10 +124187,10 @@ margin-top: 161px;
     font-size: 72px;
     position: absolute;
     color: #f6f6f6;
-    width: 673px;
+    width: 100%;
     height: 150px;
     margin-top: 180px;
-    margin-left: 142px;
+    margin-left: 0;
     line-height: 67px;
     padding-bottom: 50px;
     z-index: 11;
@@ -125217,23 +125221,23 @@ margin-top: 161px;
     position: relative;
     display: inline-block;
     margin-left: 0px;
-    padding-top: 375px;
-    margin-top: -579px;
+    padding-top: 5px;
+    margin-top: 0;
     width: 100%;
     background-color: #023878;
-    height: 807px;
+    height: auto;
   }
 
   .mainEc {
-    max-width: 1920px;
-    height: 400px;
-    margin-left: -32px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
   }
 
   .section-title5 {
     text-align: center;
-    margin-bottom: 141px;
-    margin-left: 97px;
+    margin-bottom: 10px;
+    margin-left: 0;
   }
 
   .section-title5 h2 {
@@ -125247,8 +125251,8 @@ margin-top: 161px;
     text-transform: uppercase;
     display: block;
     margin-bottom: 9px;
-    margin-top: -304px;
-    margin-left: 8px;
+    margin-top: 10px;
+    margin-left: 0px;
     font-size: 18px;
   }
 
@@ -127673,8 +127677,8 @@ margin-top: 161px;
   .testimonial-three {
     position: relative;
     display: block;
-    padding: 106px 0 97px;
-    margin-top: -66px;
+    padding: 60px 0 97px;
+    margin-top: 0px;
     margin-bottom: 50px;
     z-index: 1;
   }
@@ -128549,7 +128553,7 @@ margin-top: 161px;
     width: 673px;
     height: 150px;
     margin-top: 180px;
-    margin-left: 142px;
+    margin-left: 0;
     line-height: 67px;
     padding-bottom: 50px;
     z-index: 11;
@@ -134801,6 +134805,9 @@ margin-top: 161px;
 
 
 @media only screen and (min-width: 360px) and (max-width:393px) {
+
+
+
 
   .heroBtn {
     font-size: 10px !important;
@@ -154321,9 +154328,10 @@ margin-top: 161px;
 
 @media(max-width:768px) {
 
-  /* .tns-outer{
-    margin-left:-74px;
-  } */
+  .form-dev-enquiry .form-dev {
+    width: 100%!important;
+}
+
   .services-all-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr)!important;
@@ -154958,12 +154966,12 @@ margin-top: 161px;
 
   .reelSlidebox {
     width: 300px !important;
-    height: 121px !important;
+    height: 130px !important;
   }
 
   .reelSlidehome {
-    width: 172px !important;
-    height: 200px !important;
+    width: 7% !important;
+    height: auto !important;
     margin-top: 13px !important;
     /* margin-left: 172px; */
     position: absolute !important;

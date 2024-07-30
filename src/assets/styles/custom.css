@@ -25,7 +25,7 @@
 .btntxt-hero-btn {
   display: flex;
   vertical-align: middle;
-
+  width: 80%;
 }
 
 .btnContainerdiv {
@@ -135,6 +135,10 @@
   padding: 5px;
 }
 
+.boxContainerMainSEOservnew .boxContainerSEOservnew:hover {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+}
+
 .boxContainerSEOservnew h1 {
   font-size: 22px;
   color: #023878;
@@ -188,12 +192,13 @@ label {
 .form-dev h5 {
   text-align: center;
 }
+
 /* .form-dev-enquiry{
   padding:20%;
 } */
 .form-dev-enquiry .form-dev {
   margin-top: 10% !important;
-  width:77%;
+  width: 77%;
   margin-left: 10%;
 }
 
@@ -223,14 +228,15 @@ label {
   height: auto;
 }
 
-.viewallservice-btn{
+.viewallservice-btn {
   text-align: center;
 }
-.sidebar-para{
+
+.sidebar-para {
   color: #fff;
 }
 
-.services-all-cards{
+.services-all-cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -239,7 +245,8 @@ label {
   row-gap: 20px;
   column-gap: 10px;
 }
-.services-cardsnew{
+
+.services-cardsnew {
   text-align: center;
   border: 1px solid #023878;
   height: 350px;
@@ -248,6 +255,10 @@ label {
   background: #fff;
 }
 
-.services-cardsnew:hover{
-    box-shadow: 0 0 5px 0 rgba(0,0,0,.5);
+.services-cardsnew:hover {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+}
+
+.graphic-crd-btn {
+  text-align: center;
 }

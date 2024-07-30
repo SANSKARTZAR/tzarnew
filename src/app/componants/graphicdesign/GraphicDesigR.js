@@ -2,6 +2,7 @@
 import graphicdesign from "@/app/data/graphicdesign";
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
+import Link from "next/link";
 const { bg, img1, img2, img3, img4, img5, img6, img7, img8, images, images1, imgtitle, tagline, bILL, title, text1, text2 } = graphicdesign;
 
 const GraphicDesigR = () => {
@@ -85,6 +86,11 @@ const GraphicDesigR = () => {
               </div>
             </li>
           </ul>
+          <div className="graphic-crd-btn">
+          <Link href="#Contactform" className="thm-btn GraphicDesigning__btn">
+            Enquiry Now
+          </Link>
+          </div>
         </div>
       </div>
     </section>

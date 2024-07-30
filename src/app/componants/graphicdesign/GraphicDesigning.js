@@ -40,6 +40,7 @@ const GraphicDesigning = () => {
               <p className="GraphicDesigning__right-text-1">{text1}</p>
               <p className="GraphicDesigning__right-text-1">{text2}</p>
               <p className="GraphicDesigning__right-text-1">{text3}</p>
+              <br/>
               <Link href="#Contactform" className="thm-btn GraphicDesigning__btn">
                 Enquiry Now
               </Link>
