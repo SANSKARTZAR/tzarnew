@@ -19,7 +19,7 @@ export default function about() {
             <MainHerobanner/>
             <OurServices/>
             <WelcomeOne/>
-            <DesignStudio/>
+            {/* <DesignStudio/> */}
             <CounterOne/>
             <WebDesignMock/>
             <WhyChoose/>

@@ -21691,7 +21691,7 @@ margin-top: 161px;
     font-size: 24px;
     color: #f5f5f5;
     background: rgb(251, 158, 61);
-    background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%);
+    /* background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%); */
     padding: 5px 10px;
     border-radius: 15px;
     background-color: var(--mibooz-primary);
@@ -22952,9 +22952,9 @@ margin-top: 161px;
     display: inline-block;
     vertical-align: middle;
     outline: none !important;
-    /* background-color: transparent; */
+    background-color: #fff;
     color: #000;
-    background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%);
+    /* background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%); */
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -134193,7 +134193,7 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 375px;
-    margin-top: -94px;
+    margin-top: 0px;
     width: 100%;
     background-color: #023878;
     height: 807px;
@@ -137271,7 +137271,7 @@ margin-top: 161px;
     width: 191px !important;
     height: 363px !important;
     margin-top: 280px !important;
-    margin-left: 130px !important;
+    margin-left: 148px !important;
     position: absolute;
     z-index: 9999;
   }
@@ -137431,8 +137431,8 @@ margin-top: 161px;
     position: relative;
     display: block;
     padding: 19px 0 0px 0px;
-    margin-top: -23px;
-    margin-bottom: -60px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .comment-form__input-box {
@@ -139399,7 +139399,7 @@ margin-top: 161px;
 
 
   .mainEc {
-    max-width: 1920px;
+    max-width: 100%;
     height: auto;
     margin-left: 0;
   }
@@ -142198,7 +142198,7 @@ margin-top: 161px;
     padding: 92px 20px;
     flex-direction: column;
     text-align: center;
-    margin-left: -50px;
+    margin-left: 0px;
   }
 
   .boxF {
@@ -143870,7 +143870,7 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 55px;
-    margin-top: -80px;
+    margin-top: 0px;
     width: 100%;
     background-color: #023878;
     height: 1396px;
@@ -143922,9 +143922,9 @@ margin-top: 161px;
   }
 
   .mainEc {
-    max-width: 1920px;
-    height: 400px;
-    margin-left: -33px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
   }
 
   .ExeculsiveCardsR-page {
@@ -143932,7 +143932,7 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 55px;
-    margin-top: -80px;
+    margin-top: 0px;
     width: 100%;
     background-color: #023878;
     height: 896px;
@@ -148275,7 +148275,7 @@ margin-top: 161px;
     padding: 92px 20px;
     flex-direction: column;
     text-align: center;
-    margin-left: -50px;
+    margin-left: 0px;
   }
 
 
