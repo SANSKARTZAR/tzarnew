@@ -35,7 +35,7 @@ export default class StudioShowcase extends Component {
                 <div className="">
                     <div className="section-title text-center">
                         <div className="reel-position">
-                            <img className='my-img-reel' src="/reel.png" alt="reel" width="400" height="400" />
+                            {/* <img className='my-img-reel' src="/reel.png" alt="reel" width="400" height="400" /> */}
                         </div>
                         <p className="section-title__tagline">Where Every Frame Tells a Story</p>
                         <h2 className="section-title__title">WORK SHOWCASE</h2>

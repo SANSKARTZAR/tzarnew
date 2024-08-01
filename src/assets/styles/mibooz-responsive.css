@@ -128231,9 +128231,9 @@ margin-top: 161px;
   }
 
   .mobileCont {
-    width: 500px !important;
+    width: 100% !important;
     height: 500px !important;
-    margin-left: -32px !important;
+    margin-left: 0px !important;
     margin-top: 200px !important;
     position: absolute !important;
     z-index: 0 !important;
@@ -137206,7 +137206,7 @@ margin-top: 161px;
   }
 
   .mobileContmob {
-    width: 347px !important;
+    width: 337px !important;
     height: 500px !important;
     margin-left: 21px !important;
     margin-top: 200px !important;
@@ -139986,8 +139986,8 @@ margin-top: 161px;
     line-height: 22px;
     text-align: justify;
     max-width: 100%;
-    width: 300px;
-    margin-left: -9px;
+    width: 100%;
+    margin-left: 0px;
     font-size: 17px;
   }
 
@@ -140046,7 +140046,7 @@ margin-top: 161px;
     border: 1px solid #023878;
     flex-direction: column;
     overflow: hidden;
-    margin-left: 22px;
+    margin-left: 40px;
   }
 
   .slick-dots {

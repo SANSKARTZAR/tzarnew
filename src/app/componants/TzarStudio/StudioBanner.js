@@ -100,7 +100,7 @@ function StudioBanner() {
 
                     </Col>
                     <Col xl={4} md={12} sm={12} >
-                        {/* <StudioContact /> */}
+                        <ContactForm />
                     </Col>
                 </Row>
             </div>
