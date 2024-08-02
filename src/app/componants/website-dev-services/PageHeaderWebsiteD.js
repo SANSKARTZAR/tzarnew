@@ -40,7 +40,7 @@ return (
     <section className="page-header ">
       <div
         className="page-header-bgWd "
-        style={{ backgroundImage: `url(${bg12.src})` }}
+        style={{ backgroundImage: `url(${bg121.src})` }}
       ></div>
       <Container>
         <div className="page-header__innerAuW">
