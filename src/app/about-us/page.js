@@ -6,20 +6,20 @@ import ContactForm from "../componants/home/ContactForm";
 import Link from "next/link";
 
 export const metadata = {
-     title:"About Us - Tzar Venture Online Digital Marketing Services - Tzar Venture",
-      description:"About Us - End to End Digital Marketing Services Online."
-  }
+    title: "About Us - Tzar Venture Online Digital Marketing Services - Tzar Venture",
+    description: "About Us - End to End Digital Marketing Services Online."
+}
 
 export default function about() {
     return (
         <>
-             <PageHeaderAbout title="About Us"/>
-             <AboutPage/>
-             <TeamRA/>
-             <Link href="/our-team">
-          <span className="thm-btn abut-page__btnout">Discover Our Team</span>
-        </Link>
-             <ContactForm/>
+            <PageHeaderAbout title="About Us" />
+            <AboutPage />
+            <TeamRA />
+            <Link href="/our-team">
+                <span className="thm-btn abut-page__btnout">Discover Our Team</span>
+            </Link>
+            <ContactForm />
         </>
     )
 }
