@@ -9,16 +9,6 @@ import ProductMerchandiseDesignR from "../componants/graphicdesign/ProductMercha
 import ArtIllustrationR from "../componants/graphicdesign/ArtIllustrationR";
 import TestimonialThree from "../componants/home/Testimonial/TestimonialThree";
 import ContactForm from "../componants/home/ContactForm";
-// import PageHeaderGraphicD from "../components/PageHeader/PageHeaderGraphicD";
-// import GraphicDesigning from "../components/ServicesPG/GraphicDesigning";
-// import LogoDesigningR from "../components/ServicesPG/GraphicDesing/LogoDesigningR";
-// import WebsiteDesignCardsR from "../components/ServicesPG/WebsiteDesignCardsR";
-// import PrintDesignR from "../components/ServicesPG/GraphicDesing/PrintDesignR";
-// import GraphicDesigR from "../components/ServicesPG/GraphicDesing/GraphicDesigR";
-// import ProductMerchandiseDesignR from "../components/ServicesPG/GraphicDesing/ProductMerchandiseDesignR";
-// import ArtIllustrationR from "../components/ServicesPG/GraphicDesing/ArtIllustrationR";
-// import TestimonialThree from "../components/HomePG/Testimonial/TestimonialThree";
-// import ContactForm from "../components/ContactForm/ContactForm";
 
 export const metadata = {
   title: "Graphic Design Services - Creative Banners, Logo Design, Custom Design Online services | Agency in Indian - Tzar Venture",
