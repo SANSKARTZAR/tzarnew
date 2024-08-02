@@ -1,7 +1,7 @@
 
 "use client";
 import bg9 from "@/assets/images/backgrounds/Jobs.jpg";
-import bg91 from "@/assets/images/MobileTopbanners/Jobs.jpg";
+import bg91 from "@/assets/images/MobileTopBanners/Jobs.jpg";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
