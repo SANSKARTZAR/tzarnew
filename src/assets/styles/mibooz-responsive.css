@@ -22952,7 +22952,7 @@ margin-top: 161px;
     display: inline-block;
     vertical-align: middle;
     outline: none !important;
-    background-color: #fff;
+    background-color: #d2d2d2;
     color: #000;
     /* background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%); */
     font-size: 14px;
@@ -26941,7 +26941,7 @@ margin-top: 161px;
     display: inline-block;
     vertical-align: middle;
     outline: none !important;
-    background-color: transparent;
+    background-color: #d2d2d2;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -137272,7 +137272,7 @@ margin-top: 161px;
     width: 191px !important;
     height: 363px !important;
     margin-top: 280px !important;
-    margin-left: 148px !important;
+    margin-left: 126px !important;
     position: absolute;
     z-index: 9999;
   }
