@@ -37,20 +37,19 @@ export default class WebDesignMock extends Component {
     };
     return (
       <>
-        <section>
-          <div className="ContainerWeb">
-            <div className="section-titlemk text-center">
-              <p className="section-title__taglinemk">Website Design & Development</p>
-              <h2 className="section-title__titlemk">Shocase Mockup</h2>
-            </div>
-            <img src={MobileMock.src} alt="" className="mobileCont" />
-            <img src={MobileMockmob.src} alt="" className="mobileContmob" />
+        <section className="ContainerWeb">
+          <div className="section-titlemk text-center">
+            <p className="section-title__taglinemk">Website Design & Development</p>
+            <h2 className="section-title__titlemk">Shocase Mockup</h2>
+          </div>
+          <img src={MobileMock.src} alt="" className="mobileCont" />
+          <img src={MobileMockmob.src} alt="" className="mobileContmob" />
 
-            <Slider {...settings} className="ContainerWebContainer">
-              <div className="mobileSlidebox" >
-                <img src={MobileSlide.src} alt="" className="mobileSlidemk n" />
-              </div>
-              {/* <div className= "mobileSlidebox" >
+          <Slider {...settings} className="ContainerWebContainer">
+            <div className="mobileSlidebox" >
+              <img src={MobileSlide.src} alt="" className="mobileSlidemk n" />
+            </div>
+            {/* <div className= "mobileSlidebox" >
             <img src={MobileSlide11.src} alt=""  className="mobileSlidemk"  />  
           </div>
           <div className= "mobileSlidebox" >
@@ -62,28 +61,28 @@ export default class WebDesignMock extends Component {
           <div className= "mobileSlidebox" >
             <img src={MobileSlide14.src} alt=""  className="mobileSlidemk"  />  
           </div> */}
-              <div className="mobileSlidebox" >
-                <img src={MobileSlide1.src} alt="" className="mobileSlidemk" />
-              </div>
-              <div className="mobileSlidebox" >
-                <img src={MobileSlide2.src} alt="" className="mobileSlidemk" />
-              </div>
-              <div className="mobileSlidebox" >
-                <img src={MobileSlide3.src} alt="" className="mobileSlidemk" />
-              </div>
-              <div className="mobileSlidebox" >
-                <img src={MobileSlide4.src} alt="" className="mobileSlidemk" />
-              </div>
-              <div className="mobileSlidebox" >
-                <img src={MobileSlide5.src} alt="" className="mobileSlidemk" />
-              </div>
-              <div className="mobileSlidebox" >
-                <img src={MobileSlide6.src} alt="" className="mobileSlidemk" />
-              </div>
-              <div className="mobileSlidebox" >
-                <img src={MobileSlide7.src} alt="" className="mobileSlidemk" />
-              </div>
-              {/* <div className= "mobileSlidebox" >
+            <div className="mobileSlidebox" >
+              <img src={MobileSlide1.src} alt="" className="mobileSlidemk" />
+            </div>
+            <div className="mobileSlidebox" >
+              <img src={MobileSlide2.src} alt="" className="mobileSlidemk" />
+            </div>
+            <div className="mobileSlidebox" >
+              <img src={MobileSlide3.src} alt="" className="mobileSlidemk" />
+            </div>
+            <div className="mobileSlidebox" >
+              <img src={MobileSlide4.src} alt="" className="mobileSlidemk" />
+            </div>
+            <div className="mobileSlidebox" >
+              <img src={MobileSlide5.src} alt="" className="mobileSlidemk" />
+            </div>
+            <div className="mobileSlidebox" >
+              <img src={MobileSlide6.src} alt="" className="mobileSlidemk" />
+            </div>
+            <div className="mobileSlidebox" >
+              <img src={MobileSlide7.src} alt="" className="mobileSlidemk" />
+            </div>
+            {/* <div className= "mobileSlidebox" >
             <img src={MobileSlide8.src} alt=""  className="mobileSlidemk"  />  
           </div>
           <div className= "mobileSlidebox" >
@@ -92,8 +91,7 @@ export default class WebDesignMock extends Component {
           <div className= "mobileSlidebox" >
             <img src={MobileSlide10.src} alt=""  className="mobileSlidemk"  />  
           </div> */}
-            </Slider>
-          </div>
+          </Slider>
         </section>
       </>
     );

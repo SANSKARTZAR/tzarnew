@@ -8917,11 +8917,12 @@
 @media only screen and (max-width: 1920px) {
 
 
-  .PDsicons{
+  .PDsicons {
     width: 100px;
     height: 100px;
   }
-  .boxcontainericonpds{
+
+  .boxcontainericonpds {
     text-align: center;
   }
 
@@ -10269,7 +10270,7 @@
     text-align: center;
     margin-top: 10px;
     font-size: 25px;
-    padding-top:0;
+    padding-top: 0;
     line-height: 20px;
     width: 100%;
     padding: 26px;
@@ -21895,9 +21896,11 @@ margin-top: 161px;
     flex-direction: column;
     overflow: hidden;
   }
+
   .cardcm:hover {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
-}
+  }
+
   .Cmicons {
     width: 100%;
     height: 114px;
@@ -23793,9 +23796,11 @@ margin-top: 161px;
     flex-direction: column;
     overflow: hidden;
   }
+
   .cardSmm:hover {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
   }
+
   .cardSmm .SmmsGoals__text {
     text-align: center;
     margin-left: 0px;
@@ -116490,8 +116495,8 @@ margin-top: 161px;
     line-height: 22px;
     text-align: justify;
     max-width: 100%;
-    width: 334px;
-    margin-left: -9px;
+    width: 100%;
+    margin-left: 0px;
     font-size: 17px;
   }
 
@@ -116553,7 +116558,7 @@ margin-top: 161px;
     border: 1px solid #023878;
     flex-direction: column;
     overflow: hidden;
-    margin-left: 13px;
+    margin-left: 0px;
   }
 
   .slick-dots {
@@ -116719,7 +116724,7 @@ margin-top: 161px;
   .BenefitsLGContainer {
     position: relative;
     display: block;
-    height: 1646px;
+    height: auto;
     margin-top: 7px;
     z-index: 1;
   }
@@ -116748,10 +116753,10 @@ margin-top: 161px;
   }
 
   .BenefitsLGContainer .Lgicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 242px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
@@ -117023,36 +117028,37 @@ margin-top: 161px;
   .PPCmgmt-page {
     position: relative;
     display: inline-block;
-    margin-left: 20px;
-    padding-top: 100px;
-    padding-left: -10px;
-    margin-top: -90px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-left: 0px;
+    margin-top: 0px;
     width: 100%;
-    height: 1148px;
+    height: auto;
   }
 
   .PPCmgmt-page h1 {
     text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
-    width: 440px;
-    margin-left: -30px;
+    width: 100%;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmtCMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: 89px;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmt1 {
-    width: 315px;
-    height: 403px;
+    width: 100%;
+    height: auto;
     border: 1.5px solid #023878;
     background-color: #ffffff;
     margin-top: 50px;
-    margin-left: 45px;
+    border-radius: 10px;
+    margin-left: 0px;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
 
@@ -117111,26 +117117,25 @@ margin-top: 161px;
   .PPCmgmtSer-page {
     position: relative;
     display: inline-block;
-    margin-left: -80px;
-    padding-top: 100px;
-    padding-left: -10px;
-    margin-top: -66px;
+    margin-left: 0px;
+    padding: 10px;
+    margin-top: 0;
     width: 100%;
-    height: 769px;
+    height: auto;
   }
 
   .BoxPPCmgmtMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: 117px;
+    margin-left: 0;
   }
 
   .BoxPPCmgmtSer1 {
-    width: 315px;
-    height: 403px;
+    width: 100%;
+    height: auto;
     margin-top: 50px;
-    margin-left: 77px;
+    margin-left: 0;
   }
 
   .BoxPPCmgmtSer2 {
@@ -117155,11 +117160,11 @@ margin-top: 161px;
   }
 
   .boxTextPPCmgmtSer {
-    width: 360px;
-    height: 180px;
+    width: 100%;
+    height: auto;
     border: 3px solid #100f12;
-    margin-top: -530px;
-    margin-left: 130px;
+    margin-top: 10px;
+    margin-left: 0px;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
     padding-left: 50px;
   }
@@ -117174,19 +117179,19 @@ margin-top: 161px;
 
   .PPCmgmtSer-page .BtnPPCmgmtSer {
     margin-top: 50px;
-    margin-left: 144px;
-    width: 340px;
+    margin-left: 0;
+    width: 100%;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #100f12;
-    height: 80px;
+    height: auto;
     margin-bottom: 50px;
   }
 
   .BenefitsPPCContainer {
     position: relative;
     display: block;
-    height: 1017px;
+    height: auto;
     margin-top: 50px;
     z-index: 1;
   }
@@ -117201,27 +117206,27 @@ margin-top: 161px;
   }
 
   .BenefitsPPCContainer .ppcicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 214px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
 
 
   .boxContainerPPC1 {
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: 46px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 0px;
     margin-bottom: 20px;
   }
 
   .boxContainerPPC1 h1 {
     text-align: center;
-    width: 375px;
-    margin-left: 81px;
+    width: 100%;
+    margin-left: 0;
     margin-top: 26px;
     font-size: 30px;
     color: #100f12;
@@ -117424,44 +117429,45 @@ margin-top: 161px;
   }
 
   .BoxFact {
-    width: 423px;
-    height: 340px;
+    width: 100%;
+    height: auto;
     background-color: #023878;
     color: #E8F0F5;
     margin-bottom: 20px;
   }
 
   .BoxFact p {
-    width: 293px;
-    height: 50px;
+    width: 100%;
+    height: auto;
     line-height: 23px;
-    margin-left: 121px;
-    margin-top: -96px;
+    margin-left: 0;
+    margin-top: 0px;
     text-align: justify;
-    max-width: 67%;
+    max-width: 100%;
     font-size: 16px;
+    padding: 10px;
   }
 
   .BenefitsCKMContainer {
     position: relative;
     display: block;
-    height: 1280px;
-    margin-top: 50px;
+    height: auto;
+    margin-top: 0px;
     z-index: 1;
   }
 
   .boxContainerCKMain {
-    width: 810px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: 7px;
+    margin-left: 0px;
     margin-top: 74px;
   }
 
   .boxContainerCk {
-    width: 462px;
-    margin-left: -1px;
+    width: 100%;
+    margin-left: 0px;
     margin-bottom: 23px;
   }
 
@@ -117840,9 +117846,9 @@ margin-top: 161px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 809px;
-    margin-top: 50px;
+    grid-template-rows: repeat(1, 1fr);
+    height: auto;
+    margin-top: 0px;
     background-color: #f6f6f6;
     z-index: 1;
   }
@@ -117944,57 +117950,48 @@ margin-top: 161px;
   }
 
 
-  .BenefitsSeoContainer {
+  .BenefitsSEOContainer {
     position: relative;
     display: block;
-    height: 849px;
+    height: auto;
+    margin-top: 0;
     z-index: 1;
   }
 
   .boxContainerMainSeo {
-    width: 1920px;
-    height: 680px;
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    margin-top: -27px;
-    margin-left: 247px;
-    padding-top: 33px;
-  }
-
-  .boxContainerMainSeo {
-    width: 1920px;
-    height: 680px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    margin-top: -27px;
-    margin-left: -320px;
+    margin-top: 0px;
+    margin-left: 0;
     padding-top: 33px;
   }
 
 
   .boxContainerSeo {
-    width: 1920px;
-    height: 258px;
+    width: 100%;
+    height: auto;
     margin-top: 30px;
-    margin-left: 247px;
+    margin-left: 0;
     padding-top: 33px;
-    padding-left: -80px;
+    padding-left: 0px;
+    text-align: center;
   }
 
   .boxContainerMainSeo .Seoicons {
     width: 110px;
     height: 84px;
-    margin-left: 225px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
   .boxContainerSeo h1 {
     text-align: center;
-    width: 405px;
-    margin-left: 81px;
+    width: 100%;
+    margin-left: 0;
     margin-top: 26px;
     font-size: 30px;
     color: #100f12;
@@ -118002,14 +117999,20 @@ margin-top: 161px;
 
   .boxContainerSeo p {
     text-align: center;
-    width: 270px;
-    margin-left: 140px;
+    width: 100%;
+    margin-left: 0;
     font-size: 22px;
     line-height: 22px;
     margin-top: 16px;
     color: #000000;
     font-weight: 400;
   }
+
+  .GraphicDesigning-page {
+    position: relative;
+    display: block;
+    padding: 20px 0;
+}
 
   .cta-Three__icon {
     display: flex;
@@ -118085,7 +118088,7 @@ margin-top: 161px;
     padding-top: 100px;
     margin-top: 10px;
     width: 100%;
-    height: 1392px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -118098,17 +118101,17 @@ margin-top: 161px;
   .SMMCards-page h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-left: -165px;
+    margin-left: 0px;
     text-transform: uppercase;
   }
 
   .SMMCards-page p {
-    width: 533px;
+    width: 100%;
     font-size: 15px;
     line-height: 20px;
-    margin-left: -130px;
-    text-align: justify;
-    max-width: 135%;
+    margin-left: 0;
+    text-align: center;
+    max-width: 100%;
     word-break: normal;
   }
 
@@ -118123,8 +118126,8 @@ margin-top: 161px;
   .cardSmm {
     background-color: white;
     border-radius: 0.25rem;
-    width: 198px;
-    height: 345px;
+    width: 100%;
+    height: auto;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     display: flex;
     border: 1px solid #023878;
@@ -118136,7 +118139,7 @@ margin-top: 161px;
     width: 282px;
     height: 130px;
     padding-top: 23px;
-    margin-left: -40px;
+    margin-left: 0px;
     margin-top: 9px;
     color: #023878;
   }
@@ -118167,21 +118170,21 @@ margin-top: 161px;
   .BenefitsSMMContainer {
     position: relative;
     display: block;
-    height: 807px;
-    margin-top: 110px;
+    height: auto;
+    margin-top: 30px;
     background-color: #f6f6f6;
     z-index: 1;
-    margin-left: -100px;
+    margin-left: 0;
   }
 
   .titleHeadSMM {
     text-align: center;
     font-size: 44px;
     padding-top: 63px;
-    margin-bottom: -70px;
+    margin-bottom: 0px;
     color: #023878;
-    margin-left: 144px;
-    width: 341px;
+    margin-left: 0;
+    width: 100%;
   }
 
   .boxContainerMain {
@@ -118197,7 +118200,7 @@ margin-top: 161px;
     height: 81px;
     /* color: #100f12; */
     color: #023878;
-    margin-left: -22px;
+    margin-left: 0px;
   }
 
 
@@ -118316,7 +118319,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     padding: 106px 0 97px;
-    margin-top: -5px;
+    margin-top: 0px;
     z-index: 1;
   }
 
@@ -118339,7 +118342,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     text-align: left;
-    margin-left: 416px;
+    margin-left: 0px;
     margin-top: -169px;
     z-index: 2;
   }
@@ -118347,9 +118350,9 @@ margin-top: 161px;
   .list-unstyledAuW {
     padding-left: 0;
     list-style: none;
-    margin-left: 53px;
-    margin-top: -54px;
-    width: 777px;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
   }
 
   .page-header__innerAuW h2 {
@@ -118358,15 +118361,15 @@ margin-top: 161px;
     line-height: 31px;
     text-transform: uppercase;
     margin-top: -5px;
-    margin-left: -370px;
-    width: 628px;
+    margin-left: 0px;
+    width: 100%;
   }
 
   .testimonial-FourWD {
     position: relative;
     display: block;
     padding: 106px 0 97px;
-    margin-top: -65px;
+    margin-top: 0px;
     z-index: 1;
   }
 
@@ -118374,7 +118377,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     padding: 106px 0 97px;
-    margin-top: -65px;
+    margin-top: 0px;
     z-index: 1;
   }
 
@@ -118383,10 +118386,10 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 100px;
-    padding-left: -10px;
+    padding-left: 0px;
     margin-top: 10px;
     width: 100%;
-    height: 2580px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -118423,12 +118426,12 @@ margin-top: 161px;
   }
 
   .CardWD {
-    width: 200px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     border: 1.5px solid #023878;
     background-color: #ffffff;
     margin-top: 50px;
-    margin-left: -160px;
+    margin-left: 0px;
   }
 
   .CardWD .WDGoals__text {
@@ -118576,11 +118579,12 @@ margin-top: 161px;
   .BenefitsWDContainer {
     position: relative;
     display: block;
-    height: 864px;
+    height: auto;
     background-color: #023878;
     color: #f5f5f5;
-    margin-top: -50px;
+    margin-top: 0px;
     z-index: 1;
+    padding:5px;
   }
 
   .boxContainerMainBenefitsWD {
@@ -118596,7 +118600,7 @@ margin-top: 161px;
     color: #F5f5f5;
     text-align: center;
     padding-top: 100px;
-    margin-bottom: -17px;
+    margin-bottom: 10px;
   }
 
   .BenefitsWDContainer .bwdicons {
@@ -118808,7 +118812,7 @@ margin-top: 161px;
   .cta-Three {
     position: relative;
     display: block;
-    margin-top: 880px;
+    margin-top: 10px;
     z-index: 2;
   }
 
@@ -118817,7 +118821,7 @@ margin-top: 161px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 92px 3px;
+    padding: 50px 3px;
     color: #100f12;
   }
 
@@ -118825,7 +118829,7 @@ margin-top: 161px;
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: -508px;
+    margin-top: 0px;
   }
 
 
@@ -118835,7 +118839,7 @@ margin-top: 161px;
     vertical-align: middle;
     /* -webkit-appearance: none; */
     outline: none !important;
-    background-color: transparent;
+    background-color: #e7e7e7;
     color: #000000;
     font-size: 14px;
     font-weight: 400;
@@ -118843,7 +118847,8 @@ margin-top: 161px;
     padding: 14px 58px 14px;
     transition: all 0.3s linear;
     overflow: hidden;
-    border: 2px solid var(--mibooz-primary);
+    border: 0px solid var(--mibooz-primary);
+    border-radius: 50px;
     z-index: 1;
     font-family: var(--mibooz-font-two);
     text-shadow: 0 0 0.25px currentColor;
@@ -118892,18 +118897,12 @@ margin-top: 161px;
   .WhatSeoContainer {
     position: relative;
     display: block;
-    height: 1948px;
+    height: auto;
     z-index: 1;
   }
 
 
-  .BenefitsSEOContainer {
-    position: relative;
-    display: block;
-    height: 800px;
-    margin-top: 639px;
-    z-index: 1;
-  }
+
 
   .boxContainerMain {
     width: 310px;
@@ -119126,8 +119125,8 @@ margin-top: 161px;
     display: inline-block;
     color: var(--mibooz-base);
     font-size: 14px;
-    margin-left: -428px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: all 500ms ease;
@@ -119252,7 +119251,8 @@ margin-top: 161px;
   .section-titlemk {
     padding-top: 120px;
     margin-bottom: -180px;
-    margin-left: -1478px;
+    margin-left: 0px;
+    width: 100% !important;
   }
 
   .section-title__taglinemk {
@@ -119276,9 +119276,9 @@ margin-top: 161px;
   }
 
   .mobileCont {
-    width: 500px;
+    width: 440px;
     height: 500px;
-    margin-left: -12px;
+    margin-left: 20px;
     margin-top: 200px;
     position: absolute;
     z-index: 0;
@@ -119318,11 +119318,11 @@ margin-top: 161px;
   }
 
   .ContainerWeb {
-    width: 1920px;
+    width: 100%;
     height: 773px;
     background-color: #023878;
     color: #F4F2F2;
-    margin-left: -10px;
+    margin-left: 0px;
     margin-top: 62px;
   }
 
@@ -119409,9 +119409,9 @@ margin-top: 161px;
   .why-choose-one {
     position: relative;
     display: block;
-    padding: 120px 0;
-    height: 676px;
-    margin-top: -104px;
+    padding: 80px 0;
+    height: auto;
+    margin-top: 0px;
   }
 
 
@@ -119708,10 +119708,10 @@ margin-top: 161px;
     font-size: 72px;
     position: absolute;
     color: #f6f6f6;
-    width: 673px;
+    width: 100%;
     height: 150px;
     margin-top: 180px;
-    margin-left: 142px;
+    margin-left: 0px;
     line-height: 67px;
     padding-bottom: 50px;
     z-index: 11;
@@ -119952,9 +119952,9 @@ margin-top: 161px;
     margin-left: 0px;
     padding-top: 65px;
     padding-left: 0px;
-    margin-top: 108px;
+    margin-top: 18px;
     width: 100%;
-    height: 1193px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -119974,14 +119974,14 @@ margin-top: 161px;
   }
 
   .BoxWCU1 {
-    Width: 390px;
-    height: 224px;
+    Width: 100%;
+    height: auto;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #023878;
     padding: 20px 20px 20px 20px;
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-    margin-left: 55px;
+    margin-left: 0px;
   }
 
   .BoxWCU1 h1 {
@@ -120371,8 +120371,9 @@ margin-top: 161px;
 
   .section-title5 {
     text-align: center;
-    margin-bottom: 141px;
-    margin-left: 15px;
+    margin-bottom: 41px;
+    margin-left: 0;
+    width: 100%;
   }
 
   .section-title5 h2 {
@@ -120385,9 +120386,9 @@ margin-top: 161px;
     font-weight: 500;
     text-transform: uppercase;
     display: block;
-    margin-bottom: 9px;
-    margin-top: -304px;
-    margin-left: 8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
     font-size: 18px;
   }
 
@@ -120424,11 +120425,11 @@ margin-top: 161px;
     position: relative;
     display: inline-block;
     margin-left: 0px;
-    padding-top: 375px;
-    margin-top: 124px;
+    padding: 5px;
+    margin-top: 0;
     width: 100%;
     background-color: #023878;
-    height: 862px;
+    height: auto;
   }
 
   .form-group.formleft {
@@ -120584,9 +120585,9 @@ margin-top: 161px;
 
 
   .mainEc {
-    max-width: 1920px;
-    height: 400px;
-    margin-left: -24px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
   }
 
   .section-title5 .bar {
@@ -120597,13 +120598,6 @@ margin-top: 161px;
     border-radius: 5px;
     overflow: hidden;
     margin: auto;
-  }
-
-  .section-title5 {
-    text-align: center;
-    margin-bottom: 141px;
-    margin-left: 88px;
-    width: 300px;
   }
 
   .section-title5 span {
@@ -120642,9 +120636,9 @@ margin-top: 161px;
   .GraphicDesigning__right {
     position: relative;
     display: block;
-    margin-left: 43px;
+    margin-left: 0;
     margin-top: 50px;
-    width: 317px;
+    width: 100%;
     text-align: justify;
     max-width: 100%;
 
@@ -120654,43 +120648,43 @@ margin-top: 161px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
   .cardsWd {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
   .cardsPDR {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
   .cardsGd {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
   .cardsPMD {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
     margin-left: 3px;
   }
@@ -120699,9 +120693,9 @@ margin-top: 161px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
 
@@ -120727,20 +120721,20 @@ margin-top: 161px;
   .section-title1__titleLd {
     font-size: 27px;
     line-height: 26px;
-    margin-left: -9px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
   .LogoDesigningR__right-text-1 {
-    margin-left: 16px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 331px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -120750,34 +120744,35 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    padding-left: -50px;
-    margin-top: 859px;
+    padding-left: 0px;
+    margin-top: 0;
     width: 100%;
-    height: 962px;
+    height: auto;
   }
 
+
   .mainGd {
-    max-width: 1920px;
-    margin-left: 32px;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .section-title1__titleGD {
     font-size: 27px;
     line-height: 26px;
-    margin-left: -9px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
   .GraphicdesignR__right-text-1 {
-    margin-left: 11px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 333px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -120795,28 +120790,28 @@ margin-top: 161px;
 
 
   .mainWd {
-    max-width: 1920px;
-    margin-left: 32px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
 
   .section-title1__titleWD {
     font-size: 27px;
     line-height: 26px;
-    margin-left: -9px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
   .WebdesignR__right-text-1 {
-    margin-left: 14px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 323px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -120825,38 +120820,38 @@ margin-top: 161px;
   .PrintDesignR-page {
     position: relative;
     display: inline-block;
-    margin-left: 3px;
-    padding-top: -40px;
-    margin-top: 68px;
+    margin-left: 0px;
+    padding-top: 0px;
+    margin-top: 18px;
     width: 100%;
-    height: 1030px;
+    height: auto;
   }
 
 
   .mainPDR {
-    max-width: 529px;
-    margin-left: 36px;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
 
   .section-title1__titlePDR {
     font-size: 27px;
     line-height: 26px;
-    margin-left: -9px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
 
   }
 
   .PrintDesignR__right-text-1 {
-    margin-left: 17px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 325px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -120867,9 +120862,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 258px;
+    margin-top: 0;
     width: 100%;
-    height: 667px;
+    height: auto;
   }
 
 
@@ -120882,21 +120877,21 @@ margin-top: 161px;
   .section-title1__titlePDMR {
     font-size: 27px;
     line-height: 26px;
-    margin-left: -9px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
 
   .ProductMerchandiseDesignR__right-text-1 {
-    margin-left: 17px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 325px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -120906,35 +120901,35 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 350px;
+    margin-top: 0;
     width: 100%;
-    height: 1513px;
+    height: auto;
   }
 
   .mainAi {
-    max-width: 1920px;
-    margin-left: 36px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .section-title1__titleAi {
     font-size: 27px;
     line-height: 26px;
-    margin-left: -9px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
 
 
   .ArtIllustration__right-text-1 {
-    margin-left: 15px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 332px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -120943,7 +120938,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     padding: 0 0 43px;
-    height: 1091px;
+    height: auto;
   }
 
   .text-centerMU {
@@ -120969,11 +120964,11 @@ margin-top: 161px;
   }
 
   .Gapimag {
-    width: 33%;
-    padding: 20px 199px 102px 21px;
+    width: 100%;
+    padding: 0;
     margin-top: 11px;
-    margin-left: 1px;
-    margin-bottom: -126px;
+    margin-left: 0px;
+    margin-bottom: 0px;
   }
 
 
@@ -121078,7 +121073,7 @@ margin-top: 161px;
 
   .main-menu .mobile-nav__toggler {
     font-size: 20px;
-    color: var(--mibooz-primary);
+    color: #fff;
     cursor: pointer;
     transition: 500ms;
     margin-left: 280px;
@@ -121265,7 +121260,7 @@ margin-top: 161px;
   .Cm__right {
     position: relative;
     display: block;
-    margin-left: 9px;
+    margin-left: 0px;
     margin-top: 50px;
   }
 
@@ -121273,8 +121268,8 @@ margin-top: 161px;
     line-height: 22px;
     text-align: justify;
     max-width: 100%;
-    width: 334px;
-    margin-left: -9px;
+    width: 100%;
+    margin-left: 0px;
     font-size: 17px;
   }
 
@@ -121501,8 +121496,8 @@ margin-top: 161px;
   .BenefitsLGContainer {
     position: relative;
     display: block;
-    height: 1676px;
-    margin-top: -3px;
+    height: auto;
+    margin-top: 0px;
     z-index: 1;
   }
 
@@ -121973,10 +121968,10 @@ margin-top: 161px;
   }
 
   .BenefitsPPCContainer .ppcicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 231px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
@@ -122750,7 +122745,7 @@ margin-top: 161px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 92px 3px;
+    padding: 50px 3px;
     color: #100f12;
   }
 
@@ -122855,8 +122850,8 @@ margin-top: 161px;
 
   .boxContainerSeo h1 {
     text-align: center;
-    width: 405px;
-    margin-left: 81px;
+    width: 100%;
+    margin-left: 0;
     margin-top: 26px;
     font-size: 30px;
     color: #100f12;
@@ -122907,7 +122902,7 @@ margin-top: 161px;
     padding-top: 100px;
     margin-top: 10px;
     width: 100%;
-    height: 1392px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -122925,12 +122920,12 @@ margin-top: 161px;
   }
 
   .SMMCards-page p {
-    width: 533px;
+    width: 100%;
     font-size: 15px;
     line-height: 20px;
-    margin-left: -130px;
+    margin-left: 0px;
     text-align: justify;
-    max-width: 144%;
+    max-width: 100%;
     word-break: normal;
   }
 
@@ -123189,8 +123184,8 @@ margin-top: 161px;
   .testimonial-FourWD {
     position: relative;
     display: block;
-    padding: 106px 0 97px;
-    margin-top: -65px;
+    padding: 97px 0 97px;
+    margin-top: 0px;
     z-index: 1;
   }
 
@@ -123255,12 +123250,12 @@ margin-top: 161px;
   }
 
   .CardWD {
-    width: 170px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     border: 1.5px solid #023878;
     background-color: #ffffff;
     margin-top: 20px;
-    margin-left: -152px;
+    margin-left: 0px;
   }
 
 
@@ -123410,7 +123405,7 @@ margin-top: 161px;
   .BenefitsWDContainer {
     position: relative;
     display: block;
-    height: 863px;
+    height: auto;
     margin-top: -50px;
     background-color: #023878;
     z-index: 1;
@@ -123737,7 +123732,7 @@ margin-top: 161px;
     background-color: #023878;
     color: #F4F2F2;
     margin-left: 0px;
-    margin-top:0px;
+    margin-top: 0px;
   }
 
   .containerSlider {
@@ -123831,7 +123826,7 @@ margin-top: 161px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin-left: -2px;
+    margin-left:0px;
   }
 
   .cardsWd {
@@ -123845,7 +123840,7 @@ margin-top: 161px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin-left: -2px;
+    margin-left: 0px;
   }
 
   .cardsPMD {
@@ -123859,7 +123854,7 @@ margin-top: 161px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin-left: -2px;
+    margin-left: 0px;
   }
 
 
@@ -125334,8 +125329,8 @@ margin-top: 161px;
   }
 
   .mainGd {
-    max-width: 1920px;
-    margin-left: 32px;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .section-title1__titleGD {
@@ -125371,8 +125366,8 @@ margin-top: 161px;
 
 
   .mainWd {
-    max-width: 1920px;
-    margin-left: 32px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
 
@@ -128207,7 +128202,7 @@ margin-top: 161px;
     padding-top: 120px;
     margin-bottom: -180px;
     margin-left: 0px;
-    width:100%;
+    width: 100%;
   }
 
   .section-title__taglinemk {
@@ -132241,7 +132236,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     text-align: left;
-    margin-left: 407px;
+    margin-left: 0;
     margin-top: 0;
     z-index: 2;
   }
@@ -132260,8 +132255,8 @@ margin-top: 161px;
     line-height: 31px;
     text-transform: uppercase;
     margin-top: -19px;
-    margin-left: -384px;
-    width: 628px;
+    margin-left: 0px;
+    width: 100%;
   }
 
 
@@ -135656,6 +135651,7 @@ margin-top: 161px;
     margin-left: 0px;
     margin-right: 0px;
   }
+
   .BoxFact p {
     width: 100%;
     height: auto;
@@ -135763,6 +135759,11 @@ margin-top: 161px;
     width: 351px;
     margin-bottom: 191px;
   }
+
+.slick-slide{
+  width: 237px !important;
+}
+
 
   .ClubGrid {
     display: grid;
@@ -139937,17 +139938,19 @@ margin-top: 161px;
 
 @media only screen and (min-width: 330px) and (max-width:360px) {
 
-  .BenefitsLGContainer{
+  .BenefitsLGContainer {
     height: auto;
   }
-.ImgTxtSeclg__img-1 img{
-  width: 100%;
-}
-.Lgicons {
-  width: 50px;
-  height: 50px;
-  color: #023878;
-}
+
+  .ImgTxtSeclg__img-1 img {
+    width: 100%;
+  }
+
+  .Lgicons {
+    width: 50px;
+    height: 50px;
+    color: #023878;
+  }
 
   .thm-breadcrumb li a {
     color: var(--mibooz-base);
@@ -140323,7 +140326,7 @@ margin-top: 161px;
   }
 
   .BoxFact {
-    width:100%;
+    width: 100%;
     height: auto;
     background-color: #023878;
     color: #E8F0F5;
@@ -140351,9 +140354,11 @@ margin-top: 161px;
     max-width: 89%;
     font-size: 16px;
   }
-.cardsWDv-ads{
-  padding: 0;
-}
+
+  .cardsWDv-ads {
+    padding: 0;
+  }
+
   .BenefitsCKMContainer {
     position: relative;
     display: block;
@@ -140593,9 +140598,10 @@ margin-top: 161px;
   }
 
 
-.ContainerWebprime .slick-slide{
-  width: 100% !important;
-}
+  .ContainerWebprime .slick-slide {
+    width: 100% !important;
+  }
+
   /* .embeddedvideoCont
   {
 
@@ -142657,7 +142663,7 @@ margin-top: 161px;
     padding: 0;
     margin-left: 0;
     z-index: 1;
-}
+  }
 
 
 
@@ -142678,33 +142684,38 @@ margin-top: 161px;
     margin: 0;
     color: #F6f6f6;
   }
+
   .SomeFacts__text {
     color: #E8F0F5;
     line-height: 22px;
     width: 100%;
     margin: 0px;
-}
+  }
+
   .list-unstyledFacts {
     padding-left: 0;
     list-style: none;
     margin: 0;
     width: 100%;
   }
+
   .titleHeadPDS {
     text-align: center;
     font-size: 32px;
     text-align: center;
     margin-left: 0px;
     padding: 0px;
-}
+  }
 
-.boxcontainericonpds{
-  text-align: center;
-}
-.PDsicons{
-  width: 100px;
-  height: 100px;
-}
+  .boxcontainericonpds {
+    text-align: center;
+  }
+
+  .PDsicons {
+    width: 100px;
+    height: 100px;
+  }
+
   .SomeFacts__list {
     position: relative;
     display: grid;
@@ -143489,21 +143500,24 @@ margin-top: 161px;
     padding-right: 50px;
   }
 
-  .boxTextPPCmgmtSer{
-      width: 100%;
-      height: auto;
-      margin: 0;
-      text-align: center;
+  .boxTextPPCmgmtSer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    text-align: center;
   }
+
   .boxTextPPCmgmtSer h1 {
     padding-top: 15px;
     margin: 0px;
     font-size: 32px;
-}
-.PPCmgmtSer-page .BtnPPCmgmtSer {
-  
-  width: 100%;
-}
+  }
+
+  .PPCmgmtSer-page .BtnPPCmgmtSer {
+
+    width: 100%;
+  }
+
   .hiringCard1 {
     width: 336px;
     height: 306px;
@@ -154283,7 +154297,7 @@ margin-top: 161px;
 }
 
 .BtnStudio {
-  background-color: #fff;
+  background-color: #e7e7e7;
   color: #000;
   /* background: rgb(251, 158, 61);
   background: linear-gradient(106deg, rgba(251, 158, 61, 1) 19%, rgba(255, 197, 60, 1) 74%); */
@@ -154294,7 +154308,7 @@ margin-top: 161px;
 
 .BtnStudio:hover {
   background-color: #023878;
-  color:#fff;
+  color: #fff;
 }
 
 .studio-bannertxt span {
@@ -154331,20 +154345,20 @@ margin-top: 161px;
 @media(max-width:768px) {
 
   .form-dev-enquiry .form-dev {
-    width: 100%!important;
-}
+    width: 100% !important;
+  }
 
   .services-all-cards {
     display: grid;
-    grid-template-columns: repeat(1, 1fr)!important;
-    grid-template-rows: repeat(10, 1fr)!important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(10, 1fr) !important;
     justify-content: center;
     align-items: center;
     grid-row-gap: 20px;
     row-gap: 20px;
     grid-column-gap: 10px;
     column-gap: 10px;
-}
+  }
 
 
   .EnquiryForm input[type=email],
@@ -154582,6 +154596,7 @@ margin-top: 161px;
   }
 
   .ReactModal__Content {
+    inset: 47% auto auto 50% !important;
     height: 100vh;
     width: 100%;
     border-radius: 0 !important;
@@ -154603,6 +154618,7 @@ margin-top: 161px;
     position: absolute;
     z-index: 9999;
   }
+
   .webdev-card5 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -154610,10 +154626,11 @@ margin-top: 161px;
     row-gap: 10px;
     column-gap: 10px;
   }
+
   .wdiconsnew {
-    width: 50px!important;
-    height: 50px!important;
-}
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
 
 @media(min-width:573px) {
@@ -154958,7 +154975,7 @@ margin-top: 161px;
 
   .flim-banner {
     width: 165% !important;
-    margin-top: 50px !important;
+    margin-top: 41px !important;
     margin-left: -162px !important;
   }
 
