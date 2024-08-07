@@ -125815,8 +125815,8 @@ margin-top: 161px;
     line-height: 22px;
     text-align: justify;
     max-width: 100%;
-    width: 300px;
-    margin-left: -9px;
+    width: 100%;
+    margin-left: 0px;
     font-size: 17px;
   }
 
@@ -125870,7 +125870,7 @@ margin-top: 161px;
     border: 1px solid #023878;
     flex-direction: column;
     overflow: hidden;
-    margin-left: 13px;
+    margin-left: 21px;
   }
 
   .slick-dots {
@@ -126035,11 +126035,10 @@ margin-top: 161px;
   .BenefitsLGContainer {
     position: relative;
     display: block;
-    height: 1676px;
-    margin-top: -3px;
+    height: auto;
+    margin-top: 0px;
     z-index: 1;
   }
-
   .titleHeadPPC {
 
     text-align: center;
@@ -126331,17 +126330,17 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 100px;
-    padding-left: -10px;
+    padding-left: 0px;
     margin-top: 10px;
     width: 100%;
-    height: 1148px;
+    height: auto;
   }
 
   .BoxPPCmgmtCMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: 80px;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmt1 {
@@ -126409,26 +126408,26 @@ margin-top: 161px;
   .PPCmgmtSer-page {
     position: relative;
     display: inline-block;
-    margin-left: -80px;
-    padding-top: 100px;
-    padding-left: -10px;
-    margin-top: -66px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-left: 0px;
+    margin-top: 0px;
     width: 100%;
-    height: 769px;
+    height: auto;
   }
 
   .BoxPPCmgmtMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: 80px;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmtSer1 {
-    width: 315px;
-    height: 403px;
+    width: 100%;
+    height: auto;
     margin-top: 50px;
-    margin-left: 77px;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmtSer2 {
@@ -126453,18 +126452,18 @@ margin-top: 161px;
   }
 
   .boxTextPPCmgmtSer {
-    width: 360px;
-    height: 180px;
+    width: 100%;
+    height: auto;
     border: 3px solid #100f12;
-    margin-top: -450px;
-    margin-left: 100px;
+    margin-top: 0px;
+    margin-left: 0px;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
-    padding-left: 50px;
+    padding-left: 0px;
   }
 
   .boxTextPPCmgmtSer h1 {
     padding-top: 29px;
-    margin-left: -46px;
+    margin-left: 0px;
     font-size: 30px;
     text-align: center;
   }
@@ -126472,19 +126471,19 @@ margin-top: 161px;
 
   .PPCmgmtSer-page .BtnPPCmgmtSer {
     margin-top: 50px;
-    margin-left: 104px;
-    width: 340px;
+    margin-left: 0;
+    width: 100%;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #100f12;
-    height: 80px;
+    height: auto;
     margin-bottom: 50px;
   }
 
   .BenefitsPPCContainer {
     position: relative;
     display: block;
-    height: 1017px;
+    height: auto;
     margin-top: 50px;
     z-index: 1;
   }
@@ -126499,27 +126498,27 @@ margin-top: 161px;
   }
 
   .BenefitsPPCContainer .ppcicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 231px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
 
 
   .boxContainerPPC1 {
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
-    margin-left: 46px;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 0px;
     margin-bottom: 20px;
   }
 
   .boxContainerPPC1 h1 {
     text-align: center;
-    width: 375px;
-    margin-left: 81px;
+    width: 100%;
+    margin-left: 0px;
     margin-top: 26px;
     font-size: 30px;
     color: #100f12;
@@ -126709,8 +126708,8 @@ margin-top: 161px;
   }
 
   .BoxFact {
-    width: 385px;
-    height: 380px;
+    width: 100%;
+    height: auto;
     background-color: #023878;
     color: #E8F0F5;
     margin-bottom: 20px;
@@ -126725,12 +126724,12 @@ margin-top: 161px;
   }
 
   .BoxFact p {
-    width: 293px;
-    height: 50px;
+    width: 100%;
+    height: auto;
     line-height: 23px;
-    margin-left: 105px;
+    margin-left: 30px;
     margin-right: 50px;
-    margin-top: -96px;
+    margin-top: 0;
     text-align: justify;
     max-width: 67%;
     font-size: 16px;
@@ -126739,7 +126738,7 @@ margin-top: 161px;
   .BenefitsCKMContainer {
     position: relative;
     display: block;
-    height: 1280px;
+    height: auto;
     margin-top: 50px;
     z-index: 1;
   }
@@ -127465,10 +127464,10 @@ margin-top: 161px;
     position: relative;
     display: inline-block;
     margin-left: 0px;
-    padding-top: 100px;
+    padding-top: 10px;
     margin-top: 10px;
     width: 100%;
-    height: 1392px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -127481,7 +127480,7 @@ margin-top: 161px;
   .SMMCards-page h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-left: -165px;
+    margin-left: 0px;
     text-transform: uppercase;
   }
 
@@ -127506,8 +127505,8 @@ margin-top: 161px;
   .cardSmm {
     background-color: white;
     border-radius: 0.25rem;
-    width: 188px;
-    height: 345px;
+    width: 100%;
+    height: auto;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     display: flex;
     border: 1px solid #023878;
@@ -127516,10 +127515,10 @@ margin-top: 161px;
   }
 
   .Smmicons {
-    width: 282px;
+    width: 100%;
     height: 130px;
     padding-top: 23px;
-    margin-left: -40px;
+    margin-left: 0px;
     margin-top: 9px;
     color: #023878;
   }
@@ -127550,21 +127549,21 @@ margin-top: 161px;
   .BenefitsSMMContainer {
     position: relative;
     display: block;
-    height: 807px;
+    height: auto;
     margin-top: 110px;
     background-color: #f6f6f6;
     z-index: 1;
-    margin-left: -100px;
+    margin-left: 0px;
   }
 
   .titleHeadSMM {
     text-align: center;
     font-size: 44px;
     padding-top: 63px;
-    margin-bottom: -70px;
+    margin-bottom: 0px;
     color: #023878;
-    margin-left: 144px;
-    width: 341px;
+    margin-left: 0px;
+    width: 100%;
   }
 
   .boxContainerMain {
@@ -127580,7 +127579,7 @@ margin-top: 161px;
     height: 81px;
     /* color: #100f12; */
     color: #023878;
-    margin-left: -22px;
+    margin-left: 0px;
   }
 
 
@@ -128871,11 +128870,11 @@ margin-top: 161px;
 
 
   .Gapimag {
-    width: 33%;
-    padding: 20px 199px 102px 21px;
+    width: 100%;
+    padding: 10px;
     margin-top: 11px;
-    margin-left: -11px;
-    margin-bottom: -126px;
+    margin-left: 0px;
+    margin-bottom: 0px;
   }
 
   .WhyChooseUSLogo-page {
@@ -128884,9 +128883,9 @@ margin-top: 161px;
     margin-left: 0px;
     padding-top: 65px;
     padding-left: 0px;
-    margin-top: 108px;
+    margin-top: 10px;
     width: 100%;
-    height: 1193px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -128906,14 +128905,14 @@ margin-top: 161px;
   }
 
   .BoxWCU1 {
-    Width: 390px;
-    height: 224px;
+    Width: 100%;
+    height: auto;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #023878;
     padding: 20px 20px 20px 20px;
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-    margin-left: 55px;
+    margin-left: 0;
   }
 
   .BoxWCU1 h1 {
@@ -130370,19 +130369,11 @@ margin-top: 161px;
   }
 
 
-  .Gapimag {
-    width: 33%;
-    padding: 20px 199px 102px 21px;
-    margin-top: 11px;
-    margin-left: -16px;
-    margin-bottom: -126px;
-  }
-
   .MUCOntainer {
     position: relative;
     display: block;
     padding: 0 0 43px;
-    height: 1054px;
+    height: auto;
   }
 
   .text-centerMU {
@@ -130408,37 +130399,6 @@ margin-top: 161px;
   }
 
 
-  .BoxWCU1 {
-    Width: 399px;
-    height: 224px;
-    background-color: #f6f6f6;
-    color: #100f12;
-    margin-left: 32px;
-    margin-bottom: -40px;
-    border: 1.5px solid #023878;
-    padding: 20px 20px 20px 20px;
-    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-  }
-
-  .BoxWCU1 h1 {
-    text-align: right;
-    font-size: 20px;
-    width: 200px;
-    height: 71px;
-    margin-left: 166px;
-    font-weight: 900;
-    margin-top: -126px;
-  }
-
-  .BoxWCU1 p {
-    text-align: right;
-    line-height: 19px;
-    width: 377px;
-    height: 90px;
-    margin-top: 58px;
-    margin-left: -7px;
-    font-size: 16px;
-  }
 
   .BoxWCU2 {
     Width: 399px;
@@ -130862,8 +130822,8 @@ margin-top: 161px;
   .BenefitsLGContainer {
     position: relative;
     display: block;
-    height: 1676px;
-    margin-top: -3px;
+    height: auto;
+    margin-top: 0px;
     z-index: 1;
   }
 
@@ -131291,10 +131251,10 @@ margin-top: 161px;
   }
 
   .BenefitsPPCContainer .ppcicons {
-    width: 110px;
-    height: 84px;
-    margin-left: 231px;
-    margin-top: -50px;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
@@ -132561,8 +132521,10 @@ margin-top: 161px;
   .section-titlemk {
     padding-top: 120px;
     margin-bottom: -180px;
-    margin-left: -1508px;
+    margin-left: 0px;
+    width: 100%;
   }
+
 
   .section-title__taglinemk {
     position: relative;
@@ -132572,7 +132534,7 @@ margin-top: 161px;
     line-height: 24px;
     text-transform: capitalize;
     letter-spacing: 0.1em;
-    margin-bottom: -10px;
+    margin-bottom: 0px;
 
   }
 
@@ -132584,14 +132546,23 @@ margin-top: 161px;
     text-transform: uppercase;
   }
 
-  .mobileCont {
+  /* .mobileCont {
     width: 500px;
     height: 500px;
     margin-left: -32px;
     margin-top: 200px;
     position: absolute;
     z-index: 0;
+  } */
+  .mobileCont {
+    width: 100% !important;
+    height: 500px !important;
+    margin-left: 0px !important;
+    margin-top: 200px !important;
+    position: absolute !important;
+    z-index: 0 !important;
   }
+
 
   .mobileSlidemk {
     width: 191px;
@@ -132601,6 +132572,9 @@ margin-top: 161px;
     position: absolute;
     z-index: 9999;
   }
+  .ContainerWebContainer {
+    height: auto;
+}
 
   .titleheadContainer1 h1 {
     text-align: center;
@@ -132613,11 +132587,11 @@ margin-top: 161px;
   }
 
   .ContainerWeb {
-    width: 1920px;
-    height: 773px;
+    width: 100%;
+    height: auto;
     background-color: #023878;
     color: #F4F2F2;
-    margin-left: -10px;
+    margin-left: 0px;
     margin-top: 62px;
   }
 
@@ -132907,12 +132881,12 @@ margin-top: 161px;
     font-size: 72px;
     position: absolute;
     color: #f6f6f6;
-    width: 673px;
-    height: 150px;
+    width: 100%;
+    height: auto;
     margin-top: 149px;
-    margin-left: 142px;
+    margin-left: 0;
     line-height: 67px;
-    padding-bottom: 50px;
+    padding: 20px;
     z-index: 11;
   }
 
@@ -134239,22 +134213,22 @@ margin-top: 161px;
     margin-top: 0px;
     width: 100%;
     background-color: #023878;
-    height: 807px;
+    height: auto;
   }
 
 
 
 
   .mainEc {
-    max-width: 1920px;
-    height: 400px;
-    margin-left: -32px;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0px;
   }
 
   .section-title5 {
     text-align: center;
-    margin-bottom: 141px;
-    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-left: 0;
   }
 
   .section-title5 h2 {
@@ -134268,8 +134242,8 @@ margin-top: 161px;
     text-transform: uppercase;
     display: block;
     margin-bottom: 9px;
-    margin-top: -304px;
-    margin-left: 8px;
+    margin-top: 0px;
+    margin-left: 0px;
     font-size: 18px;
   }
 
@@ -134311,9 +134285,9 @@ margin-top: 161px;
   .testimonial-three {
     position: relative;
     display: block;
-    padding: 106px 0 97px;
-    margin-top: -199px;
-    margin-bottom: -79px;
+    padding: 16px 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
     z-index: 1;
   }
 
@@ -134546,13 +134520,6 @@ margin-top: 161px;
     margin-top: 15px;
   }
 
-  .testimonial-three {
-    position: relative;
-    display: block;
-    padding: 106px 0 97px;
-    margin-top: 165px;
-    z-index: 1;
-  }
 
   .Gapimag {
     width: 32%;
