@@ -1146,7 +1146,7 @@ ul {
   display: flex;
   justify-content: space-between;
   line-height: 30px;
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: 14px;
   font-family: var(--mibooz-font);
   font-weight: 500;
