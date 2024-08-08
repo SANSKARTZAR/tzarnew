@@ -135751,9 +135751,9 @@ margin-top: 161px;
     margin-bottom: 191px;
   }
 
-  .slick-slide {
+  /* .slick-slide {
     width: 237px !important;
-  }
+  } */
 
 
   .ClubGrid {
@@ -136188,8 +136188,8 @@ margin-top: 161px;
   .cta-Three {
     position: relative;
     display: block;
-    margin-top: 347px;
-    margin-bottom: -120px;
+    margin-top: 0;
+    margin-bottom: 00px;
     z-index: 2;
   }
 
@@ -136280,24 +136280,24 @@ margin-top: 161px;
 
 
   .boxContainerMainSeo {
-    width: 1920px;
-    height: 680px;
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    margin-top: -27px;
-    margin-left: -347px;
+    margin-top: 0px;
+    margin-left: 0px;
     padding-top: 33px;
   }
 
 
   .boxContainerSeo {
-    width: 1920px;
-    height: 258px;
+    width: 100%;
+    height: auto;
     margin-top: 30px;
-    margin-left: 247px;
+    margin-left: 0;
     padding-top: 33px;
-    padding-left: -80px;
+    padding-left: 0px;
   }
 
   .titleHeadSeo {
@@ -136309,17 +136309,17 @@ margin-top: 161px;
   }
 
   .boxContainerMainSeo .Seoicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 225px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
   .boxContainerSeo h1 {
     text-align: center;
-    width: 405px;
-    margin-left: 81px;
+    width: 100%;
+    margin-left: 0;
     margin-top: 26px;
     font-size: 30px;
     color: #100f12;
@@ -136327,8 +136327,8 @@ margin-top: 161px;
 
   .boxContainerSeo p {
     text-align: center;
-    width: 270px;
-    margin-left: 140px;
+    width: 100%;
+    margin-left: 0;
     font-size: 22px;
     line-height: 22px;
     margin-top: 16px;
@@ -136624,7 +136624,7 @@ margin-top: 161px;
     position: relative;
     display: block;
     text-align: left;
-    margin-left: 394px;
+    margin-left: 0px;
     margin-top: -169px;
     z-index: 2;
   }
@@ -136632,7 +136632,7 @@ margin-top: 161px;
   .list-unstyledAuW {
     padding-left: 0;
     list-style: none;
-    margin-left: 45px;
+    margin-left: 0px;
     margin-top: 0;
     width: 100%;
   }
@@ -136642,8 +136642,8 @@ margin-top: 161px;
     color: var(--mibooz-base);
     line-height: 31px;
     text-transform: uppercase;
-    margin-top: -5px;
-    margin-left: -384px;
+    margin-top: 0px;
+    margin-left: 0px;
     width: 100%;
   }
 
@@ -137084,7 +137084,7 @@ margin-top: 161px;
   }
 
   .thm-breadcrumb li+li {
-    margin-left: -4px;
+    margin-left: 0px;
     font-size: 14px;
   }
 
@@ -137093,8 +137093,8 @@ margin-top: 161px;
     display: inline-block;
     color: var(--mibooz-base);
     font-size: 11px;
-    margin-left: -428px;
-    margin-top: -50px;
+    margin-left: 0px;
+    margin-top: 00px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: all 500ms ease;
@@ -137406,7 +137406,7 @@ margin-top: 161px;
     outline: none !important;
     /* background-color: transparent; */
     color: #000;
-    background: #fff;
+    background: #e6e6e6;
     border-radius: 50px;
     font-size: 12px;
     font-weight: 400;
@@ -138563,8 +138563,8 @@ margin-top: 161px;
   .GraphicDesigning__right {
     position: relative;
     display: block;
-    margin-left: -5px;
-    margin-top: 50px;
+    margin-left: 0px;
+    margin-top: 5px;
   }
 
   .cardsLd {
@@ -138580,9 +138580,9 @@ margin-top: 161px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
   .cardsPDR {
@@ -138627,9 +138627,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: -96px;
+    margin-top: 0px;
     width: 100%;
-    height: 1519px;
+    height: auto;
 
   }
 
@@ -138651,12 +138651,12 @@ margin-top: 161px;
   }
 
   .LogoDesigningR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 317px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
 
@@ -138667,34 +138667,34 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 32px;
-    padding-left: -50px;
-    margin-top: 911px;
+    padding-left: 0px;
+    margin-top: 0px;
     width: 100%;
-    height: 962px;
+    height: auto;
   }
 
   .mainGd {
-    max-width: 1920px;
-    margin-left: 18px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .section-title1__titleGD {
     font-size: 24px;
     line-height: 26px;
-    margin-left: -19px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
   .GraphicdesignR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 317px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
 
@@ -138712,27 +138712,27 @@ margin-top: 161px;
   }
 
   .mainWd {
-    max-width: 1920px;
-    margin-left: 18px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .section-title1__titleWD {
     font-size: 24px;
     line-height: 26px;
-    margin-left: -19px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
   .WebdesignR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 317px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -138744,13 +138744,13 @@ margin-top: 161px;
     padding-top: -40px;
     margin-top: 68px;
     width: 100%;
-    height: 1030px;
+    height: auto;
   }
 
 
   .mainPDR {
-    max-width: 529px;
-    margin-left: 15px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .section-title1__titlePDR {
@@ -138779,9 +138779,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 258px;
+    margin-top: 10px;
     width: 100%;
-    height: 667px;
+    height: auto;
   }
 
 
@@ -138793,11 +138793,11 @@ margin-top: 161px;
   .section-title1__titlePDMR {
     font-size: 24px;
     line-height: 26px;
-    margin-left: -19px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
   .ProductMerchandiseDesignR__right-text-1 {
@@ -138823,18 +138823,18 @@ margin-top: 161px;
   }
 
   .mainAi {
-    max-width: 1920px;
-    margin-left: 9px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .section-title1__titleAi {
     font-size: 24px;
     line-height: 26px;
-    margin-left: -19px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
   .ArtIllustration__right-text-1 {
@@ -140297,7 +140297,7 @@ margin-top: 161px;
     display: inline-block;
     vertical-align: middle;
     outline: none !important;
-    background-color: transparent;
+    background-color: #e6e6e6;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -141818,8 +141818,8 @@ margin-top: 161px;
   .GraphicDesigning__right {
     position: relative;
     display: block;
-    margin-left: -5px;
-    margin-top: 50px;
+    margin-left: px;
+    margin-top: 10px;
   }
 
   .cardsLd {
@@ -143283,7 +143283,7 @@ margin-top: 161px;
   }
 
   .mainGd {
-    max-width: 1920px;
+    max-width: 100%;
     margin-left: 0px;
   }
 
@@ -143321,8 +143321,8 @@ margin-top: 161px;
   }
 
   .mainWd {
-    max-width: 1920px;
-    margin-left: 10px;
+    max-width: 100%;
+    margin-left: 0;
   }
 
   .section-title1__titleWD {
@@ -155002,7 +155002,7 @@ margin-top: 161px;
   .reelSlidehome {
     width: 7% !important;
     height: auto !important;
-    margin-top: 13px !important;
+    margin-top: 0px !important;
     /* margin-left: 172px; */
     position: absolute !important;
     z-index: 9999 !important;
