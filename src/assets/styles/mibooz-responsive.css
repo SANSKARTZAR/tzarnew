@@ -127386,8 +127386,8 @@ margin-top: 161px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    margin-top: -27px;
-    margin-left: -336px;
+    margin-top: 0px;
+    margin-left: 0px;
     padding-top: 33px;
   }
 
@@ -130594,7 +130594,7 @@ margin-top: 161px;
   .Cm__right {
     position: relative;
     display: block;
-    margin-left: 9px;
+    margin-left: 0px;
     margin-top: 50px;
   }
 
@@ -130602,8 +130602,8 @@ margin-top: 161px;
     line-height: 22px;
     text-align: justify;
     max-width: 100%;
-    width: 300px;
-    margin-left: -9px;
+    width: 100%;
+    margin-left: 0px;
     font-size: 17px;
   }
 
@@ -130669,19 +130669,19 @@ margin-top: 161px;
 
 
   .Cmicons {
-    width: 452px;
+    width: 100%;
     height: 194px;
     padding-top: 23px;
-    margin-left: -28px;
+    margin-left: 0;
     margin-top: 25px;
-    margin-bottom: -60px;
+    margin-bottom: 0px;
     color: #023878;
   }
 
   .cardcm .ContantMarketingGoals__text {
     text-align: center;
-    margin-left: 19px;
-    width: 340px;
+    margin-left: 0px;
+    width: 100%;
     font-size: 36px;
     line-height: 41px;
     padding-top: 87px;
@@ -130691,8 +130691,8 @@ margin-top: 161px;
 
   .cardcm .ContantMarketingGoals__text1 {
     text-align: justify;
-    margin-left: 18px;
-    width: 330px;
+    margin-left: 0px;
+    width: 100%;
     font-size: 20px;
     line-height: 26px;
     padding-top: 46px;
@@ -130847,10 +130847,10 @@ margin-top: 161px;
   }
 
   .BenefitsLGContainer .Lgicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 242px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
@@ -131010,9 +131010,9 @@ margin-top: 161px;
     font-size: 20px;
     font-weight: 400;
     text-align: justify;
-    width: 981px;
-    max-width: 99%;
-    margin-left: -10px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .ImgTxtSecSeo__right-text-13 {
@@ -131021,9 +131021,9 @@ margin-top: 161px;
     font-size: 20px;
     font-weight: 400;
     text-align: justify;
-    width: 981px;
-    max-width: 99%;
-    margin-left: -10px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .ImgTxtSecSeo__right-text-14 {
@@ -131032,9 +131032,9 @@ margin-top: 161px;
     font-size: 20px;
     font-weight: 400;
     text-align: justify;
-    width: 981px;
-    max-width: 99%;
-    margin-left: -10px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .SomeFactsContainer {
@@ -131082,18 +131082,18 @@ margin-top: 161px;
     position: relative;
     display: inline-block;
     margin-left: 0px;
-    padding-top: 100px;
-    padding-left: -10px;
+    padding-top: 40px;
+    padding-left: 0px;
     margin-top: 10px;
     width: 100%;
-    height: 1148px;
+    height: auto;
   }
 
   .BoxPPCmgmtCMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: 80px;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmt1 {
@@ -131161,26 +131161,26 @@ margin-top: 161px;
   .PPCmgmtSer-page {
     position: relative;
     display: inline-block;
-    margin-left: -80px;
+    margin-left: 0px;
     padding-top: 100px;
-    padding-left: -10px;
-    margin-top: -66px;
+    padding-left: 0px;
+    margin-top: 0px;
     width: 100%;
-    height: 769px;
+    height: auto;
   }
 
   .BoxPPCmgmtMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    margin-left: 80px;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmtSer1 {
-    width: 315px;
-    height: 403px;
+    width: 100%;
+    height: auto;
     margin-top: 50px;
-    margin-left: 77px;
+    margin-left: 0px;
   }
 
   .BoxPPCmgmtSer2 {
@@ -131205,18 +131205,18 @@ margin-top: 161px;
   }
 
   .boxTextPPCmgmtSer {
-    width: 360px;
-    height: 180px;
+    width: 100%;
+    height: auto;
     border: 3px solid #100f12;
-    margin-top: -450px;
-    margin-left: 100px;
+    margin-top: 0px;
+    margin-left: 0;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
-    padding-left: 50px;
+    padding-left: 0px;
   }
 
   .boxTextPPCmgmtSer h1 {
     padding-top: 29px;
-    margin-left: -46px;
+    margin-left: 0;
     font-size: 30px;
     text-align: center;
   }
@@ -131224,19 +131224,19 @@ margin-top: 161px;
 
   .PPCmgmtSer-page .BtnPPCmgmtSer {
     margin-top: 50px;
-    margin-left: 104px;
-    width: 340px;
+    margin-left: 0;
+    width: 100%;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #100f12;
-    height: 80px;
+    height: auto;
     margin-bottom: 50px;
   }
 
   .BenefitsPPCContainer {
     position: relative;
     display: block;
-    height: 1017px;
+    height: auto;
     margin-top: 50px;
     z-index: 1;
   }
@@ -131252,7 +131252,7 @@ margin-top: 161px;
 
   .BenefitsPPCContainer .ppcicons {
     width: 100%;
-    height: auto;
+    height: 84px;
     margin-left: 0;
     margin-top: 0px;
     color: #023878;
@@ -131261,17 +131261,17 @@ margin-top: 161px;
 
 
   .boxContainerPPC1 {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     margin-top: 100px;
-    margin-left: 46px;
+    margin-left: 0;
     margin-bottom: 20px;
   }
 
   .boxContainerPPC1 h1 {
     text-align: center;
-    width: 375px;
-    margin-left: 81px;
+    width: 100%;
+    margin-left: 0px;
     margin-top: 26px;
     font-size: 30px;
     color: #100f12;
@@ -131460,8 +131460,8 @@ margin-top: 161px;
   }
 
   .BoxFact {
-    width: 385px;
-    height: 380px;
+    width: 100%;
+    height: auto;
     background-color: #023878;
     color: #E8F0F5;
     margin-bottom: 20px;
@@ -131476,14 +131476,14 @@ margin-top: 161px;
   }
 
   .BoxFact p {
-    width: 293px;
-    height: 50px;
+    width: 100%;
+    height: auto;
     line-height: 23px;
-    margin-left: 105px;
-    margin-right: 50px;
-    margin-top: -96px;
+    margin-left: 0;
+    margin-right: 00px;
+    margin-top: 0px;
     text-align: justify;
-    max-width: 67%;
+    max-width: 100%;
     font-size: 16px;
   }
 
@@ -131668,7 +131668,7 @@ margin-top: 161px;
   .WhatSeoContainer {
     position: relative;
     display: block;
-    height: 1948px;
+    height: auto;
     z-index: 1;
   }
 
@@ -131676,9 +131676,9 @@ margin-top: 161px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    height: 458px;
-    margin-top: 50px;
+    grid-template-rows: repeat(1, 1fr);
+    height: auto;
+    margin-top: 20px;
     background-color: #f6f6f6;
     z-index: 1;
   }
@@ -131748,10 +131748,8 @@ margin-top: 161px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    width: 415px;
-    margin-left: -106px;
-    margin-top: 966px;
-    margin-bottom: 50px;
+    width: 100%;
+    margin: 0px;
   }
 
   .titleHeadSEO {
@@ -131763,9 +131761,9 @@ margin-top: 161px;
   }
 
   .boxContainerSeoB {
-    width: 600px;
-    margin-left: 122px;
-    margin-bottom: -29px;
+    width: 100%;
+    margin-left: 0px;
+    margin-bottom: 0px;
   }
 
   .boxContainerSeoB1 {
@@ -131786,7 +131784,7 @@ margin-top: 161px;
     margin-left: 130px;
     margin-top: -83px;
     font-size: 27px;
-    width: 270px;
+    width: 69%;
     color: #100f12;
   }
 
@@ -131823,7 +131821,7 @@ margin-top: 161px;
   .cta-Three {
     position: relative;
     display: block;
-    margin-top: 347px;
+    margin-top: 0px;
     z-index: 2;
   }
 
@@ -131843,7 +131841,7 @@ margin-top: 161px;
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: -508px;
+    margin-top: 0px;
   }
 
   .cta-Three__icon {
@@ -131857,16 +131855,16 @@ margin-top: 161px;
 
   .titleHeadCta h1 {
     font-size: 30px;
-    margin-left: 30px;
-    margin-top: 10px;
-    width: 296px;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
   }
 
   .titleHeadCta p {
     font-size: 20px;
     line-height: 25px;
-    margin-left: 30px;
-    width: 317px;
+    margin-left: 0px;
+    width: 100%;
   }
 
   .cta-Three__right {
@@ -131910,35 +131908,24 @@ margin-top: 161px;
   }
 
   .boxContainerMainSeo {
-    width: 1920px;
-    height: 680px;
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    margin-top: -27px;
-    margin-left: 247px;
-    padding-top: 33px;
-  }
-
-  .boxContainerMainSeo {
-    width: 1920px;
-    height: 680px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    margin-top: -27px;
-    margin-left: -320px;
+    margin-top: 0px;
+    margin-left: 0;
     padding-top: 33px;
   }
 
 
   .boxContainerSeo {
-    width: 1920px;
-    height: 258px;
+    width: 100%;
+    height: auto;
     margin-top: 30px;
-    margin-left: 247px;
+    margin-left: 0;
     padding-top: 33px;
-    padding-left: -80px;
+    padding-left: 0px;
   }
 
   .titleHeadSeo {
@@ -131950,17 +131937,17 @@ margin-top: 161px;
   }
 
   .boxContainerMainSeo .Seoicons {
-    width: 110px;
+    width: 100%;
     height: 84px;
-    margin-left: 225px;
-    margin-top: -50px;
+    margin-left: 0;
+    margin-top: 0px;
     color: #023878;
   }
 
   .boxContainerSeo h1 {
     text-align: center;
-    width: 405px;
-    margin-left: 81px;
+    width: 100%;
+    margin-left: 0;
     margin-top: 26px;
     font-size: 30px;
     color: #100f12;
@@ -131968,8 +131955,8 @@ margin-top: 161px;
 
   .boxContainerSeo p {
     text-align: center;
-    width: 270px;
-    margin-left: 140px;
+    width: 100%;
+    margin-left: 0;
     font-size: 22px;
     line-height: 22px;
     margin-top: 16px;
@@ -132013,29 +132000,29 @@ margin-top: 161px;
     padding-top: 100px;
     margin-top: 10px;
     width: 100%;
-    height: 1392px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
 
   .mainSmm {
-    max-width: 1920px;
+    max-width: 100%;
     margin: 0 auto;
   }
 
   .SMMCards-page h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-left: -165px;
+    margin-left: 0;
     text-transform: uppercase;
   }
 
   .SMMCards-page p {
     text-align: center;
-    width: 685px;
+    width: 100%;
     font-size: 1rem;
     line-height: 20px;
-    margin-left: -50px;
+    margin-left: 0px;
     text-transform: uppercase;
   }
 
@@ -132050,8 +132037,8 @@ margin-top: 161px;
   .cardSmm {
     background-color: white;
     border-radius: 0.25rem;
-    width: 160px;
-    height: 345px;
+    width: 100%;
+    height: auto;
     box-shadow: 0 20px 40px -14px rgb(0 0 0 / 25%);
     display: flex;
     border: 1px solid #023878;
@@ -132060,10 +132047,10 @@ margin-top: 161px;
   }
 
   .Smmicons {
-    width: 282px;
+    width: 100%;
     height: 130px;
     padding-top: 23px;
-    margin-left: -60px;
+    margin-left: 0px;
     margin-top: 9px;
     color: #023878;
   }
@@ -132093,21 +132080,21 @@ margin-top: 161px;
   .BenefitsSMMContainer {
     position: relative;
     display: block;
-    height: 800px;
+    height: auto;
     margin-top: 0px;
     background-color: #f6f6f6;
     z-index: 1;
-    margin-left: -100px;
+    margin-left: 0px;
   }
 
   .titleHeadSMM {
     text-align: center;
     font-size: 44px;
     padding-top: 63px;
-    margin-bottom: -70px;
+    margin-bottom: 0px;
     color: #023878;
-    margin-left: 171px;
-    width: 218px;
+    margin-left: 0;
+    width: 100%;
   }
 
   .boxContainerMain {
@@ -132123,7 +132110,7 @@ margin-top: 161px;
     height: 81px;
     /* color: #100f12; */
     color: #023878;
-    margin-left: -29px;
+    margin-left: 0px;
   }
 
 
@@ -132229,12 +132216,12 @@ margin-top: 161px;
   .SmmServicescontainer {
     position: relative;
     display: block;
-    margin-top: -70px;
-    margin-left: 20px;
-    max-width: 95%;
+    margin-top: 0px;
+    margin-left: 0px;
+    max-width: 100%;
     margin-bottom: 30px;
     text-align: justify;
-    margin-right: 20px;
+    margin-right: 0px;
     z-index: 1;
   }
 
@@ -132252,8 +132239,8 @@ margin-top: 161px;
     padding-left: 0;
     list-style: none;
     margin-left: 0;
-    margin-top: -54px;
-    width: 777px;
+    margin-top:0;
+    width: 100%;
   }
 
   .page-header__innerAuW h2 {
@@ -132327,8 +132314,8 @@ margin-top: 161px;
     display: inline-block;
     color: var(--mibooz-base);
     font-size: 11px;
-    margin-left: -428px;
-    margin-top: -50px;
+    margin-left: 0px;
+    margin-top: 0px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     transition: all 500ms ease;
@@ -132687,7 +132674,10 @@ margin-top: 161px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin-left: 12px;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .cardsWd {
@@ -132701,7 +132691,7 @@ margin-top: 161px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin-left: 12px;
+    margin-left: 0px;
   }
 
   .cardsGd {
@@ -132722,7 +132712,10 @@ margin-top: 161px;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    margin-left: 12px;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
 
@@ -133000,10 +132993,10 @@ margin-top: 161px;
 
 
   .boxContainerPPC1 {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     margin-top: 80px;
-    margin-left: -145px;
+    margin-left: 0;
     margin-bottom: 20px;
   }
 
@@ -133108,14 +133101,6 @@ margin-top: 161px;
     margin-top: 50px;
   }
 
-
-
-  .boxContainerPPC1 {
-    width: 400px;
-    height: 400px;
-    margin-top: 80px;
-    margin-left: -145px;
-  }
 
   .boxContainerPPC2 {
     width: 400px;
@@ -133521,7 +133506,7 @@ margin-top: 161px;
     color: #E5E5E5;
     cursor: pointer;
     transition: 500ms;
-    margin-left: 280px;
+    margin-left: 238px;
   }
 
   .counter-one__list {
@@ -134302,9 +134287,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: -96px;
+    margin-top: 0px;
     width: 100%;
-    height: 1519px;
+    height: auto;
 
   }
 
@@ -134316,7 +134301,7 @@ margin-top: 161px;
   }
 
   .section-title1__titleLd {
-    margin-left: -10px;
+    margin-left: 0px;
     text-align: center;
     font-size: 31px;
     line-height: 60px;
@@ -134324,12 +134309,12 @@ margin-top: 161px;
   }
 
   .LogoDesigningR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 343px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -134339,15 +134324,15 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 32px;
-    padding-left: -50px;
-    margin-top: 911px;
+    padding-left: 0px;
+    margin-top: 0;
     width: 100%;
-    height: 962px;
+    height: auto;
   }
 
   .mainGd {
-    max-width: 1920px;
-    margin-left: 9px;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .section-title1__titleGD {
@@ -134358,12 +134343,12 @@ margin-top: 161px;
   }
 
   .GraphicdesignR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 343px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -134371,8 +134356,9 @@ margin-top: 161px;
   .GraphicDesigning__right {
     position: relative;
     display: block;
-    margin-left: 18px;
+    margin-left: 0px;
     margin-top: 20px;
+    padding: 10px;
   }
 
   .WebdesignR-page {
@@ -134382,7 +134368,7 @@ margin-top: 161px;
     padding-top: 44px;
     margin-top: 100px;
     width: 100%;
-    height: 1770px;
+    height: auto;
     /* background-color: #023878; */
   }
 
@@ -134392,19 +134378,19 @@ margin-top: 161px;
   }
 
   .section-title1__titleWD {
-    margin-left: -14px;
+    margin-left: 0px;
     font-size: 31px;
     line-height: 60px;
     text-transform: uppercase;
   }
 
   .WebdesignR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 343px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -134412,34 +134398,34 @@ margin-top: 161px;
   .PrintDesignR-page {
     position: relative;
     display: inline-block;
-    margin-left: 3px;
-    padding-top: -40px;
+    margin-left: 0px;
+    padding-top: 0px;
     margin-top: 68px;
     width: 100%;
-    height: 1030px;
+    height: auto;
   }
 
 
   .mainPDR {
-    max-width: 529px;
-    margin-left: 5px;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .section-title1__titlePDR {
     font-size: 31px;
     line-height: 46px;
-    margin-left: -121px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
   }
 
   .PrintDesignR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 343px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
 
@@ -134451,9 +134437,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 258px;
+    margin-top: 0;
     width: 100%;
-    height: 667px;
+    height: auto;
   }
 
 
@@ -134463,16 +134449,16 @@ margin-top: 161px;
   }
 
   .section-title1__titlePDMR {
-    margin-left: -7px;
+    margin-left: 0px;
     font-size: 25px;
     line-height: 29px;
     text-transform: uppercase;
-    width: 370px;
+    width: 100%;
   }
 
   .ProductMerchandiseDesignR__right-text-1 {
-    margin-left: -3px;
-    width: 356px;
+    margin-left: 0px;
+    width: 100%;
     margin-top: 9px;
     line-height: 22px;
     margin-bottom: 20px;
@@ -134485,48 +134471,40 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 350px;
+    margin-top: 50px;
     width: 100%;
-    height: 1500px;
+    height: auto;
   }
 
   .mainAi {
-    max-width: 1920px;
-    margin-left: 9px;
+    max-width: 100%;
+    margin-left: 0px;
   }
 
   .section-title1__titleAi {
     font-size: 34px;
     line-height: 60px;
     text-transform: uppercase;
-    margin-left: -19px;
+    margin-left: 0px;
   }
 
   .ArtIllustration__right-text-1 {
-    margin-left: 15px;
+    margin-left: 0;
     margin-top: 6px;
     line-height: 20px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 326px;
+    width: 100%;
     font-size: 16px;
   }
 
-  .section-title1__titlePDR {
-    font-size: 31px;
-    line-height: 46px;
-    margin-left: -13px;
-    text-transform: uppercase;
-    margin-top: 15px;
-  }
-
-
+ 
   .Gapimag {
-    width: 32%;
-    padding: 20px 199px 102px 21px;
+    width: 100%;
+    padding: 0;
     margin-top: 11px;
-    margin-left: -20px;
-    margin-bottom: -126px;
+    margin-left: 0px;
+    margin-bottom: 0px;
   }
 
 
@@ -134534,7 +134512,7 @@ margin-top: 161px;
     font-weight: 900;
     color: #100f12;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 0px;
     font-size: 18px;
 
   }
@@ -134543,8 +134521,8 @@ margin-top: 161px;
     font-weight: 900;
     color: #100f12;
     text-align: center;
-    line-height: 22px;
-    margin-left: 10px;
+    line-height: 42px;
+    margin-left: 0px;
     font-size: 30px;
   }
 
@@ -134554,9 +134532,9 @@ margin-top: 161px;
     margin-left: 0px;
     padding-top: 65px;
     padding-left: 0px;
-    margin-top: 108px;
+    margin-top: 0;
     width: 100%;
-    height: 1193px;
+    height: auto;
     background: #F4F2F2;
     /* background: url(./../assets/images/resources/social_background_full.png); */
   }
@@ -134576,14 +134554,14 @@ margin-top: 161px;
   }
 
   .BoxWCU1 {
-    Width: 356px;
-    height: 224px;
+    Width: 100%;
+    height: auto;
     background-color: #f6f6f6;
     color: #100f12;
     border: 1.5px solid #023878;
     padding: 20px 20px 20px 20px;
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-    margin-left: 48px;
+    margin-left: 0px;
   }
 
   .BoxWCU1 h1 {
@@ -134780,28 +134758,27 @@ margin-top: 161px;
     margin-top: -81px;
   }
 
-
+  .titleHeadBenefitsWD {
+    color:#fff;
+  }
 
   .BenefitsWDContainer {
     position: relative;
     display: block;
-    height: 1208px;
-    margin-top: -50px;
+    height: auto;
+    margin-top: 0px;
     background-color: #023878;
     z-index: 1;
+    padding:0;
+    margin-top: 10px;
   }
 
-  .SmmServicescontainer {
+  .MUCOntainer {
+    display: block;
     position: relative;
     display: block;
-    margin-top: 80px;
-    margin-left: 42px;
-    max-width: 80%;
-    margin-bottom: 30px;
-    text-align: justify;
-    margin-right: 20px;
-    z-index: 1;
-
+    padding: 0;
+    height: auto;
   }
 
 
@@ -135409,7 +135386,7 @@ margin-top: 161px;
 
   .boxTextPPCmgmtSer h1 {
     padding-top: 29px;
-    margin-left: -46px;
+    margin-left: 0px;
     font-size: 30px;
     text-align: center;
   }
@@ -135955,7 +135932,7 @@ margin-top: 161px;
   .WhatSeoContainer {
     position: relative;
     display: block;
-    height: 1948px;
+    height: auto;
     z-index: 1;
   }
 
@@ -136231,7 +136208,7 @@ margin-top: 161px;
     position: relative;
     display: flex;
     align-items: center;
-    margin-top: -508px;
+    margin-top: 0px;
   }
 
   .cta-Three__icon {
@@ -138596,7 +138573,7 @@ margin-top: 161px;
     grid-template-rows: repeat(2, 1fr);
     width: 349px;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
   .cardsWd {
@@ -138612,9 +138589,9 @@ margin-top: 161px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
   .cardsGd {
@@ -138639,9 +138616,9 @@ margin-top: 161px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 349px;
+    width: 100%;
     list-style: none;
-    margin-left: 3px;
+    margin-left: 0px;
   }
 
 
@@ -138666,11 +138643,11 @@ margin-top: 161px;
   .section-title1__titleLd {
     font-size: 24px;
     line-height: 26px;
-    margin-left: -19px;
+    margin-left: 0px;
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 20px;
-    width: 387px;
+    width: 100%;
   }
 
   .LogoDesigningR__right-text-1 {
@@ -138730,7 +138707,7 @@ margin-top: 161px;
     padding-top: 44px;
     margin-top: 100px;
     width: 100%;
-    height: 1770px;
+    height: auto;
     /* background-color: #023878; */
   }
 
@@ -138786,12 +138763,12 @@ margin-top: 161px;
   }
 
   .PrintDesignR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 317px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -138824,12 +138801,12 @@ margin-top: 161px;
   }
 
   .ProductMerchandiseDesignR__right-text-1 {
-    margin-left: 19px;
+    margin-left: 0px;
     margin-top: 1px;
     line-height: 18px;
     margin-bottom: 20px;
     color: #100f12;
-    width: 317px;
+    width: 100%;
     max-width: 100%;
     text-align: justify;
   }
@@ -138840,9 +138817,9 @@ margin-top: 161px;
     display: inline-block;
     margin-left: 0px;
     padding-top: 62px;
-    margin-top: 350px;
+    margin-top: 10px;
     width: 100%;
-    height: 1505px;
+    height: auto;
   }
 
   .mainAi {
@@ -139552,7 +139529,7 @@ margin-top: 161px;
     color: #100f12;
     margin-bottom: 5px;
     text-align: center;
-    margin-left: -21px;
+    margin-left: 0px;
     font-size: 26px;
   }
 
@@ -139563,7 +139540,7 @@ margin-top: 161px;
     color: #100f12;
     margin-bottom: 0px;
     text-align: center;
-    margin-left: -12px;
+    margin-left: 0px;
     line-height: 50px;
     font-size: 42px;
   }
