@@ -67,8 +67,8 @@ const ContactForm = () => {
                             />
                         </label>
                         <label htmlFor="services">
-                            <select id="services" name="services" className="form-control form-inputs" >
-                                <option name="selectedOpti">Services</option>
+                            <select id="services" name="services" className="form-control form-inputs" required >
+                                <option value="">Services</option>
                                 <option>Websites Desing & Development</option>
                                 <option>Social Media (SMO | SMM)</option>
                                 <option>Perfomance Marketing </option>
@@ -95,7 +95,7 @@ const ContactForm = () => {
                                 <div className="form-studiocheck">
                                     <input type="checkbox" name="checkbox" required value="I agree to T&C and Privacy Policy" />
                                     <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates viaWhatsApp.</h6>
-                              </div>
+                                </div>
                             </label>
                         </div>
                         <label htmlFor="submit">
