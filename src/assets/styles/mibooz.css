@@ -11975,19 +11975,19 @@ input[type=checkbox] {
   width: 300px;
   height: 50px;
   /* background-color: #023878 !important; */
-  background: linear-gradient(106deg, rgb(251, 158, 61) 19%, rgb(255, 197, 60) 74%);
-  color: #FEFFFE !important;
+  background-color: #e3e3e3 !important;
+  color: #1a1a1a !important;
   border: none;
   border-radius: 50px !important;
 }
 
 
 .service_details_btn:hover {
-  margin-top: 30px;
+  margin-top: 00px;
   width: 300px;
   height: 50px;
-  background-color: #FEFFFE !important;
-  color: #023878 !important;
+  background-color: #b0b0b0 !important;
+  color: #ffffff !important;
   border: none;
 
 }

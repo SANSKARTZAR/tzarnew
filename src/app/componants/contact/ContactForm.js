@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { submitContact } from "../../models/action";
+import { Col, Container, Row } from "react-bootstrap";
 
 const ContactForm = () => {
     const [status, setStatus] = useState(null);
@@ -15,6 +16,8 @@ const ContactForm = () => {
                 phone: formData.get("phone"),
                 email: formData.get("email"),
                 services: formData.get("services"),
+                city: formData.get("city"),
+                country: formData.get("country"),
                 // message: formData.get("message"),
                 checkbox: formData.get("checkbox"),
             });
@@ -89,6 +92,33 @@ const ContactForm = () => {
                                 placeholder="Type your message here..."
                             ></textarea>
                         </label> */}
+                        <Row>
+                            <Col xl={6}>
+                                <label htmlFor="city">
+                                    <input
+                                        type="text"
+                                        id="city"
+                                        name="city"
+                                        placeholder="Your City"
+                                        className="form-control form-inputs"
+                                        required
+                                    />
+                                </label>
+                            </Col>
+                            <Col xl={6}>
+                                <label htmlFor="country">
+                                    <input
+                                        type="text"
+                                        id="country"
+                                        name="country"
+                                        placeholder="Your Country"
+                                        className="form-control form-inputs"
+                                        required
+                                    />
+                                </label>
+                            </Col>
+                        </Row>
+
                         <div className="form-group formlefttxt">
                             <label className="checkbox">
                                 {/* <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates viaWhatsApp.</h6> */}
