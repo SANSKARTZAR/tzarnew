@@ -18,8 +18,8 @@ function PopupHireUs() {
     const formData = new FormData(e.target);
     try {
       const response = await submitContact({
-        companyemail: formData.get("companyemail"),
-        firstname: formData.get("firstname"),
+        email: formData.get("email"),
+        fullname: formData.get("firstname"),
         phone: formData.get("phone"),
         lastname: formData.get("lastname"),
         websiteurl: formData.get("websiteurl"),
@@ -60,7 +60,7 @@ function PopupHireUs() {
                       <Col xl={12}>
                         <Row>
                           <Col xl={6} md={6}>
-                            <input type="email" name="companyemail" placeholder="Company Email" />
+                            <input type="email" name="email" placeholder="Company Email" />
 
                             <input type='text' name="firstname" placeholder="First Name" className="" />
                           </Col>
@@ -128,7 +128,7 @@ function PopupHireUs() {
                       </Col>
                     </Row>
                     <div>
-                      <button className="button-50 comment-form__btn" type="submit">Send Form</button>
+                      <button className="button-50 comment-form__btn" type="submit">Submit Form</button>
                     </div>
                   </div>
                 </div>
