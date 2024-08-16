@@ -6,10 +6,6 @@ const contactSchema = new mongoose.Schema(
             type: String,
             required: true,
         }, 
-        lastname: {
-            type: String,
-            required: true,
-        }, 
         phone: {
             type: String,
             required: true,
@@ -30,19 +26,7 @@ const contactSchema = new mongoose.Schema(
             type: String,
             required: true,
         }, 
-        websiteurl: {
-            type: String,
-            required: true,
-        }, 
         country: {
-            type: String,
-            required: true,
-        }, 
-        industry: {
-            type: String,
-            required: true,
-        }, 
-        budget: {
             type: String,
             required: true,
         }, 
