@@ -133,6 +133,8 @@ function PopupHireUs() {
                   </div>
                 </div>
               </form>
+              {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
+                {status === "error" && <div className="alert alert-success">Form submitted successfully!</div>}
             </div>
           </div>
         </Container>
