@@ -22,6 +22,19 @@ function SeoHerrobanner() {
                     </div>
                 </div>
             </section>
+            <section className="Seo-breadcrumb">
+                <div className="container">
+                    <div className="page-header__innerAuWs">
+                        <h2>Search Engine Optimization</h2>
+                        <ul className="thm-breadcrumb list-unstyledAuW">
+                            <li>
+                                <Link href="/">Home</Link>/
+                            </li>
+                            <li>Search Engine Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

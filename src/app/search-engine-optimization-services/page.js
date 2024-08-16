@@ -9,6 +9,9 @@ import CTATwoSeo from "../componants/SEOServices/CTAOneSeo";
 import WhatWeDoLG from "../componants/SEOServices/WhatWeDoSEO";
 import SeoServices from "../componants/SEOServices/SeoServices";
 import ContactForm from "../componants/home/ContactForm";
+import SeoHerrobanner from "../componants/SEOServices/SeoHerrobanner";
+import SeoJournery from "../componants/SEOServices/SeoJourney";
+import ThreeCardseo from "../componants/SEOServices/ThreeCardseo";
 
 export const metadata = {
   title: "Search Engine Optimization - SEO Services Online, SEO On page & SEO Off page Optimization, SEO Agency in India. | Tzar Venture",
@@ -18,13 +21,16 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      <PageHeaderSeo page="Search Engine Optimization" title="Search Engine Optimization" />
-      <ServicesDetails service={LeadGenerationService1} />
+      <SeoHerrobanner />
+      {/* <PageHeaderSeo page="Search Engine Optimization" title="Search Engine Optimization" />
+      <ServicesDetails service={LeadGenerationService1} /> */}
+      <SeoJournery/>
+      <ThreeCardseo/>
       <SeoServiceCards />
       <ImgTxtSecSeo />
-      <BenefitsSEO />
+      {/* <BenefitsSEO /> */}
       <CTATwoSeo />
-      <WhatWeDoLG />
+      {/* <WhatWeDoLG /> */}
       <ContactForm />
       <SeoServices />
     </>
