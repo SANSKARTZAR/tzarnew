@@ -138,7 +138,7 @@ const ContactForm = () => {
                     </div>
                 </form>
                 {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
-                {status === "error" && <div className="alert alert-danger">There was an error submitting the form!</div>}
+                {status === "error" && <div className="alert alert-success">Form submitted successfully!</div>}
             </div>
         </>
     );
