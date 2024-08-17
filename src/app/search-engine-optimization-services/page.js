@@ -12,6 +12,7 @@ import ContactForm from "../componants/home/ContactForm";
 import SeoHerrobanner from "../componants/SEOServices/SeoHerrobanner";
 import SeoJournery from "../componants/SEOServices/SeoJourney";
 import ThreeCardseo from "../componants/SEOServices/ThreeCardseo";
+import TestimonialThreeSeo from "../componants/home/Testimonial/TestimonialThreeSeo";
 
 export const metadata = {
   title: "Search Engine Optimization - SEO Services Online, SEO On page & SEO Off page Optimization, SEO Agency in India. | Tzar Venture",
@@ -26,6 +27,7 @@ const Page = () => {
       <ServicesDetails service={LeadGenerationService1} /> */}
       <SeoJournery/>
       <ThreeCardseo/>
+      <TestimonialThreeSeo/>
       {/* <SeoServiceCards /> */}
       {/* <ImgTxtSecSeo /> */}
       {/* <BenefitsSEO /> */}
