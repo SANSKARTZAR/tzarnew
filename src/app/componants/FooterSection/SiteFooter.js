@@ -55,13 +55,13 @@ const SiteFooter = () => {
         <Container>
           <div className="site-footer__middle-inner">
             <Row>
-              <Col xl={3} lg={4} className="animated fadeInUp">
+              <Col xl={4} lg={4} className="animated fadeInUp">
                 <div className="footer-widget__column footer-widget__contact">
                   <h3 className="footer-widget__title">TZAR DIGITAL AGENCY</h3>
                   <p className="footer-widget__contact-text">
                     {address} <br /> {city}
                   </p>
-                  <div className="footer-widget__contact-email-phone">
+                  {/* <div className="footer-widget__contact-email-phone">
                     <h3 className="footer-widget__title">Contact Us</h3>
                     <div className="footer-flex">
                       <img src={mailIcon.src} alt="" width="15px" height="15px" /> &nbsp;
@@ -87,7 +87,7 @@ const SiteFooter = () => {
                     >
                       + {phone1}
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </Col>
               <Col xl={4} lg={4} className="animated fadeInUp">
@@ -120,35 +120,33 @@ const SiteFooter = () => {
                 </div>
 
               </Col>
-              <Col xl={5} lg={4} className="animated fadeInUp">
-                <div className="footer-widget__column footer-widget__newsletter">
-                  <h3 className="footer-widget__title">Newsletter</h3>
-                  {/* <form
-                    onSubmit={handleSubmit}
-                    className="footer-widget__newsletter-form"
-                  >
-                    <div className="footer-widget__newsletter-input-box">
-                      <input
-                        type="email"
-                        placeholder="Email address"
-                        name="email"
-                      />
-                      <button
-                        type="submit"
-                        className="footer-widget__newsletter-btn"
-                      >
-                        <i className="far fa-paper-plane"></i>
-                      </button>
-                    </div>
-                  </form> */}
-                  <div className="footer-widget__newsletter-bottom">
-                    <div className="footer-widget__newsletter-bottom-icon">
-                      <i className="fa fa-check"></i>
-                    </div>
-                    <div className="footer-widget__newsletter-bottom-text">
-                      <p>I agree to all your terms and policies</p>
-                    </div>
+              <Col xl={4} lg={4} className="animated fadeInUp">
+                <div className="footer-widget__contact-email-phone">
+                  <h3 className="footer-widget__title">Contact Us</h3>
+                  <div className="footer-flex">
+                    <img src={mailIcon.src} alt="" width="15px" height="15px" /> &nbsp;
+                    <a
+                      href={`mailto:${email}`}
+                      className="footer-widget__contact-text"
+                    >
+                      {email}
+                    </a>
                   </div>
+                  <img src={phoneIcon.src} alt="" width="15px" /> &nbsp;
+                  <a
+                    href={`tel:${phone.split(" ").join("")}`}
+                    className="footer-widget__contact-text"
+                  >
+                    + {phone} ,
+                  </a>
+                  {/* <br />*/}
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <a
+                    href={`tel:${phone1.split(" ").join("")}`}
+                    className="footer-widget__contact-text"
+                  >
+                    + {phone1}
+                  </a>
                 </div>
                 <Row>
                   <Col xl={12}>

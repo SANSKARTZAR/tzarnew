@@ -6,9 +6,11 @@ import { Col, Container, Row } from "react-bootstrap";
 
 const ContactForm = () => {
     const [status, setStatus] = useState(null);
+    const [isSubmitting, setIsSubmitting] = useState(false); // State for loader
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSubmitting(true); // Show loader when form is submitted
         const formData = new FormData(e.target);
         try {
             const response = await submitContact({
@@ -18,7 +20,6 @@ const ContactForm = () => {
                 services: formData.get("services"),
                 city: formData.get("city"),
                 country: formData.get("country"),
-                // message: formData.get("message"),
                 checkbox: formData.get("checkbox"),
             });
             if (response.status === 200) {
@@ -27,7 +28,10 @@ const ContactForm = () => {
                 setStatus("error");
             }
         } catch (e) {
-            console.log(e)
+            setStatus("error");
+            console.log(e);
+        } finally {
+            setIsSubmitting(false); // Hide loader after form submission
         }
     };
 
@@ -84,14 +88,6 @@ const ContactForm = () => {
                                 <option>Product Packaging</option>
                             </select>
                         </label>
-                        {/* <label htmlFor="message">
-                            <textarea
-                                className="form-control form-inputs"
-                                id="message"
-                                name="message"
-                                placeholder="Type your message here..."
-                            ></textarea>
-                        </label> */}
                         <Row>
                             <Col xl={6}>
                                 <label htmlFor="city">
@@ -121,22 +117,28 @@ const ContactForm = () => {
 
                         <div className="form-group formlefttxt">
                             <label className="checkbox">
-                                {/* <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates viaWhatsApp.</h6> */}
                                 <div className="form-studiocheck">
                                     <input type="checkbox" name="checkbox" required value="I agree to T&C and Privacy Policy" />
-                                    <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates viaWhatsApp.</h6>
+                                    <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates via WhatsApp.</h6>
                                 </div>
                             </label>
                         </div>
                         <label htmlFor="submit">
-                            <button className="btn btn-submit" type="submit">
-                                Submit
+                            <button className="btn btn-submit" type="submit" disabled={isSubmitting}>
+                                {isSubmitting ? (
+                                    <div className="btn-loader">
+                                        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Loading...
+                                    </div>
+                                ) : (
+                                    "Submit"
+                                )}
                             </button>
                         </label>
                     </div>
                 </form>
                 {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
-                {status === "error" && <div className="alert alert-success">Form submitted successfully!</div>}
+                {status === "error" && <div className="alert alert-danger">There was an error submitting the form!</div>}
             </div>
         </>
     );

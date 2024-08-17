@@ -4,6 +4,7 @@ import testimonialThree from "@/app/data/testimonialThree";
 import dynamic from "next/dynamic";
 import React, { useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import Link from "next/link";
 import SingleTestimonial1 from "./SingleTestimonial1";
 
 const TinySlider1 = dynamic(() => import("@/app/componants/home/TinySlider1/TinySlider1"), {
@@ -82,6 +83,13 @@ const TestimonialThree = () => {
             </div>
           </Col>
         </Row>
+        <br/>
+        <br/>
+        <div className="viewallservice-btn">
+          <Link href="/our-client" className="BtnStudio GraphicDesigning__studiobtn">
+            View More
+          </Link>
+        </div>
       </Container>
     </section>
   );

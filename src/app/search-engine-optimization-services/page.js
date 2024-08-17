@@ -26,10 +26,10 @@ const Page = () => {
       <ServicesDetails service={LeadGenerationService1} /> */}
       <SeoJournery/>
       <ThreeCardseo/>
-      <SeoServiceCards />
-      <ImgTxtSecSeo />
+      {/* <SeoServiceCards /> */}
+      {/* <ImgTxtSecSeo /> */}
       {/* <BenefitsSEO /> */}
-      <CTATwoSeo />
+      {/* <CTATwoSeo /> */}
       {/* <WhatWeDoLG /> */}
       <ContactForm />
       <SeoServices />

@@ -11,6 +11,15 @@ function SeoHerrobanner() {
                     <div className='row'>
                         <div className='col-lg-8 col-md-6 col-12'>
                             <div className="hero-seocontent">
+                                <div>
+                                    <ul className="thm-breadcrumb list-unstyledAuW">
+                                        <li>
+                                            <Link href="/"><i class="fa fa-home" aria-hidden="true"></i>/ &nbsp;</Link> 
+                                        </li>
+                                        <li><Link href="/search-engine-optimization-services">SEO / &nbsp; </Link> </li>
+                                        <li><h3> 100% Guaranteed Result</h3></li>
+                                    </ul>
+                                </div>
                                 <h1> Drive Increased Visibility and Traffic with Our Dynamic SEO Techniques.</h1>
                                 <p>Drive Increased Visibility and Traffic with Our Dynamic SEO Techniques.</p>
                                 <Link href="#" className='thm-btn'>Enquiry Now</Link>
@@ -22,7 +31,7 @@ function SeoHerrobanner() {
                     </div>
                 </div>
             </section>
-            <section className="Seo-breadcrumb">
+            {/* <section className="Seo-breadcrumb">
                 <div className="container">
                     <div className="page-header__innerAuWs">
                         <h2>Search Engine Optimization</h2>
@@ -34,7 +43,7 @@ function SeoHerrobanner() {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }
