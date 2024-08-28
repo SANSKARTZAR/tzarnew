@@ -3,6 +3,30 @@ const client = {
     tagline: "Success Stories",
     socials: ["fab fa-twitter", "fab fa-facebook", "fab fa-instagram"],
     teams: [
+           {
+        id: 42,
+        image: "42.jpg",
+      },
+      {
+        id: 43,
+        image: "43.jpg",
+      },
+      {
+        id: 44,
+        image: "44.jpg",
+      },
+      {
+        id: 45,
+        image: "45.jpg",
+      },
+      {
+        id: 46,
+        image: "46.jpg",
+      },
+      {
+        id: 47,
+        image: "47.jpg",
+      },
       {
         id: 1,
         image: "1.png",

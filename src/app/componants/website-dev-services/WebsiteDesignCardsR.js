@@ -17,6 +17,9 @@ import * as ImIcons from "react-icons/im";
 import * as SiIcons from "react-icons/si";
 import * as FaIcons from "react-icons/fa";
 
+import icon11 from "@/assets/images/icons/shopify.png";
+import icon12 from "@/assets/images/icons/react.png";
+
 
 const { HeadTitle, title1, subtitle1, title2, subtitle2, title3, subtitle3, title4, subtitle4,
   title5, subtitle5, title6, title7, title8, title9, title10, title11, title12, subtitle6, subtitle7, subtitle8,
@@ -100,12 +103,12 @@ function WebsiteDesignCardsR({ className = "" }) {
               <p className="WDGoals__text1">{subtitle10}</p>
             </div>
             <div className="CardWDnew">
-              <FaIcons.FaJoomla className="wdiconsnew" />
+              <Image src={icon11.src} className="wdiconsnew" />
               <h3 className="WDGoals__text">{title11}</h3>
               <p className="WDGoals__text1">{subtitle11}</p>
             </div>
             <div className="CardWDnew">
-              <FaIcons.FaJoomla className="wdiconsnew" />
+              <Image  src={icon12.src}  className="wdiconsnew" />
               <h3 className="WDGoals__text">{title12}</h3>
               <p className="WDGoals__text1">{subtitle12}</p>
             </div>
