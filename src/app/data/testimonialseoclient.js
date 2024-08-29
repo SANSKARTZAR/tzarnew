@@ -34,10 +34,10 @@ const testimonialThree = {
       id: 7,
       image: "helms.jpg",
     },
-    {
-      id: 8,
-      image: "femm.jpg",
-    },
+    // {
+    //   id: 8,
+    //   image: "femm.jpg",
+    // },
     // {
     //   id: 9,
     //   image: "testimonial-one-img-9.jpg",

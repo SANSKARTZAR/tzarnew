@@ -11,6 +11,14 @@ const logodesignmu = {
 
   MUImages:[
     {
+      id:9,
+      image: "celebrix.jpg",
+    },
+    {
+      id:10,
+      image: "iacf.jpg",
+    },
+    {
       id:1,
       image: "1-1.png",
     },
