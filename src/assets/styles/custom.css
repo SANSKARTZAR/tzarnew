@@ -296,7 +296,18 @@ label {
 .graphic-crd-btn {
   text-align: center;
 }
-
+.web-herobanner {
+  background: #023878;
+  padding: 10px 0 100px 0;
+  /* background: url(../images/backgrounds/seo-banner1.gif); */
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.web-herobanner .form-dev{
+  background: #ffffffe8;
+}
 .Seo-herobanner {
   /* background: #dfdfdf; */
   padding: 10px 0 100px 0;
