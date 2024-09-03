@@ -33,7 +33,7 @@ const Page = () => {
       <TestimonialFour/>
       <WebDesignMock/>
       <TestimonialFive/>
-      <BenefitsWD/>
+      {/* <BenefitsWD/> */}
       {/* <WebdevContact/> */}
       <ContactForm/>
       <WdService/>
