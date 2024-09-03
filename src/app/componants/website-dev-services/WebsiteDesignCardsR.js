@@ -31,7 +31,7 @@ function WebsiteDesignCardsR({ className = "" }) {
       <section className="WebsiteDevelopment-page">
 
         <div className='container'>
-          <h1>{HeadTitle}</h1>
+          <h1 className='section-title__title'>{HeadTitle}</h1>
           <div className="webdev-card5">
             {/* <div className="col-lg-2 col-md-4 col-12"> */}
             <div className="CardWDnew">

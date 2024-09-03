@@ -19896,7 +19896,7 @@ img {
 
 .WebsiteDevelopment-page h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 50px;
   margin: 0px;
   text-transform: uppercase;
 }
@@ -20015,12 +20015,12 @@ img {
   width: 800px;
 }
 
-.WebsiteDevelopment-page h1 {
+/* .WebsiteDevelopment-page h1 {
   text-align: center;
   font-size: 2.5rem;
   margin-left: 0px;
   text-transform: uppercase;
-}
+} */
 
 .CardConatinerWDR {
   display: grid;

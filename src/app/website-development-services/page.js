@@ -10,6 +10,8 @@ import ContactForm from "../componants/home/ContactForm";
 import WdService from "../componants/website-dev-services/WdService";
 import WebDesignMock from "../componants/home/WebDesignMock";
 import WebdevHerrobanner from "../componants/website-dev-services/Web-devHerrobanner";
+import WebsiteShow from "../componants/website-dev-services/WebsiteShow";
+import WebdevContact from "../componants/contact/WebDevContact";
 
 export const metadata = {
   title:"Website Development Services  - Custom Website Development Services Online @ Tzar venture",
@@ -26,11 +28,13 @@ const Page = () => {
         page="Website Development"
       /> */}
       {/* <ServicesDetails service={websiteDevelopmentService} /> */}
+      <WebsiteShow/>
       <WebsiteDesignCardsR/>
       <TestimonialFour/>
       <WebDesignMock/>
       <TestimonialFive/>
       <BenefitsWD/>
+      {/* <WebdevContact/> */}
       <ContactForm/>
       <WdService/>
     </>

@@ -81,7 +81,7 @@ const ContactForm = () => {
                                 <option>Perfomance Marketing </option>
                                 <option>Influencer Marketing  </option>
                                 <option> Brand Marketing</option>
-                                <option>Content & SEO </option>
+                                <option>Search Engine Optimization (SEO)</option>
                                 <option>Product Shoot</option>
                                 <option>2D&3D Animation</option>
                                 <option>Logo Design</option>
