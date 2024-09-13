@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { submitContact } from "../../models/action";
+import { submitContact } from "../../models/actionhire";
 import contactForm from "@/app/data/contactForm";
 
 const { poptitle, popdec } = contactForm;
@@ -19,7 +19,7 @@ function PopupHireUs() {
     try {
       const response = await submitContact({
         email: formData.get("email"),
-        fullname: formData.get("firstname"),
+        firstname: formData.get("firstname"),
         phone: formData.get("phone"),
         lastname: formData.get("lastname"),
         websiteurl: formData.get("websiteurl"),
@@ -60,24 +60,24 @@ function PopupHireUs() {
                       <Col xl={12}>
                         <Row>
                           <Col xl={6} md={6}>
-                            <input type="email" name="email" placeholder="Company Email" />
+                            <input type="email" id="email" name="email" placeholder="Company Email" />
 
-                            <input type='text' name="firstname" placeholder="First Name" className="" />
+                            <input type='text' id="firstname" name="firstname" placeholder="First Name" className="" />
                           </Col>
                           <Col xl={6} md={6}>
-                            <input type="tel" name="phone" placeholder="Your Mobile Number"/>
+                            <input type="tel" id="phone" name="phone" placeholder="Your Mobile Number" />
 
-                            <input type='text' name="lastname" placeholder="Last Name" className="" />
+                            <input type='text' id="lastname" name="lastname" placeholder="Last Name" className="" />
                           </Col>
                         </Row>
                       </Col>
                       <Col xl={12}>
-                        <input type="text" name="websiteurl" placeholder="Website URL?"  />
+                        <input type="text" id="websiteurl" name="websiteurl" placeholder="Website URL?" />
                       </Col>
                       <Col xl={12}>
                         <div className="formleftpop">
-                          <select id="form_need"  className="form-controlnone" name='industry' required="required" data-error="Please specify your need.">
-                            <option name="Industry" disabled selected>Industry</option>
+                          <select id="industry" className="form-controlnone" name='industry' required="required" data-error="Please specify your need.">
+                            <option value="" >Industry</option>
                             <option value="Animal &amp; Pet">Animal &amp; Pet</option>
                             <option value="Apparel, Fashion &amp; Jewelry">Apparel, Fashion &amp; Jewelry</option>
                             <option value="Attorneys, Law &amp; Legal">Attorneys, Law &amp; Legal</option>
@@ -107,7 +107,7 @@ function PopupHireUs() {
                           </select>
                         </div>
                         <div className="formleftpop">
-                          <select id="form_need" name="budget" className="form-controlnone" required="required" data-error="Please specify your need.">
+                          <select id="budget" name="budget" className="form-controlnone" required="required" data-error="Please specify your need.">
                             <option name="selectedOpti" > Monthly Marketing Budget</option>
                             <option value="0 to 5 Lakh"> 0 to 5 Lakh</option>
                             <option value="5 Lakh to 10 Lakh" > 5 Lakh to 10 Lakh</option>
@@ -121,8 +121,8 @@ function PopupHireUs() {
                         </div>
 
                         <div className="formlefttxtpop">
-                          <input type="checkbox" id="t&pform" name="checkbox" className='checkedbox' value="I agree to T&C and Privacy Policy"  />
-                          <label for="tpform" className="form-dec">By clicking the button below, you consent for Tzar Digital and partners to use automated technology, including pre-recorded messages,
+                          <input type="checkbox" id="checkbox" name="checkbox" className='checkedbox' value="I agree to T&C and Privacy Policy" />
+                          <label className="form-dec">By clicking the button below, you consent for Tzar Digital and partners to use automated technology, including pre-recorded messages,
                             cell phones and texts, and email to contact you at the number and email address provided. This includes if the number is currently on any Do Not Call Lists. This consent is not required to make a purchase. Privacy Policy.</label>
                         </div>
                       </Col>
@@ -134,7 +134,7 @@ function PopupHireUs() {
                 </div>
               </form>
               {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
-                {status === "error" && <div className="alert alert-success">Form submitted successfully!</div>}
+              {status === "error" && <div className="alert alert-danger">Form submitted successfully!</div>}
             </div>
           </div>
         </Container>
