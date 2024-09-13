@@ -192,9 +192,15 @@
 }
 
 select option {
-  color: #fff !important;
+  color: #ffffff !important;
 }
+.hireus-form ::placeholder {
+  color: #000000 !important;
+} 
 
+.hireus-form select option {
+  color: #000000 !important;
+}
 input:-internal-autofill-selected {
   background-color: #023878 !important;
 }

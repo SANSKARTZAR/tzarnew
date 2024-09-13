@@ -12,9 +12,11 @@ const { poptitle, popdec } = contactForm;
 function PopupHireUs() {
 
   const [status, setStatus] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const formData = new FormData(e.target);
     try {
       const response = await submitContact({
@@ -34,6 +36,8 @@ function PopupHireUs() {
       }
     } catch (e) {
       console.log(e)
+    } finally {
+      setIsSubmitting(false); // Hide loader after form submission
     }
   };
 
@@ -60,14 +64,16 @@ function PopupHireUs() {
                       <Col xl={12}>
                         <Row>
                           <Col xl={6} md={6}>
-                            <input type="email" id="email" name="email" placeholder="Company Email" />
-
-                            <input type='text' id="firstname" name="firstname" placeholder="First Name" className="" />
+                            <label htmlFor="email">
+                              <input type="email" id="email" name="email" placeholder="Company Email" className=""
+                                required />
+                            </label>
+                            <input type='text' id="firstname" name="firstname" placeholder="First Name" className="" required />
                           </Col>
                           <Col xl={6} md={6}>
-                            <input type="tel" id="phone" name="phone" placeholder="Your Mobile Number" />
+                            <input type="tel" id="phone" name="phone" placeholder="Your Mobile Number" required />
 
-                            <input type='text' id="lastname" name="lastname" placeholder="Last Name" className="" />
+                            <input type='text' id="lastname" name="lastname" placeholder="Last Name" className="" required />
                           </Col>
                         </Row>
                       </Col>
@@ -76,7 +82,7 @@ function PopupHireUs() {
                       </Col>
                       <Col xl={12}>
                         <div className="formleftpop">
-                          <select id="industry" className="form-controlnone" name='industry' required="required" data-error="Please specify your need.">
+                          <select id="industry" className="form-controlnone" name='industry' required data-error="Please specify your need.">
                             <option value="" >Industry</option>
                             <option value="Animal &amp; Pet">Animal &amp; Pet</option>
                             <option value="Apparel, Fashion &amp; Jewelry">Apparel, Fashion &amp; Jewelry</option>
@@ -107,8 +113,8 @@ function PopupHireUs() {
                           </select>
                         </div>
                         <div className="formleftpop">
-                          <select id="budget" name="budget" className="form-controlnone" required="required" data-error="Please specify your need.">
-                            <option name="selectedOpti" > Monthly Marketing Budget</option>
+                          <select id="budget" name="budget" className="form-controlnone" required data-error="Please specify your need.">
+                            <option value="" > Monthly Marketing Budget</option>
                             <option value="0 to 5 Lakh"> 0 to 5 Lakh</option>
                             <option value="5 Lakh to 10 Lakh" > 5 Lakh to 10 Lakh</option>
                             <option value="10 Lakh to 15 Lakh"> 10 Lakh to 15 Lakh</option>
@@ -121,20 +127,29 @@ function PopupHireUs() {
                         </div>
 
                         <div className="formlefttxtpop">
-                          <input type="checkbox" id="checkbox" name="checkbox" className='checkedbox' value="I agree to T&C and Privacy Policy" />
+                          <input type="checkbox" id="checkbox" name="checkbox" className='checkedbox' value="I agree to T&C and Privacy Policy" required />
                           <label className="form-dec">By clicking the button below, you consent for Tzar Digital and partners to use automated technology, including pre-recorded messages,
                             cell phones and texts, and email to contact you at the number and email address provided. This includes if the number is currently on any Do Not Call Lists. This consent is not required to make a purchase. Privacy Policy.</label>
                         </div>
                       </Col>
                     </Row>
                     <div>
-                      <button className="button-50 comment-form__btn" type="submit">Submit Form</button>
+                      <button className="button-50 comment-form__btn" type="submit"  disabled={isSubmitting}>
+                      {isSubmitting ? (
+                                    <div className="btn-loader">
+                                        <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                        Loading...
+                                    </div>
+                                ) : (
+                                    "Submit Form"
+                                )}
+                      </button>
                     </div>
                   </div>
                 </div>
               </form>
               {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
-              {status === "error" && <div className="alert alert-danger">Form submitted successfully!</div>}
+              {status === "error" && <div className="alert alert-success">Form submitted successfully!</div>}
             </div>
           </div>
         </Container>

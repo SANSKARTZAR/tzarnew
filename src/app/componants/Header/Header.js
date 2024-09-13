@@ -86,7 +86,7 @@ const Header = ({ pageTitle }) => {
                 <NavItem key={navItem.id} navItem={navItem} />
               ))}
               <li>
-                <Link href="/" className="button-header">Hire Us</Link>
+                <Link href="/hire-us" className="button-header">Hire Us</Link>
               </li>
             </ul>
           </div>
