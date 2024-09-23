@@ -27,7 +27,7 @@ import MobileMenu from "./componants/MobileMenu/MobileMenu";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Tzar Digital Marketing Agency",
+  title: "TZAR VENTURE- Digital Marketing Agency",
   description: "Tzar Digital Marketing Agency",
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta content="India's fastest growing digital marketing agency | company in India - Tzar Digital Agency Mumbai" property="og:title" />
+        <meta content="India's fastest growing digital marketing agency | company in India - TZAR VENTURE- Digital Marketing Agency Mumbai" property="og:title" />
         <meta content="https://www.tzar.co/" property="og:url" />
         <link rel="icon" href="tzar-favicon.jpg" />
         <meta name="description" content="Online digital marketing Agency -  Tzar Venture India's fatest growing company/agency in online digital marketing services. DMA is a web marketing agency that offers SEO services, PPC services, social media marketing services, web design services." />
