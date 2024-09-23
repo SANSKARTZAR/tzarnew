@@ -7,7 +7,7 @@ import SomeFacts from "../componants/LeadGServices/SomeFacts";
 import ContactForm from "../componants/home/ContactForm";
 
 export const metadata = {
-  title: "Lead Generation Services - Get 100% Qualified Leads for B2B and B2C Companies | Tzar Venture",
+  title: "TZAR VENTURE- Digital Marketing Agency Lead Generation Services - Get 100% Qualified Leads for B2B and B2C Companies | Tzar Venture",
   description: "Lead Generation Services - Get 100% Qualified leads for B2B, B2C, Edu tech & Startups - Tzar Venture"
 }
 

@@ -6,7 +6,7 @@ import Privacypolicy from "@/app/componants/TermsConditions/Privacypolicy";
 
 
 export const metadata = {
-  title: "Social media marketing services | Tzar Digital Marketing Agency in Mumbai",
+  title: "TZAR VENTURE- Digital Marketing Agency Social media marketing services | Tzar Digital Marketing Agency in Mumbai",
   description: "Tzar Digital Marketing Agency",
 }
 

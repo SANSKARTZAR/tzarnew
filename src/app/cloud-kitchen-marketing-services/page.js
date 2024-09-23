@@ -6,7 +6,7 @@ import ContactForm from "../componants/home/ContactForm";
 import BenefitsCKM from "../componants/CloudKServices/BenefitsCKM";
 
 export const metadata = { 
-  title:" Tzar Digital Agency: Boost Your Cloud Kitchen Success with Strategic Marketing",
+  title:"TZAR VENTURE- Digital Marketing Agency: Boost Your Cloud Kitchen Success with Strategic Marketing",
   description:"Online cloud kitchen marketing Services will help you to grow brands, website tarffic & Sale through online digital marketing channels @ Tzar venture." 
 }
 

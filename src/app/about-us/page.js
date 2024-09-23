@@ -6,7 +6,7 @@ import ContactForm from "../componants/home/ContactForm";
 import Link from "next/link";
 
 export const metadata = {
-    title: "About Us - Tzar Venture Online Digital Marketing Services - Tzar Venture",
+    title: "TZAR VENTURE- Digital Marketing Agency About Us - Tzar Venture Online Digital Marketing Services - Tzar Venture",
     description: "About Us - End to End Digital Marketing Services Online."
 }
 

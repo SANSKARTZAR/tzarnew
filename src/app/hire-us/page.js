@@ -7,7 +7,7 @@ import PopupHireUs from "../componants/home/PopupHireUs";
 
 
 export const metadata = {
-    title:"Tzar Digital Agency Internship: Unlock Your Potential with Tzar",
+    title:"TZAR VENTURE- Digital Marketing Agency Hire Us: Unlock Your Potential with Tzar",
     description:"Explore exciting internship opportunities at Tzar Digital Agency. Join our dynamic team, gain hands-on experience, and shape your future in the world of digital marketing. Discover growth at Tzar, where innovation meets expertise." 
   }
 

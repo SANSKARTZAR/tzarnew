@@ -5,7 +5,7 @@ import StudioClients from "../componants/TzarStudio/StudioClients";
 import FoodShoot from "../componants/TzarStudio/FoodShoot";
 
 export const metadata = {
-  title: "Studio Services - Custom Logo Design. Business logos design by professionls online - Tzar venture",
+  title: "TZAR VENTURE- Digital Marketing Agency Studio Services - Custom Logo Design. Business logos design by professionls online - Tzar venture",
   description: "Custom Studio Services Online - Tzar Venture do not sell products we make ICONIC Brands. "
 }
 

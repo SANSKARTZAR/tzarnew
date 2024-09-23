@@ -8,7 +8,7 @@ import CountsLG from "../componants/LogoDService/Counts/CountsLG";
 import ContactForm from "../componants/home/ContactForm";
 
 export const metadata = { 
-  title:"Tzar Digital Agency: Expert In Product Packaging Design Services",
+  title:"TZAR VENTURE- Digital Marketing Agency: Expert In Product Packaging Design Services",
     description:"Tzar Digital's packaging design services elevate your brand. Specialists create compelling, customized packaging boosting visibility and differentiation. Complimentary consultations discuss first impressions and solutions tailored to your business goals."
 }
 

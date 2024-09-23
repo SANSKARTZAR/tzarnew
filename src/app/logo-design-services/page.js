@@ -10,8 +10,8 @@ import CountsLG from "../componants/LogoDService/Counts/CountsLG";
 import WhyChooseUSLogo from "../componants/LogoDService/WhyChooseUSLogo";
 
 export const metadata = {
-  title:"Logo Design Services - Custom Logo Design. Business logos design by professionls online - Tzar venture",
-    description:"Custom Logo Design Services Online - Tzar Venture do not sell products we make ICONIC Brands. " 
+  title:"TZAR VENTURE- Digital Marketing Agency Logo Design Services - Custom Logo Design. Business logos design by professionls online - Tzar venture",
+  description:"Custom Logo Design Services Online - Tzar Venture do not sell products we make ICONIC Brands. " 
 }
 
 

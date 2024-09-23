@@ -3,7 +3,7 @@ import PageHeaderContact from "../componants/contact/PageHeaderContact";
 import ContactFormSection from "../componants/home/ContactForm";
 
 export const metadata = {
-    title:"Tzar Digital Agency | Contact Us for Expert Digital Solutions",
+    title:"TZAR VENTURE- Digital Marketing Agency | Contact Us for Expert Digital Solutions",
     description:"Connect with Tzar Digital Agency's skilled team. Reach out through our Contact Us page for tailored digital services. Let's elevate your online presence together."
   }
 
