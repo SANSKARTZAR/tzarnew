@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { submitContact } from "../../models/action";
+import { submitContact } from "../../models/actionweb";
 import { Col, Container, Row, Image } from "react-bootstrap";
 
 import googlepartner from "@/assets/images/icons/googlepartner.png";
+import facebook from "@/assets/images/icons/facebook.png";
 
 const WebdevContact = () => {
     const [status, setStatus] = useState(null);
@@ -16,13 +17,29 @@ const WebdevContact = () => {
         const formData = new FormData(e.target);
         try {
             const response = await submitContact({
+
+                WebsitesDevelopment: formData.get("WebsitesDevelopment"),
+                socialmedia: formData.get("socialmedia"),
+                perfomancemarketing: formData.get("perfomancemarketing"),
+                influencermarketing: formData.get("influencermarketing"),
+                brandmarketing: formData.get("brandmarketing"),
+                searchengineoptimization: formData.get("searchengineoptimization"),
+                productshoot: formData.get("productshoot"),
+                animation: formData.get("animation"),
+                logodesign: formData.get("logodesign"),
+                productpackaging: formData.get("productpackaging"),
+
+                domain: formData.get("domain"),
+
+                requirmentmsg: formData.get("requirmentmsg"),
+
                 fullname: formData.get("fullname"),
                 phone: formData.get("phone"),
                 email: formData.get("email"),
                 services: formData.get("services"),
                 city: formData.get("city"),
                 country: formData.get("country"),
-                checkbox: formData.get("checkbox"),
+                TermsCondition: formData.get("TermsCondition"),
             });
             if (response.status === 200) {
                 setStatus("success");
@@ -44,156 +61,130 @@ const WebdevContact = () => {
                     <div className='row'>
                         <div className='col-lg-9 col-md-6 col-12'>
                             <div className="webform-dev">
-                                <form onSubmit={handleSubmit} className="EnquiryForm">
+                                <form onSubmit={handleSubmit} className="websitedev-enquiryform">
                                     <div className="form-div">
                                         <Row>
                                             <Col xl={6}>
                                                 <h4>Your eCommerce Project Details</h4>
                                                 <h3>Services Needed:</h3>
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="WebsitesDevelopment" required value="Websites Desing & Development" />
-                                                    <label for="WebsitesDevelopment">Websites Desing & Development</label>
+                                                    <input type="checkbox" name="WebsitesDevelopment" id="WebsitesDevelopment" value="Websites Desing & Development" />
+                                                    <label htmlFor="WebsitesDevelopment">Websites Desing & Development</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="Social Media (SMO | SMM)" required value="Social Media (SMO | SMM)" />
-                                                    <label for="Social Media (SMO | SMM)">Social Media (SMO | SMM)</label>
+                                                    <input type="checkbox" name="socialmedia" id="Social Media (SMO | SMM)" value="Social Media (SMO | SMM)" />
+                                                    <label htmlFor="Social Media (SMO | SMM)">Social Media (SMO | SMM)</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="Perfomance Marketing" required value="Perfomance Marketing" />
-                                                    <label for="Perfomance Marketing">Perfomance Marketing</label>
+                                                    <input type="checkbox" name="perfomancemarketing" id="Perfomance Marketing" value="Perfomance Marketing" />
+                                                    <label htmlFor="Perfomance Marketing">Perfomance Marketing</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="Influencer Marketing" required value="Influencer Marketing" />
-                                                    <label for="Influencer Marketing">Influencer Marketing</label>
+                                                    <input type="checkbox" name="influencermarketing" id="Influencer Marketing" value="Influencer Marketing" />
+                                                    <label htmlFor="Influencer Marketing">Influencer Marketing</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="Brand Marketing" required value="Brand Marketing" />
-                                                    <label for="Brand Marketing">Brand Marketing</label>
+                                                    <input type="checkbox" name="brandmarketing" id="Brand Marketing" value="Brand Marketing" />
+                                                    <label htmlFor="Brand Marketing">Brand Marketing</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="Search Engine Optimization (SEO)" required value="Search Engine Optimization (SEO)" />
-                                                    <label for="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</label>
+                                                    <input type="checkbox" name="searchengineoptimization" id="Search Engine Optimization (SEO)" value="Search Engine Optimization (SEO)" />
+                                                    <label htmlFor="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="Product Shoot" required value="Product Shoot" />
-                                                    <label for="Product Shoot">Product Shoot</label>
+                                                    <input type="checkbox" name="productshoot" id="Product Shoot" value="Product Shoot" />
+                                                    <label htmlFor="Product Shoot">Product Shoot</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="2D&3D Animation" required value="2D&3D Animation" />
-                                                    <label for="2D&3D Animation">2D&3D Animation</label>
+                                                    <input type="checkbox" name="animation" id="2D&3D Animation" value="2D&3D Animation" />
+                                                    <label htmlFor="2D&3D Animation">2D&3D Animation</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="Logo Design" required value="Logo Design" />
-                                                    <label for="Logo Design">Logo Design</label>
+                                                    <input type="checkbox" name="logodesign" id="Logo Design" value="Logo Design" />
+                                                    <label htmlFor="Logo Design">Logo Design</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="checkbox" id="Product Packaging" required value="Product Packaging" />
-                                                    <label for="Product Packaging">Product Packaging</label>
+                                                    <input type="checkbox" name="productpackaging" id="Product Packaging" value="Product Packaging" />
+                                                    <label htmlFor="Product Packaging">Product Packaging</label>
                                                 </div>
                                                 {/* <br /> */}
 
-                                                <label htmlFor="fullname">Website Address / Domain:</label>
+                                                <label htmlFor="domain">Website Address / Domain:</label>
+                                                <input
+                                                    type="text"
+                                                    id="domain"
+                                                    name="domain"
+                                                    placeholder="John Doe"
+                                                    className="webdevformcontrol"
+                                                    required
+                                                />
+
+                                                <label htmlFor="requirmentmsg">Describe Your eCommerce Website Needs & Goals:</label>
+                                                <p>Please explain your eCommerce website needs, timeline, and goals.</p>
+                                                <textarea id="requirmentmsg" className="webdevformcontrol" name="requirmentmsg" rows="4" cols="50"></textarea>
+
+                                            </Col>
+                                            <Col xl={6}>
+                                                <h4>Your Contact Information</h4>
+                                                <label htmlFor="fullname">Fullname</label>
                                                 <input
                                                     type="text"
                                                     id="fullname"
                                                     name="fullname"
                                                     placeholder="John Doe"
-                                                    className="form-control form-inputs"
+                                                    className="webdevformcontrol"
                                                     required
                                                 />
-
-                                                <label for="requirmentmsg">Describe Your eCommerce Website Needs & Goals:</label>
-                                                <p>Please explain your eCommerce website needs, timeline, and goals.</p>
-                                                <textarea id="requirmentmsg" name="requirmentmsg" rows="4" cols="50"></textarea>
-
-                                            </Col>
-                                            <Col xl={6}>
-                                                <h4>Your Contact Information</h4>
-                                                <label htmlFor="fullname">
-                                                    <input
-                                                        type="text"
-                                                        id="fullname"
-                                                        name="fullname"
-                                                        placeholder="John Doe"
-                                                        className="form-control form-inputs"
-                                                        required
-                                                    />
-                                                </label>
-                                                <label htmlFor="phone">
-                                                    <input
-                                                        type="tel"
-                                                        id="phone"
-                                                        name="phone"
-                                                        placeholder="Add phone no."
-                                                        className="form-control form-inputs"
-                                                        required
-                                                    />
-                                                </label>
-                                                <label htmlFor="email">
-                                                    <input
-                                                        type="email"
-                                                        id="email"
-                                                        name="email"
-                                                        placeholder="john@gmail.com"
-                                                        className="form-control form-inputs"
-                                                        required
-                                                    />
-                                                </label>
-                                                {/* <label htmlFor="services">
-                                            <select id="services" name="services" className="form-control form-inputs" required >
-                                                <option value="">Services</option>
-                                                <option>Websites Desing & Development</option>
-                                                <option>Social Media (SMO | SMM)</option>
-                                                <option>Perfomance Marketing </option>
-                                                <option>Influencer Marketing  </option>
-                                                <option> Brand Marketing</option>
-                                                <option>Search Engine Optimization (SEO)</option>
-                                                <option>Product Shoot</option>
-                                                <option>2D&3D Animation</option>
-                                                <option>Logo Design</option>
-                                                <option>Product Packaging</option>
-                                            </select>
-                                        </label> */}
-                                                <Row>
-                                                    <Col xl={6}>
-                                                        <label htmlFor="city">
-                                                            <input
-                                                                type="text"
-                                                                id="city"
-                                                                name="city"
-                                                                placeholder="Your City"
-                                                                className="form-control form-inputs"
-                                                                required
-                                                            />
-                                                        </label>
-                                                    </Col>
-                                                    <Col xl={6}>
-                                                        <label htmlFor="country">
-                                                            <input
-                                                                type="text"
-                                                                id="country"
-                                                                name="country"
-                                                                placeholder="Your Country"
-                                                                className="form-control form-inputs"
-                                                                required
-                                                            />
-                                                        </label>
-                                                    </Col>
-                                                </Row>
+                                                <label htmlFor="phone">Phone</label>
+                                                <input
+                                                    type="tel"
+                                                    id="phone"
+                                                    name="phone"
+                                                    placeholder="Add phone no."
+                                                    className="webdevformcontrol"
+                                                    required
+                                                />
+                                                <label htmlFor="email">Email</label>
+                                                <input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    placeholder="john@gmail.com"
+                                                    className="webdevformcontrol"
+                                                    required
+                                                />
+                                                <label htmlFor="city">City</label>
+                                                <input
+                                                    type="text"
+                                                    id="city"
+                                                    name="city"
+                                                    placeholder="Your City"
+                                                    className="webdevformcontrol "
+                                                    required
+                                                />
+                                                <label htmlFor="country">Country</label>
+                                                <input
+                                                    type="text"
+                                                    id="country"
+                                                    name="country"
+                                                    placeholder="Your Country"
+                                                    className="webdevformcontrol"
+                                                    required
+                                                />
 
                                                 <div className="form-group formlefttxt">
                                                     <label className="checkbox">
                                                         <div className="form-studiocheck">
-                                                            <input type="checkbox" name="checkbox" required value="I agree to T&C and Privacy Policy" />
+                                                            <input type="checkbox" name="TermsCondition" required value="I agree to T&C and Privacy Policy" />
                                                             <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates via WhatsApp.</h6>
                                                         </div>
                                                     </label>
@@ -210,6 +201,27 @@ const WebdevContact = () => {
                                                         )}
                                                     </button>
                                                 </label>
+                                                <br /><br />
+                                                <div className='row'>
+                                                    <div className='col-lg-4 col-md-4 col-12'>
+                                                        <div className="projects-web">
+                                                            <h2 className="projects-counter">1,000+</h2>
+                                                            <p>Projects</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-lg-4 col-md-4 col-12'>
+                                                        <div className="projects-web">
+                                                            <h2 className="projects-counter">99%</h2>
+                                                            <p>Job Success Score</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className='col-lg-4 col-md-4 col-12'>
+                                                        <div className="projects-web">
+                                                            <h2 className="projects-counter">500+</h2>
+                                                            <p>Trusted Clients Globaly</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </Col>
                                         </Row>
                                     </div>
@@ -217,9 +229,14 @@ const WebdevContact = () => {
                                 {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
                                 {status === "error" && <div className="alert alert-success">Form submitted successfully!</div>}
                             </div>
+
                         </div>
                         <div className='col-lg-3 col-md-6 col-12'>
-                            <Image src={googlepartner.src} alt="googlepartnar" width="300" />
+                            <div className="form-partners">
+                                <Image src={googlepartner.src} alt="googlepartnar" width="300" />
+                                <Image src={facebook.src} alt="googlepartnar" width="280" />
+                            </div>
+
                         </div>
                     </div>
                 </div>

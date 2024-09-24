@@ -34,8 +34,8 @@ const Page = () => {
       <WebDesignMock/>
       <TestimonialFive/>
       {/* <BenefitsWD/> */}
-      {/* <WebdevContact/> */}
-      <ContactForm/>
+      <WebdevContact/>
+      {/* <ContactForm/> */}
       <WdService/>
     </>
   );

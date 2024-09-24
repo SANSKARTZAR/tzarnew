@@ -194,13 +194,15 @@
 select option {
   color: #ffffff !important;
 }
+
 .hireus-form ::placeholder {
   color: #000000 !important;
-} 
+}
 
 .hireus-form select option {
   color: #000000 !important;
 }
+
 input:-internal-autofill-selected {
   background-color: #023878 !important;
 }
@@ -480,14 +482,49 @@ label {
   text-align: center;
 }
 
-.checkboxserviceform{
+.checkboxserviceform {
   display: flex;
   gap: 10px;
   margin: 5px;
 }
-.website-enquiryform{
+
+.website-enquiryform {
   padding: 30px 0;
 }
-.web-titleshow{
+
+.web-titleshow {
   text-align: center;
+}
+
+
+.websitedev-enquiryform label {
+  margin-top: 10px;
+}
+
+.webdevformcontrol {
+  width: 100%;
+  background: #f5f6f7;
+  border: 1px solid #e5e6e7;
+  display: block;
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: 10px 20px;
+  transition: color .35s, border-color .35s, background-color .35s;
+}
+
+
+.form-partners{
+  text-align: center;
+}
+
+.projects-web{
+  text-align: center;
+  padding: 10px;
+  background-color: #023878;
+  border-radius: 5px;
+  color: #fff;
+  height: 110px;
+}
+.projects-counter{
+  color: #fff;
 }

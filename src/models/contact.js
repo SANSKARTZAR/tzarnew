@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 
 const contactSchema = new mongoose.Schema(
     {
+        // message: {
+        //     type: String,
+        //     required: true,
+        // },
         fullname: {
             type: String,
             required: true,
@@ -18,10 +22,6 @@ const contactSchema = new mongoose.Schema(
             type: String,
             required: true,
         }, 
-        // message: {
-        //     type: String,
-        //     required: true,
-        // },
         city: {
             type: String,
             required: true,
