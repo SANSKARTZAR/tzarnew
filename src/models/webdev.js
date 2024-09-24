@@ -71,7 +71,7 @@ const webdevSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        checkbox: {
+        termscondition: {
             type: String,
             required: true,
         },

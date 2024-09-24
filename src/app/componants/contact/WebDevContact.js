@@ -30,16 +30,14 @@ const WebdevContact = () => {
                 productpackaging: formData.get("productpackaging"),
 
                 domain: formData.get("domain"),
-
                 requirmentmsg: formData.get("requirmentmsg"),
 
                 fullname: formData.get("fullname"),
                 phone: formData.get("phone"),
                 email: formData.get("email"),
-                services: formData.get("services"),
                 city: formData.get("city"),
                 country: formData.get("country"),
-                TermsCondition: formData.get("TermsCondition"),
+                termscondition: formData.get("termscondition"),
             });
             if (response.status === 200) {
                 setStatus("success");
@@ -184,7 +182,7 @@ const WebdevContact = () => {
                                                 <div className="form-group formlefttxt">
                                                     <label className="checkbox">
                                                         <div className="form-studiocheck">
-                                                            <input type="checkbox" name="TermsCondition" required value="I agree to T&C and Privacy Policy" />
+                                                            <input type="checkbox" name="termscondition" required value="I agree to T&C and Privacy Policy" />
                                                             <h6 className="homeformtext">By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink"> T&C </Link>and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates via WhatsApp.</h6>
                                                         </div>
                                                     </label>
