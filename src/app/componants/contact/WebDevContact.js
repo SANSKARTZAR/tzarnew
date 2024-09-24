@@ -71,48 +71,48 @@ const WebdevContact = () => {
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="socialmedia" id="Social Media (SMO | SMM)" value="Social Media (SMO | SMM)" />
-                                                    <label htmlFor="Social Media (SMO | SMM)">Social Media (SMO | SMM)</label>
+                                                    <input type="checkbox" name="socialmedia" id="socialmedia" value="Social Media (SMO | SMM)" />
+                                                    <label htmlFor="socialmedia">Social Media (SMO | SMM)</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="perfomancemarketing" id="Perfomance Marketing" value="Perfomance Marketing" />
-                                                    <label htmlFor="Perfomance Marketing">Perfomance Marketing</label>
+                                                    <input type="checkbox" name="perfomancemarketing" id="perfomancemarketing" value="Perfomance Marketing" />
+                                                    <label htmlFor="perfomancemarketing">Perfomance Marketing</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="influencermarketing" id="Influencer Marketing" value="Influencer Marketing" />
-                                                    <label htmlFor="Influencer Marketing">Influencer Marketing</label>
+                                                    <input type="checkbox" name="influencermarketing" id="influencermarketing" value="Influencer Marketing" />
+                                                    <label htmlFor="influencermarketing">Influencer Marketing</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="brandmarketing" id="Brand Marketing" value="Brand Marketing" />
-                                                    <label htmlFor="Brand Marketing">Brand Marketing</label>
+                                                    <input type="checkbox" name="brandmarketing" id="brandmarketing" value="Brand Marketing" />
+                                                    <label htmlFor="brandmarketing">Brand Marketing</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="searchengineoptimization" id="Search Engine Optimization (SEO)" value="Search Engine Optimization (SEO)" />
-                                                    <label htmlFor="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</label>
+                                                    <input type="checkbox" name="searchengineoptimization" id="searchengineoptimization" value="Search Engine Optimization (SEO)" />
+                                                    <label htmlFor="searchengineoptimization">Search Engine Optimization (SEO)</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="productshoot" id="Product Shoot" value="Product Shoot" />
-                                                    <label htmlFor="Product Shoot">Product Shoot</label>
+                                                    <input type="checkbox" name="productshoot" id="productshoot" value="Product Shoot" />
+                                                    <label htmlFor="productshoot">Product Shoot</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="animation" id="2D&3D Animation" value="2D&3D Animation" />
-                                                    <label htmlFor="2D&3D Animation">2D&3D Animation</label>
+                                                    <input type="checkbox" name="animation" id="animation" value="2D&3D Animation" />
+                                                    <label htmlFor="animation">2D&3D Animation</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="logodesign" id="Logo Design" value="Logo Design" />
-                                                    <label htmlFor="Logo Design">Logo Design</label>
+                                                    <input type="checkbox" name="logodesign" id="logodesign" value="Logo Design" />
+                                                    <label htmlFor="logodesign">Logo Design</label>
                                                 </div>
                                                 {/* <br /> */}
                                                 <div className="checkboxserviceform">
-                                                    <input type="checkbox" name="productpackaging" id="Product Packaging" value="Product Packaging" />
-                                                    <label htmlFor="Product Packaging">Product Packaging</label>
+                                                    <input type="checkbox" name="productpackaging" id="productpackaging" value="Product Packaging" />
+                                                    <label htmlFor="productpackaging">Product Packaging</label>
                                                 </div>
                                                 {/* <br /> */}
 
