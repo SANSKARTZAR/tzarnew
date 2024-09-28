@@ -19,6 +19,12 @@ const footerData = {
   city: " Andheri East Mumbai, Maharashtra 400093",
   year: new Date().getFullYear(),
   author: "Tzar Digital Marketing Agency",
+  contactadd: [
+    {
+      id: 1,
+      icon: "icon-phone-call",
+    }
+  ],
   socials: [
     {
       id: 1,
@@ -40,6 +46,7 @@ const footerData = {
       icon: "fab fa-instagram",
       href: "https://www.instagram.com/tzarmktagency/",
     },
+
   ],
   links: [
     {

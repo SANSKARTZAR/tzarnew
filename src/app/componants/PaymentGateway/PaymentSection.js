@@ -2,7 +2,7 @@
 import React from 'react'
 import { Row, Col, Container, Image } from 'react-bootstrap';
 import footerData from "@/app/data/footerData";
-const { bg, title, phone, phone1, phoneIcon, mailIcon, googlepartner, facebook, googlereview, socials, address, city, email, links, year, author } =
+const { bg, title, phone, phone1, phoneIcon, mailIcon, contactadd, googlepartner, facebook, googlereview, socials, address, city, email, links, year, author } =
     footerData;
 
 var tableStyle = {
@@ -72,7 +72,8 @@ function PaymentSection() {
 
                                         <h3 className="contact-widget__title">Contact Us</h3>
                                         <div className="footer-flex">
-                                            <img src={mailIcon.src} alt="" width="15px" height="15px" /> &nbsp;
+                                            {/* <img src={mailIcon.src} alt="" width="15px" height="15px" /> &nbsp; */}
+                                            <i class="icomoon icon-email"></i>
                                             <a
                                                 href={`mailto:${email}`}
                                                 className="footer-widget__contact-text"
@@ -80,7 +81,9 @@ function PaymentSection() {
                                                 {email}
                                             </a>
                                         </div>
-                                        <img src={phoneIcon.src} alt="" width="15px" /> &nbsp;
+                                        {/* <img src={phoneIcon.src} alt="" width="15px" /> &nbsp; */}
+
+                                        <i class="icon-phone-call"></i>
                                         <a
                                             href={`tel:${phone.split(" ").join("")}`}
                                             className="footer-widget__contact-text"
