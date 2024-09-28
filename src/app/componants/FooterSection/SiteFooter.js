@@ -61,6 +61,7 @@ const SiteFooter = () => {
                   <p className="footer-widget__contact-text">
                     {address} <br /> {city}
                   </p>
+                  <Link href="/payment-gateway"><h3 className="footer-widget__title">Make Online Payment</h3></Link>
                   {/* <div className="footer-widget__contact-email-phone">
                     <h3 className="footer-widget__title">Contact Us</h3>
                     <div className="footer-flex">
