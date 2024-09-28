@@ -31,7 +31,7 @@
 
 
 
-.icon-command:before{
+.icon-command:before {
   content: "\e916";
 }
 
@@ -132,6 +132,22 @@
   content: "\e917";
 }
 
-.icon-email:before {
-  content: "\e918";
+/* .icon-email:before {
+  content: "\e911";
+} */
+
+.fi-rr-mailbox:before {
+  content: "\f63e";
 }
+
+.fi-rr-circle-envelope:before {
+  content: "\f30e";
+}
+
+.fi-rr-circle-phone:before {
+  content: "\f322";
+}
+
+.fi-rr-phone-call:before {
+  content: "\f71b";
+  }

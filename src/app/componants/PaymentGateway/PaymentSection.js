@@ -73,7 +73,7 @@ function PaymentSection() {
                                         <h3 className="contact-widget__title">Contact Us</h3>
                                         <div className="footer-flex">
                                             {/* <img src={mailIcon.src} alt="" width="15px" height="15px" /> &nbsp; */}
-                                            <i class="icomoon icon-email"></i>
+                                            <i class="fi-rr-envelope"></i>  &nbsp;
                                             <a
                                                 href={`mailto:${email}`}
                                                 className="footer-widget__contact-text"
@@ -83,15 +83,14 @@ function PaymentSection() {
                                         </div>
                                         {/* <img src={phoneIcon.src} alt="" width="15px" /> &nbsp; */}
 
-                                        <i class="icon-phone-call"></i>
+                                        <i class="fi-rr-phone-call"></i> &nbsp;
                                         <a
                                             href={`tel:${phone.split(" ").join("")}`}
                                             className="footer-widget__contact-text"
                                         >
                                             + {phone} ,
                                         </a>
-                                        {/* <br />*/}
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;
                                         <a
                                             href={`tel:${phone1.split(" ").join("")}`}
                                             className="footer-widget__contact-text"
