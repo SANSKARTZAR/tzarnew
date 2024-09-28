@@ -1,6 +1,9 @@
 "use client";
 import React from 'react'
 import { Row, Col, Container, Image } from 'react-bootstrap';
+import footerData from "@/app/data/footerData";
+const { bg, title, phone, phone1, phoneIcon, mailIcon, googlepartner, facebook, googlereview, socials, address, city, email, links, year, author } =
+    footerData;
 
 var tableStyle = {
     "width": "100%"
@@ -55,6 +58,43 @@ function PaymentSection() {
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                </div>
+                                <div className='payment-set'>
+                                    <div className='account-card2'>
+
+                                        <h3 className="contact-widget__title">Address</h3>
+                                        <p className="footer-widget__contact-text">
+                                            {address} {city}
+                                        </p>
+
+
+
+                                        <h3 className="contact-widget__title">Contact Us</h3>
+                                        <div className="footer-flex">
+                                            <img src={mailIcon.src} alt="" width="15px" height="15px" /> &nbsp;
+                                            <a
+                                                href={`mailto:${email}`}
+                                                className="footer-widget__contact-text"
+                                            >
+                                                {email}
+                                            </a>
+                                        </div>
+                                        <img src={phoneIcon.src} alt="" width="15px" /> &nbsp;
+                                        <a
+                                            href={`tel:${phone.split(" ").join("")}`}
+                                            className="footer-widget__contact-text"
+                                        >
+                                            + {phone} ,
+                                        </a>
+                                        {/* <br />*/}
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a
+                                            href={`tel:${phone1.split(" ").join("")}`}
+                                            className="footer-widget__contact-text"
+                                        >
+                                            + {phone1}
+                                        </a>
                                     </div>
                                 </div>
                             </Col>
