@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const webdevSchema = new mongoose.Schema(
     {
-        WebsitesDevelopment: {
+        websitesdevelopment: {
             type: String,
             required: true,
         },

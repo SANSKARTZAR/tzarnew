@@ -18,7 +18,7 @@ function PaymentSection() {
                         <Row className="justify-content-center">
                             <Col xl={6} md={6}>
                                 <div className="text-align-right">
-                                    <Image src='/tzarpayment.jpg' alt='payment tzar' width="80%" />
+                                    <Image src='/tzarpayment.jpg' alt='payment tzar' width="100%" />
                                 </div>
                             </Col>
                             <Col xl={6} md={6}>

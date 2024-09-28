@@ -568,20 +568,18 @@
 
 
 
-
-
-
-
 }
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
 
+  .web-dev-enquiry{
+    padding: 10px;
+  }
+
   .payment-set{
     padding: 5px!important;
   }
-
-
 
   /* .section-title__title {
     font-size: 30px;
