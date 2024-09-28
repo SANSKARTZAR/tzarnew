@@ -4,53 +4,52 @@ const webdevSchema = new mongoose.Schema(
     {
         websitesdevelopment: {
             type: String,
-            required: true,
+            required: false,  // Optional, since it depends on user selection
         },
         socialmedia: {
             type: String,
-            required: true,
+            required: false,  // Optional
         },
-        perfomancemarketing: {
+        performancemarketing: {  // Corrected typo
             type: String,
-            required: true,
+            required: false,  // Optional
         },
         influencermarketing: {
             type: String,
-            required: true,
+            required: false,  // Optional
         },
         brandmarketing: {
             type: String,
-            required: true,
+            required: false,  // Optional
         },
         searchengineoptimization: {
             type: String,
-            required: true,
+            required: false,  // Optional
         },
         productshoot: {
             type: String,
-            required: true,
+            required: false,  // Optional
         },
         animation: {
             type: String,
-            required: true,
+            required: false,  // Optional
         },
         logodesign: {
             type: String,
-            required: true,
+            required: false,  // Optional
         },
         productpackaging: {
             type: String,
-            required: true,
+            required: false,  // Optional
         },
         domain: {
             type: String,
-            required: true,
+            required: true,  // Required as per your original structure
         },
         requirmentmsg: {
             type: String,
-            required: true,
+            required: true,  // Required as per your original structure
         },
-
         fullname: {
             type: String,
             required: true,
@@ -72,14 +71,15 @@ const webdevSchema = new mongoose.Schema(
             required: true,
         },
         termscondition: {
-            type: String,
+            type: Boolean,  // Changed to Boolean since it's a checkbox for agreeing to terms
             required: true,
         },
     },
     {
-        timestamps: true,
-    })
+        timestamps: true,  // Adds createdAt and updatedAt timestamps automatically
+    }
+);
 
-const Webdev = mongoose.models.Webdev || mongoose.model('Webdev', webdevSchema)
+const Webdev = mongoose.models.Webdev || mongoose.model('Webdev', webdevSchema);
 
 export default Webdev;

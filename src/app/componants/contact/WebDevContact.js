@@ -9,15 +9,14 @@ import facebook from "@/assets/images/icons/facebook.png";
 
 const WebdevContact = () => {
     const [status, setStatus] = useState(null);
-    const [isSubmitting, setIsSubmitting] = useState(false); // State for loader
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsSubmitting(true); // Show loader when form is submitted
+        setIsSubmitting(true);
         const formData = new FormData(e.target);
         try {
             const response = await submitContact({
-
                 websitesdevelopment: formData.get("websitesdevelopment"),
                 socialmedia: formData.get("socialmedia"),
                 perfomancemarketing: formData.get("perfomancemarketing"),
@@ -28,10 +27,8 @@ const WebdevContact = () => {
                 animation: formData.get("animation"),
                 logodesign: formData.get("logodesign"),
                 productpackaging: formData.get("productpackaging"),
-
                 domain: formData.get("domain"),
                 requirmentmsg: formData.get("requirmentmsg"),
-
                 fullname: formData.get("fullname"),
                 phone: formData.get("phone"),
                 email: formData.get("email"),
@@ -46,19 +43,19 @@ const WebdevContact = () => {
             }
         } catch (e) {
             setStatus("error");
-            console.log(e);
+            console.error(e);
         } finally {
-            setIsSubmitting(false); // Hide loader after form submission
+            setIsSubmitting(false);
         }
     };
 
     return (
         <>
             <section className="website-enquiryform">
-                <div className='container'>
+                <div className="container">
                     <div className="web-dev-enquiry">
-                        <div className='row'>
-                            <div className='col-lg-9 col-md-6 col-12'>
+                        <div className="row">
+                            <div className="col-lg-9 col-md-6 col-12">
                                 <div className="webform-dev">
                                     <form onSubmit={handleSubmit} className="websitedev-enquiryform">
                                         <div className="form-div">
@@ -67,62 +64,81 @@ const WebdevContact = () => {
                                                     <h4>Your eCommerce Project Details</h4>
                                                     <h3>Services Needed:</h3>
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="websitesdevelopment" id="websitesdevelopment" value="Websites Desing & Development" />
-                                                        <label htmlFor="websitesdevelopment">Websites Desing & Development</label>
+                                                        <label htmlFor="websitesdevelopment">
+                                                            <input type="checkbox" name="websitesdevelopment" id="websitesdevelopment" value="Websites Design & Development" />
+                                                            Websites Design & Development
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="socialmedia" id="socialmedia" value="Social Media (SMO | SMM)" />
-                                                        <label htmlFor="socialmedia">Social Media (SMO | SMM)</label>
+                                                        <label htmlFor="socialmedia">
+                                                            <input type="checkbox" name="socialmedia" id="socialmedia" value="Social Media (SMO | SMM)" />
+                                                            Social Media (SMO | SMM)
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="perfomancemarketing" id="perfomancemarketing" value="Perfomance Marketing" />
-                                                        <label htmlFor="perfomancemarketing">Perfomance Marketing</label>
+                                                        <label htmlFor="perfomancemarketing">
+                                                            <input type="checkbox" name="perfomancemarketing" id="perfomancemarketing" value="Performance Marketing" />
+                                                            Performance Marketing
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="influencermarketing" id="influencermarketing" value="Influencer Marketing" />
-                                                        <label htmlFor="influencermarketing">Influencer Marketing</label>
+                                                        <label htmlFor="influencermarketing">
+                                                            <input type="checkbox" name="influencermarketing" id="influencermarketing" value="Influencer Marketing" />
+                                                            Influencer Marketing
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="brandmarketing" id="brandmarketing" value="Brand Marketing" />
-                                                        <label htmlFor="brandmarketing">Brand Marketing</label>
+                                                        <label htmlFor="brandmarketing">
+                                                            <input type="checkbox" name="brandmarketing" id="brandmarketing" value="Brand Marketing" />
+                                                            Brand Marketing
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="searchengineoptimization" id="searchengineoptimization" value="Search Engine Optimization (SEO)" />
-                                                        <label htmlFor="searchengineoptimization">Search Engine Optimization (SEO)</label>
+                                                        <label htmlFor="searchengineoptimization">
+                                                            <input type="checkbox" name="searchengineoptimization" id="searchengineoptimization" value="Search Engine Optimization (SEO)" />
+                                                            Search Engine Optimization (SEO)
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="productshoot" id="productshoot" value="Product Shoot" />
-                                                        <label htmlFor="productshoot">Product Shoot</label>
+                                                        <label htmlFor="productshoot">
+                                                            <input type="checkbox" name="productshoot" id="productshoot" value="Product Shoot" />
+                                                            Product Shoot
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="animation" id="animation" value="2D&3D Animation" />
-                                                        <label htmlFor="animation">2D&3D Animation</label>
+                                                        <label htmlFor="animation">
+                                                            <input type="checkbox" name="animation" id="animation" value="2D&3D Animation" />
+                                                            2D&3D Animation
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="logodesign" id="logodesign" value="Logo Design" />
-                                                        <label htmlFor="logodesign">Logo Design</label>
+                                                        <label htmlFor="logodesign">
+                                                            <input type="checkbox" name="logodesign" id="logodesign" value="Logo Design" />
+                                                            Logo Design
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
+
                                                     <div className="checkboxserviceform">
-                                                        <input type="checkbox" name="productpackaging" id="productpackaging" value="Product Packaging" />
-                                                        <label htmlFor="productpackaging">Product Packaging</label>
+                                                        <label htmlFor="productpackaging">
+                                                            <input type="checkbox" name="productpackaging" id="productpackaging" value="Product Packaging" />
+                                                            Product Packaging
+                                                        </label>
                                                     </div>
-                                                    {/* <br /> */}
 
                                                     <label htmlFor="domain">Website Address / Domain:</label>
                                                     <input
                                                         type="text"
                                                         id="domain"
                                                         name="domain"
-                                                        placeholder="John Doe"
+                                                        placeholder="Your Domain"
                                                         className="webdevformcontrol"
                                                         required
                                                     />
@@ -130,11 +146,11 @@ const WebdevContact = () => {
                                                     <label htmlFor="requirmentmsg">Describe Your eCommerce Website Needs & Goals:</label>
                                                     <p>Please explain your eCommerce website needs, timeline, and goals.</p>
                                                     <textarea id="requirmentmsg" className="webdevformcontrol" name="requirmentmsg" rows="4" cols="50"></textarea>
-
                                                 </Col>
+
                                                 <Col xl={6}>
                                                     <h4>Your Contact Information</h4>
-                                                    <label htmlFor="fullname">Fullname</label>
+                                                    <label htmlFor="fullname">Full Name</label>
                                                     <input
                                                         type="text"
                                                         id="fullname"
@@ -167,7 +183,7 @@ const WebdevContact = () => {
                                                         id="city"
                                                         name="city"
                                                         placeholder="Your City"
-                                                        className="webdevformcontrol "
+                                                        className="webdevformcontrol"
                                                         required
                                                     />
                                                     <label htmlFor="country">Country</label>
@@ -188,6 +204,7 @@ const WebdevContact = () => {
                                                             </div>
                                                         </label>
                                                     </div>
+
                                                     <label htmlFor="submit">
                                                         <button className="btn btn-submit" type="submit" disabled={isSubmitting}>
                                                             {isSubmitting ? (
@@ -201,23 +218,24 @@ const WebdevContact = () => {
                                                         </button>
                                                     </label>
                                                     <br /><br />
-                                                    <div className='row'>
-                                                        <div className='col-lg-4 col-md-4 col-12'>
+
+                                                    <div className="row">
+                                                        <div className="col-lg-4 col-md-4 col-12">
                                                             <div className="projects-web">
                                                                 <h2 className="projects-counter">1,000+</h2>
                                                                 <p>Projects</p>
                                                             </div>
                                                         </div>
-                                                        <div className='col-lg-4 col-md-4 col-12'>
+                                                        <div className="col-lg-4 col-md-4 col-12">
                                                             <div className="projects-web">
                                                                 <h2 className="projects-counter">99%</h2>
                                                                 <p>Job Success Score</p>
                                                             </div>
                                                         </div>
-                                                        <div className='col-lg-4 col-md-4 col-12'>
+                                                        <div className="col-lg-4 col-md-4 col-12">
                                                             <div className="projects-web">
                                                                 <h2 className="projects-counter">500+</h2>
-                                                                <p>Trusted Clients Globaly</p>
+                                                                <p>Trusted Clients Globally</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -228,20 +246,18 @@ const WebdevContact = () => {
                                     {status === "success" && <div className="alert alert-success">Form submitted successfully!</div>}
                                     {status === "error" && <div className="alert alert-success">Form submitted successfully!</div>}
                                 </div>
-
                             </div>
-                            <div className='col-lg-3 col-md-6 col-12'>
-                                <div className="form-partners">
-                                    <Image src={googlepartner.src} alt="googlepartnar" width="300" />
-                                    <Image src={facebook.src} alt="googlepartnar" width="280" />
-                                </div>
 
+                            <div className="col-lg-3 col-md-6 col-12">
+                                <div className="form-partners">
+                                    <Image src={googlepartner.src} alt="googlepartner" width="300" />
+                                    <Image src={facebook.src} alt="facebook" width="280" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
         </>
     );
 };
