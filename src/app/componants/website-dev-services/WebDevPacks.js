@@ -19,7 +19,7 @@ function WebDevPacks() {
                             <div className="web-card">
                                 <Image src={wordpress.src} alt="WordPress" width="150" />
                                 <h3 className="web-titleshow">WordPress | WooCommerce (B2B/B2C/D2C)</h3>
-                                <p><b>1 - 2 weeks / Staring Package</b></p>
+                                <p><b>1 - 2 weeks / Starting Package</b></p>
                                 <div className="web-Price">
                                     <h2> 29,999/- INR  + GST </h2>
                                 </div>
@@ -118,7 +118,7 @@ function WebDevPacks() {
                             <div className="web-card">
                                 <Image src={shopify.src} alt="Shopify" width="150" />
                                 <h3 className="web-titleshow">Shopify <br /> (B2C/D2C)</h3>
-                                <p> <b>3 - 4 weeks / Staring Package</b></p>
+                                <p> <b>3 - 4 weeks / Starting Package</b></p>
                                 <div className="web-Price">
                                     <h2> 49,999/- INR  + GST</h2>
                                 </div>
@@ -224,7 +224,7 @@ function WebDevPacks() {
                             <div className="web-card">
                                 <Image src={nextjs.src} alt="Nextjs" width="150" />
                                 <h3 className="web-titleshow" >  React . Js | Adv. React Next  (B2C/D2C)</h3>
-                                <p><b>8 - 12 weeks / Staring Package</b></p>
+                                <p><b>8 - 12 weeks / Starting Package</b></p>
                                 <div className="web-Price">
                                     <h2> 79,999/- INR  + GST</h2>
 
