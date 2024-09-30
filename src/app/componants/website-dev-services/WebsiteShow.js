@@ -14,26 +14,26 @@ function WebsiteShow() {
                 <div className="container-fluid">
                     <h1 className="section-title__title">Build in Shopify</h1>
                     <div className="row">
-                        <div className="col-lg-3 col-md-12">
+                        <div className="col-lg-3 col-md-12 webslide-show">
                             <Link href="https://allthingspriti.com/">
                                 <Image src={atpshopweb.src} alt="allthingspriti" width="350" />
                                 <h3 className="web-titleshow">AllThingsPriti</h3>
                             </Link>
                         </div>
-                        <div className="col-lg-3 col-md-12">
+                        <div className="col-lg-3 col-md-12 webslide-show">
                             <Link href="https://www.apolloindia.co/">
                                 <Image src={aplloweb.src} alt="allthingspriti" width="350" />
                                 <h3  className="web-titleshow" >Apollo India</h3>
                             </Link> 
                         </div>
-                        <div className="col-lg-3 col-md-12">
+                        <div className="col-lg-3 col-md-12 webslide-show">
                             <Link href="https://cabelochave.com/">
                                 <Image src={cabiloweb.src} alt="allthingspriti" width="350" />
                                 <h3  className="web-titleshow" >Cabelo Chave</h3>
                             </Link> 
 
                         </div>
-                        <div className="col-lg-3 col-md-12">
+                        <div className="col-lg-3 col-md-12 webslide-show">
                             <Link href="https://mahaarajaa.life/">
                                 <Image src={mahaaraja.src} alt="allthingspriti" width="350" />
                                 <h3  className="web-titleshow" >Mahaarajaa</h3>
