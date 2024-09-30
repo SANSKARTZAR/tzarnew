@@ -76,7 +76,7 @@ const WebServicesContactForm = () => {
                         <label htmlFor="services">
                             <select id="services" name="services" className="form-control form-inputs" required >
                                 <option value="">Services</option>
-                                <option>Wordpress</option>
+                                <option>WordPress</option>
                                 <option>Shopify</option>
                                 <option>React js</option>
                                 <option>Next js</option>

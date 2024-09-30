@@ -51,7 +51,7 @@ const WebdevContact = () => {
 
     return (
         <>
-            <section className="website-enquiryform">
+            <section className="website-enquiryform" id="enquiry">
                 <div className="container">
                     <div className="web-dev-enquiry">
                         <div className="row">
