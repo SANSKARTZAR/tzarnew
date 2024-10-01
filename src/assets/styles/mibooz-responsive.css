@@ -24127,8 +24127,8 @@ margin-top: 161px;
   .testimonial-threeWD {
     position: relative;
     display: block;
-    padding: 106px 0 97px;
-    margin-top: -65px;
+    padding: 97px 0;
+    margin-top: 0px;
     z-index: 1;
   }
 
