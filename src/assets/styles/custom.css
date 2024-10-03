@@ -470,6 +470,8 @@ label {
 
 /* --------------------------------website show-------------- */
 
+
+
 .website-show {
   width: 100%;
   height: auto;
@@ -477,9 +479,11 @@ label {
   /* background-color: #F4F2F2; */
   padding: 30px 30px;
 }
-.webslide-show{
-  text-align: center!important;
+
+.webslide-show {
+  text-align: center !important;
 }
+
 .website-show h1 {
   text-align: center;
   font-size: 45px;
@@ -597,12 +601,13 @@ label {
   color: #ffffff;
 }
 
-.web-btnEnquiry{
+.web-btnEnquiry {
   padding: 10px 0 0 0;
   justify-content: space-between;
   display: flex;
   gap: 3px;
 }
+
 .web-enquiry-btn {
   background-color: #023878;
   border-radius: 0 20px 0 0;
@@ -611,6 +616,7 @@ label {
   text-decoration: none;
   width: 100%;
 }
+
 .web-enquiry-btn2 {
   background-color: #023878;
   border-radius: 20px 0 0 0;
@@ -622,13 +628,14 @@ label {
 
 .list-div-web {
   text-align: left;
- 
+  height: 550px;
 }
 
-.icon-list-item-web{
+.icon-list-item-web {
   list-style: none;
   margin: 10px 0;
 }
+
 .icon-list-item-web svg {
   fill: #023878;
   width: 20px;

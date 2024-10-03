@@ -573,20 +573,20 @@
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
 
-  .website-show{
-    padding: 30px 10px!important;
+  .website-show {
+    padding: 30px 10px !important;
   }
 
-  .section-title__title_web{
-    font-size: 29px!important;
+  .section-title__title_web {
+    font-size: 29px !important;
   }
 
-  .web-dev-enquiry{
+  .web-dev-enquiry {
     padding: 10px;
   }
 
-  .payment-set{
-    padding: 5px!important;
+  .payment-set {
+    padding: 5px !important;
   }
 
   /* .section-title__title {
@@ -24059,6 +24059,7 @@ margin-top: 161px;
     margin-top: -169px;
     z-index: 2;
   }
+
   .Seo-breadcrumb {
     position: relative;
     display: block;
@@ -24066,9 +24067,10 @@ margin-top: 161px;
     margin-left: 0px;
     margin-top: 0px;
     z-index: 2;
-    padding:10px;
+    padding: 10px;
     background-color: #023878;
   }
+
   .page-header__innerAuWs h2 {
     color: #fff;
   }
@@ -154404,8 +154406,12 @@ margin-top: 161px;
 
 @media(max-width:768px) {
 
+  .list-div-web {
+    height: auto!important;
+  }
+
   .image-setdiv:after {
-    content: ""!important;
+    content: "" !important;
   }
 
   .cardsWDv-ads {
