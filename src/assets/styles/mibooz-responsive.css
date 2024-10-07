@@ -154405,9 +154405,18 @@ margin-top: 161px;
 }
 
 @media(max-width:768px) {
+.seo-secion-pack{
+  width: 1500px;
+}
+  .seopack-tab {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
 
   .list-div-web {
-    height: auto!important;
+    height: auto !important;
   }
 
   .image-setdiv:after {
