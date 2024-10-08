@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta content="India's fastest growing digital marketing agency | company in India - TZAR VENTURE- Digital Marketing Agency Mumbai" property="og:title" />
         <meta content="https://www.tzar.co/" property="og:url" />
-        <link rel="icon" href="tzar-favicon.jpg" />
+        <link rel="icon" href="tzar-favicon.png" />
         <meta name="description" content="Online digital marketing Agency -  Tzar Venture India's fatest growing company/agency in online digital marketing services. DMA is a web marketing agency that offers SEO services, PPC services, social media marketing services, web design services." />
         <meta name="next-head-count" content="8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

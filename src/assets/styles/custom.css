@@ -664,6 +664,12 @@ label {
   padding: 50px 10px;
 }
 
+.seopack-title h1 {
+  font-weight: 800;
+  font-size: 56px !important;
+  text-transform: uppercase;
+}
+
 #seo-packages {
   /* border-collapse: collapse; */
   width: 100%;

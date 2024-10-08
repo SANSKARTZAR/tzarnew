@@ -1,5 +1,5 @@
 import image from "@/assets/images/resources/welcome-one-img-1.jpeg";
-import person from "@/assets/images/resources/welcome-one-person-img.jpg";
+import person from "@/assets/images/resources//welcome-one-person-img.png";
 import shape from "@/assets/images/resources/welcome-one-shape.png";
 
 const welcomeOne = {

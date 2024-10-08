@@ -22,6 +22,10 @@ const SEOPackages = () => {
         <>
             <section className="seopack-tab">
                 <Container>
+                    <div className="seopack-title">
+                        <h1>Find the Right Plan for You</h1>
+                        <h2>Maximize Audience Engagement</h2>
+                    </div>
                     <div className="seo-secion-pack">
                         <Suspense fallback={<h1>🌀 Loading...</h1>}>
                             <div className="ButtonsTab-seopack">
