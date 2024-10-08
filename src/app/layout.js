@@ -21,6 +21,7 @@ import Whatsapp from "../assets/images/icons/whatsapp.png";
 
 import { useRootContext } from "@/app/componants/context/context";
 import MobileMenu from "./componants/MobileMenu/MobileMenu";
+import StickyBar from "./componants/Header/StickyBar";
 
 
 
@@ -125,6 +126,7 @@ export default function RootLayout({ children }) {
             <Image src={Whatsapp.src} alt="whatsapp" width="50" />
           </a>
         </div>
+        <StickyBar/>
       </body>
     </html>
   );

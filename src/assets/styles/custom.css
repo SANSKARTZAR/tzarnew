@@ -791,3 +791,77 @@ label {
 td:empty {
   display: none;
 }
+
+
+
+/* ----------------------sticky bar------------------ */
+
+
+/* components/StickyBar.module.css */
+
+.stickyBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:#023878;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 18px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tagline {
+  flex: 1;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.knowMoreBtn {
+  background-color: rgb(255, 255, 255);
+  color: #023878;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.knowMoreBtn:hover {
+  background-color: #fffffffc;
+}
+
+.closeBtn {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  margin: 0 20px;
+}
+@media (max-width: 768px) {
+  .stickyBar {
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px;
+  }
+
+  .tagline {
+    margin-left: 0;
+    margin-bottom: 10px; /* Add space between items */
+    text-align: center;
+  }
+
+  .knowMoreBtn {
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .closeBtn {
+    font-size: 18px;
+    margin-right: 0;
+  }
+}
