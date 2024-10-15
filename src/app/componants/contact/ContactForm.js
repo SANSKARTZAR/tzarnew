@@ -3,8 +3,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { submitContact } from "../../models/action";
 import { Col, Container, Row } from "react-bootstrap";
+import { useRouter } from 'next/navigation';
+
 
 const ContactForm = () => {
+
+    const router = useRouter();
     const [status, setStatus] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false); // State for loader
 
@@ -24,8 +28,10 @@ const ContactForm = () => {
             });
             if (response.status === 200) {
                 setStatus("success");
+                router.push('/thank-you');
             } else {
                 setStatus("error");
+                router.push('/thank-you');
             }
         } catch (e) {
             setStatus("error");

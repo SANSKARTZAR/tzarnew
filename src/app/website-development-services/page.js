@@ -14,6 +14,7 @@ import WebsiteShow from "../componants/website-dev-services/WebsiteShow";
 import WebdevContact from "../componants/contact/WebDevContact";
 import WebDevPacks from "../componants/website-dev-services/WebDevPacks";
 import ContactFormWeb from "../componants/home/ContactFormWeb";
+import OurIndustryExpertise from "../componants/website-dev-services/OurIndustryExpertise";
 
 export const metadata = {
   title:"TZAR VENTURE- Digital Marketing Agency Website Development Services  - Custom Website Development Services Online @ Tzar venture",
@@ -33,6 +34,7 @@ const Page = () => {
       <WebDevPacks/>
       <WebsiteShow/>
       <WebsiteDesignCardsR/>
+      <OurIndustryExpertise/>
       <TestimonialFour/>
       <WebDesignMock/>
       <TestimonialFive/>

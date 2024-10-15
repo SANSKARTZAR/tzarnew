@@ -1,6 +1,7 @@
 
 import { Inter } from "next/font/google";
 import { Image } from "react-bootstrap";
+import Script from 'next/script';
 import "./globals.css";
 import "../assets/styles/mibooz.css";
 import "../assets/styles/mibooz-responsive.css";
@@ -22,7 +23,7 @@ import Whatsapp from "../assets/images/icons/whatsapp.png";
 import { useRootContext } from "@/app/componants/context/context";
 import MobileMenu from "./componants/MobileMenu/MobileMenu";
 import StickyBar from "./componants/Header/StickyBar";
-
+// import { GoogleAnalytics } from '@next/third-parties/google';
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -38,6 +39,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+
+      <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-NCJ1WLWM68`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NCJ1WLWM68');
+          `}
+        </Script>
+
         <meta content="India's fastest growing digital marketing agency | company in India - TZAR VENTURE- Digital Marketing Agency Mumbai" property="og:title" />
         <meta content="https://www.tzar.co/" property="og:url" />
         <link rel="icon" href="tzar-favicon.png" />
@@ -120,13 +135,14 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
+        {/* <GoogleAnalytics gaId="G-NCJ1WLWM68" /> */}
         <SiteFooter />
         <div className="whatsapp">
           <a href="https://api.whatsapp.com/send?phone=7304056607">
             <Image src={Whatsapp.src} alt="whatsapp" width="50" />
           </a>
         </div>
-        <StickyBar/>
+        <StickyBar />
       </body>
     </html>
   );

@@ -5,12 +5,14 @@ import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { submitContact } from "../../models/actionhire";
 import contactForm from "@/app/data/contactForm";
+import { useRouter } from 'next/navigation';
 
 const { poptitle, popdec } = contactForm;
 
 
 function PopupHireUs() {
 
+  const router = useRouter();
   const [status, setStatus] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -31,8 +33,10 @@ function PopupHireUs() {
       });
       if (response.status === 200) {
         setStatus("success");
+        router.push('/thank-you');
       } else {
         setStatus("error");
+        router.push('/thank-you');
       }
     } catch (e) {
       console.log(e)
