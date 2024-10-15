@@ -37,7 +37,7 @@ function WebdevHerrobanner() {
                                         <li><h3> 100% Guaranteed Result</h3></li>
                                     </ul> */}
                                 </div>
-                                <h1> Boost Your Online Presence with Expert Website Development Services</h1>
+                                <h1> Power up your online presence with professional web development. <br/>SHOPIFY | WORDPRESS | REACT | NEXT"</h1>
                                 {/* <Link href="#" className='thm-btn'>Enquiry Now</Link> */}
                             </div>
                         </div>

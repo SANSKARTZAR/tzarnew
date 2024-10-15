@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
 
-      <Script
+        <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-NCJ1WLWM68`}
         />
@@ -50,6 +50,24 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-NCJ1WLWM68');
+          `}
+        </Script>
+
+         {/* Google Tag Delayed Navigation Helper Script */}
+         <Script id="gtag-send-event" strategy="afterInteractive">
+          {`
+            function gtagSendEvent(url) {
+              var callback = function () {
+                if (typeof url === 'string') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'ads_conversion_Contact_Us_1', {
+                'event_callback': callback,
+                'event_timeout': 2000,
+              });
+              return false;
+            }
           `}
         </Script>
 
