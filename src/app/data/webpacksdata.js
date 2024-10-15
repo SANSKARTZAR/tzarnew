@@ -20,7 +20,7 @@ const webpacksdata = {
         },
         {
             id: 3,
-            feature: "onWebsite Contente",
+            feature: "Website Content",
         },
         {
             id: 4,
@@ -82,7 +82,7 @@ const webpacksdata = {
         },
         {
             id: 3,
-            feature: "Up to 10 Pages",
+            feature: "Up to 100 Pages",
         },
         {
             id: 4,
