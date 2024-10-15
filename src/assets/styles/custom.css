@@ -804,7 +804,7 @@ td:empty {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color:#023878;
+  background-color: #023878;
   color: white;
   text-align: center;
   padding: 15px 10px;
@@ -841,41 +841,48 @@ td:empty {
   cursor: pointer;
   margin: 0 20px;
 }
+
 .webdev-card-Expert {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px 0 15px;
+  padding: 0;
 }
-.webdev-card-Expert li{
-    list-style: none;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px 25px;
-    text-align: center;
-    box-shadow: -1px -1px 6px #c1c1c1;
-    margin: 15px 10px;
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.webdev-card-Expert li {
+  list-style: none;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px 25px;
+  text-align: center;
+  box-shadow: -1px -1px 6px #c1c1c1;
+  margin: 15px 10px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.webdev-card-Expert li:hover{
+
+.webdev-card-Expert li:hover {
   box-shadow: -1px -1px 6px #aaaaaa;
 }
-.thankyou-page{
-  padding:50px;
+
+.thankyou-page {
+  padding: 50px;
 }
 
 @media (max-width: 768px) {
   .stickyBar {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
+    /* Stack items vertically */
     padding: 10px;
   }
 
   .tagline {
     margin-left: 0;
-    margin-bottom: 10px; /* Add space between items */
+    margin-bottom: 10px;
+    /* Add space between items */
     text-align: center;
   }
 
@@ -889,5 +896,9 @@ td:empty {
   .closeBtn {
     font-size: 18px;
     margin-right: 0;
+  }
+
+  .webdev-card-Expert li {
+    width: 100%;
   }
 }
