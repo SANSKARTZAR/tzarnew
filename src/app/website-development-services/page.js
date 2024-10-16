@@ -15,34 +15,33 @@ import WebdevContact from "../componants/contact/WebDevContact";
 import WebDevPacks from "../componants/website-dev-services/WebDevPacks";
 import ContactFormWeb from "../componants/home/ContactFormWeb";
 import OurIndustryExpertise from "../componants/website-dev-services/OurIndustryExpertise";
+import FaqWebdev from "../componants/website-dev-services/faq/FaqWebdev";
 
 export const metadata = {
-  title:"TZAR VENTURE- Digital Marketing Agency Website Development Services  - Custom Website Development Services Online @ Tzar venture",
-    description:"Website Development Services  -  Responsive custom website development service provider at Tzar venture."
+  title: "TZAR VENTURE- Digital Marketing Agency Website Development Services  - Custom Website Development Services Online @ Tzar venture",
+  description: "Website Development Services  -  Responsive custom website development service provider at Tzar venture."
 }
 
 const Page = () => {
   return (
     <>
-    <WebdevHerrobanner/>
+      <WebdevHerrobanner />
       {/* <PageHeaderWebsiteD
         parent="Services"
         title="Website Development"
         page="Website Development"
       /> */}
       {/* <ServicesDetails service={websiteDevelopmentService} /> */}
-      <WebDevPacks/>
-      <WebsiteShow/>
-      <WebsiteDesignCardsR/>
-      <OurIndustryExpertise/>
-      <TestimonialFour/>
-      <WebDesignMock/>
-      <TestimonialFive/>
-      {/* <BenefitsWD/> */}
-      {/* <WebdevContact/> */}
-      {/* <ContactForm/> */}
-      <ContactFormWeb/>
-      <WdService/>
+      <WebDevPacks />
+      <WebsiteShow />
+      <WebsiteDesignCardsR />
+      <OurIndustryExpertise />
+      <TestimonialFour />
+      <WebDesignMock />
+      <TestimonialFive />
+      <ContactFormWeb />
+      <WdService />
+      <FaqWebdev />
     </>
   );
 };

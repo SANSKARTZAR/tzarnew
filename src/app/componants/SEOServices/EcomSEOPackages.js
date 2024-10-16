@@ -83,15 +83,6 @@ const EcomPackagestab = () => {
             </tr>
           </tbody>
         </table>
-        <Row>
-          <Col xl={12}>
-            <div className="faq-page__bottom">
-              <p className="faq-page__bottom-text">
-                {bottomText} <Link href="/about">Find Your Solution</Link>
-              </p>
-            </div>
-          </Col>
-        </Row>
       </Container>
     </section>
   );

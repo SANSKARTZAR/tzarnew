@@ -27,8 +27,7 @@ function WebdevHerrobanner() {
                         <div className='row'>
                             <div className='col-lg-8 col-md-6 col-12'>
                                 <div className="hero-seocontent">
-                                    <h1> Power up your online presence with professional web development. <br />SHOPIFY | WORDPRESS | REACT JS | NEXT JS"</h1>
-                                    {/* <Link href="#" className='thm-btn'>Enquiry Now</Link> */}
+                                    <h1>Powerup your online presence <br />Shopify | Wordpress | React Next. Js</h1>
                                 </div>
                             </div>
                             <div className='col-lg-4 col-md-6 col-12'>

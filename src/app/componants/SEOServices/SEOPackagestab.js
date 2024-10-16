@@ -63,15 +63,6 @@ const SEOPackagetab = () => {
           </tbody>
         </table>
       </div>
-      <Row>
-        <Col xl={12}>
-          <div className="faq-page__bottom">
-            <p className="faq-page__bottom-text">
-              {bottomText} <Link href="/about">Find Your Solution</Link>
-            </p>
-          </div>
-        </Col>
-      </Row>
     </div>
   );
 };

@@ -869,7 +869,17 @@ td:empty {
 }
 
 .thankyou-page {
+  padding: 50px 70px;
+}
+
+.faq-webdev{
   padding: 50px;
+}
+.faq-web{
+  padding: 50px 70px;
+}
+.faq-webdev h1, .faq-webdev span{
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -900,5 +910,23 @@ td:empty {
 
   .webdev-card-Expert li {
     width: 100%;
+  }
+  .web-herobanner {
+    background: #023878 !important;
+  }
+  .stickyBar{
+    display: none;
+  }
+
+  .Seo-herobanner {
+    background: #023878 !important;
+  }
+  .Seo-herobanner .thm-btn{
+    background: #a3a3a3 !important;
+    padding: 14px 28px;
+    margin: 10px 0;
+  }
+  .faq-webdev, .faq-web{
+    padding: 5px;
   }
 }
