@@ -1,3 +1,6 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 .main-menu .main-menu__list>li+li,
 .stricky-header .main-menu__list>li+li {
   margin-left: 30px !important;

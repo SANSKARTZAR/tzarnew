@@ -82,7 +82,7 @@ const webpacksdata = {
         },
         {
             id: 3,
-            feature: "Up to 100 Pages",
+            feature: "Up to 100 Product",
         },
         {
             id: 4,
