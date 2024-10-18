@@ -4,9 +4,7 @@ import studioTabOne from "@/app/data/studioTabOne";
 import React, { Suspense, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useWindowSize } from "@react-hook/window-size/throttled";
-import TabButton from "@/app/componants/PortfolioPG/TabButton";
-import CreativeBanners from "@/app/componants/PortfolioPG/CreativeBanners";
-import WebDesign from "@/app/componants/PortfolioPG/WebDesign";
+import TabButton from "@/app/componants/WebsitePricing/WebTabButton";
 import PlanShopify from "../ShopifyEnquiry/PlanShopify";
 import EcomPlanShopify from "../ShopifyEnquiry/EcomPlanShopify";
 
@@ -38,7 +36,7 @@ const WebDevTab = ({ projectPage = true, filterData }) => {
     return (
         <section className="protfoilo-tab">
             <Suspense fallback={<h1>🌀 Loading...</h1>}>
-                <div className="ButtonsTabP">
+                <div className="ButtonsTabwebPrice">
                     <TabButton
                         isActive={tab === 'EComPricing'}
                         onClick={() => setTab('EComPricing')}

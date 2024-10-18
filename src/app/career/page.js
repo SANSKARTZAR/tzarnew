@@ -18,7 +18,7 @@ export default function about() {
             <PageHeaderCareer title="Career"/>
             <Jobs/>
             <JobTzar/>
-            <ContactForm/>
+            {/* <ContactForm/> */}
         </>
     )
 }

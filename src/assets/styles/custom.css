@@ -875,16 +875,43 @@ td:empty {
   padding: 50px 70px;
 }
 
-.faq-webdev{
+.faq-webdev {
   padding: 50px;
 }
-.faq-web{
+
+.faq-web {
   padding: 50px 70px;
 }
-.faq-webdev h1, .faq-webdev span{
+
+.faq-webdev h1,
+.faq-webdev span {
   text-align: center;
 }
-
+.ButtonsTabwebPrice b {
+  width: 50%;
+  background: #023878 !important;
+  color: #ffffff;
+  border-radius: 4px 4px 4px 4px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+.ButtonsTabwebPrice{
+  display: flex;
+}
+.ButtonsTabwebPrice button {
+  width: 50%;
+  color: #000;
+  background: #d8d8d8;
+  border-radius: 4px 4px 4px 4px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+}
+.active-btn-tab{
+  background: #023878 !important;
+  color: #ffffff !important;
+}
 @media (max-width: 768px) {
   .stickyBar {
     flex-direction: column;
@@ -914,22 +941,27 @@ td:empty {
   .webdev-card-Expert li {
     width: 100%;
   }
+
   .web-herobanner {
     background: #023878 !important;
   }
-  .stickyBar{
+
+  .stickyBar {
     display: none;
   }
 
   .Seo-herobanner {
     background: #023878 !important;
   }
-  .Seo-herobanner .thm-btn{
+
+  .Seo-herobanner .thm-btn {
     background: #a3a3a3 !important;
     padding: 14px 28px;
     margin: 10px 0;
   }
-  .faq-webdev, .faq-web{
+
+  .faq-webdev,
+  .faq-web {
     padding: 5px;
   }
 }
