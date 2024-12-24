@@ -31,7 +31,7 @@ const BlogDetailsLeft = () => {
     <div className="blog-details__left">
       <div className="blog-details__img">
         {/* <Image src={image.src} alt="" /> */}
-        <Image src={require(`@/assets/images/blog/${image}`).default.src} alt="" />
+        {/* <Image src={require(`@/assets/images/blog/${image}`).default.src} alt="" /> */}
 
         <div className="blog-details__date-box">
           <p>{date}</p>
@@ -49,46 +49,46 @@ const BlogDetailsLeft = () => {
           </li>
           <li>
             <Link href="/blog-details">
-                <i className="far fa-comments"></i> {comments.length} Comments
+                {/* <i className="far fa-comments"></i> {comments.length} Comments */}
             </Link>
           </li>
         </ul>
         <h3 className="blog-details__title">{title}</h3>
-        {texts.map((text, i) => (
+        {/* {texts.map((text, i) => (
           <p key={i} className={`blog-details__text-${i + 1}`}>
             {text}
           </p>
-        ))}
+        ))} */}
       </div>
       <div className="blog-details__bottom">
         <p className="blog-details__tags">
           <span>Tags</span>
-          {tags.map((tag, i) => (
+          {/* {tags.map((tag, i) => (
             <a key={i} href="#">
               {tag}
             </a>
-          ))}
+          ))} */}
         </p>
         <div className="blog-details__social-list">
-          {socials.map(({ id, icon, href }) => (
+          {/* {socials.map(({ id, icon, href }) => (
             <a key={id} href={href}>
               <i className={icon}></i>
             </a>
-          ))}
+          ))} */}
         </div>
       </div>
       <div className="blgo-details__pagenation-box">
         <ul className="list-unstyled blog-details__pagenation">
-          {pagination.map((text, i) => (
+          {/* {pagination.map((text, i) => (
             <li key={i}>
               <TextSplit text={text} />
             </li>
-          ))}
+          ))} */}
         </ul>
       </div>
       <div className="comment-one">
-        <h3 className="comment-one__title">{comments.length} Comments</h3>
-        {comments.map(({ id, comment, name, image }) => (
+        {/* <h3 className="comment-one__title">{comments.length} Comments</h3> */}
+        {/* {comments.map(({ id, comment, name, image }) => (
           <div key={id} className="comment-one__single">
             <div className="comment-one__image">
               <Image
@@ -104,7 +104,7 @@ const BlogDetailsLeft = () => {
               </Link>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
       <div className="comment-form">
         <h3 className="comment-form__title">Leave a Comment</h3>
