@@ -15,8 +15,8 @@ const footerData = {
   facebook,
   googlepartner,
   email: "corporate@tzar.co",
-  address: "WeWork K. Raheja Platinum, Sag Baug Road, off Andheri - Kurla Rd, Marol",
-  city: " Andheri East Mumbai, Maharashtra 400093",
+  address: "B, Ground Floor, Andheri E, Saki Vihar Rd, behind Finch Restaurant, Ganesh Nagar, Marol,",
+  city: "Andheri East, Mumbai, Maharashtra 400072",
   year: new Date().getFullYear(),
   author: "Tzar Digital Marketing Agency",
   contactadd: [
@@ -77,7 +77,7 @@ const footerData = {
     {
       id: 13,
       title: "Blog",
-      href: "/",  //Our Portfolio
+      href: "/blog",  //Our Portfolio
     },
     {
       id: 4,

@@ -1,3 +1,4 @@
+import BlogOne from "../blog/BlogOne";
 import ContactForm from "./ContactForm";
 import CounterOne from "./CounterOne";
 import CTAOne from "./CTAOne";
@@ -28,6 +29,7 @@ export default function about() {
             <TestimonialThree/>
             <CTAOne/>
             <ContactForm/>
+            <BlogOne/>
             <SeoOurWebsite/>
         </>
     )
