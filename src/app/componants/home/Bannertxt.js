@@ -35,7 +35,7 @@ function Bannertxt() {
               <div className="bannertxthero">
                 <div className="banner-heading">
                   <TypeAnimation
-                    sequence={['Over a 1000+ Satisfied Clients were Served in the Year 2023. ', 1000, '']}
+                    sequence={['Over a 1000+ Satisfied Clients were Served in the Year 2025. ', 1000, '']}
                     speed={25}
                     deletionSpeed={99}
                     wrapper="h2"

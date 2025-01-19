@@ -23,17 +23,39 @@ function MainHerobanner() {
   if (width > breakpoint) {
     return (
       <>
-        <Bannertxt />
-        <video autoPlay loop muted src="https://ik.imagekit.io/xhgygdewi6/tzarheader.mp4?updatedAt=1698295413309"></video>
+        <section className="section-hero">
+          <div className="video-container">
+            <Bannertxt />
+            {/* <video autoPlay loop muted src="https://ik.imagekit.io/xhgygdewi6/tzarheader.mp4?updatedAt=1698295413309"></video> */}
+            <video autoPlay loop muted playsInline className="video-bg desktop-video">
+              <source
+                src="https://ik.imagekit.io/xhgygdewi6/tzarheader.mp4?updatedAt=1698295413309"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </section>
       </>
     )
   }
   return (
-      <>
-        <Bannertxt />
-        <video autoPlay loop muted src='https://ik.imagekit.io/xhgygdewi6/Bgvideo.mp4?updatedAt=1710580577029'></video>
-        <ContactForm />
-      </>
+    <>
+      <section className="section-hero">
+        {/* <div className="video-container"> */}
+          <Bannertxt />
+          <video autoPlay loop muted src='https://ik.imagekit.io/xhgygdewi6/Bgvideo.mp4?updatedAt=1710580577029'></video>
+          {/* <video autoPlay loop muted playsInline className="video-bg mobile-video">
+            <source
+              src="https://ik.imagekit.io/xhgygdewi6/Bgvideo.mp4?updatedAt=1710580577029"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video> */}
+          <ContactForm />
+        {/* </div> */}
+      </section>
+    </>
   );
 }
 export default MainHerobanner;

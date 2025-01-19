@@ -1,4 +1,5 @@
 import BlogOne from "../blog/BlogOne";
+import BackgroundVideo from "./BackgroundVideo";
 import ContactForm from "./ContactForm";
 import CounterOne from "./CounterOne";
 import CTAOne from "./CTAOne";
@@ -18,6 +19,7 @@ export default function about() {
     return (
         <>
             <MainHerobanner/>
+            {/* <BackgroundVideo/> */}
             <OurServices/>
             <WelcomeOne/>
             {/* <DesignStudio/> */}
