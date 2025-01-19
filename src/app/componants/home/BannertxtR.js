@@ -21,7 +21,7 @@ function BannertxtR() {
         <Col xl={8} md={6} sm={12}>
           <div className="bannertxt">
             <TypeAnimation
-              sequence={['Over a 1000+ Satisfied Clients were Served in the Year 2025.', 1000, '']}
+              sequence={['Over a 1000+ Satisfied Clients were Served in the Year 2024.', 1000, '']}
               speed={25}
               deletionSpeed={99}
               wrapper="h2"
