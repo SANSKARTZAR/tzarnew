@@ -8,11 +8,11 @@ const SingleServiceNew = ({ service = {} }) => {
 
   return (
     <div className="animated fadeInUp ">
-      <div className="services-three__single1 services-cardsnew">
+      <div className="services-three__single1 services-cardsnew" style={{ height: "400px" }}>
         <div className="services-three_icon">
           <span className={icon}></span>
         </div>
-        <h3 className="services-three__title">
+        <h3 className="services-three__title" style={{marginTop: "0px", fontSize: "19px"}}>
           <Link href={link}>
               <TextSplit text={title} />
           </Link>

@@ -13,9 +13,9 @@ const teamTwo = {
     {
       id: 2,
       image: "team-page-img-7.jpg",
-      title: "Hr and Legal ",
-      name: "Vaibhav",
-      describe:"Assisting in various legal and employee relations",
+      title: "Performance Marketing Executives ",
+      name: "Yash Mishra",
+      // describe:"Responsible for planning, executing, and optimizing digital marketing campaigns to achieve measurable business results.",
     },
     {
       id: 3,

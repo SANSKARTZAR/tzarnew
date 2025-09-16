@@ -1,45 +1,44 @@
-"use client"
+"use client";
 import contentMarketingt from "@/app/data/contentMarketingt";
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import Tilt from "react-tilt";
 import Link from "next/link";
 
-const { images, badge, tagline, title, text1, text2 } = contentMarketingt ;
+const { images, badge, tagline, title, text1, text2 } = contentMarketingt;
 
 const ContentMarketing = () => {
   return (
-    <section className="Cm-page">
+    <section className="Cm-page py-5">
       <Container>
-        <Row>
-          <Col xl={6}>
-          <div className="Cm__left">
+        <Row className="align-items-center">
+          {/* Left Column: Images */}
+          <Col lg={6} className="mb-4 mb-lg-0">
+            <div className="Cm__left position-relative">
               <ul className="list-unstyled Cm__images">
                 {images.map((image, i) => (
-                  <li key={i}>
-                    <div className={`Cm__img-${i + 1}`}>
-                      <Image
-                        src={require(`@/assets/images/resources/${image}`).default.src}
-                        alt=""
-                      />
-                    </div>
+                  <li key={i} className={`Cm__img-${i + 1}`}>
+                    <Image
+                      src={require(`@/assets/images/resources/${image}`).default.src}
+                      alt={`image-${i + 1}`}
+                      className="img-fluid rounded"
+                    />
                   </li>
                 ))}
               </ul>
-              <div className="Cm__badge">
-                {/* <Tilt options={{ scale: 1 }}>
-                  <Image src={badge.src} alt="" />
-                </Tilt> */}
-              </div>
+              {/* Uncomment this if using badge and Tilt */}
+              {/* <div className="Cm__badge position-absolute">
+                <Image src={badge.src} alt="badge" />
+              </div> */}
             </div>
           </Col>
-          <Col xl={6}>
-          <div className="Cm__right">
-              {/* <Title title={title} tagline={tagline} className="text-left" /> */}
-              <h1 className="section-title__titleCm">{title}</h1>    
-              <p className="Cm__right-text-1">{text1}</p>
-              <p className="Cm__right-text-1">{text2}</p>
-              <Link href="#Contactform" className="thm-btn Cm__btn">
+
+          {/* Right Column: Text Content */}
+          <Col lg={6}>
+            <div className="Cm__right text-center text-lg-start">
+              <h1 className="section-title__titleCm mb-4">{title}</h1>
+              <p className="Cm__right-text-1 mb-3">{text1}</p>
+              <p className="Cm__right-text-1 mb-4">{text2}</p>
+              <Link style={{color: "black"}} href="#Contactform" className="thm-btn Cm__btn">
                 Enquiry Now
               </Link>
             </div>

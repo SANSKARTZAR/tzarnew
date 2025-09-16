@@ -10,24 +10,49 @@ import CountsLG from "../componants/LogoDService/Counts/CountsLG";
 import WhyChooseUSLogo from "../componants/LogoDService/WhyChooseUSLogo";
 
 export const metadata = {
-  title:"TZAR VENTURE- Digital Marketing Agency Logo Design Services - Custom Logo Design. Business logos design by professionls online - Tzar venture",
-  description:"Custom Logo Design Services Online - Tzar Venture do not sell products we make ICONIC Brands. " 
-}
-
+  title:
+    "TZAR VENTURE - Digital Marketing Agency Logo Design Services - Custom Logo Design. Business logos design by professionals online - Tzar venture",
+  description:
+    "Custom Logo Design Services Online - Tzar Venture do not sell products we make ICONIC Brands.",
+};
 
 const Page = () => {
   return (
     <>
-      <PageHeaderLogoD parent="Services"
-        title="LOGO DESIGNING"
-        page="LOGO DESIGNING" />
-      <ServicesDetails service={logodesigngService} />
-      <LogoDesignMU />
-      <TestimonialThree />
-      <WhyChooseUSLogo />
-      {/* <CountsLG /> */}
-      <ContactForm />
+      <div style={{ overflowX: "hidden" }}> {/* ✅ Prevent horizontal scroll */}
+        <PageHeaderLogoD
+          parent="Services"
+          title="LOGO DESIGNING"
+          page="LOGO DESIGNING"
+        />
+
+        <div style={{ marginBottom: "60px" }}>
+          <ServicesDetails service={logodesigngService} />
+        </div>
+
+        <div style={{ marginBottom: "60px" }}>
+          <LogoDesignMU />
+        </div>
+
+        <div style={{ marginBottom: "60px" }}>
+          <TestimonialThree />
+        </div>
+
+        <div style={{ marginBottom: "60px" }}>
+          <WhyChooseUSLogo />
+        </div>
+
+        {/* Optional Counts Block */}
+        {/* <div style={{ marginBottom: "60px" }}>
+          <CountsLG />
+        </div> */}
+
+        <div style={{ marginBottom: "60px" }}>
+          <ContactForm />
+        </div>
+      </div>
     </>
   );
 };
+
 export default Page;

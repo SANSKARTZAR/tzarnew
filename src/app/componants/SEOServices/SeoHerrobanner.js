@@ -26,15 +26,42 @@ function SeoHerrobanner() {
                     <div className='row'>
                         <div className='col-lg-8 col-md-6 col-12'>
                             <div className="hero-seocontent">
-                                <div>
-                                    <ul className="thm-breadcrumb list-unstyledAuW">
-                                        <li>
-                                            <Link href="/"><i class="fa fa-home" aria-hidden="true"></i>/ &nbsp;</Link>
-                                        </li>
-                                        <li><Link href="/search-engine-optimization-services">SEO / &nbsp; </Link> </li>
-                                        <li><h3> 100% Guaranteed Result</h3></li>
-                                    </ul>
-                                </div>
+                                <div style={{
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '6px',
+  marginTop: '20px'
+}}>
+  <ul style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    listStyle: 'none',
+    padding: 0,
+    margin: 0,
+    fontSize: '14px',
+    color: '#fff'
+  }}>
+    <li style={{ marginRight: '5px' }}>
+      <Link href="/" style={{ color: '#fff', textDecoration: 'none' }}>
+        <i className="fa fa-home" aria-hidden="true"></i> /
+      </Link>
+    </li>
+    <li style={{ marginRight: '5px' }}>
+      <Link href="/search-engine-optimization-services" style={{ color: '#fff', textDecoration: 'none' }}>
+        SEO /
+      </Link>
+    </li>
+  </ul>
+  <h3 style={{
+    fontSize: '16px',
+    color: '#fff',
+    fontWeight: 600,
+    margin: 0
+  }}>
+    100% Guaranteed Result
+  </h3>
+</div>
+
                                 <h1> Drive Increased Visibility and Traffic with Our Dynamic SEO Techniques.</h1>
                                 <Link href="#" className='thm-btn'>Enquiry Now</Link>
                             </div>

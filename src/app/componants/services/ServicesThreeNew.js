@@ -16,7 +16,7 @@ const ServicesThreeNew = () => {
       ></div>
       <div className="container-fluid">
         <Title title={title} tagline={tagline} className="text-center" />
-        <div className="services-three__top services-all-cards">
+        <div className="services-three__top services-all-cards" >
             {services.map((service) => (
               <SingleServiceNew key={service.id} service={service} />
             ))}

@@ -7,9 +7,9 @@ const teamTwoR = {
       name1: "Kaustav Roy",
       describe1:"With indepth knowledge of Graphic Design",
       
-      title2: "Hr and Legal ",
-      name2: "Vaibhav",
-      describe2:"Assisting in various legal and employee relations",
+      title2: "Performance Marketing Executives",
+      name2: "Yash Mishra",
+      describe2:"Responsible for planning, executing, and optimizing digital marketing campaigns to achieve measurable business results",
 
       title3: "Creative Designer",
       name3: "Ankit",

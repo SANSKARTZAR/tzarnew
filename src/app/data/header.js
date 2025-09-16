@@ -99,6 +99,12 @@ const navItems = [
     href: "/portfolio",
     subNavItems: [],
   },
+//   {
+//   id: 7,
+//   name: "Corporate Gifting",
+//   href: "/corporate-gifting",
+//   subNavItems: [],
+// },
   // {
   //   id: 5,
   //   name: "Hire Us",

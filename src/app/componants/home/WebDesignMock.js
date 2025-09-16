@@ -12,15 +12,6 @@ import MobileSlide4 from "@/assets/images/MobileShowcase/Home/Showcase-10.png"
 import MobileSlide5 from "@/assets/images/MobileShowcase/Home/Showcase-11.png"
 import MobileSlide6 from "@/assets/images/MobileShowcase/Home/Showcase-13.png"
 import MobileSlide7 from "@/assets/images/MobileShowcase/Home/Showcase-14.png"
-// import MobileSlide8 from "@/assets/images/MobileShowcase/Home/Showcase-15.png" 
-// import MobileSlide9 from "@/assets/images/MobileShowcase/Home/Showcase-16.png" 
-// import MobileSlide10 from "@/assets/images/MobileShowcase/Home/Showcase-17.png" 
-// import MobileSlide11 from "@/assets/images/MobileShowcase/Home/MahaaRajass.png" 
-// import MobileSlide12 from "@/assets/images/MobileShowcase/Home/CabeoChavess.png" 
-// import MobileSlide13 from "@/assets/images/MobileShowcase/Home/blue7vets.png" 
-// import MobileSlide14 from "@/assets/images/MobileShowcase/Home/epitomess.png" 
-
-
 
 export default class WebDesignMock extends Component {
   render() {
@@ -35,62 +26,58 @@ export default class WebDesignMock extends Component {
       autoplaySpeed: 1000,
       speed: 500
     };
+
     return (
       <>
+        {/* Inline responsive fix for iPads */}
+        <style>{`
+          /* iPad Pro, Air, Mini */
+          @media (max-width: 1366px) and (min-width: 768px) {
+            .section-titlemk p,
+            .section-titlemk h2 {
+              margin-left: 0 !important;
+              text-align: center !important;
+              display: block;
+            }
+          }
+        `}</style>
+
         <section className="ContainerWeb">
           <div className="section-titlemk text-center">
             <p className="section-title__taglinemk">Website Design & Development</p>
-            <h2 className="section-title__titlemk">Shocase Mockup</h2>
+            <h2 className="section-title__titlemk" style={{ marginLeft: "0px" }}>
+              Showcase Mockup
+            </h2>
           </div>
+
           <img src={MobileMock.src} alt="" className="mobileCont" />
           <img src={MobileMockmob.src} alt="" className="mobileContmob" />
 
           <Slider {...settings} className="ContainerWebContainer">
-            <div className="mobileSlidebox" >
+            <div className="mobileSlidebox">
               <img src={MobileSlide.src} alt="" className="mobileSlidemk n" />
             </div>
-            {/* <div className= "mobileSlidebox" >
-            <img src={MobileSlide11.src} alt=""  className="mobileSlidemk"  />  
-          </div>
-          <div className= "mobileSlidebox" >
-            <img src={MobileSlide12.src} alt=""  className="mobileSlidemk"  />  
-          </div>
-          <div className= "mobileSlidebox" >
-            <img src={MobileSlide13.src} alt=""  className="mobileSlidemk"  />  
-          </div>
-          <div className= "mobileSlidebox" >
-            <img src={MobileSlide14.src} alt=""  className="mobileSlidemk"  />  
-          </div> */}
-            <div className="mobileSlidebox" >
+            <div className="mobileSlidebox">
               <img src={MobileSlide1.src} alt="" className="mobileSlidemk" />
             </div>
-            <div className="mobileSlidebox" >
+            <div className="mobileSlidebox">
               <img src={MobileSlide2.src} alt="" className="mobileSlidemk" />
             </div>
-            <div className="mobileSlidebox" >
+            <div className="mobileSlidebox">
               <img src={MobileSlide3.src} alt="" className="mobileSlidemk" />
             </div>
-            <div className="mobileSlidebox" >
+            <div className="mobileSlidebox">
               <img src={MobileSlide4.src} alt="" className="mobileSlidemk" />
             </div>
-            <div className="mobileSlidebox" >
+            <div className="mobileSlidebox">
               <img src={MobileSlide5.src} alt="" className="mobileSlidemk" />
             </div>
-            <div className="mobileSlidebox" >
+            <div className="mobileSlidebox">
               <img src={MobileSlide6.src} alt="" className="mobileSlidemk" />
             </div>
-            <div className="mobileSlidebox" >
+            <div className="mobileSlidebox">
               <img src={MobileSlide7.src} alt="" className="mobileSlidemk" />
             </div>
-            {/* <div className= "mobileSlidebox" >
-            <img src={MobileSlide8.src} alt=""  className="mobileSlidemk"  />  
-          </div>
-          <div className= "mobileSlidebox" >
-            <img src={MobileSlide9.src} alt=""  className="mobileSlidemk"  />  
-          </div>
-          <div className= "mobileSlidebox" >
-            <img src={MobileSlide10.src} alt=""  className="mobileSlidemk"  />  
-          </div> */}
           </Slider>
         </section>
       </>

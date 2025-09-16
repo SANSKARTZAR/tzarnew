@@ -316,3 +316,128 @@ a {
   font-size: 15px;
   font-weight: 400;
 }
+
+.WebsiteDevelopment-page {
+  padding: 40px 0 20px; /* Top, Right/Left, Bottom */
+  min-height: unset;
+  height: auto;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+
+.container {
+  padding-bottom: 0 !important;
+}
+
+
+.CardWDnew {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+
+.CardWDnew:hover {
+  transform: translateY(-5px);
+}
+
+.wdiconsnew {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #0a2e65;
+  max-height: 50px;
+}
+
+.WDGoals__text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.WDGoals__text1 {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .WebsiteDevelopment-page {
+    padding-bottom: 20px !important;
+  }
+}
+
+/* Ensure images are centered on tablets */
+.ImgTxtSecLG__left-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure images are centered inside the list */
+.ImgTxtSecLg__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0;
+}
+
+.ImgTxtSecLg__images li {
+  margin: 10px;
+  list-style: none;
+  text-align: center;
+}
+
+/* For smaller tablets and phones */
+@media (max-width: 768px) {
+  .ImgTxtSecLG__left-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .ImgTxtSecLg__images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ImgTxtSecLg__images li {
+    margin-bottom: 15px;
+  }
+}
+
+.BenefitsLGContainer {
+  color: #000;
+}
+
+.Lgicons {
+  font-size: 40px;
+  color: #0066cc; /* or your brand color */
+}
+
+.titleHeadPPC {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .titleHeadPPC {
+    font-size: 2rem;
+  }
+
+  .Lgicons {
+    font-size: 36px;
+  }
+}
+
+
+
+
+
+

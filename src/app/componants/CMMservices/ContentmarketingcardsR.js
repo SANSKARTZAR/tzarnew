@@ -13,21 +13,36 @@ const { HeadTitle,title1, subtitle1, title2, subtitle2, title3, subtitle3, title
 
 function ContentmarketingcardsR({ className = "" }) {
   const [width, height] = useWindowSize({ fps: 60 });
-  const breakpoint = 768;
+  const breakpoint = 991;
   const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    speed: 2000,
-    arrows: false,
-    autoplaySpeed: 2000,
-    lazyLoad: true,
-    focusOnSelect: true,
-    pauseOnHover: true,
-    cssEase: "linear",
-  };
+  dots: true,
+  infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: false,
+  speed: 500,
+  arrows: false,
+  autoplaySpeed: 2000,
+  lazyLoad: true,
+  focusOnSelect: true,
+  pauseOnHover: true,
+  cssEase: "linear",
+  responsive: [
+    {
+      breakpoint: 991, // iPad and tablets
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 768, // mobile
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+};
+
 
   if (width > breakpoint) {
   return (
@@ -35,7 +50,7 @@ function ContentmarketingcardsR({ className = "" }) {
        <section className="ContentmarketingCards-page">
        <div className="maincm">
             <h1>{HeadTitle}</h1>
-            <p>{text2}</p>
+            <p style={{textAlign: "center"}}>{text2}</p>
        <div className='container-fluid'>   
         <div className="cardscm"> 
         <div>  

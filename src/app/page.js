@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import HomePage from "../app/componants/home/HomePage";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export const metadata = {
   title: "India's fastest growing digital marketing agency | company in India - TZAR VENTURE- Digital Marketing Agency Mumbai",

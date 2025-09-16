@@ -1,47 +1,63 @@
-"use client"
+"use client";
 import leadgeneration from "@/app/data/leadgeneration";
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import Tilt from "react-tilt";
 import Link from "next/link";
 import Title from "../Reuseable/Title";
 
-const { ImageUrl, badge, tagline, title, text1, text2 , text3} = leadgeneration ;
+const { ImageUrl, badge, tagline, title, text1, text2, text3 } = leadgeneration;
 
 const LeadGeneration = () => {
   return (
-    <section className="Lead_Generation-page">
+    <section className="py-5">
       <Container>
-        <Row>
-          <Col xl={6}>
-          <div className="Lead_Generation__left">
-              <ul className="list-unstyled Lead_Generation__images">
-                    <div className="Lead_Generation__img">
-                      {/* <Image
-                        src={require(`@/assets/images/resources/${image}`).default.src}
-                        alt=""
-                      /> */}
-                      <Image src={ImageUrl} alt="Lead_Generation"/>
-                    </div>
-              </ul>
-              <div className="Lead_Generation__badge">
-                {/* <Tilt options={{ scale: 1 }}>
-                  <Image src={badge.src} alt="" />
-                </Tilt> */}
-              </div>
+        <Row className="align-items-stretch">
+          {/* LEFT: IMAGE COLUMN */}
+          <Col
+            xl={6}
+            lg={6}
+            md={12}
+            className="d-flex align-items-stretch justify-content-center mb-4 mb-lg-0"
+          >
+            <div
+              className="w-100"
+              style={{
+                background: "#fff",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: "450px", // 👈 Increase image height
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={ImageUrl}
+                alt="Lead Generation"
+                className="img-fluid h-100 object-fit-cover"
+                style={{ objectFit: "cover", height: "100%", width: "auto" }}
+              />
             </div>
           </Col>
-          <Col xl={6}>
-          <div className="Lead_Generation__right">
-              <Title title={title} tagline={tagline} className="text-left" />
-              <p className="Lead_Generation__right-text-1">{text1}</p>
-              <p className="Lead_Generation__right-text-1">{text2}</p>
-              <p className="Lead_Generation__right-text-1">{text3}</p>
 
-              {/* <h4 className="Lead_Generation__right-text-2">{text2}</h4> */}
-              <Link href="#Contactform" className="thm-btn Lead_Generation__btn">
-                Enquiry Now
-              </Link>
+          {/* RIGHT: TEXT COLUMN */}
+          <Col
+            xl={6}
+            lg={6}
+            md={12}
+            className="d-flex align-items-stretch flex-column justify-content-between"
+          >
+            <div className="d-flex flex-column justify-content-between h-100">
+              <div>
+                <Title title={title} tagline={tagline} className="text-left" />
+                <p className="mb-3">{text1}</p>
+                <p className="mb-3">{text2}</p>
+                <p className="mb-3">{text3}</p>
+              </div>
+              <div>
+                <Link href="#Contactform" className="thm-btn mt-3" style={{color: "black"}}>
+                  Enquiry Now
+                </Link>
+              </div>
             </div>
           </Col>
         </Row>

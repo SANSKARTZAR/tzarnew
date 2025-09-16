@@ -1,65 +1,104 @@
-import React from 'react'
-import { Col, Container, Image, Row } from "react-bootstrap";
-// import Title from "../Reuseable/Title";
-import benefitsckm from "@/app/data/benefitsckm";
-import * as HiIcons from "react-icons/hi" 
-import * as AiIcons from "react-icons/ai" 
-import * as FaIcons from "react-icons/fa" 
-import * as BsIcons from "react-icons/bs" 
-import * as MdIcons from "react-icons/md" 
+"use client";
+import React from "react";
+import * as HiIcons from "react-icons/hi";
 
-const { bg, title, tagline, benefits1, benefits , benefits2   } = benefitsckm;
+export default function Benefits() {
+  const containerStyle = {
+    padding: "40px 20px",
+    background: "linear-gradient(135deg, #f8f9fa 25%, #ffffff 100%)",
+    textAlign: "center",
+  };
 
-function BenefitsSMM  ({ className = "" }) {
+  const titleStyle = {
+    fontSize: "28px",
+    fontWeight: "bold",
+    marginBottom: "10px",
+    color: "#222",
+  };
+
+  const gridStyle = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+    gap: "20px",
+    marginTop: "30px", // ✅ pushes cards down so they don’t overlap heading
+  };
+
+  const cardStyle = {
+    background: "#fff",
+    padding: "20px",
+    borderRadius: "10px",
+    boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+    display: "flex",
+    gap: "15px",
+    alignItems: "flex-start",
+    textAlign: "left",
+  };
+
+  const iconStyle = {
+    fontSize: "30px",
+    color: "#0066ff",
+    flexShrink: 0,
+  };
+
+  const headingStyle = {
+    fontSize: "16px",
+    fontWeight: "bold",
+    marginBottom: "6px",
+  };
+
+  const paraStyle = {
+    fontSize: "14px",
+    color: "#555",
+    lineHeight: "1.5",
+    margin: 0,
+  };
+
   return (
-    <>
-      <section className="BenefitsSMMContainer">
-      <div
-          className="counter-one-pattern"
-          style={{ backgroundImage: `url(${bg.src})` }}
-        ></div>
-        <h1 className="titleHeadSMM"> BENEFITS FOR YOUR BUSINESS</h1>
-        <div  className="container card-boxsmm">
-          <div className="row">
-            <div className='col-lg-6'>
-                <div className="boxContainerSMMnew">
-                 <HiIcons.HiShare className="smmicons" />
-                 <div>
-                 <h1>Increases brand awareness</h1>
-                 <p>Company’s image or Brand creation using the multimedia capabilities of social networking</p>
-                </div></div>
-            </div>
-            <div className='col-lg-6'>
-                 <div className="boxContainerSMMnew">
-                 <BsIcons.BsFillHeartFill className="smmicons" />
-                 <div>
-                  <h1>Increases audience loyalty</h1>
-                  <p>Formation of user confidence in the brand, product, company, achieved through interaction within the social network</p>
-                </div></div>
-            </div>
-            <div className='col-lg-6'>
-                 <div className="boxContainerSMMnew">
-                  <MdIcons.MdFeedback className="smmicons" />
-                  <div>
-                  <h1>Feedback</h1>
-                  <p>SMO allows you to get feedback from potential and real customers to improve the quality of your services</p>
-                </div>
-                </div>
-            </div>
-            <div className='col-lg-6'>
-                 <div className="boxContainerSMMnew">
-                  <MdIcons.MdPeopleAlt className="smmicons" />
-                  <div>
-                  <h1>Base of potential customers</h1>
-                  <p>SMO allows you to build a base of potential customers for further conversion into real customers</p>
-                </div></div>
-            </div>
+    <div style={containerStyle}>
+      <h1 style={titleStyle}>BENEFITS FOR YOUR BUSINESS</h1>
+
+      <div style={gridStyle}>
+        <div style={cardStyle}>
+          <HiIcons.HiShare style={iconStyle} />
+          <div>
+            <h1 style={headingStyle}>Increases brand awareness</h1>
+            <p style={paraStyle}>
+              Company’s image or Brand creation using the multimedia capabilities of social networking
+            </p>
           </div>
-          
         </div>
-    </section>
- 
-    </>
-  )
+
+        <div style={cardStyle}>
+          <HiIcons.HiHeart style={iconStyle} />
+          <div>
+            <h1 style={headingStyle}>Increases audience loyalty</h1>
+            <p style={paraStyle}>
+              Formation of user confidence in the brand, product, company, achieved through interaction
+              within the social network
+            </p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <HiIcons.HiChatAlt2 style={iconStyle} />
+          <div>
+            <h1 style={headingStyle}>Feedback</h1>
+            <p style={paraStyle}>
+              SMO allows you to get feedback from potential and real customers to improve the quality of your services
+            </p>
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <HiIcons.HiUserGroup style={iconStyle} />
+          <div>
+            <h1 style={headingStyle}>Base of potential customers</h1>
+            <p style={paraStyle}>
+              SMO allows you to build a base of potential customers for further conversion into real customers
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default BenefitsSMM

@@ -1,151 +1,152 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import printdesign from "@/app/data/printdesign";
-import React from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Image } from "react-bootstrap";
 import Link from "next/link";
-const { bg, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, images, images1, imgtitle, tagline, bILL, title, text1, text2 } = printdesign;
+
+const {
+  bg, img1, img2, img3, img4, img5, img6,
+  img7, img8, img9, img10, img11, img12, img13, img14,
+  title, text1
+} = printdesign;
 
 const PrintDesignR = () => {
+  const [screenWidth, setScreenWidth] = useState(1200);
+
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    setScreenWidth(window.innerWidth); // Set initial width
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Control card width based on screen size
+  const getCardWidth = () => {
+    if (screenWidth < 768) return '48%'; // 2 per row on mobile
+    if (screenWidth < 1024) return '30%'; // 3 per row on iPad
+    return '22%'; // 4 per row on desktop
+  };
+
+  const containerStyle = {
+    padding: '60px 20px',
+    backgroundColor: '#fff',
+  };
+
+  const titleStyle = {
+    textAlign: 'center',
+    fontSize: screenWidth < 480 ? '1.8rem' : '2.5rem',
+    fontWeight: 'bold',
+    marginBottom: '10px',
+  };
+
+  const textStyle = {
+    textAlign: 'center',
+    maxWidth: '800px',
+    margin: '0 auto 40px',
+    fontSize: '1rem',
+    color: '#666',
+  };
+
+  const cardListStyle = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '20px',
+    justifyContent: 'center',
+    padding: 0,
+    listStyle: 'none',
+  };
+
+  const cardItemStyle = {
+    width: getCardWidth(),
+    display: 'flex',
+    justifyContent: 'center',
+  };
+
+  const cardStyle = {
+    background: '#fff',
+    borderRadius: '12px',
+    padding: '20px',
+    textAlign: 'center',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+    width: '100%',
+    transition: 'all 0.3s ease-in-out',
+  };
+
+  const imgStyle = {
+    maxWidth: '100%',
+    height: 'auto',
+    borderRadius: '8px',
+  };
+
+  const cardTitleStyle = {
+    fontSize: '1.1rem',
+    marginTop: '15px',
+    fontWeight: '600',
+  };
+
+  const buttonWrapper = {
+    textAlign: 'center',
+    marginTop: '40px',
+  };
+
+  const buttonStyle = {
+    padding: '12px 30px',
+    backgroundColor: '#000',
+    color: '#fff',
+    borderRadius: '30px',
+    textDecoration: 'none',
+    fontWeight: 600,
+  };
+
+  const cardData = [
+    { img: img1, title: 'Flyer Design' },
+    { img: img2, title: 'Brochure Design' },
+    { img: img3, title: 'Poster Design' },
+    { img: img4, title: 'Advertisement Design' },
+    { img: img5, title: 'Catalogue Design' },
+    { img: img6, title: 'Envelope Design' },
+    { img: img7, title: 'Magazine Design' },
+    { img: img8, title: 'Menu Design' },
+    { img: img9, title: 'Newspaper Ad Design' },
+    { img: img10, title: 'Print Design' },
+    { img: img11, title: 'Sticker Design' },
+    { img: img12, title: 'Resume Design' },
+    { img: img13, title: 'Word Template Design' },
+    { img: img14, title: 'PostCard Design' },
+  ];
+
   return (
     <section className="PrintDesignR-page">
-      {/* <div
-          className="counter-one-pattern"
-          style={{ backgroundImage: `url(${bg.src})` }}
-        ></div> */}
       <div className="container-fluid">
-
-
-        <div className="mainPDR">
+        <div style={containerStyle}>
           <div className="PrintDesignR__center">
-            {/* <Title title={title} tagline={tagline} className="text-left section-title1__titlePDR" /> */}
-            <h1 className="section-title1__titlePDR">{title}</h1>
-            <p className="PrintDesignR__right-text-1">{text1}</p>
+            <h1 style={titleStyle}>{title}</h1>
+            <p style={textStyle}>{text1}</p>
           </div>
-          <ul className="cardsPDR">
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img1.src} alt="" />
+
+          <ul style={cardListStyle}>
+            {cardData.map((card, index) => (
+              <li key={index} style={cardItemStyle}>
+                <div style={cardStyle}>
+                  <div>
+                    <Image src={card.img.src} alt={card.title} style={imgStyle} />
+                  </div>
+                  <h4 style={cardTitleStyle}>{card.title}</h4>
                 </div>
-                <h4 className="card_titlePDR">Flyer Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img2.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Brochure Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img3.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Poster Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img4.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Advertisement Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img5.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Catalogue Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img6.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Envelope Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img7.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Magazine Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img8.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Menu Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img9.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Newspaper Ad Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img10.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Print Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img11.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Sticker Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img12.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Resume Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img13.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">Word Template Design</h4>
-              </div>
-            </li>
-            <li className="cards_itemPDR">
-              <div className="cardPDR">
-                <div className="card_imagePDR">
-                  <Image src={img14.src} alt="" />
-                </div>
-                <h4 className="card_titlePDR">PostCard Design</h4>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
-          <div className="graphic-crd-btn">
-          <Link href="#Contactform" className="thm-btn GraphicDesigning__btn">
-            Enquiry Now
-          </Link>
+
+          <div style={buttonWrapper}>
+            <Link href="#Contactform" style={buttonStyle}>
+              Enquiry Now
+            </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 };
 
 export default PrintDesignR;
-
-
