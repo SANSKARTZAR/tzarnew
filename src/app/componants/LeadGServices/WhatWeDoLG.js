@@ -1,83 +1,107 @@
-import React from 'react'
-import * as HiIcons from "react-icons/hi"
-import * as FaIcons from "react-icons/fa"
-import * as ImIcons from "react-icons/im"
-import * as GiIcons from "react-icons/gi"
-import benefitsckm from "@/app/data/benefitsckm";
+'use client';
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import { FaPen, FaLaptop, FaBullhorn, FaEnvelope, FaSearch, FaChartBar } from 'react-icons/fa';
 
-const { bg } = benefitsckm;
+const leadServices = [
+  {
+    icon: <FaPen size={40} color="#003f87" />,
+    title: 'Content Marketing & Strategy',
+    description: 'Crafting blogs, videos, infographics, and social media campaigns to attract and educate potential leads.',
+  },
+  {
+    icon: <FaLaptop size={40} color="#003f87" />,
+    title: 'Landing Page & Conversion Optimization',
+    description: 'Designing high-converting landing pages with clear CTAs and forms to capture leads effectively.',
+  },
+  {
+    icon: <FaBullhorn size={40} color="#003f87" />,
+    title: 'Paid Advertising (PPC & Social Ads)',
+    description: 'Running targeted ads on Google, Facebook, Instagram, and LinkedIn to drive qualified traffic.',
+  },
+  {
+    icon: <FaEnvelope size={40} color="#003f87" />,
+    title: 'Email Marketing & Lead Nurturing',
+    description: 'Automating email sequences to nurture leads and guide them down the sales funnel.',
+  },
+  {
+    icon: <FaSearch size={40} color="#003f87" />,
+    title: 'SEO & Organic Traffic Growth',
+    description: 'Optimizing websites and content to rank higher in search engines and attract inbound leads.',
+  },
+  {
+    icon: <FaChartBar size={40} color="#003f87" />,
+    title: 'Analytics, Reporting & Optimization',
+    description: 'Tracking campaigns, analyzing results, and refining strategies for better lead quality and ROI.',
+  },
+];
 
-function WhatWeDoLG({ className = "" }) {
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0 },
+};
+
+const LeadGenerationServices = () => {
   return (
-    <>
-      <section
-        className="BenefitsLGContainer"
-        style={{
-          position: 'relative',
-          padding: '60px 0',
-          overflow: 'hidden',
-        }}
-      >
-        <div
-          className="counter-one-pattern"
+    <section style={{ background: '#f9f9f9', padding: '80px 0' }}>
+      <Container>
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
           style={{
-            backgroundImage: `url(${bg.src})`,
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '40%',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'repeat', // Keep pattern repeating for background
-            backgroundSize: 'auto',
-            zIndex: -1,
+            textAlign: 'center',
+            fontSize: '2rem',
+            fontWeight: '600',
+            marginBottom: '60px',
+            color: '#003f87',
           }}
-        ></div>
+        >
+          Our Lead Generation Services
+        </motion.h2>
 
-        <div className='container' style={{ position: 'relative', zIndex: 1 }}>
-          <h2
-            className="text-center fw-bold mb-5 titleHeadPPC"
-            style={{ marginBottom: '3rem' }}
-          >
-            WHAT WE DO?
-          </h2>
+        <motion.div variants={containerVariants} initial="hidden" animate="show">
+          <Row>
+            {leadServices.map((service, index) => (
+              <Col md={4} sm={6} xs={12} key={index} className="mb-4">
+                <motion.div
+                  variants={cardVariants}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                  style={{
+                    background: '#fff',
+                    padding: '30px',
+                    borderRadius: '15px',
+                    boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+                    textAlign: 'center',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'flex-start',
+                  }}
+                >
+                  <div style={{ marginBottom: '20px' }}>{service.icon}</div>
+                  <h5 style={{ fontWeight: '600', marginBottom: '15px' }}>{service.title}</h5>
+                  <p style={{ fontSize: '0.95rem', color: '#555' }}>{service.description}</p>
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </motion.div>
+      </Container>
+    </section>
+  );
+};
 
-          <div className="row text-center">
-            <div className="col-lg-4 col-md-6 col-12 mb-4 led-new">
-              <HiIcons.HiDocument className="Lgicons" />
-              <h1>Content Marketing</h1>
-              <p>Create content that attract attention</p>
-            </div>
-            <div className="col-lg-4 col-md-6 col-12 mb-4 led-new">
-              <ImIcons.ImTree className="Lgicons" />
-              <h1>Link Building</h1>
-              <p>Let search engines know about your website</p>
-            </div>
-            <div className="col-lg-4 col-md-6 col-12 mb-4 led-new">
-              <FaIcons.FaUser className="Lgicons" />
-              <h1>Competitive Research</h1>
-              <p>Find the strengths and weaknesses of current and potential competitors</p>
-            </div>
-            <div className="col-lg-4 col-md-6 col-12 mb-4 led-new">
-              <ImIcons.ImTree className="Lgicons" />
-              <h1>On-page SEO</h1>
-              <p>Optimization of HTML code and page content</p>
-            </div>
-            <div className="col-lg-4 col-md-6 col-12 mb-4 led-new">
-              <GiIcons.GiTrophyCup className="Lgicons" />
-              <h1>Local Fame</h1>
-              <p>Press-releases and links at all local directories and forums</p>
-            </div>
-            <div className="col-lg-4 col-md-6 col-12 mb-4 led-new">
-              <FaIcons.FaUser className="Lgicons" />
-              <h1>Conversion Optimization</h1>
-              <p>Increasing conversion of the percentage of visitors into customers</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
-
-export default WhatWeDoLG
+export default LeadGenerationServices;

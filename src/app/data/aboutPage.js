@@ -1,7 +1,7 @@
 import badge from "@/assets/images/resources/about-page-badge.png";
 
 const aboutPage = {
-  images: ["about-page-img-1.jpg"],
+  images: ["about-page-img-1.png"],
   badge,
   tagline: "about company",
   title: "ABOUT US",

@@ -6,7 +6,7 @@ import * as FaIcons from "react-icons/fa";
 import * as ImIcons from "react-icons/im";
 import { useWindowSize } from "@react-hook/window-size/throttled";
 
-const { bg } = benefitsckm;
+// const { bg } = benefitsckm;
 
 function BenefitsPPC() {
   const [width] = useWindowSize({ fps: 60 });
@@ -30,9 +30,10 @@ function BenefitsPPC() {
     <section
       style={{
         padding: "40px 15px",
-        backgroundImage: `url(${bg.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundColor: "#ffffff",
+        // backgroundImage: `url(${bg.src})`,
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
       }}
     >
       <h1

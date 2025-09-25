@@ -70,7 +70,7 @@ const navItems = [
       { id: 8, name: "Pay Per Click", href: "/pay-per-click-services" },
       { id: 9, name: "Lead Generation", href: "/lead-generation-services" },
       { id: 10, name: "Product Design & Packaging", href: "/product-design-packaging-services" },
-      { id: 11, name: "Cloud Kitchen Marketing", href: "/cloud-kitchen-marketing-services" },
+      // { id: 11, name: "Cloud Kitchen Marketing", href: "/cloud-kitchen-marketing-services" },
     ],
   },
   {
@@ -79,14 +79,14 @@ const navItems = [
     href: "/tzar-studio",
     subNavItems: [],
   },
-  {
-    id: 6,
-    name: "Animation 3D | 2D",
-    href: "/",
-    subNavItems: [
-      // { id: 1, name: "Blog Sidebar", href: "/blog-sidebar" },
-    ],
-  },
+  // {
+  //   id: 6,
+  //   name: "Animation 3D | 2D",
+  //   href: "/",
+  //   subNavItems: [
+  //     // { id: 1, name: "Blog Sidebar", href: "/blog-sidebar" },
+  //   ],
+  // },
   {
     id: 9,
     name: "Outdoor-Ads",
@@ -99,12 +99,12 @@ const navItems = [
     href: "/portfolio",
     subNavItems: [],
   },
-//   {
-//   id: 7,
-//   name: "Corporate Gifting",
-//   href: "/corporate-gifting",
-//   subNavItems: [],
-// },
+  {
+  id: 7,
+  name: "Corporate Gifting",
+  href: "/corporate-gifting",
+  subNavItems: [],
+},
   // {
   //   id: 5,
   //   name: "Hire Us",

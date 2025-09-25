@@ -15,7 +15,8 @@ export default function hireus() {
     return (
         <>
             <PageHeaderInternship title="Hire Us"/>
-            <PopupHireUs/>
+            <ContactForm />
+            {/* <PopupHireUs/> */}
         </>
     )
 }

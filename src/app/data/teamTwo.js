@@ -12,7 +12,7 @@ const teamTwo = {
     },
     {
       id: 2,
-      image: "team-page-img-7.jpg",
+      image: "team-page-img-7.png",
       title: "Performance Marketing Executives ",
       name: "Yash Mishra",
       // describe:"Responsible for planning, executing, and optimizing digital marketing campaigns to achieve measurable business results.",

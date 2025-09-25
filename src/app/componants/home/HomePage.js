@@ -25,7 +25,7 @@ export default function about() {
             {/* <DesignStudio/> */}
             <CounterOne/>
             <WebDesignMock/>
-            <WhyChoose/>
+            {/* <WhyChoose/> */}
             <StudioSection/>
             <ExeculsiveCardsR/>
             <TestimonialThree/>

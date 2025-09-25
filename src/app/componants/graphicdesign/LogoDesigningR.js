@@ -16,91 +16,79 @@ const LogoDesigningR = () => {
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
-
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
+    const handleResize = () => setScreenWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Determine item width based on screen size
-  const getItemWidth = () => {
-    if (screenWidth < 480) return "100%";
-    if (screenWidth < 768) return "100%";
-    if (screenWidth < 1024) return "47%";
-    return "30%";
-  };
-
   const containerStyle = {
-    padding: "60px 20px",
+    padding: "50px 20px",
     backgroundColor: "#fff",
   };
 
   const titleStyle = {
-    fontSize: screenWidth < 480 ? "1.8rem" : "2.5rem",
+    fontSize: screenWidth < 480 ? "1.6rem" : "2.3rem",
     fontWeight: 700,
     textAlign: "center",
-    marginBottom: "20px",
+    marginBottom: "15px",
   };
 
   const textStyle = {
     fontSize: "1rem",
     textAlign: "center",
     maxWidth: "800px",
-    margin: "0 auto 40px",
+    margin: "0 auto 30px",
     color: "#555",
   };
 
+  // ✅ Grid system
   const cardsContainer = {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
+    display: "grid",
     gap: "20px",
-    padding: 0,
     listStyle: "none",
-  };
-
-  const cardItem = {
-    width: getItemWidth(),
-    display: "flex",
-    justifyContent: "center",
+    padding: 0,
+    gridTemplateColumns:
+      screenWidth >= 1200
+        ? "repeat(5, 1fr)" // 5 per row desktop
+        : screenWidth >= 992
+        ? "repeat(3, 1fr)" // 3 per row laptop
+        : "repeat(2, 1fr)", // 2 per row tablet/mobile
   };
 
   const cardStyle = {
     backgroundColor: "#fff",
-    borderRadius: "12px",
-    padding: "20px",
+    borderRadius: "10px",
+    padding: "15px", // smaller card
     textAlign: "center",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
     transition: "0.3s ease",
-    width: "70%",
   };
 
   const imageStyle = {
-    maxWidth: "100%",
+    maxWidth: "90%",
     height: "auto",
   };
 
   const cardTitle = {
-    marginTop: "15px",
-    fontSize: "1.1rem",
+    marginTop: "10px",
+    fontSize: "1rem",
     fontWeight: 600,
   };
 
   const buttonWrapper = {
     textAlign: "center",
-    marginTop: "40px",
+    marginTop: "30px",
   };
 
   const buttonStyle = {
     backgroundColor: "#000",
     color: "#fff",
-    padding: "12px 30px",
-    borderRadius: "30px",
+    padding: "10px 25px",
+    borderRadius: "25px",
     fontWeight: 600,
     textDecoration: "none",
     display: "inline-block",
+    fontSize: "0.95rem",
   };
 
   const cardData = [
@@ -125,11 +113,9 @@ const LogoDesigningR = () => {
 
         <ul style={cardsContainer}>
           {cardData.map((card, index) => (
-            <li key={index} style={cardItem}>
+            <li key={index}>
               <div style={cardStyle}>
-                <div>
-                  <Image src={card.img.src} alt={card.title} style={imageStyle} />
-                </div>
+                <Image src={card.img.src} alt={card.title} style={imageStyle} />
                 <h4 style={cardTitle}>{card.title}</h4>
               </div>
             </li>

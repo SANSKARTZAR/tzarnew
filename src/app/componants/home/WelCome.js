@@ -75,14 +75,14 @@ const WelcomeOne = () => {
                           </li>
                         ))}
                       </ul>
-                      <div className="welcome-one__person">
+                      {/* <div className="welcome-one__person">
                         <div className="welcome-one__person-img">
                           <Image src={person.src} alt="" />
                         </div>
                         <div className="welcome-one__person-sign">
                           <h3>{personName}</h3>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </Col>
                   <Col xl={6} lg={6} md={6}>

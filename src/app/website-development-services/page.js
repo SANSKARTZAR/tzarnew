@@ -41,7 +41,7 @@ const Page = () => {
       <TestimonialFive />
       <ContactFormWeb />
       <WdService />
-      <FaqWebdev />
+      {/* <FaqWebdev /> */}
     </>
   );
 };

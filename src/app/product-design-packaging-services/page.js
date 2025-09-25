@@ -6,6 +6,7 @@ import PackagingDesignServ from "../componants/productDservices/PackagingDesignS
 import SomeFacts from "../componants/LeadGServices/SomeFacts";
 import CountsLG from "../componants/LogoDService/Counts/CountsLG";
 import ContactForm from "../componants/home/ContactForm";
+import HeroSec from "../componants/productDservices/HeroSec";
 
 export const metadata = { 
   title:"TZAR VENTURE- Digital Marketing Agency: Expert In Product Packaging Design Services",
@@ -17,7 +18,8 @@ const Page = () => {
   return (
     <>
     <PageHeaderPPD title="PRODUCT DESIGN PACKAGING SERVICE"/>
-    <ServicesDetails service={LeadGenerationService2} />
+    {/* <ServicesDetails service={LeadGenerationService2} /> */}
+    <HeroSec/>
     <PackagingDesignServ/>
     {/* <SomeFacts/>
     <CountsLG/> */}

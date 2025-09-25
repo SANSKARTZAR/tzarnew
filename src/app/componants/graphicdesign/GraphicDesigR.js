@@ -4,28 +4,66 @@ import { Image } from "react-bootstrap";
 import graphicdesign from "@/app/data/graphicdesign";
 import Link from "next/link";
 
-const {
-  bg,
-  img1, img2, img3, img4, img5, img6, img7, img8,
-  title,
-  text1
-} = graphicdesign;
+const { bg, img1, img2, img3, img4, img5, img6, img7, img8, title, text1 } =
+  graphicdesign;
 
 const GraphicDesigR = () => {
-  const [width, setWidth] = useState(1200);
+  const [screenWidth, setScreenWidth] = useState(1200);
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    handleResize(); // call initially
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const getCardWidth = () => {
-    if (width < 768) return "48%";      // Mobile (2 per row)
-    if (width < 1024) return "30%";     // Tablet (3 per row)
-    return "22%";                       // Desktop (4 per row)
+  // ✅ Responsive Grid Layout
+  const cardsContainer = {
+    display: "grid",
+    gap: "15px",
+    listStyle: "none",
+    padding: 0,
+    gridTemplateColumns:
+      screenWidth >= 1200
+        ? "repeat(5, 1fr)" // 5 per row desktop
+        : screenWidth >= 992
+        ? "repeat(3, 1fr)" // 3 per row laptop
+        : "repeat(2, 1fr)", // 2 per row mobile
   };
+
+  const cardStyle = {
+    backgroundColor: "#fff",
+    borderRadius: "8px",
+    padding: "12px",
+    textAlign: "center",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+    transition: "0.3s ease",
+  };
+
+  const imageStyle = {
+    maxWidth: "85%",
+    height: "auto",
+    borderRadius: "6px",
+  };
+
+  const cardTitle = {
+    marginTop: "8px",
+    fontSize: "0.95rem",
+    fontWeight: 600,
+  };
+
+  const buttonStyle = {
+    backgroundColor: "#000",
+    color: "#fff",
+    padding: "10px 22px",
+    borderRadius: "25px",
+    fontWeight: 600,
+    textDecoration: "none",
+    fontSize: "0.9rem",
+  };
+
+  // ✅ Normalize image source (string or object)
+  const getSrc = (img) => (typeof img === "string" ? img : img?.src);
 
   const cardData = [
     { img: img1, title: "Graphic Design" },
@@ -39,68 +77,60 @@ const GraphicDesigR = () => {
   ];
 
   return (
-    <section style={{ backgroundColor: "#f9f9f9", padding: "40px 20px" }}>
+    <section className="GraphicDesigR-page">
       <div
         style={{
-          backgroundImage: `url(${bg.src})`,
+          backgroundImage: `url(${getSrc(bg)})`, // ✅ Safe handling
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: "100px",
-          marginBottom: "30px",
-        }}
-      ></div>
-
-      <div style={{ textAlign: "center" }}>
-        <h1 style={{ fontSize: "2rem", marginBottom: "10px" }}>{title}</h1>
-        <p style={{ maxWidth: "800px", margin: "0 auto 30px" }}>{text1}</p>
-      </div>
-
-      <ul
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: "20px",
-          listStyle: "none",
-          padding: 0,
+          backgroundPosition: "center",
+          width: "100%",
         }}
       >
-        {cardData.map((card, index) => (
-          <li key={index} style={{ width: getCardWidth() }}>
-            <div
+        <div style={{ padding: "40px 20px", backgroundColor: "#fff" }}>
+          <div style={{ textAlign: "center", marginBottom: "20px" }}>
+            <h1
               style={{
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                textAlign: "center",
-                padding: "16px",
-                backgroundColor: "#fff",
+                fontSize: screenWidth < 480 ? "1.6rem" : "2.2rem",
+                fontWeight: 700,
+                marginBottom: "10px",
               }}
             >
-              <Image
-                src={card.img.src}
-                alt={card.title}
-                style={{ maxWidth: "100%", height: "auto" }}
-              />
-              <h4 style={{ marginTop: "10px", fontSize: "1rem" }}>{card.title}</h4>
-            </div>
-          </li>
-        ))}
-      </ul>
+              {title}
+            </h1>
+            <p
+              style={{
+                maxWidth: "800px",
+                margin: "0 auto",
+                fontSize: "1rem",
+                color: "#555",
+              }}
+            >
+              {text1}
+            </p>
+          </div>
 
-      <div style={{ textAlign: "center", marginTop: "40px" }}>
-        <Link
-          href="#Contactform"
-          style={{
-            backgroundColor: "#000",
-            color: "#fff",
-            padding: "12px 24px",
-            borderRadius: "30px",
-            textDecoration: "none",
-            fontWeight: "600",
-          }}
-        >
-          Enquiry Now
-        </Link>
+          <ul style={cardsContainer}>
+            {cardData.map((card, index) => (
+              <li key={index}>
+                <div style={cardStyle}>
+                  <Image
+                    src={getSrc(card.img)} // ✅ Safe handling
+                    alt={card.title}
+                    style={imageStyle}
+                  />
+                  <h4 style={cardTitle}>{card.title}</h4>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <div style={{ textAlign: "center", marginTop: "30px" }}>
+            <Link href="#Contactform" style={buttonStyle}>
+              Enquiry Now
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

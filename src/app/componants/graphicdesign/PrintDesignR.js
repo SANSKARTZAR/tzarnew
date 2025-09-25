@@ -15,123 +15,127 @@ const PrintDesignR = () => {
   const [screenWidth, setScreenWidth] = useState(1200);
 
   useEffect(() => {
+    setScreenWidth(window.innerWidth);
     const handleResize = () => setScreenWidth(window.innerWidth);
-    setScreenWidth(window.innerWidth); // Set initial width
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Control card width based on screen size
-  const getCardWidth = () => {
-    if (screenWidth < 768) return '48%'; // 2 per row on mobile
-    if (screenWidth < 1024) return '30%'; // 3 per row on iPad
-    return '22%'; // 4 per row on desktop
-  };
-
+  // ✅ Container
   const containerStyle = {
-    padding: '60px 20px',
-    backgroundColor: '#fff',
+    padding: "25px 10px", // smaller vertical padding
+    backgroundColor: "#fff",
   };
 
+  // ✅ Title
   const titleStyle = {
-    textAlign: 'center',
-    fontSize: screenWidth < 480 ? '1.8rem' : '2.5rem',
-    fontWeight: 'bold',
-    marginBottom: '10px',
+    fontSize: screenWidth < 480 ? "1.4rem" : "2rem",
+    fontWeight: 700,
+    textAlign: "center",
+    marginBottom: "6px",
   };
 
   const textStyle = {
-    textAlign: 'center',
-    maxWidth: '800px',
-    margin: '0 auto 40px',
-    fontSize: '1rem',
-    color: '#666',
+    fontSize: "0.95rem",
+    textAlign: "center",
+    maxWidth: "750px",
+    margin: "0 auto 15px",
+    color: "#555",
   };
 
-  const cardListStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '20px',
-    justifyContent: 'center',
+  // ✅ Grid (5 / 3 / 2)
+  const cardsContainer = {
+    display: "grid",
+    gap: "10px",
+    listStyle: "none",
     padding: 0,
-    listStyle: 'none',
+    gridTemplateColumns:
+      screenWidth >= 1200
+        ? "repeat(5, 1fr)" // desktop
+        : screenWidth >= 992
+        ? "repeat(3, 1fr)" // laptop
+        : "repeat(2, 1fr)", // mobile/tablet
   };
 
-  const cardItemStyle = {
-    width: getCardWidth(),
-    display: 'flex',
-    justifyContent: 'center',
-  };
-
+  // ✅ Card
   const cardStyle = {
-    background: '#fff',
-    borderRadius: '12px',
-    padding: '20px',
-    textAlign: 'center',
-    boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-    width: '100%',
-    transition: 'all 0.3s ease-in-out',
+    backgroundColor: "#fff",
+    borderRadius: "6px",
+    padding: "8px",
+    textAlign: "center",
+    boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
+    transition: "0.2s ease",
   };
 
   const imgStyle = {
-    maxWidth: '100%',
-    height: 'auto',
-    borderRadius: '8px',
+    maxWidth: "85%",
+    height: "auto",
+    borderRadius: "6px",
   };
 
   const cardTitleStyle = {
-    fontSize: '1.1rem',
-    marginTop: '15px',
-    fontWeight: '600',
-  };
-
-  const buttonWrapper = {
-    textAlign: 'center',
-    marginTop: '40px',
-  };
-
-  const buttonStyle = {
-    padding: '12px 30px',
-    backgroundColor: '#000',
-    color: '#fff',
-    borderRadius: '30px',
-    textDecoration: 'none',
+    marginTop: "5px",
+    fontSize: "0.9rem",
     fontWeight: 600,
   };
 
+  // ✅ Button
+  const buttonWrapper = {
+    textAlign: "center",
+    marginTop: "12px",
+    marginBottom: "5px",
+  };
+
+  const buttonStyle = {
+    backgroundColor: "#000",
+    color: "#fff",
+    padding: "8px 18px",
+    borderRadius: "20px",
+    fontWeight: 600,
+    textDecoration: "none",
+    display: "inline-block",
+    fontSize: "0.85rem",
+  };
+
   const cardData = [
-    { img: img1, title: 'Flyer Design' },
-    { img: img2, title: 'Brochure Design' },
-    { img: img3, title: 'Poster Design' },
-    { img: img4, title: 'Advertisement Design' },
-    { img: img5, title: 'Catalogue Design' },
-    { img: img6, title: 'Envelope Design' },
-    { img: img7, title: 'Magazine Design' },
-    { img: img8, title: 'Menu Design' },
-    { img: img9, title: 'Newspaper Ad Design' },
-    { img: img10, title: 'Print Design' },
-    { img: img11, title: 'Sticker Design' },
-    { img: img12, title: 'Resume Design' },
-    { img: img13, title: 'Word Template Design' },
-    { img: img14, title: 'PostCard Design' },
+    { img: img1, title: "Flyer Design" },
+    { img: img2, title: "Brochure Design" },
+    { img: img3, title: "Poster Design" },
+    { img: img4, title: "Advertisement Design" },
+    { img: img5, title: "Catalogue Design" },
+    { img: img6, title: "Envelope Design" },
+    { img: img7, title: "Magazine Design" },
+    { img: img8, title: "Menu Design" },
+    { img: img9, title: "Newspaper Ad Design" },
+    { img: img10, title: "Print Design" },
+    { img: img11, title: "Sticker Design" },
+    { img: img12, title: "Resume Design" },
+    { img: img13, title: "Word Template Design" },
+    { img: img14, title: "PostCard Design" },
   ];
 
   return (
     <section className="PrintDesignR-page">
-      <div className="container-fluid">
+      <div
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          width: "100%",
+        }}
+      >
         <div style={containerStyle}>
-          <div className="PrintDesignR__center">
+          <div>
             <h1 style={titleStyle}>{title}</h1>
             <p style={textStyle}>{text1}</p>
           </div>
 
-          <ul style={cardListStyle}>
+          <ul style={cardsContainer}>
             {cardData.map((card, index) => (
-              <li key={index} style={cardItemStyle}>
+              <li key={index}>
                 <div style={cardStyle}>
-                  <div>
-                    <Image src={card.img.src} alt={card.title} style={imgStyle} />
-                  </div>
+                  <Image src={card.img.src} alt={card.title} style={imgStyle} />
                   <h4 style={cardTitleStyle}>{card.title}</h4>
                 </div>
               </li>
