@@ -9,7 +9,7 @@ import Employee1 from "@/assets/images/backgrounds/employee1.webp";
 import Employee2 from "@/assets/images/backgrounds/employee2.webp";
 import Client from "@/assets/images/backgrounds/client.webp";
 import Client1 from "@/assets/images/backgrounds/client1.webp";
-import Promo1 from "@/assets/images/backgrounds/promo1.webp";
+import Promo1 from "@/assets/images/backgrounds/Promo1.webp";
 import Promo2 from "@/assets/images/backgrounds/promo2.webp";
 import Promo3 from "@/assets/images/backgrounds/promo3.webp";
 import Promo4 from "@/assets/images/backgrounds/promo4.webp";
