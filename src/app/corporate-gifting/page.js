@@ -490,12 +490,27 @@ const CorporateGiftingPage = () => {
 
             {/* Bulk Orders Tab */}
             <TabPanel>
-  <p className="text-center text-primary fw-bold">
-    👉 <a href="https://crownleaf.co/bulk-enquiry/" target="_blank" rel="noopener noreferrer">
-      Click on the link For Bulk enquiry
+  <div style={{ textAlign: "center" }}>
+    <a
+      href="https://crownleaf.co/bulk-enquiry/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-block",
+        backgroundColor: "#003366",        // button background
+        color: "#ffffff",                 // button text color
+        padding: "10px 20px",             // vertical & horizontal padding
+        borderRadius: "20px",              // rounded corners
+        textDecoration: "none",           // remove underline from link
+        fontWeight: "bold",
+        fontSize: "1rem",
+      }}
+    >
+      Bulk Enquiry
     </a>
-  </p>
+  </div>
 </TabPanel>
+
 
           </Tabs>
         </Container>
