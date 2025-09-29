@@ -1,5 +1,5 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
-"use client";
 import productmerchandisedesign from "@/app/data/productmerchandisedesign";
 import React, { useEffect, useState } from "react";
 import { Image } from "react-bootstrap";
@@ -27,52 +27,6 @@ const ProductMerchandiseDesignR = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // ✅ Responsive Grid Layout
-  const cardsContainer = {
-    display: "grid",
-    gap: "15px",
-    listStyle: "none",
-    padding: 0,
-    gridTemplateColumns:
-      screenWidth >= 1200
-        ? "repeat(5, 1fr)" // desktop
-        : screenWidth >= 992
-        ? "repeat(3, 1fr)" // laptop
-        : "repeat(2, 1fr)", // mobile
-  };
-
-  const cardStyle = {
-    backgroundColor: "#fff",
-    borderRadius: "8px",
-    padding: "12px",
-    textAlign: "center",
-    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-    transition: "0.3s ease",
-  };
-
-  const imageStyle = {
-    maxWidth: "85%",
-    height: "auto",
-    borderRadius: "6px",
-  };
-
-  const cardTitle = {
-    marginTop: "8px",
-    fontSize: "0.9rem",
-    fontWeight: 600,
-  };
-
-  const buttonStyle = {
-    backgroundColor: "#000",
-    color: "#fff",
-    padding: "10px 22px",
-    borderRadius: "25px",
-    fontWeight: 600,
-    textDecoration: "none",
-    fontSize: "0.9rem",
-  };
-
-  // ✅ Normalize src (handles string or imported object)
   const getSrc = (img) => (typeof img === "string" ? img : img?.src);
 
   const cardData = [
@@ -84,48 +38,135 @@ const ProductMerchandiseDesignR = () => {
     { img: img6, title: "Merchandise Design" },
   ];
 
+  // ✅ Grid Layout
+  const cardsContainer = {
+    display: "grid",
+    gap: "15px",
+    listStyle: "none",
+    padding: 0,
+    margin: 0,
+    gridTemplateColumns:
+      screenWidth >= 1200
+        ? "repeat(5, 1fr)"
+        : screenWidth >= 992
+        ? "repeat(3, 1fr)"
+        : "repeat(2, 1fr)",
+  };
+
+  const cardStyle = {
+    backgroundColor: "#fff",
+    border: "1px solid #0D2C6B",
+    borderRadius: "8px",
+    padding: "15px",
+    textAlign: "center",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+    transition: "transform 0.3s ease",
+    cursor: "pointer",
+  };
+
+  const imageWrapper = {
+  width: "100%",
+  aspectRatio: "4 / 3",  // maintain consistent aspect ratio
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: "10px",
+  overflow: "hidden",
+};
+
+const imageStyle = {
+  maxWidth: "100%",
+  maxHeight: "100%",
+  height: "auto",
+  width: "auto",
+  objectFit: "contain",
+  borderRadius: "6px",
+};
+
+
+  const cardTitle = {
+    color: "#0D2C6B",
+    fontWeight: 600,
+    fontSize: "0.9rem",
+    margin: 0,
+  };
+
+  const buttonWrapper = {
+    textAlign: "center",
+    marginTop: "30px",
+  };
+
+  const buttonStyle = {
+    backgroundColor: "#0D2C6B",
+    color: "#fff",
+    padding: "10px 22px",
+    borderRadius: "25px",
+    fontWeight: 600,
+    textDecoration: "none",
+    fontSize: "0.9rem",
+    display: "inline-block",
+  };
+
   return (
-    <section className="ProductMerchandiseDesignR-page">
-      <div style={{ padding: "40px 20px", backgroundColor: "#fff" }}>
-        <div style={{ textAlign: "center", marginBottom: "20px" }}>
-          <h1
-            style={{
-              fontSize: screenWidth < 480 ? "1.6rem" : "2.2rem",
-              fontWeight: 700,
-              marginBottom: "10px",
-            }}
-          >
-            {title}
-          </h1>
-          <p
-            style={{
-              maxWidth: "800px",
-              margin: "0 auto",
-              fontSize: "1rem",
-              color: "#555",
-            }}
-          >
-            {text1}
-          </p>
-        </div>
+    <section className="ProductMerchandiseDesignR-page" style={{ padding: "40px 20px", backgroundColor: "#fff" }}>
+      <div
+        className="bg-wrapper"
+        style={{
+          backgroundImage: `url(${getSrc(bg)})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          width: "100%",
+        }}
+      >
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          {/* Header */}
+          <div style={{ textAlign: "center", marginBottom: "20px" }}>
+            <h1
+              style={{
+                fontSize: screenWidth < 480 ? "1.6rem" : "2.2rem",
+                fontWeight: 700,
+                marginBottom: "10px",
+              }}
+            >
+              {title}
+            </h1>
+            <p
+              style={{
+                maxWidth: "800px",
+                margin: "0 auto",
+                fontSize: "1rem",
+                color: "#555",
+              }}
+            >
+              {text1}
+            </p>
+          </div>
 
-        {/* ✅ Cards */}
-        <ul style={cardsContainer}>
-          {cardData.map((card, index) => (
-            <li key={index}>
-              <div style={cardStyle}>
-                <Image src={getSrc(card.img)} alt={card.title} style={imageStyle} />
-                <h4 style={cardTitle}>{card.title}</h4>
-              </div>
-            </li>
-          ))}
-        </ul>
+          {/* Cards */}
+          <ul style={cardsContainer}>
+            {cardData.map(({ img, title }, idx) => (
+              <li key={idx}>
+                <div
+                  style={cardStyle}
+                  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                >
+                  <div style={imageWrapper}>
+                    <Image src={getSrc(img)} alt={title} style={imageStyle} />
+                  </div>
+                  <h4 style={cardTitle}>{title}</h4>
+                </div>
+              </li>
+            ))}
+          </ul>
 
-        {/* ✅ Enquiry Button */}
-        <div style={{ textAlign: "center", marginTop: "30px" }}>
-          <Link href="#Contactform" style={buttonStyle}>
-            Enquiry Now
-          </Link>
+          {/* CTA Button */}
+          <div style={buttonWrapper}>
+            <Link href="#Contactform" style={buttonStyle}>
+              Enquiry Now
+            </Link>
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 import LogoDesigning from "@/app/data/logodesigning";
 import React, { useEffect, useState } from "react";
@@ -15,80 +14,72 @@ const LogoDesigningR = () => {
   const [screenWidth, setScreenWidth] = useState(1200);
 
   useEffect(() => {
-    setScreenWidth(window.innerWidth);
     const handleResize = () => setScreenWidth(window.innerWidth);
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const containerStyle = {
-    padding: "50px 20px",
-    backgroundColor: "#fff",
-  };
-
-  const titleStyle = {
-    fontSize: screenWidth < 480 ? "1.6rem" : "2.3rem",
-    fontWeight: 700,
-    textAlign: "center",
-    marginBottom: "15px",
-  };
-
-  const textStyle = {
-    fontSize: "1rem",
-    textAlign: "center",
-    maxWidth: "800px",
-    margin: "0 auto 30px",
-    color: "#555",
-  };
-
-  // ✅ Grid system
   const cardsContainer = {
     display: "grid",
     gap: "20px",
     listStyle: "none",
     padding: 0,
+    margin: 0,
     gridTemplateColumns:
       screenWidth >= 1200
-        ? "repeat(5, 1fr)" // 5 per row desktop
+        ? "repeat(5, 1fr)"
         : screenWidth >= 992
-        ? "repeat(3, 1fr)" // 3 per row laptop
-        : "repeat(2, 1fr)", // 2 per row tablet/mobile
+        ? "repeat(3, 1fr)"
+        : "repeat(2, 1fr)",
   };
 
   const cardStyle = {
     backgroundColor: "#fff",
+    border: "1px solid #0D2C6B",
     borderRadius: "10px",
-    padding: "15px", // smaller card
+    padding: "20px",
     textAlign: "center",
     boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-    transition: "0.3s ease",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    cursor: "pointer",
+  };
+
+  const imageWrapper = {
+    width: "100%",
+    aspectRatio: "4 / 3", // Maintains ratio across devices
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: "15px",
+    overflow: "hidden",
   };
 
   const imageStyle = {
-    maxWidth: "90%",
+    maxWidth: "100%",
+    maxHeight: "100%",
     height: "auto",
+    width: "auto",
+    objectFit: "contain",
+    borderRadius: "6px",
   };
 
   const cardTitle = {
-    marginTop: "10px",
-    fontSize: "1rem",
+    color: "#0D2C6B",
     fontWeight: 600,
-  };
-
-  const buttonWrapper = {
-    textAlign: "center",
-    marginTop: "30px",
+    fontSize: "1rem",
+    margin: 0,
   };
 
   const buttonStyle = {
-    backgroundColor: "#000",
+    backgroundColor: "#0D2C6B",
     color: "#fff",
-    padding: "10px 25px",
+    padding: "12px 25px",
     borderRadius: "25px",
     fontWeight: 600,
     textDecoration: "none",
-    display: "inline-block",
-    fontSize: "0.95rem",
+    fontSize: "1rem",
+    transition: "background-color 0.3s ease",
   };
 
   const cardData = [
@@ -104,25 +95,51 @@ const LogoDesigningR = () => {
   ];
 
   return (
-    <section className="LogoDesigningR-page">
-      <div style={containerStyle}>
-        <div>
-          <h1 style={titleStyle}>{title}</h1>
-          <p style={textStyle}>{text1}</p>
+    <section className="LogoDesigningR-page" style={{ padding: "40px 20px", backgroundColor: "#fff" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "30px" }}>
+          <h1
+            style={{
+              fontSize: screenWidth < 480 ? "1.6rem" : "2.2rem",
+              fontWeight: 700,
+              marginBottom: "10px",
+            }}
+          >
+            {title}
+          </h1>
+          <p
+            style={{
+              maxWidth: "800px",
+              margin: "0 auto",
+              fontSize: "1rem",
+              color: "#555",
+            }}
+          >
+            {text1}
+          </p>
         </div>
 
+        {/* Cards */}
         <ul style={cardsContainer}>
           {cardData.map((card, index) => (
             <li key={index}>
-              <div style={cardStyle}>
-                <Image src={card.img.src} alt={card.title} style={imageStyle} />
+              <div
+                style={cardStyle}
+                onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
+                onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+              >
+                <div style={imageWrapper}>
+                  <Image src={card.img.src} alt={card.title} style={imageStyle} />
+                </div>
                 <h4 style={cardTitle}>{card.title}</h4>
               </div>
             </li>
           ))}
         </ul>
 
-        <div style={buttonWrapper}>
+        {/* CTA Button */}
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
           <Link href="#Contactform" style={buttonStyle}>
             Enquiry Now
           </Link>

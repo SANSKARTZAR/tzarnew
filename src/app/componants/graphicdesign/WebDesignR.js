@@ -15,82 +15,79 @@ const WebDesignR = () => {
   const [screenWidth, setScreenWidth] = useState(1200);
 
   useEffect(() => {
-    setScreenWidth(window.innerWidth);
     const handleResize = () => setScreenWidth(window.innerWidth);
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const containerStyle = {
-    padding: "25px 10px", // much smaller vertical padding
-    backgroundColor: "#fff",
-  };
-
-  const titleStyle = {
-    fontSize: screenWidth < 480 ? "1.4rem" : "2rem",
-    fontWeight: 700,
-    textAlign: "center",
-    marginBottom: "6px", // reduced
-  };
-
-  const textStyle = {
-    fontSize: "0.95rem",
-    textAlign: "center",
-    maxWidth: "750px",
-    margin: "0 auto 15px", // reduced
-    color: "#555",
-  };
-
-  // ✅ Responsive Grid
+  // ✅ Responsive Grid Layout
   const cardsContainer = {
     display: "grid",
-    gap: "10px", // very compact grid
+    gap: "15px",
     listStyle: "none",
     padding: 0,
+    margin: 0,
     gridTemplateColumns:
       screenWidth >= 1200
-        ? "repeat(5, 1fr)" // 5 per row desktop
+        ? "repeat(5, 1fr)"
         : screenWidth >= 992
-        ? "repeat(3, 1fr)" // 3 per row laptop
-        : "repeat(2, 1fr)", // 2 per row mobile/tablet
+        ? "repeat(3, 1fr)"
+        : "repeat(2, 1fr)",
   };
 
   const cardStyle = {
     backgroundColor: "#fff",
-    borderRadius: "6px",
-    padding: "8px", // smaller card padding
+    border: "1px solid #000", // same orange border
+    borderRadius: "8px",
+    padding: "15px",
     textAlign: "center",
-    boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
-    transition: "0.2s ease",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
+    transition: "transform 0.3s ease",
+    cursor: "pointer",
   };
 
-  const imageStyle = {
-    maxWidth: "85%",
-    height: "auto",
-    borderRadius: "6px",
-  };
+  const imageWrapper = {
+  width: "100%",
+  aspectRatio: "4 / 3",  // maintain consistent aspect ratio
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: "10px",
+  overflow: "hidden",
+};
+
+const imageStyle = {
+  maxWidth: "100%",
+  maxHeight: "100%",
+  height: "auto",
+  width: "auto",
+  objectFit: "contain",
+  borderRadius: "6px",
+};
+
 
   const cardTitle = {
-    marginTop: "5px", // minimal space
-    fontSize: "0.9rem",
+    color: "#0D2C6B",
     fontWeight: 600,
+    fontSize: "0.9rem",
+    margin: 0,
   };
 
   const buttonWrapper = {
     textAlign: "center",
-    marginTop: "12px", // almost no gap above
-    marginBottom: "5px", // minimal below
+    marginTop: "25px",
   };
 
   const buttonStyle = {
-    backgroundColor: "#000",
+    backgroundColor: "#0D2C6B",
     color: "#fff",
-    padding: "8px 18px", // smaller button
-    borderRadius: "20px",
+    padding: "10px 22px",
+    borderRadius: "25px",
     fontWeight: 600,
     textDecoration: "none",
+    fontSize: "0.9rem",
     display: "inline-block",
-    fontSize: "0.85rem",
   };
 
   const cardData = [
@@ -109,33 +106,60 @@ const WebDesignR = () => {
   ];
 
   return (
-    <section className="WebdesignR-page">
+    <section className="WebdesignR-page" style={{ padding: "40px 20px", backgroundColor: "#fff" }}>
       <div
+        className="bg-pattern"
         style={{
-          backgroundImage: `url(${bg.src})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          width: "100%",
+          backgroundColor: "#fff",
+          // backgroundImage: `url(${bg.src})`,
+          // backgroundSize: "cover",
+          // backgroundRepeat: "no-repeat",
+          // backgroundPosition: "center",
+          // width: "100%",
         }}
       >
-        <div style={containerStyle}>
-          <div>
-            <h1 style={titleStyle}>{title}</h1>
-            <p style={textStyle}>{text1}</p>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "20px" }}>
+            <h1
+              style={{
+                fontSize: screenWidth < 480 ? "1.6rem" : "2.2rem",
+                fontWeight: 700,
+                marginBottom: "10px",
+              }}
+            >
+              {title}
+            </h1>
+            <p
+              style={{
+                maxWidth: "800px",
+                margin: "0 auto",
+                fontSize: "1rem",
+                color: "#555",
+              }}
+            >
+              {text1}
+            </p>
           </div>
 
+          {/* ✅ Grid of Cards */}
           <ul style={cardsContainer}>
-            {cardData.map((card, index) => (
+            {cardData.map(({ img, title }, index) => (
               <li key={index}>
-                <div style={cardStyle}>
-                  <Image src={card.img.src} alt={card.title} style={imageStyle} />
-                  <h4 style={cardTitle}>{card.title}</h4>
+                <div
+                  style={cardStyle}
+                  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                >
+                  <div style={imageWrapper}>
+                    <Image src={img.src} alt={title} style={imageStyle} />
+                  </div>
+                  <h4 style={cardTitle}>{title}</h4>
                 </div>
               </li>
             ))}
           </ul>
 
+          {/* ✅ Button */}
           <div style={buttonWrapper}>
             <Link href="#Contactform" style={buttonStyle}>
               Enquiry Now

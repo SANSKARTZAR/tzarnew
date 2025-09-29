@@ -7,23 +7,31 @@ const SingleTestimonial1 = ({ testimonial = {}, listRef }) => {
   return (
     <div
       ref={listRef}
-      style={{ userSelect: "none" }}
       className="testimonial-one__singlecard"
+      style={{
+        userSelect: "none",
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "10%", // Adds responsive spacing around image
+        boxSizing: "border-box",
+      }}
     >
-      <div className="testimonial-one__contentcard">
-        {/* <p className="testimonial-one__textcard">{text}</p> */}
-      </div>
-      <div className="testimonial-one__client-infocard">
-        <div className="testimonial-one__client__imgcard">
-          <Image
-            src={require(`@/assets/images/testimonial/${image}`).default.src}
-            alt=""
-            style={{ width: '140px'}}
-          />
-        </div>
-        {/* <h4 className="testimonial-one__namecard">{name}</h4>
-        <p className="testimonial-one__titlecard">{title}</p> */}
-      </div>
+      <Image
+        src={require(`@/assets/images/testimonial/${image}`).default.src}
+        alt=""
+        fluid // ✅ Bootstrap prop: makes image responsive automatically
+        style={{
+          maxWidth: "100%",
+          maxHeight: "100%",
+          objectFit: "contain",
+          height: "auto",
+          width: "auto",
+          display: "block",
+        }}
+      />
     </div>
   );
 };

@@ -56,20 +56,24 @@ const ArtIllustrationR = () => {
   };
 
   const imageWrapper = {
-    width: "100%",
-    height: "150px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "10px",
-  };
+  width: "100%",
+  aspectRatio: "4 / 3",  // maintain consistent aspect ratio
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: "10px",
+  overflow: "hidden",
+};
 
-  const imageStyle = {
-    maxWidth: "100%",
-    maxHeight: "100%",
-    objectFit: "contain",
-    borderRadius: "6px",
-  };
+const imageStyle = {
+  maxWidth: "100%",
+  maxHeight: "100%",
+  height: "auto",
+  width: "auto",
+  objectFit: "contain",
+  borderRadius: "6px",
+};
+
 
   const cardTitle = {
     color: "#0D2C6B",
@@ -79,7 +83,7 @@ const ArtIllustrationR = () => {
   };
 
   const buttonStyle = {
-    backgroundColor: "#000",
+    backgroundColor: "#0D2C6B",
     color: "#fff",
     padding: "10px 22px",
     borderRadius: "25px",

@@ -85,7 +85,7 @@ const WelcomeOne = () => {
                       </div> */}
                     </div>
                   </Col>
-                  <Col xl={6} lg={6} md={6}>
+                  {/* <Col xl={6} lg={6} md={6}>
                     <div className="welcome-one__bottom-right">
                       <div className="welcome-one__bottom-right-content">
                         <div className="welcome-one__bottom-right-icon">
@@ -98,7 +98,7 @@ const WelcomeOne = () => {
                         </Link>
                       </div>
                     </div>
-                  </Col>
+                  </Col> */}
                 </Row>
               </div>
             </div>

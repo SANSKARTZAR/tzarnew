@@ -4,8 +4,9 @@ import { Image } from "react-bootstrap";
 import graphicdesign from "@/app/data/graphicdesign";
 import Link from "next/link";
 
-const { bg, img1, img2, img3, img4, img5, img6, img7, img8, title, text1 } =
-  graphicdesign;
+const {
+  bg, img1, img2, img3, img4, img5, img6, img7, img8, title, text1
+} = graphicdesign;
 
 const GraphicDesigR = () => {
   const [screenWidth, setScreenWidth] = useState(1200);
@@ -17,52 +18,6 @@ const GraphicDesigR = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // ✅ Responsive Grid Layout
-  const cardsContainer = {
-    display: "grid",
-    gap: "15px",
-    listStyle: "none",
-    padding: 0,
-    gridTemplateColumns:
-      screenWidth >= 1200
-        ? "repeat(5, 1fr)" // 5 per row desktop
-        : screenWidth >= 992
-        ? "repeat(3, 1fr)" // 3 per row laptop
-        : "repeat(2, 1fr)", // 2 per row mobile
-  };
-
-  const cardStyle = {
-    backgroundColor: "#fff",
-    borderRadius: "8px",
-    padding: "12px",
-    textAlign: "center",
-    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-    transition: "0.3s ease",
-  };
-
-  const imageStyle = {
-    maxWidth: "85%",
-    height: "auto",
-    borderRadius: "6px",
-  };
-
-  const cardTitle = {
-    marginTop: "8px",
-    fontSize: "0.95rem",
-    fontWeight: 600,
-  };
-
-  const buttonStyle = {
-    backgroundColor: "#000",
-    color: "#fff",
-    padding: "10px 22px",
-    borderRadius: "25px",
-    fontWeight: 600,
-    textDecoration: "none",
-    fontSize: "0.9rem",
-  };
-
-  // ✅ Normalize image source (string or object)
   const getSrc = (img) => (typeof img === "string" ? img : img?.src);
 
   const cardData = [
@@ -76,18 +31,90 @@ const GraphicDesigR = () => {
     { img: img8, title: "Mascot Design" },
   ];
 
+  // ✅ Grid Layout
+  const cardsContainer = {
+    display: "grid",
+    gap: "15px",
+    listStyle: "none",
+    padding: 0,
+    margin: 0,
+    gridTemplateColumns:
+      screenWidth >= 1200
+        ? "repeat(5, 1fr)"
+        : screenWidth >= 992
+        ? "repeat(3, 1fr)"
+        : "repeat(2, 1fr)",
+  };
+
+  // ✅ Card Style
+  const cardStyle = {
+    backgroundColor: "#fff",
+    border: "1px solid #0D2C6B",
+    borderRadius: "8px",
+    padding: "15px",
+    textAlign: "center",
+    boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+    transition: "transform 0.3s ease",
+    cursor: "pointer",
+  };
+
+ const imageWrapper = {
+  width: "100%",
+  aspectRatio: "4 / 3",  // maintain consistent aspect ratio
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginBottom: "10px",
+  overflow: "hidden",
+};
+
+const imageStyle = {
+  maxWidth: "100%",
+  maxHeight: "100%",
+  height: "auto",
+  width: "auto",
+  objectFit: "contain",
+  borderRadius: "6px",
+};
+
+
+  const cardTitle = {
+    color: "#0D2C6B",
+    fontWeight: 600,
+    fontSize: "0.9rem",
+    margin: 0,
+  };
+
+  const buttonWrapper = {
+    textAlign: "center",
+    marginTop: "30px",
+  };
+
+  const buttonStyle = {
+    backgroundColor: "#0D2C6B",
+    color: "#fff",
+    padding: "10px 22px",
+    borderRadius: "25px",
+    fontWeight: 600,
+    textDecoration: "none",
+    fontSize: "0.9rem",
+    display: "inline-block",
+  };
+
   return (
-    <section className="GraphicDesigR-page">
+    <section className="GraphicDesigR-page" style={{ padding: "40px 20px", backgroundColor: "#fff" }}>
       <div
         style={{
-          backgroundImage: `url(${getSrc(bg)})`, // ✅ Safe handling
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          width: "100%",
+          backgroundColor: "#fff",
+          // backgroundImage: `url(${getSrc(bg)})`,
+          // backgroundSize: "cover",
+          // backgroundRepeat: "no-repeat",
+          // backgroundPosition: "center",
+          // width: "100%",
         }}
       >
-        <div style={{ padding: "40px 20px", backgroundColor: "#fff" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          {/* Header */}
           <div style={{ textAlign: "center", marginBottom: "20px" }}>
             <h1
               style={{
@@ -110,22 +137,26 @@ const GraphicDesigR = () => {
             </p>
           </div>
 
+          {/* Cards */}
           <ul style={cardsContainer}>
-            {cardData.map((card, index) => (
+            {cardData.map(({ img, title }, index) => (
               <li key={index}>
-                <div style={cardStyle}>
-                  <Image
-                    src={getSrc(card.img)} // ✅ Safe handling
-                    alt={card.title}
-                    style={imageStyle}
-                  />
-                  <h4 style={cardTitle}>{card.title}</h4>
+                <div
+                  style={cardStyle}
+                  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                >
+                  <div style={imageWrapper}>
+                    <Image src={getSrc(img)} alt={title} style={imageStyle} />
+                  </div>
+                  <h4 style={cardTitle}>{title}</h4>
                 </div>
               </li>
             ))}
           </ul>
 
-          <div style={{ textAlign: "center", marginTop: "30px" }}>
+          {/* Enquiry CTA */}
+          <div style={buttonWrapper}>
             <Link href="#Contactform" style={buttonStyle}>
               Enquiry Now
             </Link>

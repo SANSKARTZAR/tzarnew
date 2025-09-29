@@ -1,60 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 import testimonialThree from "@/app/data/testimonialThree";
-import dynamic from "next/dynamic";
-import React, { useRef, useState, useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import Link from "next/link";
 import SingleTestimonial1 from "./SingleTestimonial1";
-
-const TinySlider1 = dynamic(() => import("@/app/componants/home/TinySlider1/TinySlider1"), {
-  ssr: false,
-});
-
-const settings = {
-  loop: true,
-  lazyload: true,
-  nav: false,
-  mouseDrag: true,
-  autoplay: true,
-  autoHeight: false, // ✅ Set to false to prevent jumpy layout
-  controls: false,
-  gutter: 20, // ✅ Increased for more spacing
-  autoplayButton: false,
-  autoplayButtonOutput: false,
-  responsive: {
-    568: {
-      items: 2,
-      gutter: 15,
-    },
-    668: {
-      items: 2,
-      gutter: 20,
-    },
-    768: {
-      items: 3,
-      gutter: 20,
-    },
-    886: {
-      items: 3,
-      gutter: 25,
-    },
-    998: {
-      items: 4,
-      gutter: 25,
-    },
-    1200: {
-      items: 5,
-      gutter: 30,
-    },
-  },
-};
 
 const { bg, tagline, title, testimonials } = testimonialThree;
 
 const TestimonialThree = () => {
-  const listRef = useRef(null);
-
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1200
   );
@@ -62,92 +16,111 @@ const TestimonialThree = () => {
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Responsive styles for the title based on window width
+  // Responsive columns
+  let columns = 7;
+  if (windowWidth <= 576) columns = 2;
+  else if (windowWidth <= 768) columns = 3;
+  else if (windowWidth <= 992) columns = 3;
+
+  // Responsive title
   let titleFontSize = "3rem";
   let titleLineHeight = 1.2;
-  let titlePadding = "0 15px";
-
   if (windowWidth <= 576) {
     titleFontSize = "1.6rem";
     titleLineHeight = 1.4;
-    titlePadding = "0 10px";
   } else if (windowWidth <= 768) {
     titleFontSize = "2.2rem";
     titleLineHeight = 1.3;
-    titlePadding = "0 15px";
   } else if (windowWidth <= 992) {
     titleFontSize = "2.6rem";
     titleLineHeight = 1.25;
-    titlePadding = "0 20px";
   }
 
-  const sectionTitleStyle = {
-    maxWidth: "900px",
-    margin: "0 auto",
-    padding: "0 15px",
-    textAlign: "center",
-  };
-
-  const taglineStyle = {
-    display: "block",
-    marginBottom: "0.5rem",
-    fontWeight: "500",
-    fontSize: "1rem",
-  };
-
-  const titleStyle = {
-    fontSize: titleFontSize,
-    lineHeight: titleLineHeight,
-    maxWidth: "100%",
-    wordWrap: "break-word",
-    margin: "0 auto",
-    padding: titlePadding,
-    fontWeight: "700",
-  };
-
   return (
-    <section className="testimonial-three">
+    <section
+      className="testimonial-three"
+      style={{ position: "relative", padding: "60px 0", background: "#fff" }}
+    >
+      {/* Background */}
       <div
         className="testimonial-three__map"
-        style={{ backgroundImage: `url(${bg.src})` }}
-      ></div>
+        style={{
+          backgroundImage: `url(${bg.src})`,
+          position: "absolute",
+          inset: 0,
+          opacity: 0.05,
+        }}
+      />
+
       <Container>
-        <div className="section-title" style={sectionTitleStyle}>
-          <span style={taglineStyle}>{tagline || "We Don't Sell Products"}</span>
-          <h2 className="section-title__title" style={titleStyle}>
+        {/* Section Title */}
+        <div
+          className="section-title"
+          style={{
+            maxWidth: "900px",
+            margin: "0 auto 40px auto",
+            textAlign: "center",
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              marginBottom: "0.5rem",
+              fontWeight: 500,
+              fontSize: "1rem",
+            }}
+          >
+            {tagline || "We Don't Sell Products"}
+          </span>
+          <h2
+            style={{
+              fontSize: titleFontSize,
+              lineHeight: titleLineHeight,
+              fontWeight: 700,
+              margin: 0,
+            }}
+          >
             {title || "WE MAKE ICONIC BRANDS"}
           </h2>
         </div>
-        <Row>
-          <Col xl={12}>
-           <div
-  className="testimonial-three__carousel"
-  style={{
-    overflow: "hidden", // ✅ Prevent horizontal scroll
-    padding: "20px 0",  // ✅ Space around carousel
-  }}
->
 
-              <TinySlider1 options={settings} listRef={listRef}>
-                {testimonials.map((testimonial) => (
-                  <SingleTestimonial1
-                    key={testimonial.id}
-                    testimonial={testimonial}
-                    listRef={listRef}
-                  />
-                ))}
-              </TinySlider1>
+        {/* Logo Grid */}
+        <div
+          className="testimonial-three__grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: `repeat(${columns}, 1fr)`,
+            gap: "25px",
+          }}
+        >
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              style={{
+                background: "transparent",
+                border: "1px solid #000",
+                borderRadius: "8px",
+                boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                aspectRatio: "1 / 1", // 🔲 Square shape
+              }}
+            >
+              <SingleTestimonial1 testimonial={testimonial} />
             </div>
-          </Col>
-        </Row>
-        <br />
-        <br />
-        <div className="viewallservice-btn" style={{ textAlign: "center" }}>
+          ))}
+        </div>
+
+        {/* View More Button */}
+        <div
+          className="viewallservice-btn"
+          style={{ textAlign: "center", marginTop: "40px" }}
+        >
           <Link
             href="/our-client"
             className="BtnStudio GraphicDesigning__studiobtn"

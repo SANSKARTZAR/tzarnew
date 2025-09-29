@@ -1,91 +1,79 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 import testimonialseoclient from "@/app/data/testimonialseoclient";
-import dynamic from "next/dynamic";
-import React, { useRef } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
 import Link from "next/link";
 import SingleTestimonial1 from "./SingleTestimonial1";
-
-const TinySlider1 = dynamic(() => import("@/app/componants/home/TinySlider1/TinySlider1"), {
-  ssr: false,
-});
-
-const settings = {
-  loop: true,
-  lazyload: true,
-  nav: false,
-  mouseDrag: true,
-  items: 2,
-  autoplay: true,
-  autoHeight: true,
-  controls: false,
-  gutter: 5,
-  autoplayButton: false,
-  autoplayButtonOutput: false,
-  responsive: {
-    568: {
-      items: 2,
-      gutter: 5,
-    },
-    668: {
-      items: 3,
-      gutter: 30,
-    },
-    768: {
-      items: 3,
-      gutter: 30,
-    },
-    886: {
-      items: 5,
-      gutter: 30,
-    },
-    998: {
-      items: 4,
-      gutter: 30,
-    },
-    1200: {
-      items: 6,
-      gutter: 30,
-    },
-
-  },
-};
 
 const { bg, tagline, title, testimonials } = testimonialseoclient;
 
 const TestimonialThreeSeo = () => {
-  const listRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Responsive columns
+  let columns = 7;
+  if (windowWidth <= 576) columns = 2;
+  else if (windowWidth <= 768) columns = 3;
+  else if (windowWidth <= 992) columns = 4;
+  else if (windowWidth <= 1200) columns = 5;
 
   return (
-    <section className="testimonial-three">
+    <section className="testimonial-three" style={{ position: "relative", padding: "60px 0", background: "#fff" }}>
+      {/* Background Map (faint) */}
       <div
         className="testimonial-three__map"
-        style={{ backgroundImage: `url(${bg.src})` }}
+        style={{
+          backgroundImage: `url(${bg?.src})`,
+          position: "absolute",
+          inset: 0,
+          opacity: 0.05,
+        }}
       ></div>
+
       <Container>
-        <div className="section-title text-center">
-          <span className="section-title__tagline">We Don't Sell Products</span>
-          <h2 className="section-title__title">WE MAKE ICONIC BRANDS</h2>
+        <div className="section-title text-center" style={{ marginBottom: "40px" }}>
+          <span className="section-title__tagline">{tagline || "We Don't Sell Products"}</span>
+          <h2 className="section-title__title">{title || "WE MAKE ICONIC BRANDS"}</h2>
         </div>
-        <Row>
-          <Col xl={12}>
-            <div className="testimonial-three__carousel">
-              <TinySlider1 options={settings} listRef={listRef}>
-                {testimonials.map((testimonial) => (
-                  <SingleTestimonial1
-                    key={testimonial.id}
-                    testimonial={testimonial}
-                    listRef={listRef}
-                  />
-                ))}
-              </TinySlider1>
+
+        {/* Grid instead of slider */}
+        <div
+          className="testimonial-three__grid"
+          style={{
+            display: "grid",
+            gridTemplateColumns: `repeat(${columns}, 1fr)`,
+            gap: "20px",
+          }}
+        >
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              style={{
+                background: "#fff",
+                border: "1px solid #000",
+                borderRadius: "8px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                aspectRatio: "1 / 1",
+                boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+              }}
+            >
+              <SingleTestimonial1 testimonial={testimonial} />
             </div>
-          </Col>
-        </Row>
-        <br/>
-        <br/>
-        <div className="viewallservice-btn">
+          ))}
+        </div>
+
+        <div className="viewallservice-btn" style={{ textAlign: "center", marginTop: "40px" }}>
           <Link href="/our-client" className="BtnStudio GraphicDesigning__studiobtn">
             View More
           </Link>
