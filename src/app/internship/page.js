@@ -3,6 +3,7 @@ import JobTzar from "../componants/Career/JobTzar";
 import PageHeaderInternship from "../componants/Internship/PageHeaderInternship";
 import ContactForm from "../componants/home/ContactForm";
 import Internship from "../componants/Internship/Internship";
+import PopupHireUs from "../componants/home/PopupHireUs";
 
 
 export const metadata = {
@@ -15,7 +16,8 @@ export default function about() {
         <>
             <PageHeaderInternship title="Internship"/>
             <Internship/>
-            <ContactForm />
+             <PopupHireUs/>
+            {/* <ContactForm /> */}
         </>
     )
 }
