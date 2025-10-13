@@ -20,6 +20,7 @@
     "fortawesome": "^0.0.1-security",
     "framer-motion": "^11.2.12",
     "jarallax": "^2.2.1",
+    "lucide-react": "^0.545.0",
     "mdb-react-ui-kit": "^8.0.0",
     "mdb-ui-kit": "^7.3.2",
     "mongoose": "^8.4.0",

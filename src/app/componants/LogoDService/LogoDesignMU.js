@@ -1,33 +1,85 @@
-import React from 'react'
-import { Container, Row, Col, Image } from 'react-bootstrap'
-import logodesignmu from '@/app/data/logodesignmu'
-const { title, tagline, socials, MUImages } = logodesignmu;
+"use client";
+
+import React from "react";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import logodesignmu from "@/app/data/logodesignmu";
+
+const { MUImages } = logodesignmu;
 
 function LogoDesignMU({ className = "" }) {
+  const sectionStyle = {
+    padding: "30px 0", // reduced from 50px to 30px
+    marginTop: "-20px", // optional: negative margin to pull section upward
+  };
+
+  const textCenterStyle = {
+    textAlign: "center",
+    padding: "20px 0",
+  };
+
+  const titleStyle = {
+    fontWeight: "700",
+    fontSize: "2.3rem",
+  };
+
+  const subtitleStyle = {
+    color: "#6c757d",
+    marginBottom: "8px",
+  };
+
+  const imgWrapperStyle = {
+    overflow: "hidden",
+    borderRadius: "18px",
+    boxShadow: "0 6px 15px rgba(0,0,0,0.15)",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    width: "100%",
+  };
+
+  const imgStyle = {
+    width: "100%",
+    height: "auto",
+    objectFit: "cover",
+    display: "block",
+  };
+
   return (
-    <>
-      <section className={`MUCOntainer ${className}`}>
-        <Container>
-          <br />
-          <h6 className="text-centerMU">about Logo Design MockUp</h6>
-          <h1 className="text-centerMU1">Logo Design MockUp Services</h1>
-          <br />
-          <div className="MainContainer">
-            {MUImages.map(({ id, image }) => (
-              <div key={id} className="GapimgContainer">
+    <section className={`MUContainer ${className}`} style={sectionStyle}>
+      <Container>
+        <div style={textCenterStyle}>
+          <h6 style={subtitleStyle}>About Logo Design MockUp</h6>
+          <h1 style={titleStyle}>Logo Design MockUp Services</h1>
+        </div>
+
+        <Row className="justify-content-center g-4">
+          {MUImages.map(({ id, image }) => (
+            <Col key={id} xs={12} sm={12} md={6}>
+              <div
+                style={imgWrapperStyle}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-6px)";
+                  e.currentTarget.style.boxShadow =
+                    "0 10px 25px rgba(0,0,0,0.2)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow =
+                    "0 6px 15px rgba(0,0,0,0.15)";
+                }}
+              >
                 <Image
                   src={require(`@/assets/images/Mockup/${image}`).default.src}
-                  alt=""
-                  className="Gapimag"
+                  alt={`Mockup ${id}`}
+                  style={imgStyle}
+                  loading="lazy"
+                  fluid
                 />
-
               </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-    </>
-  )
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  );
 }
 
-export default LogoDesignMU; 
+export default LogoDesignMU;

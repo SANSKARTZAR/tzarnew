@@ -16,8 +16,8 @@ export default function about() {
         <>
             <PageHeaderInternship title="Internship"/>
             <Internship/>
-             <PopupHireUs/>
-            {/* <ContactForm /> */}
+             {/* <PopupHireUs/> */}
+            <ContactForm />
         </>
     )
 }

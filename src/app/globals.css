@@ -318,7 +318,7 @@ a {
 }
 
 .WebsiteDevelopment-page {
-  padding: 40px 0 20px; /* Top, Right/Left, Bottom */
+  padding: 0 0 0; /* Top, Right/Left, Bottom */
   min-height: unset;
   height: auto;
   background: #f8f8f8;
@@ -369,10 +369,16 @@ a {
 
 @media screen and (min-width: 768px) and (max-width: 1366px) {
   .WebsiteDevelopment-page {
-    padding-bottom: 20px !important;
+    padding-bottom: 0 !important;
   }
 }
 
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+  .WebsiteDevelopment-page {
+    padding: 45px 0;
+    height: 1200px;
+  }
+}
 /* Ensure images are centered on tablets */
 .ImgTxtSecLG__left-wrapper {
   display: flex;

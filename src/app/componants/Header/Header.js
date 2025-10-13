@@ -3,40 +3,35 @@ import { useRootContext } from "@/app/componants/context/context";
 import header from "@/app/data/header";
 import useScroll from "@/app/componants/hooks/useScroll";
 import Link from "next/link";
-// import React from "react";
 import { Image } from "react-bootstrap";
 import NavItem from "./NavItem";
-import React, { useState } from 'react'
-import Modal from 'react-modal'
-import PopupHireUs from "../home/PopupHireUs";
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 import MobileMenu from "../MobileMenu/MobileMenu";
 
-const { logo1, logo2, phone, phone1, phoneIcon, navItems } = header;
+const { logo1, logo2, phone, phone1, navItems } = header;
 
 const Header = ({ pageTitle }) => {
   const scrollTop = useScroll(130);
   const { toggleMenu, toggleSearch } = useRootContext();
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const customStyles = {
     overlay: {
       backgroundColor: 'transparent',
-      zindex: '999999'
+      zIndex: '999999'
     },
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-16%',
-      transform: 'translate(-50%, -50%)',
-      zindex: '999999',
-      borderradius: 'none'
-    }
+    // content: {
+    //   top: '50%',
+    //   left: '10%',
+    //   right: 'auto',
+    //   bottom: 'auto',
+    //   marginRight: '-10%',
+    //   transform: 'translate(-50%, -50%)',
+    //   zIndex: '999999',
+    //   borderRadius: 'none'
+    // }
   };
-
-
-
 
   return (
     <header
@@ -65,6 +60,7 @@ const Header = ({ pageTitle }) => {
               : "main-menu-wrapper clearfix"
           }
         >
+          {/* Logo */}
           <div className="main-menu-wrapper__logo">
             <Link href="/">
               <Image
@@ -74,12 +70,12 @@ const Header = ({ pageTitle }) => {
               />
             </Link>
           </div>
+
+          {/* Main Menu */}
           <div className="main-menu-wrapper__main-menu">
             <span onClick={() => setIsOpen(true)} className="mobile-nav__toggler">
               <i className="fa fa-bars"></i>
             </span>
-
-
 
             <ul className="main-menu__list">
               {navItems.map((navItem) => (
@@ -91,34 +87,41 @@ const Header = ({ pageTitle }) => {
             </ul>
           </div>
 
+          {/* Phone Section (Right Side, No Icon, Text White) */}
           <div className="main-menu-wrapper__right">
-            <div className="main-menu-wrapper__call">
-              <div className="main-menu-wrapper__call-icon">
-                <Image src={phoneIcon.src} alt="" width="34" height="34" />
-              </div>
-              <div className="main-menu-wrapper__call-number">
-                <p>Call Anytime</p>
-                <h5>
-                  <a href={`tel:${phone.split(" ").join("")}`}>+ {phone}</a> &nbsp;&nbsp;
-                  <a href={`tel:${phone1.split(" ").join("")}`}>+ {phone1}</a>
-                </h5>
-              </div>
+            <div
+              className="main-menu-wrapper__call"
+              style={{
+                display: "flex",
+                flexDirection: "column", // stack numbers vertically
+                alignItems: "flex-end", // right align
+                justifyContent: "center",
+                color: "#fff", // text white
+                textAlign: "right",
+              }}
+            >
+              <p style={{ margin: "0 0 5px 0", fontSize: "14px", color: "#fff" }}>
+                Call Anytime
+              </p>
+              <a
+                href={`tel:${phone.split(" ").join("")}`}
+                style={{ textDecoration: "none", color: "#fff", lineHeight: "1.2" }}
+              >
+                + {phone}
+              </a>
+              <a
+                href={`tel:${phone1.split(" ").join("")}`}
+                style={{ textDecoration: "none", color: "#fff", lineHeight: "1.2" }}
+              >
+                + {phone1}
+              </a>
             </div>
-            {/* <div className="main-menu-wrapper__search-box">
-              <span
-                onClick={toggleSearch}
-                style={{ cursor: "pointer" }}
-                className="main-menu-wrapper__search search-toggler icon-magnifying-glass"
-              ></span>
-            </div> */}
 
+            {/* Mobile Menu Modal */}
             <div className="header-form">
               <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
-
-                {/* <button onClick={() => setIsOpen(false)} className="close-form">×</button> */}
-                <div className="mobile-nav__wrapper  animated fadeInLeft">
+                <div className="mobile-nav__wrapper animated fadeInLeft">
                   <div className="mobile-nav__content">
-
                     <span
                       onClick={() => setIsOpen(false)}
                       className="mobile-nav__close mobile-nav__toggler"

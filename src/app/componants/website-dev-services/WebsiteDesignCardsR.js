@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import websiteDevCard from '@/app/data/websiteDevCards';
@@ -21,7 +21,16 @@ const {
 
 function WebsiteDesignCardsR({ className = "" }) {
   return (
-    <section className={`WebsiteDevelopment-page ${className}`}>
+    <section
+  className="WebsiteDevelopment-page"
+  style={{
+    margin: 0,
+    padding: "40px 0 10px",
+    height: "auto",
+    background: "#f8f8f8",
+  }}
+>
+
       <Container>
         <h1 className="section-title__title text-center">{HeadTitle}</h1>
         <Row className="g-4">

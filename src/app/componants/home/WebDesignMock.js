@@ -32,22 +32,32 @@ export default class WebDesignMock extends Component {
     return (
       <>
         {/* Inline responsive fix for iPads */}
-        <style>{`
-          /* iPad Pro, Air, Mini */
-          @media (max-width: 1366px) and (min-width: 768px) {
-            .section-titlemk p,
-            .section-titlemk h2 {
-              margin-left: 0 !important;
-              text-align: center !important;
-              display: block;
-            }
-          }
-        `}</style>
+       <style>{`
+  /* Center heading and paragraph on all devices */
+  .section-titlemk p,
+  .section-titlemk h2 {
+    margin: 0 auto !important;
+    text-align: center !important;
+    display: block;
+  }
 
+  /* Optional: Shift entire section upwards for tablets if needed */
+  @media (max-width: 1366px) and (min-width: 768px) {
+    .ContainerWeb {
+      margin-top: 50px; /* adjust value as needed */
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 600px) {
+    .ContainerWeb {
+      margin-top: -60px; /* fine-tune for small tablets */
+    }
+  }
+`}</style>
         <section className="ContainerWeb">
           <div className="section-titlemk text-center">
             <p className="section-title__taglinemk">Website Design & Development</p>
-            <h2 className="section-title__titlemk" style={{ marginLeft: "0px" }}>
+            <h2 className="section-title__titlemk">
               Showcase Mockup
             </h2>
           </div>

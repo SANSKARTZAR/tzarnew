@@ -41,6 +41,25 @@ const TestimonialFive = () => {
 
   return (
     <section className="testimonial-threeWD">
+        <style>{`
+    /* Shift the testimonial section down */
+    .testimonial-threeWD {
+      margin-top: 80px; /* Adjust this value as needed */
+    }
+
+    /* Optional: responsive adjustments */
+    @media (max-width: 1200px) {
+      .testimonial-threeWD {
+        margin-top: 60px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-threeWD {
+        margin-top: 40px;
+      }
+    }
+  `}</style>
       <div
         className="testimonial-three__map"
         style={{ backgroundImage: `url(${bg.src})` }}
