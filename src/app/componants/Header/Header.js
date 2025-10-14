@@ -68,13 +68,13 @@ const Header = ({ pageTitle }) => {
 
           {/* Main Menu */}
           {/* Main Menu */}
+{/* Main Menu */}
 <div
   className="main-menu-wrapper__main-menu"
   style={{
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "center", // center the menu wrapper
     alignItems: "center",
-    flex: 1,
   }}
 >
   <span onClick={() => setIsOpen(true)} className="mobile-nav__toggler">
@@ -84,13 +84,13 @@ const Header = ({ pageTitle }) => {
   <ul
     className="main-menu__list"
     style={{
-      display: "flex",
-      gap: "15px", // default gap
+      display: "inline-flex", // keep menu inline
+      gap: "15px",
       margin: 0,
       padding: 0,
-      flexWrap: "wrap", // allows wrapping on smaller screens
-      justifyContent: "center",
       listStyle: "none",
+      justifyContent: "center", // center menu items
+      width: "auto",
     }}
   >
     {navItems.map((navItem) => (
@@ -102,30 +102,28 @@ const Header = ({ pageTitle }) => {
   </ul>
 </div>
 
-{/* Add this style tag somewhere in your component or global CSS */}
+{/* Add this style for responsiveness */}
 <style jsx>{`
-  @media screen and (max-width: 1440px) { /* Apple laptops like 13-15 inch */
+  @media screen and (max-width: 1500px) {
     .main-menu__list {
-      gap: 5px !important; /* reduce horizontal gap */
+      gap: 12px !important;
     }
   }
 
-  @media screen and (max-width: 1200px) { 
+  @media screen and (max-width: 1200px) {
     .main-menu__list {
-      gap: 8px !important;
-      justify-content: center;
+      gap: 10px !important;
     }
   }
 
-  @media screen and (max-width: 992px) { 
+  @media screen and (max-width: 992px) {
     .main-menu__list {
-      flex-direction: column; /* stack menu items */
+      flex-direction: column;
       align-items: center;
       gap: 12px !important;
     }
   }
 `}</style>
-
 
           {/* Phone Section (Right Side) */}
           <div className="main-menu-wrapper__right">
