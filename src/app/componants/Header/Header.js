@@ -69,11 +69,12 @@ const Header = ({ pageTitle }) => {
           {/* Main Menu */}
           {/* Main Menu */}
 {/* Main Menu */}
+{/* Main Menu */}
 <div
   className="main-menu-wrapper__main-menu"
   style={{
     display: "flex",
-    justifyContent: "center", // center the menu wrapper
+    justifyContent: "center",
     alignItems: "center",
   }}
 >
@@ -84,12 +85,12 @@ const Header = ({ pageTitle }) => {
   <ul
     className="main-menu__list"
     style={{
-      display: "inline-flex", // keep menu inline
+      display: "inline-flex",
       gap: "15px",
       margin: 0,
       padding: 0,
       listStyle: "none",
-      justifyContent: "center", // center menu items
+      justifyContent: "center",
       width: "auto",
     }}
   >
@@ -102,15 +103,23 @@ const Header = ({ pageTitle }) => {
   </ul>
 </div>
 
-{/* Add this style for responsiveness */}
 <style jsx>{`
+  /* Shift menu slightly left on wide laptops to avoid overlap */
   @media screen and (max-width: 1500px) {
+    .main-menu-wrapper__main-menu {
+      justify-content: flex-start; /* shift menu left */
+      padding-left: 60px; /* adjust spacing from left edge */
+    }
     .main-menu__list {
       gap: 12px !important;
     }
   }
 
   @media screen and (max-width: 1200px) {
+    .main-menu-wrapper__main-menu {
+      justify-content: center; /* recenter on smaller screens */
+      padding-left: 0;
+    }
     .main-menu__list {
       gap: 10px !important;
     }
@@ -124,6 +133,7 @@ const Header = ({ pageTitle }) => {
     }
   }
 `}</style>
+
 
           {/* Phone Section (Right Side) */}
           <div className="main-menu-wrapper__right">
