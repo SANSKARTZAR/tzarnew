@@ -21,16 +21,6 @@ const Header = ({ pageTitle }) => {
       backgroundColor: 'transparent',
       zIndex: '999999'
     },
-    // content: {
-    //   top: '50%',
-    //   left: '10%',
-    //   right: 'auto',
-    //   bottom: 'auto',
-    //   marginRight: '-10%',
-    //   transform: 'translate(-50%, -50%)',
-    //   zIndex: '999999',
-    //   borderRadius: 'none'
-    // }
   };
 
   return (
@@ -59,6 +49,11 @@ const Header = ({ pageTitle }) => {
               ? "sticky-header__content main-menu-wrapper clearfix"
               : "main-menu-wrapper clearfix"
           }
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
         >
           {/* Logo */}
           <div className="main-menu-wrapper__logo">
@@ -72,31 +67,76 @@ const Header = ({ pageTitle }) => {
           </div>
 
           {/* Main Menu */}
-          <div className="main-menu-wrapper__main-menu">
-            <span onClick={() => setIsOpen(true)} className="mobile-nav__toggler">
-              <i className="fa fa-bars"></i>
-            </span>
+          {/* Main Menu */}
+<div
+  className="main-menu-wrapper__main-menu"
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  }}
+>
+  <span onClick={() => setIsOpen(true)} className="mobile-nav__toggler">
+    <i className="fa fa-bars"></i>
+  </span>
 
-            <ul className="main-menu__list">
-              {navItems.map((navItem) => (
-                <NavItem key={navItem.id} navItem={navItem} />
-              ))}
-              <li>
-                <Link href="/hire-us" className="button-header">Hire Us</Link>
-              </li>
-            </ul>
-          </div>
+  <ul
+    className="main-menu__list"
+    style={{
+      display: "flex",
+      gap: "15px", // default gap
+      margin: 0,
+      padding: 0,
+      flexWrap: "wrap", // allows wrapping on smaller screens
+      justifyContent: "center",
+      listStyle: "none",
+    }}
+  >
+    {navItems.map((navItem) => (
+      <NavItem key={navItem.id} navItem={navItem} />
+    ))}
+    <li>
+      <Link href="/hire-us" className="button-header">Hire Us</Link>
+    </li>
+  </ul>
+</div>
 
-          {/* Phone Section (Right Side, No Icon, Text White) */}
+{/* Add this style tag somewhere in your component or global CSS */}
+<style jsx>{`
+  @media screen and (max-width: 1440px) { /* Apple laptops like 13-15 inch */
+    .main-menu__list {
+      gap: 5px !important; /* reduce horizontal gap */
+    }
+  }
+
+  @media screen and (max-width: 1200px) { 
+    .main-menu__list {
+      gap: 8px !important;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 992px) { 
+    .main-menu__list {
+      flex-direction: column; /* stack menu items */
+      align-items: center;
+      gap: 12px !important;
+    }
+  }
+`}</style>
+
+
+          {/* Phone Section (Right Side) */}
           <div className="main-menu-wrapper__right">
             <div
               className="main-menu-wrapper__call"
               style={{
                 display: "flex",
-                flexDirection: "column", // stack numbers vertically
-                alignItems: "flex-end", // right align
+                flexDirection: "column",
+                alignItems: "flex-end",
                 justifyContent: "center",
-                color: "#fff", // text white
+                color: "#fff",
                 textAlign: "right",
               }}
             >
