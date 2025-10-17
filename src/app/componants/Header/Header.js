@@ -1,37 +1,51 @@
-"use client";
+"use client"
 import { useRootContext } from "@/app/componants/context/context";
 import header from "@/app/data/header";
 import useScroll from "@/app/componants/hooks/useScroll";
 import Link from "next/link";
+// import React from "react";
 import { Image } from "react-bootstrap";
 import NavItem from "./NavItem";
-import React, { useState } from "react";
-import Modal from "react-modal";
+import React, { useState } from 'react'
+import Modal from 'react-modal'
+import PopupHireUs from "../home/PopupHireUs";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
-const { logo1, logo2, phone, phone1, navItems } = header;
+const { logo1, logo2, phone, phone1, phoneIcon, navItems } = header;
 
 const Header = ({ pageTitle }) => {
   const scrollTop = useScroll(130);
   const { toggleMenu, toggleSearch } = useRootContext();
-  const [isOpen, setIsOpen] = useState(false);
 
+  const [isOpen, setIsOpen] = useState(false)
   const customStyles = {
     overlay: {
-      backgroundColor: "transparent",
-      zIndex: "999999",
+      backgroundColor: 'transparent',
+      zindex: '999999'
     },
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-16%',
+      transform: 'translate(-50%, -50%)',
+      zindex: '999999',
+      borderradius: 'none'
+    }
   };
+
+
+
 
   return (
     <header
       className={`main-header${pageTitle === "Home Two"
         ? " main-header-two"
         : pageTitle === "Home Three"
-        ? " main-header-three"
-        : ""
+          ? " main-header-three"
+          : ""
         } clearfix`}
-      style={{ width: "100%" }}
     >
       <nav
         className={`${scrollTop
@@ -43,154 +57,79 @@ const Header = ({ pageTitle }) => {
               ? " main-menu-three"
               : ""
           }`}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          width: "100%",
-          padding: "0 40px",
-          height: "90px",
-          boxSizing: "border-box",
-        }}
       >
-        {/* Logo */}
-        <div className="main-menu-wrapper__logo" style={{ flex: "0 0 auto" }}>
-          <Link href="/">
-            <Image
-              src={pageTitle === "Home Two" ? logo2.src : logo1.src}
-              alt="logo"
-              width="70"
-              height="auto"
-            />
-          </Link>
-        </div>
-
-        {/* Centered Menu */}
         <div
-          className="main-menu-wrapper__main-menu"
-          style={{
-            flex: "1",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          className={
+            scrollTop
+              ? "sticky-header__content main-menu-wrapper clearfix"
+              : "main-menu-wrapper clearfix"
+          }
         >
-          <span
-            onClick={() => setIsOpen(true)}
-            className="mobile-nav__toggler"
-            style={{ display: "none" }}
-          >
-            <i className="fa fa-bars"></i>
-          </span>
+          <div className="main-menu-wrapper__logo">
+            <Link href="/">
+              <Image
+                src={pageTitle === "Home Two" ? logo2.src : logo1.src}
+                alt=""
+                width="70px"
+              />
+            </Link>
+          </div>
+          <div className="main-menu-wrapper__main-menu">
+            <span onClick={() => setIsOpen(true)} className="mobile-nav__toggler">
+              <i className="fa fa-bars"></i>
+            </span>
 
-          <ul
-            className="main-menu__list"
-            style={{
-              display: "flex",
-              gap: "35px",
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-              alignItems: "center",
-            }}
-          >
-            {navItems.map((navItem) => (
-              <NavItem key={navItem.id} navItem={navItem} />
-            ))}
-          </ul>
-        </div>
 
-        {/* Right Section: Phone + Hire Us */}
-        <div
-          className="main-menu-wrapper__right"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            gap: "20px",
-            flex: "0 0 auto",
-          }}
-        >
-          <div
-            className="main-menu-wrapper__call"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-              color: "#fff",
-              textAlign: "right",
-              lineHeight: "1.2",
-            }}
-          >
-            <p
-              style={{
-                margin: "0 0 5px 0",
-                fontSize: "14px",
-                color: "#fff",
-              }}
-            >
-              Call Anytime
-            </p>
-            <a
-              href={`tel:${phone.split(" ").join("")}`}
-              style={{
-                textDecoration: "none",
-                color: "#fff",
-                fontSize: "14px",
-              }}
-            >
-              + {phone}
-            </a>
-            <a
-              href={`tel:${phone1.split(" ").join("")}`}
-              style={{
-                textDecoration: "none",
-                color: "#fff",
-                fontSize: "14px",
-              }}
-            >
-              + {phone1}
-            </a>
+
+            <ul className="main-menu__list">
+              {navItems.map((navItem) => (
+                <NavItem key={navItem.id} navItem={navItem} />
+              ))}
+              <li>
+                <Link href="/hire-us" className="button-header">Hire Us</Link>
+              </li>
+            </ul>
           </div>
 
-          {/* Hire Us Button */}
-          <Link
-            href="/hire-us"
-            className="button-header"
-            style={{
-              backgroundColor: "#fff",
-              color: "#0D2C6B",
-              padding: "8px 18px",
-              borderRadius: "25px",
-              textDecoration: "none",
-              fontWeight: "600",
-              fontSize: "14px",
-              transition: "all 0.3s ease",
-              whiteSpace: "nowrap",
-            }}
-          >
-            Hire Us
-          </Link>
-
-          {/* Mobile Menu */}
-          <div className="header-form">
-            <Modal
-              isOpen={isOpen}
-              onRequestClose={() => setIsOpen(false)}
-              style={customStyles}
-            >
-              <div className="mobile-nav__wrapper animated fadeInLeft">
-                <div className="mobile-nav__content">
-                  <span
-                    onClick={() => setIsOpen(false)}
-                    className="mobile-nav__close mobile-nav__toggler"
-                  >
-                    <i className="fa fa-times"></i>
-                  </span>
-                  <MobileMenu />
-                </div>
+          <div className="main-menu-wrapper__right">
+            <div className="main-menu-wrapper__call">
+              <div className="main-menu-wrapper__call-icon">
+                <Image src={phoneIcon.src} alt="" width="34" height="34" />
               </div>
-            </Modal>
+              <div className="main-menu-wrapper__call-number">
+                <p>Call Anytime</p>
+                <h5>
+                  <a href={`tel:${phone.split(" ").join("")}`}>+ {phone}</a> &nbsp;&nbsp;
+                  <a href={`tel:${phone1.split(" ").join("")}`}>+ {phone1}</a>
+                </h5>
+              </div>
+            </div>
+            {/* <div className="main-menu-wrapper__search-box">
+              <span
+                onClick={toggleSearch}
+                style={{ cursor: "pointer" }}
+                className="main-menu-wrapper__search search-toggler icon-magnifying-glass"
+              ></span>
+            </div> */}
+
+            <div className="header-form">
+              <Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
+
+                {/* <button onClick={() => setIsOpen(false)} className="close-form">×</button> */}
+                <div className="mobile-nav__wrapper  animated fadeInLeft">
+                  <div className="mobile-nav__content">
+
+                    <span
+                      onClick={() => setIsOpen(false)}
+                      className="mobile-nav__close mobile-nav__toggler"
+                    >
+                      <i className="fa fa-times"></i>
+                    </span>
+                    <MobileMenu />
+                  </div>
+                </div>
+              </Modal>
+            </div>
           </div>
         </div>
       </nav>
