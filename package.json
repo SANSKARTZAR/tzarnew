@@ -23,7 +23,7 @@
     "lucide-react": "^0.545.0",
     "mdb-react-ui-kit": "^8.0.0",
     "mdb-ui-kit": "^7.3.2",
-    "mongoose": "^8.4.0",
+    "mongoose": "^8.20.1",
     "next": "14.2.3",
     "next-seo": "^6.5.0",
     "react": "^18.3.1",

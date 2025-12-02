@@ -6,21 +6,21 @@ const hireusSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    phone: {
-      type: String,
-      required: true,
-    },
-    service: {
-      type: String,
-      required: true,
-    },
     email: {
       type: String,
       required: true,
     },
-    query: {
+    phone: {
       type: String,
-      required: false,
+      required: true,
+    },
+    internshipType: {
+      type: String,
+      required: true,
+    },
+    resume: {
+      type: String, // file name or file URL
+      required: true,
     },
   },
   {
@@ -28,6 +28,7 @@ const hireusSchema = new mongoose.Schema(
   }
 );
 
-const Hireus = mongoose.models.Hireus || mongoose.model("Hireus", hireusSchema);
+const Hireus =
+  mongoose.models.Hireus || mongoose.model("Hireus", hireusSchema);
 
 export default Hireus;

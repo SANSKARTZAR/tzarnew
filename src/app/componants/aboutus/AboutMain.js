@@ -3,42 +3,87 @@ import aboutPage from "@/app/data/aboutPage";
 import Link from "next/link";
 import React from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import Tilt from "react-tilt";
 import Title from "@/app/componants/Reuseable/Title";
 
-const { images, badge, tagline, title, text1, text2 } = aboutPage;
+const { tagline, title, text1, text2 } = aboutPage;
 
 const AboutPage = () => {
   return (
-    <section className="about-page">
+    <section
+      className="about-page"
+      style={{
+        padding: "60px 0",
+        backgroundColor: "#ffffff"
+      }}
+    >
       <Container>
-        <Row>
+        <Row className="align-items-center">
+          
+          {/* LEFT FULL IMAGE */}
           <Col xl={6}>
-            <div className="about-page__left">
-              <ul className="list-unstyled about-page__images">
-                {images.map((image, i) => (
-                  <li key={i}>
-                    <div className={`about-page__img-${i + 1}`}>
-                      <Image
-                        src={require(`@/assets/images/resources/${image}`).default.src}
-                        alt=""
-                      />
-                    </div>
-                  </li>
-                ))}
-              </ul>
+            <div
+              style={{
+                width: "100%",
+                backgroundColor: "#ffffff",
+              }}
+            >
+              <Image
+                src={require("@/assets/images/resources/about-page-img-2.png").default.src}
+                alt="About Image"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain",
+                  display: "block",
+                  filter: "grayscale(100%)"
+                }}
+              />
             </div>
-          </Col> 
+          </Col>
+
+          {/* RIGHT TEXT */}
           <Col xl={6}>
-            <div className="about-page__right">
+            <div
+              className="about-page__right"
+              style={{
+                paddingLeft: "40px",
+                backgroundColor: "#ffffff",
+              }}
+            >
               <Title title={title} tagline={tagline} className="text-left" />
-              <p className="about-page__right-text-1">{text1}</p>
-              <h4 className="about-page__right-text-2">{text2}</h4>
-              <Link href="/about" className="thm-btn abut-page__btn">
+
+              <p style={{ marginTop: "10px", lineHeight: "1.7" }}>
+                {text1}
+              </p>
+
+              <h4
+                style={{
+                  marginTop: "25px",
+                  fontWeight: 600,
+                  lineHeight: "1.5",
+                  color: "#0c2d6b",
+                }}
+              >
+                {text2}
+              </h4>
+
+              <Link
+                href="/about"
+                className="thm-btn abut-page__btn"
+                style={{
+                  display: "inline-block",
+                  marginTop: "25px",
+                  padding: "12px 28px",
+                  backgroundColor: "#0c2d6b",
+                  color: "#fff",
+                  borderRadius: "5px",
+                }}
+              >
                 Discover More
               </Link>
             </div>
           </Col>
+
         </Row>
       </Container>
     </section>

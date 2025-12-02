@@ -4,18 +4,18 @@ const teamTwo = {
   socials: ["fab fa-twitter", "fab fa-facebook", "fab fa-instagram"],
   teams: [
     {
-      id: 1,
-      image: "team-page-img-1.jpg",
-      title: "Creative Designer",
-      name: "Kaustav Roy",
-      describe:"With indepth knowledge of Graphic Design",
-    },
-    {
       id: 2,
       image: "team-page-img-7.jpg",
-      title: "Performance Marketing Executives ",
-      name: "Yash Mishra",
-      // describe:"Responsible for planning, executing, and optimizing digital marketing campaigns to achieve measurable business results.",
+      title: "Web Developer",
+      name: "Nistha Bhati",
+      describe:"Full-stack web developer building scalable, visually polished, and intuitive web platforms.",
+    },
+    {
+      id: 1,
+      image: "team-page-img-1.webp",
+      title: "Social Media",
+      name: "Devika Kalal",
+      describe:"With indepth knowledge of Social media",
     },
     {
       id: 3,
@@ -24,31 +24,34 @@ const teamTwo = {
       name: "Ankit",
       describe:"Budding with interesting throughts and ideas , he can create an entire new world of colours , images and text"
     },
+
+    
+    {
+      id: 6,
+      image: "vivek11.png",
+      title: "Website Developer",
+      name: "Deepak Yadav",
+    },   
+    {
+      id: 7,
+      image: "sanskar11.webp",
+      title: "Graphic Designer",
+      name: "Jahid",
+    },
+
     {
       id: 4,
-      image: "team-page-img-4.jpg",
-      title: "Business Haed ",
-      name: "Nidhi",
-      describe:"A combination of expertise and knowledge"
-    },
-    {
-      id: 5,
       image: "team-page-img-5.jpg",
       title: "Sale Development Executive ",
       name: "Parnika",
       describe:"She has serious attitude towards the work when it comes to delivering results to clients ",
     },
     {
-      id: 6,
-      image: "vivek11.jpg",
-      title: "Website Developer",
-      name: "Vivek",
-    },   
-    {
-      id: 7,
-      image: "sanskar11.jpg",
-      title: "Website Developer",
-      name: "Sanskar",
+      id: 5,
+      image: "team-page-img-4.jpg",
+      title: "Business Haed ",
+      name: "Nidhi",
+      describe:"A combination of expertise and knowledge"
     },
     {
       id: 8,
@@ -56,12 +59,12 @@ const teamTwo = {
       title: "Social Media",
       name: "Mansi",
     },
-    {
-      id: 9,
-      image: "pooja11.jpg",
-      title: "Creative Designer",
-      name: "Pooja",
-    },
+    // {
+    //   id: 9,
+    //   image: "pooja11.jpg",
+    //   title: "Creative Designer",
+    //   name: "Pooja",
+    // },
     {
       id: 10,
       image: "team-page-img-2.jpg",
