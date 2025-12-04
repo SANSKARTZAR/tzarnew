@@ -16,7 +16,8 @@ const MobileMenu = () => {
     <>
       <div className="logo-box">
         <Link href="/" aria-label="logo image">
-          <Image src={logo1.src} width={155} alt="" />
+          <Image src={logo1.src} width={90} alt="" style={{ height: "auto" }} />
+
         </Link>
       </div>
       <div className="mobile-nav__container">

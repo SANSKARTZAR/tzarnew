@@ -1,44 +1,78 @@
+"use client";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useState } from "react";
-import SubNavItem from "./SubNavItem";
 
-const NavItem = ({ item = {} }) => {
-  // const { pathname } = useRouter();
-  const { pathname } = useRouter;
+const NavItem = ({ item }) => {
+  const { name, href, subNavItems = [] } = item;
+  const [open, setOpen] = useState(false);
 
-  const [expand, setExpand] = useState(false);
-
-  const handleExpand = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setExpand((preExpand) => !preExpand);
-  };
-
-  const { name, href, subNavItems } = item;
+  const hasDropdown = subNavItems.length > 0;
 
   return (
-    <li className={`dropdown${pathname === href ? " current" : ""}`}>
-      
-        <Link className={expand ? " expanded" : ""} href={href}>
-          {name}
-          <button
-            onClick={handleExpand}
-            aria-label="dropdown toggler"
-            className={expand ? "expanded" : ""}
-          >
-            <i className="fa fa-angle-down"></i>
-          </button>
-        </Link>
-      <ul
+    <li
+      style={{
+        listStyle: "none",
+        padding: "10px 0",
+        borderBottom: "1px solid rgba(255,255,255,0.15)",
+      }}
+    >
+      {/* MAIN MENU ITEM */}
+      <div
+        onClick={() => hasDropdown && setOpen(!open)}
         style={{
-          display: expand ? "block" : "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "12px 15px",
+          cursor: "pointer",
         }}
       >
-        {subNavItems.map((subItem) => (
-          <SubNavItem subItem={subItem} key={subItem.id} />
-        ))}
-      </ul>
+        <Link
+          href={href}
+          style={{
+            flex: 1,
+            textDecoration: "none",
+            color: "#fff",
+            fontSize: "16px",
+          }}
+        >
+          {name}
+        </Link>
+
+        {/* ARROW ONLY IF SUBMENU EXISTS */}
+        {hasDropdown && (
+          <span style={{ color: "#fff", fontSize: "14px" }}>
+            {open ? "▲" : "▼"}
+          </span>
+        )}
+      </div>
+
+      {/* SUBMENU */}
+      {hasDropdown && (
+        <ul
+          style={{
+            display: open ? "block" : "none",
+            padding: "5px 0 10px 30px",
+            background: "rgba(255,255,255,0.08)",
+          }}
+        >
+          {subNavItems.map((sub) => (
+            <li key={sub.id} style={{ listStyle: "none" }}>
+              <Link
+                href={sub.href}
+                style={{
+                  display: "block",
+                  padding: "6px 0",
+                  color: "#fff",
+                  textDecoration: "none",
+                }}
+              >
+                {sub.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </li>
   );
 };

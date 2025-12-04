@@ -26,11 +26,11 @@ const servicesDetails = {
 
 
     },
-    {
-      id: 5,
-      title: "Pay Per Click",
-      href: "/pay-per-click-services",
-    },
+    // {
+    //   id: 5,
+    //   title: "Pay Per Click",
+    //   href: "/pay-per-click-services",
+    // },
     {
       id: 6,
       title: "Product Design And Packaging",

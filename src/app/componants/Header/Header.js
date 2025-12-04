@@ -304,6 +304,6 @@ const Header = ({ pageTitle }) => {
       </header>
     </>
   );
-};
+};  
 
 export default Header;

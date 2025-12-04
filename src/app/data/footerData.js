@@ -26,16 +26,16 @@ const footerData = {
     }
   ],
   socials: [
-    {
-      id: 1,
-      icon: "fab fa-twitter",
-      href: "#",
-    },
-    {
-      id: 2,
-      icon: "fab fa-facebook",
-      href: "https://www.facebook.com/TzarAgency",
-    },
+    // {
+    //   id: 1,
+    //   icon: "fab fa-twitter",
+    //   href: "#",
+    // },
+    // {
+    //   id: 2,
+    //   icon: "fab fa-facebook",
+    //   href: "https://www.facebook.com/TzarAgency",
+    // },
     {
       id: 3,
       icon: "fab fa-linkedin",
