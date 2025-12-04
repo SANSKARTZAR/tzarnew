@@ -16,19 +16,24 @@ const ContactForm = () => {
 
     const formData = new FormData(e.target);
 
-    // Send each field separately
+    // Combine extra fields into one message for Google Sheets
+    const message = `
+Service: ${formData.get("services")}
+City: ${formData.get("city")}
+Country: ${formData.get("country")}
+Agreement: ${formData.get("checkbox")}
+`.trim();
+
     const payload = {
-      fullname: formData.get("fullname"),
-      phone: formData.get("phone"),
+      name: formData.get("fullname"),
       email: formData.get("email"),
-      services: formData.get("services"),
-      city: formData.get("city"),
-      country: formData.get("country"),
-      checkbox: formData.get("checkbox"),
+      phone: formData.get("phone"),
+      message,
     };
 
     try {
-      const res = await fetch("/api/submit-contact", {
+      console.log("Sending payload:", payload);
+      const res = await fetch("/api/submit-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -37,13 +42,15 @@ const ContactForm = () => {
       const data = await res.json();
 
       if (data.success) {
+        console.log("Form successfully submitted!");
         setStatus("success");
         router.push("/thank-you");
       } else {
+        console.error("Submission error:", data.error);
         setStatus("error");
       }
     } catch (err) {
-      console.error(err);
+      console.error("Fetch error:", err);
       setStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -53,24 +60,17 @@ const ContactForm = () => {
   return (
     <div className="form-dev">
       <h5>From Concept to Capture: We Do It All</h5>
-
       <form onSubmit={handleSubmit} className="EnquiryForm">
         <div className="form-div">
           <label>
-            <input type="text" name="fullname" placeholder="John Doe"
-              className="form-control form-inputs" required />
+            <input type="text" name="fullname" placeholder="John Doe" className="form-control form-inputs" required />
           </label>
-
           <label>
-            <input type="tel" name="phone" placeholder="Add phone no."
-              className="form-control form-inputs" required />
+            <input type="tel" name="phone" placeholder="Add phone no." className="form-control form-inputs" required />
           </label>
-
           <label>
-            <input type="email" name="email" placeholder="john@gmail.com"
-              className="form-control form-inputs" required />
+            <input type="email" name="email" placeholder="john@gmail.com" className="form-control form-inputs" required />
           </label>
-
           <label>
             <select name="services" className="form-control form-inputs" required>
               <option value="">Services</option>
@@ -86,19 +86,15 @@ const ContactForm = () => {
               <option>Product Packaging</option>
             </select>
           </label>
-
           <Row>
             <Col xl={6}>
               <label>
-                <input type="text" name="city" placeholder="Your City"
-                  className="form-control form-inputs" required />
+                <input type="text" name="city" placeholder="Your City" className="form-control form-inputs" required />
               </label>
             </Col>
-
             <Col xl={6}>
               <label>
-                <input type="text" name="country" placeholder="Your Country"
-                  className="form-control form-inputs" required />
+                <input type="text" name="country" placeholder="Your Country" className="form-control form-inputs" required />
               </label>
             </Col>
           </Row>
@@ -106,8 +102,7 @@ const ContactForm = () => {
           <div className="form-group formlefttxt">
             <label className="checkbox">
               <div className="form-studiocheck">
-                <input type="checkbox" name="checkbox"
-                  value="Agreed" required />
+                <input type="checkbox" name="checkbox" value="I agree to T&C and Privacy Policy" required />
                 <h6 className="homeformtext">
                   By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink">T&C</Link> and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates via WhatsApp.
                 </h6>
@@ -117,7 +112,7 @@ const ContactForm = () => {
 
           <button className="btn btn-submit" type="submit" disabled={isSubmitting}>
             {isSubmitting ? (
-              <span className="spinner-border spinner-border-sm" />
+              <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             ) : (
               "Submit"
             )}

@@ -79,45 +79,97 @@ function MainHerobanner() {
   }
 
   return (
-    <>
-      <section className="section-hero">
-        <Bannertxt />
+  <>
+    <section className="section-hero">
+      <div className="mobile-hero-wrap">
+
         <video
           autoPlay
           loop
           muted
+          playsInline
+          className="mobile-video"
           src="https://ik.imagekit.io/xhgygdewi6/Bgvideo.mp4?updatedAt=1710580577029"
         ></video>
-        <ContactForm />
-      </section>
 
-      {/* ✅ Styles */}
-      <style jsx>{`
-        .section-hero {
-          position: relative;
-          overflow: hidden;
-          width: 100%;
-          height: 100vh;
-        }
+        {/* ⭐ Banner Text */}
+        <div className="mobile-banner-text">
+          <Bannertxt />
+        </div>
 
-        .section-hero video {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        {/* ⭐ Contact Form OVERLAY */}
+        <div className="mobile-contact-box">
+          <ContactForm />
+        </div>
 
-        /* ✅ Keep same visible area on Apple laptop sizes */
-        @media screen and (max-width: 1450px) and (min-width: 1200px) {
-          .section-hero {
-            height: 90vh;
-          }
-          .section-hero video {
-            height: 90vh;
-          }
+      </div>
+    </section>
+
+    <style jsx>{`
+      .section-hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .mobile-hero-wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .mobile-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ⭐ Contact Form Box EXACT STYLE LIKE IMAGE */
+      .mobile-contact-box {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 360px;
+        background: #ffffff;
+        padding: 25px 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.25);
+        z-index: 10;
+      }
+
+      /* ⭐ Keep form inside readable on mobile */
+      @media (max-width: 600px) {
+        .mobile-contact-box {
+          width: 90%;
+          right: 50%;
+          transform: translate(50%, 0);
+          bottom: 20px;
+          top: auto;
         }
-      `}</style>
-    </>
-  );
+      }
+
+      /* ⭐ Ensure form fields display properly */
+      .mobile-contact-box :global(input),
+      .mobile-contact-box :global(select),
+      .mobile-contact-box :global(textarea) {
+        height: 42px !important;
+        border-radius: 8px !important;
+      }
+
+      .mobile-banner-text {
+        position: absolute;
+        z-index: 5;
+        top: 20%;
+        left: 20px;
+        right: 20px;
+      }
+    `}
+    </style>
+  </>
+);
+
 }
 
 export default MainHerobanner;
