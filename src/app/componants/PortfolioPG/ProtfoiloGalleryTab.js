@@ -104,26 +104,11 @@ const ProtfoiloGalleryTab = ({ projectPage = true, filterData }) => {
   }
 
   /* ✅ Optional: on large tablets like iPad Pro, increase width */
-  /* 🖥️ Desktop — keep all tab buttons in one line */
-@media (min-width: 1024px) {
-  .ButtonsTabP {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap; /* ❗ force single line */
-    overflow-x: auto; /* scroll if the line overflows */
-    gap: 16px;
+  @media (min-width: 1024px) {
+    .ButtonsTabP :global(button) {
+      width: 200px;
+    }
   }
-
-  .ButtonsTabP::-webkit-scrollbar {
-    display: none; /* Hide scrollbar on desktop */
-  }
-
-  .ButtonsTabP :global(button) {
-    width: 180px; /* consistent size */
-    flex-shrink: 0; /* prevent squeezing */
-  }
-}
-
 
   /* ✅ Optional: on mobile devices (smaller than 480px) */
   @media (max-width: 480px) {
