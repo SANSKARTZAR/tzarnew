@@ -5,6 +5,26 @@ const testimonialFour = {
   tagline: "our customer feedbacks",
   title: "What they’re saying",
   testimonials: [
+    {
+      id: 14,
+      image: "48.png",
+    },
+    {
+      id: 15,
+      image: "49.png",
+    },
+    {
+      id: 16,
+      image: "50.png",
+    },
+    {
+      id: 17,
+      image: "51.png",
+    },
+     {
+      id: 18,
+      image: "52.png",
+    },
       {
         id: 1,
         image: "1.png",

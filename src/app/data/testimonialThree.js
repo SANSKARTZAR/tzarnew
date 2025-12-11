@@ -12,6 +12,30 @@ const testimonialThree = {
     //   message: "Multi Lingual Marketing"
     // },
     {
+      id: 27,
+      image: "testimonial-one-img-27.png",
+    },
+    {
+      id: 28,
+      image: "testimonial-one-img-28.png",
+    },
+    {
+      id: 29,
+      image: "testimonial-one-img-29.png",
+    },
+    {
+      id: 30,
+      image: "testimonial-one-img-30.png",
+    },
+    {
+      id: 31,
+      image: "testimonial-one-img-31.png",
+    },
+     {
+      id: 32,
+      image: "testimonial-one-img-32.png",
+    },
+    {
       id: 1,
       image: "testimonial-one-img-2.jpg",
     },

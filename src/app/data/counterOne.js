@@ -6,19 +6,19 @@ const counterOne = {
     {
       id: 1,
       icon: "icon-recommend",
-      count: 2000,
+      count: 8000,
       title: "Projects Completed",
     },
     {
       id: 2,
       icon: "icon-recruit",
-      count: 70,
+      count: 150,
       title: "Active Clients",
     },
     {
       id: 3,
       icon: "icon-customer",
-      count: 1800,
+      count: 7000,
       title: "Satisfied Clients",
     },
     {

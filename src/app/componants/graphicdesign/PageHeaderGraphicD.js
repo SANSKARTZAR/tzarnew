@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 import { useWindowSize } from "@react-hook/window-size/throttled";
 
 const PageHeaderGraphicD = ({ page = "", title = "", parent = "" }) => {
-  const [width, height] = useWindowSize({ fps: 60 });
+  const [width] = useWindowSize({ fps: 60 });
   const breakpoint = 683;
   const [isMounted, setIsMounted] = useState(false);
 
@@ -20,15 +20,18 @@ const PageHeaderGraphicD = ({ page = "", title = "", parent = "" }) => {
   }
 
   return (
-    <section className="page-header">
+    <section className="page-header" style={{ position: "relative" }}>
       <div
         className={width > breakpoint ? "page-header-bgAu" : "page-header-bgWd"}
         style={{ backgroundImage: `url(${width > breakpoint ? bg6.src : bg61.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerAuW">
+        <div
+          className="page-header__innerAuW"
+          style={{ position: "absolute", bottom: "20px", left: "20px" }}
+        >
           <h2>{title || page}</h2>
-          <ul className="thm-breadcrumb list-unstyledAuW"  style={{marginTop: "15px"}}>
+          <ul className="thm-breadcrumb list-unstyledAuW" style={{ marginTop: "15px" }}>
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}

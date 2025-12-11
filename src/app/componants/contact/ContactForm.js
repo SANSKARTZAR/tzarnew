@@ -16,7 +16,6 @@ const ContactForm = () => {
 
     const formData = new FormData(e.target);
 
-    // Combine extra fields into one message for Google Sheets
     const message = `
 Service: ${formData.get("services")}
 City: ${formData.get("city")}
@@ -32,7 +31,6 @@ Agreement: ${formData.get("checkbox")}
     };
 
     try {
-      console.log("Sending payload:", payload);
       const res = await fetch("/api/submit-form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -42,86 +40,210 @@ Agreement: ${formData.get("checkbox")}
       const data = await res.json();
 
       if (data.success) {
-        console.log("Form successfully submitted!");
         setStatus("success");
         router.push("/thank-you");
       } else {
-        console.error("Submission error:", data.error);
         setStatus("error");
       }
     } catch (err) {
-      console.error("Fetch error:", err);
       setStatus("error");
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  // EXACT styling as in your screenshot:
+  const inputStyle = {
+    height: "40px",
+    width: "100%",
+    borderRadius: "20px",
+    paddingLeft: "15px",
+    marginBottom: "13px",
+    border: "none",
+    background: "#0C3B77",
+    color: "white",
+    fontSize: "13px",
+    outline: "none",
+  };
+
+  const selectStyle = {
+    ...inputStyle,
+    appearance: "none",
+    WebkitAppearance: "none",
+    MozAppearance: "none",
+  };
+
+  const buttonStyle = {
+    width: "120px",
+    height: "38px",
+    borderRadius: "18px",
+    background: "#D9D9D9",
+    color: "#2b2b2b",
+    fontWeight: "600",
+    border: "none",
+    marginTop: "5px",
+    cursor: "pointer",
+  };
+
   return (
-    <div className="form-dev">
-      <h5>From Concept to Capture: We Do It All</h5>
-      <form onSubmit={handleSubmit} className="EnquiryForm">
-        <div className="form-div">
-          <label>
-            <input type="text" name="fullname" placeholder="John Doe" className="form-control form-inputs" required />
-          </label>
-          <label>
-            <input type="tel" name="phone" placeholder="Add phone no." className="form-control form-inputs" required />
-          </label>
-          <label>
-            <input type="email" name="email" placeholder="john@gmail.com" className="form-control form-inputs" required />
-          </label>
-          <label>
-            <select name="services" className="form-control form-inputs" required>
-              <option value="">Services</option>
-              <option>Websites Design & Development</option>
-              <option>Social Media (SMO | SMM)</option>
-              <option>Performance Marketing</option>
-              <option>Influencer Marketing</option>
-              <option>Brand Marketing</option>
-              <option>Search Engine Optimization (SEO)</option>
-              <option>Product Shoot</option>
-              <option>2D&3D Animation</option>
-              <option>Logo Design</option>
-              <option>Product Packaging</option>
-            </select>
-          </label>
-          <Row>
-            <Col xl={6}>
-              <label>
-                <input type="text" name="city" placeholder="Your City" className="form-control form-inputs" required />
-              </label>
-            </Col>
-            <Col xl={6}>
-              <label>
-                <input type="text" name="country" placeholder="Your Country" className="form-control form-inputs" required />
-              </label>
-            </Col>
-          </Row>
+   <div
+  style={{
+    background: "#ffffffE8",
+    borderRadius: "15px",
+    padding: "15px",
+    width: "100%",
+    maxWidth: "390px",
+    boxShadow: "0px 0px 10px rgba(0,0,0,0.15)",
+    margin: "0 auto",
+  }}
+>
 
-          <div className="form-group formlefttxt">
-            <label className="checkbox">
-              <div className="form-studiocheck">
-                <input type="checkbox" name="checkbox" value="I agree to T&C and Privacy Policy" required />
-                <h6 className="homeformtext">
-                  By Proceeding, I agree to <Link href="/TermsConditions" className="studioformlink">T&C</Link> and <Link href="/privacy-policy" className="studioformlink">Privacy Policy</Link>. Yes, I would like to receive updates via WhatsApp.
-                </h6>
-              </div>
-            </label>
-          </div>
+      <h5
+        style={{
+          fontSize: "18px",
+          fontWeight: "600",
+          color: "#333",
+          marginBottom: "18px",
+        }}
+      >
+        From Concept to Capture: We Do It All
+      </h5>
 
-          <button className="btn btn-submit" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? (
-              <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            ) : (
-              "Submit"
-            )}
-          </button>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="fullname"
+          placeholder="John Doe"
+          required
+          style={inputStyle}
+        />
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Add phone no."
+          required
+          style={inputStyle}
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="john@gmail.com"
+          required
+          style={inputStyle}
+        />
+
+        <select name="services" required style={selectStyle}>
+          <option value="">Services</option>
+          <option>Websites Design & Development</option>
+          <option>Social Media (SMO | SMM)</option>
+          <option>Performance Marketing</option>
+          <option>Influencer Marketing</option>
+          <option>Brand Marketing</option>
+          <option>Search Engine Optimization (SEO)</option>
+          <option>Product Shoot</option>
+          <option>2D&3D Animation</option>
+          <option>Logo Design</option>
+          <option>Product Packaging</option>
+        </select>
+
+        <Row>
+          <Col xl={6}>
+            <input
+              type="text"
+              name="city"
+              placeholder="Your City"
+              required
+              style={inputStyle}
+            />
+          </Col>
+
+          <Col xl={6}>
+            <input
+              type="text"
+              name="country"
+              placeholder="Your Country"
+              required
+              style={inputStyle}
+            />
+          </Col>
+        </Row>
+
+        {/* Checkbox area */}
+        <div style={{ marginTop: "10px", marginBottom: "15px" }}>
+          <label
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              gap: "10px",
+            }}
+          >
+            <input
+              type="checkbox"
+              name="checkbox"
+              value="I agree to T&C and Privacy Policy"
+              required
+              style={{
+                marginTop: "3px",
+                width: "16px",
+                height: "16px",
+              }}
+            />
+
+            <p
+              style={{
+                fontSize: "12px",
+                margin: 0,
+                color: "#333",
+                lineHeight: "16px",
+              }}
+            >
+              By Proceeding, I agree to{" "}
+              <Link href="/TermsConditions" style={{ textDecoration: "underline" }}>
+                T&C
+              </Link>{" "}
+              and{" "}
+              <Link href="/privacy-policy" style={{ textDecoration: "underline" }}>
+                Privacy Policy
+              </Link>
+              . Yes, I would like to receive updates via WhatsApp.
+            </p>
+          </label>
         </div>
+
+        <button type="submit" disabled={isSubmitting} style={buttonStyle}>
+          {isSubmitting ? "Submitting..." : "SUBMIT"}
+        </button>
       </form>
 
-      {status === "success" && <div className="alert alert-success mt-3">Form submitted successfully!</div>}
-      {status === "error" && <div className="alert alert-danger mt-3">There was an error submitting the form.</div>}
+      {status === "success" && (
+        <div
+          style={{
+            background: "#c7ffd6",
+            padding: "10px",
+            color: "#0c6f34",
+            borderRadius: "10px",
+            marginTop: "15px",
+          }}
+        >
+          Form submitted successfully!
+        </div>
+      )}
+
+      {status === "error" && (
+        <div
+          style={{
+            background: "#ffd3d3",
+            padding: "10px",
+            color: "#9b0000",
+            borderRadius: "10px",
+            marginTop: "15px",
+          }}
+        >
+          There was an error submitting the form.
+        </div>
+      )}
     </div>
   );
 };

@@ -19,16 +19,19 @@ const PageHeaderCmm = ({ page = "", title = "", parent = "" }) => {
     return null;
   }
 
-  return (
-    <section className="page-header">
+ return (
+    <section className="page-header" style={{ position: "relative" }}>
       <div
         className={width > breakpoint ? "page-header-bgAu" : "page-header-bgWd"}
         style={{ backgroundImage: `url(${width > breakpoint ? bg6.src : bg61.src})` }}
       ></div>
       <Container>
-        <div className="page-header__innerAuW">
+        <div
+          className="page-header__innerAuW"
+          style={{ position: "absolute", bottom: "20px", left: "20px" }} // bottom-left with margin
+        >
           <h2>{title || page}</h2>
-          <ul className="thm-breadcrumb list-unstyledAuW" style={{marginTop: "15px"}}>
+          <ul className="thm-breadcrumb list-unstyledAuW" style={{ marginTop: "15px" }}>
             <li>
               <Link href="/">Home</Link>/
             </li>{" "}

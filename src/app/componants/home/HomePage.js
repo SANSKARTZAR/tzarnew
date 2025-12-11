@@ -13,6 +13,7 @@ import TestimonialThree from "./Testimonial/TestimonialThree";
 import WebDesignMock from "./WebDesignMock";
 import WelcomeOne from "./WelCome";
 import WhyChoose from "./WhyChoose";
+import Domain from "./Domain";
 
 
 export default function about() {
@@ -27,11 +28,12 @@ export default function about() {
             <WebDesignMock/>
             {/* <WhyChoose/> */}
             <StudioSection/>
-            <ExeculsiveCardsR/>
+            <Domain/>
+            {/* <ExeculsiveCardsR/> */}
             <TestimonialThree/>
             <CTAOne/>
             <ContactForm/>
-            <BlogOne/>
+            {/* <BlogOne/> */}
             <SeoOurWebsite/>
         </>
     )
