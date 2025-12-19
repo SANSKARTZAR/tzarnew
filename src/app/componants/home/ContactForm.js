@@ -12,8 +12,8 @@ function ContactFormSection() {
       className="ContactForm-page" 
       style={{ 
         position: "relative", 
-        paddingTop: "40px",  // reduced from default py-5
-        paddingBottom: "40px" // reduced from default py-5
+        paddingTop: "40px",
+        paddingBottom: "40px"
       }}
     >
       {/* Background */}
@@ -33,8 +33,9 @@ function ContactFormSection() {
       ></div>
 
       <Container>
+
         {/* Heading */}
-        <div style={{ textAlign: 'center', marginBottom: '30px' }}> {/* reduced marginBottom */}
+        <div style={{ textAlign: 'center', marginBottom: '30px' }}>
           <h2 style={{ fontSize: '2.2rem', fontWeight: '700', color: '#003366', marginBottom: '10px' }}>
             We Can Get Massive Traffic To Your Website
           </h2>
@@ -43,36 +44,66 @@ function ContactFormSection() {
           </p>
         </div>
 
-        <Row className="align-items-center justify-content-center">
-          {/* Contact Form Column */}
-          <Col xs={12} lg={5} className="mb-3 mb-lg-0 px-2">
-            <div className="form-dev-enquiry">
+        {/* ⭐ MAIN CONTENT ROW ⭐ */}
+        <Row
+          className="justify-content-center"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            minHeight: "100%"
+          }}
+        >
+
+          {/* LEFT: FORM COLUMN */}
+          <Col 
+            xs={12} 
+            lg={5} 
+            className="mb-3 mb-lg-0 px-2 d-flex"
+            style={{ height: "100%" }}
+          >
+            <div className="form-dev-enquiry" style={{ width: "100%" }}>
               <ContactForm />
             </div>
           </Col>
 
-          {/* Text Content Column */}
-          <Col xs={12} lg={5} className="px-2">
-            <div className="ContactForm-page__right text-start">
+          {/* RIGHT: TEXT COLUMN — shifted upwards */}
+          <Col 
+            xs={12} 
+            lg={5} 
+            className="px-2 d-flex"
+            style={{ 
+              alignItems: "center",
+              height: "100%",
+              transform: "translateY(-30px)"   // ⭐ SHIFT CONTENT UPWARD
+            }}
+          >
+            <div className="ContactForm-page__right text-start" style={{ width: "100%" }}>
               <div className="boximp">
+
                 <p className="mb-2" style={{ fontSize: '0.95rem', lineHeight: '1.4', color: '#333' }}>
                   SEO | Content Marketing | Paid Search Marketing | Social Media | Analytics | Programmatic Advertising
                 </p>
 
                 <div className="important">
+
                   <h5 style={{ fontSize: '0.95rem', marginBottom: '8px' }}>
                     <span className="highlight1" style={{ color: '#003366', fontWeight: 'bold' }}>SEO</span> – Bring huge traffic through SEO strategies.
                   </h5>
+
                   <h5 style={{ fontSize: '0.95rem', marginBottom: '8px' }}>
                     <span className="highlight1" style={{ color: '#003366', fontWeight: 'bold' }}>Paid Media</span> – Strategies with guaranteed ROI.
                   </h5>
+
                   <h5 style={{ fontSize: '0.95rem', marginBottom: 0 }}>
                     <span className="highlight1" style={{ color: '#003366', fontWeight: 'bold' }}>Content Marketing</span> – Attractive and creative content which will increase customer engagement and traffic.
                   </h5>
+
                 </div>
+
               </div>
             </div>
           </Col>
+
         </Row>
       </Container>
     </section>

@@ -5,14 +5,14 @@ const teamTwo = {
   teams: [
     {
       id: 2,
-      image: "team-page-img-7.jpg",
+      image: "team-page-img-7.png",
       title: "Web Developer",
       name: "Nistha Bhati",
       describe:"Full-stack web developer building scalable, visually polished, and intuitive web platforms.",
     },
     {
       id: 1,
-      image: "team-page-img-1.webp",
+      image: "team-page-img-1.png",
       title: "Social Media",
       name: "Devika Kalal",
       describe:"With indepth knowledge of Social media",
@@ -34,7 +34,7 @@ const teamTwo = {
     },   
     {
       id: 7,
-      image: "sanskar11.webp",
+      image: "sanskar11.png",
       title: "Graphic Designer",
       name: "Jahid",
     },

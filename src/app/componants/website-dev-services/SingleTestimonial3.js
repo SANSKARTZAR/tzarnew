@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Image } from "react-bootstrap";
 
@@ -17,7 +16,7 @@ const SingleTestimonial3 = ({ testimonial = {}, listRef }) => {
       <div className="testimonial-one__client-infocard">
         <div className="testimonial-one__client__imgcard">
           <Image
-            src={require(`@/assets/images/FED/${image}`).default.src}
+            src={(`/FED/${image}`).default.src}
             alt=""
         
           />

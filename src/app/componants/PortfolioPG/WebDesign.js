@@ -79,17 +79,17 @@ function WebDesign() {
   //     "SMM",
   //   ],
   // },
-  {
-    id: 18,
-    img: Pr18,
-    logo: Logo2,
-    title: "Ankam",
-    link: "https://ankamplay.com/",
-    services: [
-      "WordPress Website Development",
-      "Ui/Ux Strategy",
-    ],
-  },
+  // {
+  //   id: 18,
+  //   img: Pr18,
+  //   logo: Logo2,
+  //   title: "Ankam",
+  //   link: "https://ankamplay.com/",
+  //   services: [
+  //     "WordPress Website Development",
+  //     "Ui/Ux Strategy",
+  //   ],
+  // },
   {
     id: 19,
     img: Pr21,

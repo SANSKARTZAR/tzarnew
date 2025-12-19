@@ -6,15 +6,15 @@ import { Col, Container, Row, Image } from "react-bootstrap";
 import { useWindowSize } from "@react-hook/window-size/throttled";
 import teamTwoR from "../../data/teamTwoR"
 import { Carousel } from 'react-responsive-carousel';
-import profile1 from "@/assets/images/team/team-page-img-1.jpg"
+import profile1 from "@/assets/images/team/team-page-img-1.png"
 import profile2 from "@/assets/images/team/team-page-img-2.jpg"
 import profile3 from "@/assets/images/team/team-page-img-3.jpg"
 import profile4 from "@/assets/images/team/team-page-img-4.jpg"
 import profile5 from "@/assets/images/team/team-page-img-5.jpg"
-import profile6 from "@/assets/images/team/team-page-img-7.jpg"
+import profile6 from "@/assets/images/team/team-page-img-7.png"
 // import profile7 from "@/assets/images/team/team-page-img-8.jpg"
-import profile8 from "@/assets/images/team/vivek11.jpg"
-import profile9 from "@/assets/images/team/sanskar11.jpg"
+import profile8 from "@/assets/images/team/vivek11.png"
+import profile9 from "@/assets/images/team/sanskar11.png"
 import profile10 from "@/assets/images/team/mansi11.jpg"
 import profile11 from "@/assets/images/team/pooja11.jpg"
 // import TeamOne from '../TeamOne/TeamOne';
