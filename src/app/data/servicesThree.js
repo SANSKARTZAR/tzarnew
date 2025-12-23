@@ -45,14 +45,14 @@ const servicesThree = {
       text: "Generating qualified leads for your business with mix of strategies.",
 
     },
-    {
-      id: 5,
-      title: "Pay-Per-Click ",
-      icon: "icon-front-end",
-      link: "/pay-per-click-services",
-      text: "Just pay for results. We can bring clients to your business tomorrow!.",
+    // {
+    //   id: 5,
+    //   title: "Pay-Per-Click ",
+    //   icon: "icon-front-end",
+    //   link: "/pay-per-click-services",
+    //   text: "Just pay for results. We can bring clients to your business tomorrow!.",
 
-    },
+    // },
     {
       id: 6,
       title: "Product Design & Packaging ",

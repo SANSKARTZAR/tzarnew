@@ -18,7 +18,7 @@ export default function ProjectsDelivered() {
       <div className="relative mt-12 max-w-4xl w-full flex justify-center">
         {/* World Map Image */}
         <Image
-          src="/assets/images/icons/map-961700_640.webp" // <- Replace with your image path
+          src="@/assets/images/icons/map-961700_640.webp" // <- Replace with your image path
           width={1200}
           height={600}
           alt="world map"
