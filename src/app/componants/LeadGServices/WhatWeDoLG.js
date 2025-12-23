@@ -15,11 +15,11 @@ const leadServices = [
     title: 'Landing Page & Conversion Optimization',
     description: 'Designing high-converting landing pages with clear CTAs and forms to capture leads effectively.',
   },
-  {
-    icon: <FaBullhorn size={40} color="#003f87" />,
-    title: 'Paid Advertising (PPC & Social Ads)',
-    description: 'Running targeted ads on Google, Facebook, Instagram, and LinkedIn to drive qualified traffic.',
-  },
+  // {
+  //   icon: <FaBullhorn size={40} color="#003f87" />,
+  //   title: 'Paid Advertising (PPC & Social Ads)',
+  //   description: 'Running targeted ads on Google, Facebook, Instagram, and LinkedIn to drive qualified traffic.',
+  // },
   {
     icon: <FaEnvelope size={40} color="#003f87" />,
     title: 'Email Marketing & Lead Nurturing',
