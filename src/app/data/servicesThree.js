@@ -37,28 +37,28 @@ const servicesThree = {
       text: "On page, off page optimization and link building strategies.",
 
     },
-    // {
-    //   id: 4,
-    //   title: "Lead Generation",
-    //   icon: "icon-front-end",
-    //   link: "/lead-generation-services",
-    //   text: "Generating qualified leads for your business with mix of strategies.",
+    {
+      id: 4,
+      title: "Lead Generation",
+      icon: "icon-front-end",
+      link: "/lead-generation-services",
+      text: "Generating qualified leads for your business with mix of strategies.",
 
-    // },
-    // {
-    //   id: 5,
-    //   title: "Pay-Per-Click ",
-    //   icon: "icon-front-end",
-    //   link: "/pay-per-click-services",
-    //   text: "Just pay for results. We can bring clients to your business tomorrow!.",
+    },
+    {
+      id: 5,
+      title: "Pay-Per-Click ",
+      icon: "icon-front-end",
+      link: "/pay-per-click-services",
+      text: "Just pay for results. We can bring clients to your business tomorrow!.",
 
-    // },
+    },
     {
       id: 6,
       title: "Product Design & Packaging ",
       icon: "icon-front-end",
       link: "/product-design-packaging-services",
-      text: "It plays a cucial role in sale of product. We are curator of customised package design.",
+      text: "It plays a crucial role in sale of product. We are curator of customised package design.",
 
     },
     {

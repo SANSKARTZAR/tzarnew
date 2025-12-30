@@ -65,7 +65,7 @@ const ProtfoiloGalleryTab = ({ projectPage = true, filterData }) => {
      <style jsx>{`
   .ButtonsTabP {
     display: flex;
-    flex-direction: column; /* default for mobile */
+    flex-direction: column; /* mobile default */
     gap: 12px;
     align-items: center;
     margin-bottom: 20px;
@@ -77,11 +77,9 @@ const ProtfoiloGalleryTab = ({ projectPage = true, filterData }) => {
     width: 240px;
     height: 48px;
     font-size: 14px;
-    padding: 0 16px;
+    padding: 0 14px;
     text-align: center;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,27 +88,39 @@ const ProtfoiloGalleryTab = ({ projectPage = true, filterData }) => {
     color: white;
   }
 
-  /* ✅ Tablet breakpoint (iPad mini and up) — horizontal layout */
+  /* ✅ TABLET */
   @media (min-width: 768px) {
     .ButtonsTabP {
       flex-direction: row;
       justify-content: center;
-      flex-wrap: wrap; /* allow wrap if needed */
+      flex-wrap: wrap; /* tablets can wrap */
     }
 
     .ButtonsTabP :global(button) {
-      width: 180px;
+      width: 170px;
     }
   }
 
-  /* ✅ Optional: on large tablets like iPad Pro, increase width */
+  /* ✅ DESKTOP & LAPTOP — FORCE SINGLE LINE */
   @media (min-width: 1024px) {
+    .ButtonsTabP {
+      flex-wrap: nowrap;        /* 🚫 NO WRAP */
+      justify-content: center;
+      overflow-x: auto;         /* fallback safety */
+      scrollbar-width: none;    /* hide scrollbar */
+    }
+
+    .ButtonsTabP::-webkit-scrollbar {
+      display: none;
+    }
+
     .ButtonsTabP :global(button) {
-      width: 200px;
+      width: 150px;             /* compact width */
+      flex-shrink: 0;           /* prevent shrinking */
     }
   }
 
-  /* ✅ Optional: on mobile devices (smaller than 480px) */
+  /* ✅ SMALL MOBILE */
   @media (max-width: 480px) {
     .ButtonsTabP :global(button) {
       width: 60%;
@@ -118,9 +128,10 @@ const ProtfoiloGalleryTab = ({ projectPage = true, filterData }) => {
   }
 
   .protfoilo-tab {
-    padding-bottom: 80px; /* Prevent floating icons overlap */
+    padding-bottom: 80px;
   }
 `}</style>
+
 
     </section>
   );

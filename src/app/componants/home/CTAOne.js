@@ -17,7 +17,7 @@ const CTAOne = () => {
                 </div>
                 <div className="cta-one__title-box">
                   <h2 className="cta-one__title">
-                    we’re deliver the best <br /> customer experience
+                    We deliver the best <br /> customer experience
                   </h2>
                 </div>
               </div>
