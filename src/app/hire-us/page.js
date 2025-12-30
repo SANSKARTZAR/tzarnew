@@ -17,9 +17,7 @@ export const metadata = {
 export default function hireus() {
     return (
         <>
-            <PageHeaderInternship title="Hire Us"/>
-            <ServicesAndProcess />
-           
+            <PageHeaderInternship title="Hire Us"/>  
             <ContactForm />
             {/* <PopupHireUs/> */}
         </>
