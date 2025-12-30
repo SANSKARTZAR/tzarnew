@@ -4,8 +4,8 @@ import PageHeaderInternship from "../componants/Internship/PageHeaderInternship"
 import ContactForm from "../componants/home/ContactForm";
 import Internship from "../componants/Internship/Internship";
 import PopupHireUs from "../componants/home/PopupHireUs";
-import ServicesAndProcess from "../componants/HireUs/ServicesAndProcess";
-import Payment from "../payment";
+
+
 
 
 
@@ -18,8 +18,8 @@ export default function hireus() {
     return (
         <>
             <PageHeaderInternship title="Hire Us"/>
-            {/* <ServicesAndProcess /> */}
-            {/* <Payment /> */}
+            <ServicesAndProcess />
+           
             <ContactForm />
             {/* <PopupHireUs/> */}
         </>
