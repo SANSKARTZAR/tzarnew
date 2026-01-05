@@ -18,6 +18,20 @@ const teamTwo = {
       describe:"With indepth knowledge of Social media",
     },
     {
+      id: 1,
+      image: "Artboard 2 (1).png",
+      title: "Social Media",
+      name: "Iqra Fatima ",
+      describe:"I help businesses look good and connect with people on social media.",
+    },
+    {
+      id: 1,
+      image: "Artboard 1 (1).png",
+      title: "Social Media",
+      name: "Sufiya utnal Mohammed rafique",
+      describe:"Enthusiast passionate about building meaningful digital presence.",
+    },
+    {
       id: 3,
       image: "team-page-img-3.jpg",
       title: "Creative Designer",
