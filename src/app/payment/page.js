@@ -2,6 +2,7 @@
 import { useState } from "react";
 import services from "./services";
 import "./Payment.css";
+import Script from "next/script";
 
 export default function PaymentPage() {
   const [step, setStep] = useState(1);
@@ -10,6 +11,7 @@ export default function PaymentPage() {
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [manualAmount, setManualAmount] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const toggleService = (service) => {
     setSelected((prev) =>
@@ -19,142 +21,250 @@ export default function PaymentPage() {
     );
   };
 
+  // ✅ RAZORPAY PAY BUTTON LOGIC
+  const handlePayment = async () => {
+    if (!name || !email) {
+      alert("Please enter name and email");
+      return;
+    }
+
+    const amount = Number(manualAmount);
+    if (!amount || amount < 1) {
+      alert("Please enter a valid amount");
+      return;
+    }
+
+    if (!window.Razorpay) {
+      alert("Razorpay SDK not loaded");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      // 1️⃣ Create order
+      const res = await fetch("/api/razorpay", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          amount,
+          services: selected.map((s) => s.title),
+        }),
+      });
+
+      const data = await res.json();
+
+      // 2️⃣ Razorpay options
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
+        amount: data.amount,
+        currency: "INR",
+        name: "Your Company Name",
+        description: "Service Payment",
+        order_id: data.orderId,
+
+        handler: async function (response) {
+          try {
+            const verifyRes = await fetch("/api/verify-payment", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+
+                customerName: name,
+                company,
+                customerEmail: email,
+                amount,
+                services: selected.map((s) => s.title),
+              }),
+            });
+
+            const result = await verifyRes.json();
+
+            if (result.success) {
+              alert("Payment successful! Invoice sent to email.");
+            } else {
+              alert("Payment verification failed");
+            }
+          } catch (err) {
+            console.error(err);
+            alert("Payment completed but verification failed");
+          } finally {
+            setLoading(false);
+          }
+        },
+
+        modal: {
+          ondismiss: () => setLoading(false),
+        },
+
+        theme: { color: "#003366" },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    } catch (err) {
+      console.error(err);
+      alert("Payment failed");
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="checkout-page">
-     {/* HERO BANNER */}
-<section className="checkout-hero">
-  <div className="hero-overlay" />
-  <div className="hero-content">
-    <h1>Pay with Confidence</h1>
-    <p>Secure transactions, transparent pricing, and complete data protection</p>
-  </div>
-</section>
+    <>
+      <Script src="https://checkout.razorpay.com/v1/checkout.js" />
 
-      <h1 className="checkout-title">Checkout</h1>
-      <p className="checkout-subtitle">
-        Select your services and complete payment
-      </p>
+      <div className="checkout-page">
+        {/* HERO BANNER */}
+        <section className="checkout-hero">
+          <div className="hero-overlay" />
+          <div className="hero-content">
+            <h1>Pay with Confidence</h1>
+            <p>
+              Secure transactions, transparent pricing, and complete data
+              protection
+            </p>
+          </div>
+        </section>
 
-      <div className="checkout-steps">
-        <div className={`step ${step >= 1 ? "active" : ""}`}>1 Services</div>
-        <div className={`step ${step >= 2 ? "active" : ""}`}>2 Details</div>
-        <div className={`step ${step >= 3 ? "active" : ""}`}>3 Payment</div>
-      </div>
+        <h1 className="checkout-title">Checkout</h1>
+        <p className="checkout-subtitle">
+          Select your services and complete payment
+        </p>
 
-      <div className="checkout-card">
-        {/* STEP 1 */}
-        {step === 1 && (
-          <div className="services-section">
-            <h2>Select Services</h2>
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className={`service-card ${
-                  selected.find((s) => s.id === service.id) ? "selected" : ""
-                }`}
-                onClick={() => toggleService(service)}
-              >
-                <div>
-                  <h4>{service.title}</h4>
-                  <p>{service.desc}</p>
+        <div className="checkout-steps">
+          <div className={`step ${step >= 1 ? "active" : ""}`}>1 Services</div>
+          <div className={`step ${step >= 2 ? "active" : ""}`}>2 Details</div>
+          <div className={`step ${step >= 3 ? "active" : ""}`}>3 Payment</div>
+        </div>
+
+        <div className="checkout-card">
+          {/* STEP 1 */}
+          {step === 1 && (
+            <div className="services-section">
+              <h2>Select Services</h2>
+              {services.map((service) => (
+                <div
+                  key={service.id}
+                  className={`service-card ${
+                    selected.find((s) => s.id === service.id)
+                      ? "selected"
+                      : ""
+                  }`}
+                  onClick={() => toggleService(service)}
+                >
+                  <div>
+                    <h4>{service.title}</h4>
+                    <p>{service.desc}</p>
+                  </div>
                 </div>
-                {/* <span className="service-price">₹{service.price}</span> */}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* STEP 2 */}
-        {step === 2 && (
-          <div className="summary-section">
-            <h3>Your Details</h3>
-
-            <label>Full Name</label>
-            <input value={name} onChange={(e) => setName(e.target.value)} />
-
-            <label>Company Name</label>
-            <input
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-            />
-
-            <label>Email Address</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-
-            <label>Enter Amount (₹)</label>
-            <input
-              type="number"
-              min="1"
-              value={manualAmount}
-              onChange={(e) => setManualAmount(e.target.value)}
-            />
-          </div>
-        )}
-
-        {/* STEP 3 */}
-        {step === 3 && (
-          <div className="order-summary">
-            <h3>Order Summary</h3>
-
-            {selected.map((s) => (
-              <div className="summary-row" key={s.id}>
-                <span>{s.title}</span>
-                {/* <span>₹{manualAmount}</span> */}
-              </div>
-            ))}
-
-            <div className="summary-divider" />
-
-            <div className="total-row">
-              <span>Total Amount</span>
-              <span className="total-amount">₹{manualAmount}</span>
+              ))}
             </div>
-
-            <div className="billing-box">
-              <p>Billing to:</p>
-              <strong>{name}</strong>
-              {company && <div>{company}</div>}
-              <div>{email}</div>
-            </div>
-
-            <div className="secure-text">
-              🔒 Secure 256-bit SSL encryption
-            </div>
-          </div>
-        )}
-
-        {/* CARD FOOTER (ALL DEVICES) */}
-        <div className="card-footer">
-          {step > 1 ? (
-            <button className="back-inline" onClick={() => setStep(step - 1)}>
-              ← Back
-            </button>
-          ) : <div />}
-
-          {step < 3 && (
-            <button
-              className="continue-btn"
-              onClick={() => setStep(step + 1)}
-              disabled={step === 1 && selected.length === 0}
-            >
-              Continue →
-            </button>
           )}
 
+          {/* STEP 2 */}
+          {step === 2 && (
+            <div className="summary-section">
+              <h3>Your Details</h3>
+
+              <label>Full Name</label>
+              <input value={name} onChange={(e) => setName(e.target.value)} />
+
+              <label>Company Name</label>
+              <input
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+              />
+
+              <label>Email Address</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              <label>Enter Amount (₹)</label>
+              <input
+                type="number"
+                min="1"
+                value={manualAmount}
+                onChange={(e) => setManualAmount(e.target.value)}
+              />
+            </div>
+          )}
+
+          {/* STEP 3 */}
           {step === 3 && (
-            <button className="pay-btn">
-              Pay ₹{manualAmount || 0}
-            </button>
+            <div className="order-summary">
+              <h3>Order Summary</h3>
+
+              {selected.map((s) => (
+                <div className="summary-row" key={s.id}>
+                  <span>{s.title}</span>
+                </div>
+              ))}
+
+              <div className="summary-divider" />
+
+              <div className="total-row">
+                <span>Total Amount</span>
+                <span className="total-amount">₹{manualAmount}</span>
+              </div>
+
+              <div className="billing-box">
+                <p>Billing to:</p>
+                <strong>{name}</strong>
+                {company && <div>{company}</div>}
+                <div>{email}</div>
+              </div>
+
+              <div className="secure-text">
+                🔒 Secure 256-bit SSL encryption
+              </div>
+            </div>
           )}
+
+          {/* FOOTER */}
+          <div className="card-footer">
+            {step > 1 ? (
+              <button
+                className="back-inline"
+                onClick={() => setStep(step - 1)}
+              >
+                ← Back
+              </button>
+            ) : (
+              <div />
+            )}
+
+            {step < 3 && (
+              <button
+                className="continue-btn"
+                onClick={() => setStep(step + 1)}
+                disabled={step === 1 && selected.length === 0}
+              >
+                Continue →
+              </button>
+            )}
+
+            {step === 3 && (
+              <button
+                className="pay-btn"
+                onClick={handlePayment}
+                disabled={loading}
+              >
+                {loading ? "Processing..." : `Pay ₹${manualAmount || 0}`}
+              </button>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
+
 
 
 
