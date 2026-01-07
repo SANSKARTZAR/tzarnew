@@ -211,7 +211,8 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
         </div>
         <StickyBar />
 
-        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+       <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 
       </body>
     </html>

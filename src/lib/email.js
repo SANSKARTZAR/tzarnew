@@ -10,7 +10,7 @@ export async function sendEmail({ to, subject, html }) {
   });
 
   return transporter.sendMail({
-    from: `"Your Company" <${process.env.EMAIL_USER}>`,
+    from: `"Tzar Venture" <${process.env.EMAIL_USER}>`,
     to,
     subject,
     html,

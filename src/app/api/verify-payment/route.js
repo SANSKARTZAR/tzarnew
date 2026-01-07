@@ -1,7 +1,9 @@
+export const runtime = "nodejs";
+
 import crypto from "crypto";
-import clientPromise from "../../../lib/mongodb";
-import { generateInvoice } from "../../../lib/invoice";
-import { sendEmail } from "../../../lib/email";
+import nodemailer from "nodemailer";
+import { NextResponse } from "next/server";
+import { generateInvoice } from "@/lib/generateInvoice";
 
 export async function POST(req) {
   try {
@@ -12,78 +14,78 @@ export async function POST(req) {
       razorpay_payment_id,
       razorpay_signature,
       customerName,
+      companyName, 
       customerEmail,
       amount,
       services,
     } = body;
 
-    // 🔐 Verify Razorpay signature
-    const expectedSignature = crypto
-      .createHmac("sha256", process.env.RAZORPAY_SECRET)
+    // Safety check: Razorpay secret must exist
+    if (!process.env.RAZORPAY_KEY_SECRET) {
+      console.error("RAZORPAY_KEY_SECRET is missing in .env.local!");
+      return NextResponse.json(
+        { success: false, error: "Razorpay secret missing" },
+        { status: 500 }
+      );
+    }
+
+    // Verify payment signature
+    const generatedSignature = crypto
+      .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
       .update(`${razorpay_order_id}|${razorpay_payment_id}`)
       .digest("hex");
 
-    if (expectedSignature !== razorpay_signature) {
-      return Response.json({ success: false }, { status: 400 });
+    if (generatedSignature !== razorpay_signature) {
+      return NextResponse.json({ success: false, error: "Invalid signature" }, { status: 400 });
     }
 
-    // 🔌 MongoDB
-    const client = await clientPromise;
-    const db = client.db();
+    // ✅ Generate PDF invoice
+    const invoiceUrl = generateInvoice({
+  customerName,
+  companyName, 
+  customerEmail,
+  amount,
+  paymentId: razorpay_payment_id,
+  services,
+});
 
-    // 📄 Generate invoice
-    const invoiceUrl = await generateInvoice({
-      name: customerName,
-      email: customerEmail,
-      amount,
-      services,
+
+    // ✅ Send invoice via email (customer + admin)
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS, // App password if using Gmail 2FA
+      },
     });
 
-    // 💾 Save payment
-    await db.collection("payments").insertOne({
-      name: customerName,
-      email: customerEmail,
-      amount,
-      services,
-      razorpayPaymentId: razorpay_payment_id,
-      razorpayOrderId: razorpay_order_id,
-      invoiceUrl,
-      createdAt: new Date(),
-    });
-
-    // 📧 Email to client
-    await sendEmail({
-      to: customerEmail,
-      subject: "Payment Successful",
+    await transporter.sendMail({
+      from: process.env.EMAIL_USER,
+      to: `${customerEmail}, ${process.env.ADMIN_EMAIL}`,
+      subject: "Payment Successful - Your Invoice",
       html: `
         <p>Hi ${customerName},</p>
-        <p>Your payment was successful.</p>
-        <p><b>Amount:</b> ₹${amount}</p>
-        <p><b>Services:</b> ${services.join(", ")}</p>
-        <a href="${process.env.NEXT_PUBLIC_SITE_URL}${invoiceUrl}">
-          Download Invoice
-        </a>
+        <p>Thank you for your payment of ₹${amount}.</p>
+        <p><b>Payment ID:</b> ${razorpay_payment_id}</p>
+        <p>
+          <a href="${process.env.NEXT_PUBLIC_SITE_URL}${invoiceUrl}" target="_blank">
+            Download Invoice
+          </a>
+        </p>
+        <p>Regards,<br>Tzar Venture</p>
       `,
+      attachments: [
+        {
+          path: `public${invoiceUrl}`, // Attach the PDF invoice
+        },
+      ],
     });
 
-    // 📧 Email to admin
-    await sendEmail({
-      to: process.env.ADMIN_EMAIL,
-      subject: "New Payment Received",
-      html: `
-        <p><b>Name:</b> ${customerName}</p>
-        <p><b>Email:</b> ${customerEmail}</p>
-        <p><b>Amount:</b> ₹${amount}</p>
-        <p><b>Services:</b> ${services.join(", ")}</p>
-      `,
-    });
+    // ✅ Respond to frontend with invoice URL
+    return NextResponse.json({ success: true, invoiceUrl });
 
-    return Response.json({ success: true, invoiceUrl });
-  } catch (err) {
-    console.error("VERIFY PAYMENT ERROR:", err);
-    return Response.json(
-      { success: false, error: "Server error" },
-      { status: 500 }
-    );
+  } catch (error) {
+    console.error("Verify Payment Error:", error);
+    return NextResponse.json({ success: false, error: "Server error" }, { status: 500 });
   }
 }
