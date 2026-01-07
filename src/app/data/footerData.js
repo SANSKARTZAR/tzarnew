@@ -64,11 +64,11 @@ const footerData = {
       title: "Our Portfolio",
       href: "/portfolio",  //Our Portfolio
     },
-    {
-      id: 14,
-      title:"Payment Link",
-      href: "/payment",  //Our Portfolio
-    },
+    // {
+    //   id: 14,
+    //   title:"Payment Link",
+    //   href: "/payment",  //Our Portfolio
+    // },
     {
       id: 11,
       title: "Career",
