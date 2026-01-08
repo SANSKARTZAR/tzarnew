@@ -257,3 +257,71 @@ html, body {
   font-weight: 600;
   color: #fff;
 }
+
+.thankyou-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+}
+
+.thankyou-card {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 14px;
+  text-align: center;
+  max-width: 460px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.thankyou-card h1 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.thankyou-text {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.thankyou-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #003366;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  opacity: 0.9;
+}
+
+.home-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 2px solid #003366;
+  background: transparent;
+  color: #003366;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background: #003366;
+  color: white;
+}

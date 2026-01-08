@@ -13,6 +13,10 @@ export default function PaymentPage() {
   const [manualAmount, setManualAmount] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // ✅ NEW STATES
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [invoiceUrl, setInvoiceUrl] = useState("");
+
   const toggleService = (service) => {
     setSelected((prev) =>
       prev.find((s) => s.id === service.id)
@@ -21,7 +25,7 @@ export default function PaymentPage() {
     );
   };
 
-  // ✅ RAZORPAY PAY BUTTON LOGIC
+  // ✅ PAYMENT LOGIC
   const handlePayment = async () => {
     if (!name || !email) {
       alert("Please enter name and email");
@@ -84,7 +88,8 @@ export default function PaymentPage() {
             const result = await verifyRes.json();
 
             if (result.success) {
-              alert("Payment successful! Invoice sent to email.");
+              setInvoiceUrl(result.invoiceUrl); // backend should return invoice URL
+              setPaymentSuccess(true);
             } else {
               alert("Payment verification failed");
             }
@@ -111,6 +116,35 @@ export default function PaymentPage() {
       setLoading(false);
     }
   };
+
+  // ✅ THANK YOU SCREEN
+  if (paymentSuccess) {
+  return (
+    <div className="thankyou-page">
+      <div className="thankyou-card">
+        <h1>🎉 Payment Successful!</h1>
+        <p className="thankyou-text">
+          Thank you for your payment. Your invoice has been sent to your email.
+        </p>
+
+        <div className="thankyou-actions">
+          <a href={invoiceUrl} download>
+            <button className="download-btn">
+              📄 Download Invoice
+            </button>
+          </a>
+
+          <button
+            className="home-btn"
+            onClick={() => window.location.reload()}
+          >
+            Make Another Payment
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
   return (
     <>
@@ -264,6 +298,7 @@ export default function PaymentPage() {
     </>
   );
 }
+
 
 
 
