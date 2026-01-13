@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-'use client';
+"use client";
 import testimonialThree from "@/app/data/testimonialThree";
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
@@ -19,11 +19,11 @@ const TestimonialThree = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Responsive columns
-  let columns = 7;
-  if (windowWidth <= 576) columns = 2;
-  else if (windowWidth <= 768) columns = 3;
-  else if (windowWidth <= 992) columns = 3;
+  // Responsive visible items
+  let visible = 7;
+  if (windowWidth <= 576) visible = 2;
+  else if (windowWidth <= 768) visible = 3;
+  else if (windowWidth <= 992) visible = 4;
 
   // Responsive title
   let titleFontSize = "3rem";
@@ -87,33 +87,40 @@ const TestimonialThree = () => {
           </h2>
         </div>
 
-        {/* Logo Grid */}
+        {/* SLIDER */}
         <div
-          className="testimonial-three__grid"
           style={{
-            display: "grid",
-            gridTemplateColumns: `repeat(${columns}, 1fr)`,
-            gap: "25px",
+            overflow: "hidden",
+            width: "100%",
           }}
         >
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              style={{
-                background: "transparent",
-                border: "1px solid #000",
-                borderRadius: "8px",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                overflow: "hidden",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                aspectRatio: "1 / 1", // 🔲 Square shape
-              }}
-            >
-              <SingleTestimonial1 testimonial={testimonial} />
-            </div>
-          ))}
+          <div
+            className="logo-slider-track"
+            style={{
+              display: "flex",
+              gap: "25px",
+              animation: "scroll 30s linear infinite",
+            }}
+          >
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <div
+                key={index}
+                style={{
+                  minWidth: `calc(100% / ${visible})`,
+                  background: "transparent",
+                  border: "1px solid #000",
+                  borderRadius: "8px",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  aspectRatio: "1 / 1",
+                }}
+              >
+                <SingleTestimonial1 testimonial={testimonial} />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* View More Button */}
@@ -130,6 +137,18 @@ const TestimonialThree = () => {
           </Link>
         </div>
       </Container>
+
+      {/* Slider Animation */}
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 };

@@ -17,202 +17,156 @@ export function generateInvoice(data) {
 
   const pageWidth = doc.page.width;
   const startX = 50;
-  const contentWidth = pageWidth - 100;
-
-  // ✅ CLEAN AMOUNT (Fixes "'1" bug)
-  const cleanAmount = (value) => {
-    if (!value) return 0;
-
-    let amount = value.toString().replace(/[^0-9.]/g, ""); // remove ' ₹ etc
-    amount = Number(amount);
-
-    // Razorpay sends paise sometimes
-    if (amount > 1000) {
-      amount = amount / 100;
-    }
-
-    return amount;
-  };
-
-  const formatMoney = (amount) => `₹${Number(amount).toLocaleString("en-IN")}`;
-
-  const invoiceNo = `INV-${Date.now().toString().slice(-6)}`;
-  const invoiceDate = new Date().toLocaleDateString();
-
-  const totalAmount = cleanAmount(data.amount);
-
-  const services = Array.isArray(data.services) ? data.services : [];
-
-  const companyName =
-    data.company ||
-    data.companyName ||
-    data.customerCompany ||
-    "";
+  const rightX = 350;
 
   /* ================= HEADER ================= */
 
-  doc.rect(0, 0, pageWidth, 110).fill("#e0e0e0");
+  doc.font("Times-Bold").fontSize(20).text("TZAR", startX, 40);
+  doc.fontSize(11).text("TZAR Venture", startX, 70);
+  doc.text("DIGITAL MARKETING AGENCY", startX, 90);
 
-  doc.fillColor("#000000")
-    .font("Times-Bold")
-    .fontSize(20)
-    .text("Tzar Venture", startX, 40);
+  const invoiceNo = `2025${Date.now().toString().slice(-4)}`;
+  const invoiceDate = new Date().toLocaleDateString("en-GB");
 
+  doc.fontSize(11).text(`Invoice No: ${invoiceNo}`, startX, 140);
+  doc.text(`Date Issued: ${invoiceDate}`, startX, 160);
+
+  /* ================= ISSUED TO ================= */
+
+  let issuedY = 140;
+  doc.font("Times-Bold").text("Issued to:", rightX, issuedY);
+  issuedY += 25;
+
+  doc.font("Times-Roman").text(data.customerName || "-", rightX, issuedY);
+  issuedY += 18;
+
+  if (data.company) {
+    doc.text(data.company, rightX, issuedY);
+    issuedY += 18;
+  }
+
+  if (data.address) {
+    doc.text(data.address, rightX, issuedY, { width: 200 });
+    issuedY += 40;
+  }
+
+  if (data.gstNumber) {
+    doc.text(`GST: ${data.gstNumber}`, rightX, issuedY);
+  }
+
+  /* ================= AMOUNTS ================= */
+
+  const baseAmount = Number(data.baseAmount || data.amount || 0);
+  const cgst = Math.round(baseAmount * 0.09);
+  const sgst = Math.round(baseAmount * 0.09);
+  const grandTotal = baseAmount + cgst + sgst;
+
+  /* ================= TABLE ================= */
+
+  let tableTop = 260;
+  const rowHeight = 35;
+  const tableWidth = pageWidth - 100;
+
+  // Header
+  doc.rect(startX, tableTop, tableWidth, rowHeight).stroke();
+  doc.font("Times-Bold").text("Description", startX + 10, tableTop + 10);
+  doc.text("Amount", pageWidth - 130, tableTop + 10);
+
+  tableTop += rowHeight;
+
+  const description = data.services?.join(", ") || "Service Payment";
+
+  doc.rect(startX, tableTop, tableWidth, rowHeight * 2).stroke();
   doc.font("Times-Roman")
-    .fontSize(10)
-    .text("yourcompany@email.com", startX, 70)
-    .text("+91-XXXXXXXXXX", startX, 85);
+    .text(description, startX + 10, tableTop + 10, { width: 350 })
+    .text(`Rs ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, tableTop + 10);
 
-  doc.rect(pageWidth - 150, 0, 150, 110).fill("#003366");
+  tableTop += rowHeight * 2;
 
-  doc.fillColor("#ffffff")
-    .font("Times-Bold")
-    .fontSize(20)
-    .text("INVOICE", pageWidth - 130, 45);
+  /* ================= TOTAL SECTION ================= */
 
-  /* ================= BILL TO ================= */
+  let totalY = tableTop + 30;
 
-  let y = 150;
+  doc.font("Times-Bold").text("SUBTOTAL", pageWidth - 220, totalY);
+  doc.text(`Rs ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  doc.fillColor("#000000").font("Times-Bold").fontSize(11);
-  doc.text("BILL TO:", startX, y);
+  totalY += 20;
+  doc.text("CGST 9%", pageWidth - 220, totalY);
+  doc.text(`Rs ${cgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  y += 20;
-  doc.font("Times-Roman").fontSize(12);
-  doc.text(data.customerName || "-", startX, y);
+  totalY += 20;
+  doc.text("SGST 9%", pageWidth - 220, totalY);
+  doc.text(`Rs ${sgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  if (companyName.trim()) {
-    y += 18;
-    doc.text(companyName, startX, y);
-  }
+  totalY += 25;
+  doc.fontSize(12).text("GRAND TOTAL", pageWidth - 220, totalY);
+  doc.text(`Rs ${grandTotal.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  y += 18;
-  doc.text(data.customerEmail || "-", startX, y);
+  /* ================= AMOUNT IN WORDS ================= */
 
-  /* ================= INVOICE META ================= */
+  doc.fontSize(10).text(
+    `IN WORDS: Rupees ${numberToWords(grandTotal)} Only`,
+    startX,
+    totalY + 40
+  );
 
-  let metaY = 150;
+  /* ================= PAYMENT INFO ================= */
 
-  doc.font("Times-Bold").fontSize(11);
-  doc.text("Invoice No:", 350, metaY);
-  doc.font("Times-Roman").fontSize(12);
-  doc.text(invoiceNo, 450, metaY);
+  let payY = totalY + 80;
+  doc.font("Times-Bold").text("Payment Info:", startX, payY);
 
-  metaY += 20;
-  doc.font("Times-Bold").text("Invoice Date:", 350, metaY);
-  doc.font("Times-Roman").text(invoiceDate, 450, metaY);
+  payY += 18;
+  doc.font("Times-Roman").text("Account Details :", startX, payY);
 
-  metaY += 20;
-  doc.font("Times-Bold").text("Total Amount:", 350, metaY);
-  doc.font("Times-Roman").text(formatMoney(totalAmount), 450, metaY);
+  payY += 15;
+  doc.text("Name : Tzar Digital Agency", startX, payY);
 
-  /* ================= SERVICES TABLE ================= */
+  payY += 15;
+  doc.text("Bank Name : Kotak Mahindra Bank", startX, payY);
 
-  y += 60;
+  payY += 15;
+  doc.text("Account Number : 2545306876", startX, payY);
 
-  const tableTop = y;
-  const rowHeight = 30;
+  payY += 15;
+  doc.text("IFSC Code : KBK0001363", startX, payY);
 
-  doc.rect(startX, tableTop, contentWidth, rowHeight).fill("#003366");
-
-  doc.fillColor("#ffffff").font("Times-Bold").fontSize(11);
-  doc.text("SERVICE", startX + 10, tableTop + 8);
-
-  y = tableTop + rowHeight;
-  doc.fillColor("#000000").font("Times-Roman").fontSize(11);
-
-  if (services.length === 0) {
-    doc.rect(startX, y, contentWidth, rowHeight).stroke();
-    doc.text("Service Payment", startX + 10, y + 8);
-    y += rowHeight;
-  } else {
-    services.forEach((service) => {
-      doc.rect(startX, y, contentWidth, rowHeight).stroke();
-      doc.text(service, startX + 10, y + 8);
-      y += rowHeight;
-    });
-  }
-
-  /* ================= TOTAL ================= */
-
-  y += 40;
-
-  doc.font("Times-Bold").fontSize(12);
-  doc.text("TOTAL:", startX + 300, y);
-  doc.text(formatMoney(totalAmount), startX + 400, y);
+  payY += 15;
+  doc.text("GST : 27ASYPR9821NZF", startX, payY);
 
   /* ================= FOOTER ================= */
 
-  y += 80;
-
-  doc.font("Times-Roman").fontSize(10);
-  doc.text(
-    "Thank you for your business! If you have any questions, please contact us.",
-    startX,
-    y,
-    { align: "center", width: contentWidth }
-  );
-
-  doc.moveTo(startX + 380, y + 40).lineTo(startX + 520, y + 40).stroke();
-  doc.text("Tzar Venture", startX + 390, y + 45);
+  doc.fontSize(18).text("Thank You !", startX, payY + 50, {
+    align: "right",
+    width: tableWidth,
+  });
 
   doc.end();
 
   return `/invoices/${fileName}`;
 }
 
+/* ================= NUMBER TO WORDS ================= */
 
+function numberToWords(num) {
+  const a = [
+    "", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
+    "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen",
+    "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"
+  ];
 
+  const b = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
 
-// import fs from "fs";
-// import path from "path";
-// import PDFDocument from "pdfkit/js/pdfkit.standalone.js"; // ✅ Use standalone version
+  if (num === 0) return "Zero";
 
-// /**
-//  * Generates PDF invoice safely for Next.js + Windows
-//  */
-// export function generateInvoice(data) {
-//   const invoiceDir = path.join(process.cwd(), "public/invoices");
+  if (num < 20) return a[num];
 
-//   // Create folder if it doesn't exist
-//   if (!fs.existsSync(invoiceDir)) {
-//     fs.mkdirSync(invoiceDir, { recursive: true });
-//   }
+  if (num < 100) return b[Math.floor(num / 10)] + " " + a[num % 10];
 
-//   const fileName = `invoice_${Date.now()}.pdf`;
-//   const filePath = path.join(invoiceDir, fileName);
+  if (num < 1000)
+    return a[Math.floor(num / 100)] + " Hundred " + numberToWords(num % 100);
 
-//   // ✅ Use PDFKit standalone version (no Helvetica.afm)
-//   const doc = new PDFDocument({ size: "A4", margin: 50 });
+  if (num < 100000)
+    return numberToWords(Math.floor(num / 1000)) + " Thousand " + numberToWords(num % 1000);
 
-//   doc.pipe(fs.createWriteStream(filePath));
-
-//   // Header
-//   doc.font("Times-Roman") // Safe standard font included in standalone
-//      .fontSize(22)
-//      .text("Payment Invoice", { align: "center" });
-//   doc.moveDown();
-
-//   // Customer info
-//   doc.fontSize(12);
-//   doc.text(`Name: ${data.customerName}`);
-//   doc.text(`Company Name: ${data.companyName || "-"}`);
-//   doc.text(`Email: ${data.customerEmail}`);
-//   doc.text(`Amount Paid: ₹${data.amount}`);
-//   doc.text(`Payment ID: ${data.paymentId}`);
-//   doc.text(`Date: ${new Date().toLocaleDateString()}`);
-//   doc.moveDown();
-
-//   // Services
-//   doc.text("Services Selected:", { underline: true });
-//   data.services.forEach((s, i) => {
-//     doc.text(`${i + 1}. ${s}`);
-//   });
-
-//   doc.moveDown();
-//   doc.text("Thank you for your payment!", { align: "center" });
-
-//   doc.end();
-
-//   return `/invoices/${fileName}`;
-// }
+  return num.toString();
+}

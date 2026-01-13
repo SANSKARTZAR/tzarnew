@@ -1,11 +1,6 @@
 // app/payment/services.js
 const services = [
-  {
-    id: "web",
-    title: "Web Development",
-    // price: 25000,
-    points: ["Responsive design", "SEO optimization", "Performance tuning", "CMS integration"],
-  },
+  
   {
     id: "SEO",
     title: "SEO",
@@ -36,7 +31,7 @@ const services = [
   },
   {
     id: "Content Marketing",
-    title: "Content Marketing",
+    title: "Social Media Management",
     // price: 20000,
     points: ["Website content", "Blogs & articles", "Ad copywriting", "Brand storytelling"],
     
@@ -47,6 +42,41 @@ const services = [
     // price: 20000,
     points: ["User-focused product design", "Creative packaging concepts", "Prototyping & mockups", "Label & print-ready files"],
     
+  },
+  {
+    id: "Google Ads",
+    title: "Google Ads",
+    // price: 20000,
+    points: ["User-focused product design", "Creative packaging concepts", "Prototyping & mockups", "Label & print-ready files"],
+    
+  },
+  {
+    id: "Leads Generation",
+    title: "Leads Generation",
+    // price: 20000,
+    points: ["User-focused product design", "Creative packaging concepts", "Prototyping & mockups", "Label & print-ready files"],
+    
+  },
+  {
+    id: "Corporate Gifting",
+    title: "Corporate Gifting",
+    // price: 20000,
+    points: ["User-focused product design", "Creative packaging concepts", "Prototyping & mockups", "Label & print-ready files"],
+    
+  },
+  {
+    id: "Photoshoot",
+    title: "Photoshoot",
+    // price: 20000,
+    points: ["User-focused product design", "Creative packaging concepts", "Prototyping & mockups", "Label & print-ready files"],
+    
+  },
+
+  {
+    id: "web",
+    title: "Web Development",
+    // price: 25000,
+    points: ["Responsive design", "SEO optimization", "Performance tuning", "CMS integration"],
   },
 ];
 

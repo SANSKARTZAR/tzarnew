@@ -11,13 +11,17 @@ export async function POST(req) {
 
     const {
       razorpay_order_id,
-      razorpay_payment_id,
-      razorpay_signature,
-      customerName,
-      companyName, 
-      customerEmail,
-      amount,
-      services,
+    razorpay_payment_id,
+    razorpay_signature,
+    customerName,
+    company,
+    customerEmail,
+    gstNumber,
+    address,
+    baseAmount,
+    gstAmount,
+    amount,
+    services,
     } = body;
 
     // Safety check: Razorpay secret must exist
@@ -42,11 +46,14 @@ export async function POST(req) {
     // ✅ Generate PDF invoice
     const invoiceUrl = generateInvoice({
   customerName,
-  companyName, 
-  customerEmail,
-  amount,
-  paymentId: razorpay_payment_id,
-  services,
+    company,
+    customerEmail,
+    gstNumber,
+    address,
+    baseAmount,
+    gstAmount,
+    amount,
+    services,
 });
 
 

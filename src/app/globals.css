@@ -442,6 +442,47 @@ a {
   }
 }
 
+.topbar {
+  width: 100%;
+  background: #0D2C6B;
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+}
+
+.topbar-track {
+  display: flex;
+  width: fit-content;
+  animation: marquee 35s linear infinite; /* slower speed */
+}
+
+.topbar-track > * {
+  flex-shrink: 0;
+}
+
+.topbar-text {
+  color: #fff;
+  font-size: 14px;
+  padding: 0 50px;
+  white-space: nowrap;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* duplicate track trick removes gap */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 
 

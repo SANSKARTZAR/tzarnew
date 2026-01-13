@@ -10,12 +10,19 @@ export default function PaymentPage() {
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
+  const [gstNumber, setGstNumber] = useState("");
+  const [address, setAddress] = useState("");   // ✅ Address field
   const [manualAmount, setManualAmount] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // ✅ NEW STATES
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [invoiceUrl, setInvoiceUrl] = useState("");
+
+  // Web Development Plan
+  const [webPlan, setWebPlan] = useState("");
+
+  // T&C Consent
+  const [tcAccepted, setTcAccepted] = useState(false);
 
   const toggleService = (service) => {
     setSelected((prev) =>
@@ -23,17 +30,42 @@ export default function PaymentPage() {
         ? prev.filter((s) => s.id !== service.id)
         : [...prev, service]
     );
+
+    if (service.title.toLowerCase().includes("web")) {
+      if (selected.find((s) => s.id === service.id)) {
+        setWebPlan("");
+        setTcAccepted(false);
+      }
+    }
   };
 
-  // ✅ PAYMENT LOGIC
+  const isWebDevSelected = selected.some((s) =>
+    s.title.toLowerCase().includes("web")
+  );
+
+  // GST Calculations
+  const baseAmount = Number(manualAmount || 0);
+  const gstAmount = Math.round(baseAmount * 0.18);
+  const finalAmount = baseAmount + gstAmount;
+
+  // PAYMENT
   const handlePayment = async () => {
-    if (!name || !email) {
-      alert("Please enter name and email");
+    if (!name || !email || !address) {
+      alert("Please enter name, email and billing address");
       return;
     }
 
-    const amount = Number(manualAmount);
-    if (!amount || amount < 1) {
+    if (isWebDevSelected && !webPlan) {
+      alert("Please select a Web Development plan");
+      return;
+    }
+
+    if (isWebDevSelected && !tcAccepted) {
+      alert("Please accept Terms & Conditions");
+      return;
+    }
+
+    if (!baseAmount || baseAmount < 1) {
       alert("Please enter a valid amount");
       return;
     }
@@ -46,19 +78,22 @@ export default function PaymentPage() {
     try {
       setLoading(true);
 
-      // 1️⃣ Create order
       const res = await fetch("/api/razorpay", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          amount,
+          amount: finalAmount,
+          baseAmount,
+          gstAmount,
+          gstNumber,
           services: selected.map((s) => s.title),
+          webPlan,
+          address, // ✅ send address
         }),
       });
 
       const data = await res.json();
 
-      // 2️⃣ Razorpay options
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
         amount: data.amount,
@@ -80,15 +115,20 @@ export default function PaymentPage() {
                 customerName: name,
                 company,
                 customerEmail: email,
-                amount,
+                gstNumber,
+                address, // ✅ send address
+                baseAmount,
+                gstAmount,
+                amount: finalAmount,
                 services: selected.map((s) => s.title),
+                webPlan,
               }),
             });
 
             const result = await verifyRes.json();
 
             if (result.success) {
-              setInvoiceUrl(result.invoiceUrl); // backend should return invoice URL
+              setInvoiceUrl(result.invoiceUrl);
               setPaymentSuccess(true);
             } else {
               alert("Payment verification failed");
@@ -117,56 +157,42 @@ export default function PaymentPage() {
     }
   };
 
-  // ✅ THANK YOU SCREEN
+  // THANK YOU PAGE
   if (paymentSuccess) {
-  return (
-    <div className="thankyou-page">
-      <div className="thankyou-card">
-        <h1>🎉 Payment Successful!</h1>
-        <p className="thankyou-text">
-          Thank you for your payment. Your invoice has been sent to your email.
-        </p>
+    return (
+      <div className="thankyou-page">
+        <div className="thankyou-card">
+          <h1>🎉 Payment Successful!</h1>
+          <p>Thank you for your payment. Your invoice has been sent to your email.</p>
 
-        <div className="thankyou-actions">
-          <a href={invoiceUrl} download>
-            <button className="download-btn">
-              📄 Download Invoice
+          <div className="thankyou-actions">
+            <a href={invoiceUrl} download>
+              <button className="download-btn">📄 Download Invoice</button>
+            </a>
+
+            <button className="home-btn" onClick={() => window.location.reload()}>
+              Make Another Payment
             </button>
-          </a>
-
-          <button
-            className="home-btn"
-            onClick={() => window.location.reload()}
-          >
-            Make Another Payment
-          </button>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
   return (
     <>
       <Script src="https://checkout.razorpay.com/v1/checkout.js" />
 
       <div className="checkout-page">
-        {/* HERO BANNER */}
-        <section className="checkout-hero">
-          <div className="hero-overlay" />
-          <div className="hero-content">
-            <h1>Pay with Confidence</h1>
-            <p>
-              Secure transactions, transparent pricing, and complete data
-              protection
-            </p>
-          </div>
-        </section>
-
+        <section className="checkout-hero"> 
+          <div className="hero-overlay" /> 
+          <div className="hero-content"> 
+            <h1>Pay with Confidence</h1> 
+            <p> Secure transactions, transparent pricing, and complete data protection </p> 
+            </div> 
+            </section>
         <h1 className="checkout-title">Checkout</h1>
-        <p className="checkout-subtitle">
-          Select your services and complete payment
-        </p>
+        <p className="checkout-subtitle">Select your services and continue</p>
 
         <div className="checkout-steps">
           <div className={`step ${step >= 1 ? "active" : ""}`}>1 Services</div>
@@ -175,61 +201,127 @@ export default function PaymentPage() {
         </div>
 
         <div className="checkout-card">
-          {/* STEP 1 */}
+
+          {/* STEP 1 - SERVICES */}
           {step === 1 && (
             <div className="services-section">
               <h2>Select Services</h2>
-              {services.map((service) => (
-                <div
-                  key={service.id}
-                  className={`service-card ${
-                    selected.find((s) => s.id === service.id)
-                      ? "selected"
-                      : ""
-                  }`}
-                  onClick={() => toggleService(service)}
-                >
-                  <div>
-                    <h4>{service.title}</h4>
-                    <p>{service.desc}</p>
-                  </div>
-                </div>
-              ))}
+
+              <div className="services-grid">
+                {services.map((service) => {
+                  const isSelected = selected.find((s) => s.id === service.id);
+                  const isWebService = service.title.toLowerCase().includes("web");
+
+                  return (
+                    <div key={service.id} className="service-wrapper">
+                      <div
+                        className={`service-card ${isSelected ? "selected" : ""}`}
+                        onClick={() => toggleService(service)}
+                      >
+                        <h4>{service.title}</h4>
+                        <p>{service.desc}</p>
+                      </div>
+
+                      {isSelected && isWebService && (
+                        <div className="web-plan-box">
+                          <label>Select Web Development Plan</label>
+                          <select
+                            value={webPlan}
+                            onChange={(e) => setWebPlan(e.target.value)}
+                            className="web-plan-dropdown"
+                          >
+                            <option value="">Choose a plan</option>
+                            <option value="Wordpress">Wordpress</option>
+                            <option value="Shopify">Shopify</option>
+                            <option value="React">React</option>
+                            <option value="Landing Page">Landing Page</option>
+                            <option value="Other">Other</option>
+                          </select>
+
+                          <div className="tc-wrapper">
+  <label className="tc-consent">
+    <input
+      type="checkbox"
+      checked={tcAccepted}
+      onChange={(e) => setTcAccepted(e.target.checked)}
+    />
+    <span>
+      I agree that{" "}
+      <a href="/terms-and-conditions" target="_blank">
+        T & C
+      </a>{" "}
+      applies.
+    </span>
+  </label>
+</div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           )}
 
-          {/* STEP 2 */}
+          {/* STEP 2 - DETAILS */}
           {step === 2 && (
-            <div className="summary-section">
-              <h3>Your Details</h3>
+  <div className="summary-section">
+    <h3>Your Details</h3>
 
-              <label>Full Name</label>
-              <input value={name} onChange={(e) => setName(e.target.value)} />
+    <div className="form-grid">
+      <div>
+        <label>Full Name</label>
+        <input value={name} onChange={(e) => setName(e.target.value)} />
+      </div>
 
-              <label>Company Name</label>
-              <input
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
-              />
+      <div>
+        <label>Company Name</label>
+        <input value={company} onChange={(e) => setCompany(e.target.value)} />
+      </div>
 
-              <label>Email Address</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+      <div>
+        <label>Email Address</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
 
-              <label>Enter Amount (₹)</label>
-              <input
-                type="number"
-                min="1"
-                value={manualAmount}
-                onChange={(e) => setManualAmount(e.target.value)}
-              />
-            </div>
-          )}
+      <div>
+        <label>Billing Address</label>
+        <textarea
+          rows="3"
+          placeholder="Enter full billing address"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+        />
+      </div>
 
-          {/* STEP 3 */}
+      <div>
+        <label>GST Number</label>
+        <input
+          placeholder="Enter GST number"
+          value={gstNumber}
+          onChange={(e) => setGstNumber(e.target.value.toUpperCase())}
+        />
+      </div>
+
+      <div>
+        <label>Enter Amount (₹)</label>
+        <input
+          type="number"
+          min="1"
+          value={manualAmount}
+          onChange={(e) => setManualAmount(e.target.value)}
+        />
+      </div>
+    </div>
+  </div>
+)}
+
+
+          {/* STEP 3 - SUMMARY */}
           {step === 3 && (
             <div className="order-summary">
               <h3>Order Summary</h3>
@@ -240,22 +332,37 @@ export default function PaymentPage() {
                 </div>
               ))}
 
+              {webPlan && (
+                <div className="summary-row">
+                  <span>Web Development Plan</span>
+                  <strong>{webPlan}</strong>
+                </div>
+              )}
+
+              <div className="summary-row">
+                <span>Base Amount</span>
+                <strong>₹{baseAmount}</strong>
+              </div>
+
+              <div className="summary-row">
+                <span>GST (18%)</span>
+                <strong>₹{gstAmount}</strong>
+              </div>
+
               <div className="summary-divider" />
 
               <div className="total-row">
-                <span>Total Amount</span>
-                <span className="total-amount">₹{manualAmount}</span>
+                <span>Total Payable</span>
+                <span className="total-amount">₹{finalAmount}</span>
               </div>
 
               <div className="billing-box">
                 <p>Billing to:</p>
                 <strong>{name}</strong>
                 {company && <div>{company}</div>}
+                {address && <div>{address}</div>}
                 <div>{email}</div>
-              </div>
-
-              <div className="secure-text">
-                🔒 Secure 256-bit SSL encryption
+                {gstNumber && <div>GST: {gstNumber}</div>}
               </div>
             </div>
           )}
@@ -263,10 +370,7 @@ export default function PaymentPage() {
           {/* FOOTER */}
           <div className="card-footer">
             {step > 1 ? (
-              <button
-                className="back-inline"
-                onClick={() => setStep(step - 1)}
-              >
+              <button className="back-inline" onClick={() => setStep(step - 1)}>
                 ← Back
               </button>
             ) : (
@@ -277,7 +381,10 @@ export default function PaymentPage() {
               <button
                 className="continue-btn"
                 onClick={() => setStep(step + 1)}
-                disabled={step === 1 && selected.length === 0}
+                disabled={
+                  selected.length === 0 ||
+                  (isWebDevSelected && (!webPlan || !tcAccepted))
+                }
               >
                 Continue →
               </button>
@@ -287,9 +394,9 @@ export default function PaymentPage() {
               <button
                 className="pay-btn"
                 onClick={handlePayment}
-                disabled={loading}
+                disabled={loading || (isWebDevSelected && !tcAccepted)}
               >
-                {loading ? "Processing..." : `Pay ₹${manualAmount || 0}`}
+                {loading ? "Processing..." : `Pay ₹${finalAmount}`}
               </button>
             )}
           </div>
@@ -298,6 +405,10 @@ export default function PaymentPage() {
     </>
   );
 }
+
+
+
+
 
 
 
