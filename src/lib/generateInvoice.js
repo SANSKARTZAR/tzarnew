@@ -3,24 +3,23 @@ import path from "path";
 import os from "os";
 import PDFDocument from "pdfkit/js/pdfkit.standalone.js";
 
-export function generateInvoice(data) {
-  // temp folder (server safe)
+export async function generateInvoice(data) {
   const tempDir = path.join(os.tmpdir(), "invoices");
-  if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
-
-  // public folder (downloadable)
   const publicDir = path.join(process.cwd(), "public/invoices");
+
+  if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 
   const fileName = `invoice_${Date.now()}.pdf`;
-
   const tempPath = path.join(tempDir, fileName);
   const publicPath = path.join(publicDir, fileName);
 
   const doc = new PDFDocument({ size: "A4", margin: 50 });
-  doc.pipe(fs.createWriteStream(tempPath));
+  const writeStream = fs.createWriteStream(tempPath);
 
-  /* ===== YOUR EXISTING DESIGN CODE (UNCHANGED) ===== */
+  doc.pipe(writeStream);
+
+  /* ===== YOUR EXISTING DESIGN (UNCHANGED) ===== */
 
   const pageWidth = doc.page.width;
   const startX = 50;
@@ -111,13 +110,14 @@ export function generateInvoice(data) {
 
   doc.end();
 
-  // wait for file to finish writing
-  return new Promise((resolve) => {
-    doc.on("end", () => {
-      fs.copyFileSync(tempPath, publicPath);
-      resolve(`/invoices/${fileName}`); // public URL
-    });
-  });
+  // 🔴 WAIT until file is fully written
+  await new Promise((resolve) => writeStream.on("finish", resolve));
+
+  // Copy to public folder
+  fs.copyFileSync(tempPath, publicPath);
+
+  // Return public URL
+  return `/invoices/${fileName}`;
 }
 
 /* ================= NUMBER TO WORDS ================= */
@@ -139,7 +139,8 @@ function numberToWords(num) {
     return numberToWords(Math.floor(num / 1000)) + " Thousand " + numberToWords(num % 1000);
 
   return num.toString();
-}  
+}
+
 
 // import fs from "fs";
 // import path from "path";
