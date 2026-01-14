@@ -1,6 +1,5 @@
 import PDFDocument from "pdfkit/js/pdfkit.standalone.js";
 import cloudinary from "cloudinary";
-import streamifier from "streamifier";
 
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -14,24 +13,22 @@ export async function generateInvoice(data) {
 
     const buffers = [];
     doc.on("data", buffers.push.bind(buffers));
+
     doc.on("end", async () => {
       try {
         const pdfBuffer = Buffer.concat(buffers);
 
-        const uploadStream = cloudinary.v2.uploader.upload_stream(
+        // ✅ Upload as Base64 (no streamifier needed)
+        const result = await cloudinary.v2.uploader.upload(
+          `data:application/pdf;base64,${pdfBuffer.toString("base64")}`,
           {
             folder: "invoices",
             resource_type: "raw",
-            format: "pdf",
             public_id: `TZAR_Invoice_${Date.now()}`,
-          },
-          (error, result) => {
-            if (error) return reject(error);
-            resolve(result.secure_url); // ✅ permanent PDF link
           }
         );
 
-        streamifier.createReadStream(pdfBuffer).pipe(uploadStream);
+        resolve(result.secure_url); // ✅ permanent PDF URL
       } catch (err) {
         reject(err);
       }
@@ -49,7 +46,7 @@ export async function generateInvoice(data) {
     const invoiceNo = `2025${Date.now().toString().slice(-4)}`;
     const invoiceDate = new Date().toLocaleDateString("en-GB");
 
-    doc.fontSize(11).text(`Invoice No: ${invoiceNo}`, startX, 140);
+    doc.text(`Invoice No: ${invoiceNo}`, startX, 140);
     doc.text(`Date Issued: ${invoiceDate}`, startX, 160);
 
     let issuedY = 140;

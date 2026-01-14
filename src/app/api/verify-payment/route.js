@@ -24,7 +24,6 @@ export async function POST(req) {
       services,
     } = body;
 
-    // 🔐 Verify Razorpay signature
     const generatedSignature = crypto
       .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
       .update(`${razorpay_order_id}|${razorpay_payment_id}`)
@@ -37,7 +36,6 @@ export async function POST(req) {
       );
     }
 
-    // ✅ Generate invoice on Cloudinary
     const invoiceUrl = await generateInvoice({
       customerName,
       company,
@@ -50,7 +48,6 @@ export async function POST(req) {
       services,
     });
 
-    // ✅ Send email with direct PDF link
     if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
       const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -80,7 +77,6 @@ export async function POST(req) {
       });
     }
 
-    // ✅ Send invoice link to frontend
     return NextResponse.json({
       success: true,
       invoiceUrl,
@@ -94,6 +90,7 @@ export async function POST(req) {
     );
   }
 }
+
 
 
 
