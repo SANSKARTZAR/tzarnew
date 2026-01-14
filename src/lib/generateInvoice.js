@@ -6,14 +6,14 @@ export async function generateInvoice(data) {
   const publicDir = path.join(process.cwd(), "public/invoices");
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 
-  const fileName = `invoice_${Date.now()}.pdf`;
+  const fileName = `invoice_${Date.now()}.pdf`; // just filename
   const publicPath = path.join(publicDir, fileName);
 
   const doc = new PDFDocument({ size: "A4", margin: 50 });
   const writeStream = fs.createWriteStream(publicPath);
   doc.pipe(writeStream);
 
-  // ===== Invoice Design =====
+  // ===== PDF DESIGN =====
   const pageWidth = doc.page.width;
   const startX = 50;
   const rightX = 350;
@@ -35,19 +35,9 @@ export async function generateInvoice(data) {
   doc.font("Times-Roman").text(data.customerName || "-", rightX, issuedY);
   issuedY += 18;
 
-  if (data.company) {
-    doc.text(data.company, rightX, issuedY);
-    issuedY += 18;
-  }
-
-  if (data.address) {
-    doc.text(data.address, rightX, issuedY, { width: 200 });
-    issuedY += 40;
-  }
-
-  if (data.gstNumber) {
-    doc.text(`GST: ${data.gstNumber}`, rightX, issuedY);
-  }
+  if (data.company) { doc.text(data.company, rightX, issuedY); issuedY += 18; }
+  if (data.address) { doc.text(data.address, rightX, issuedY, { width: 200 }); issuedY += 40; }
+  if (data.gstNumber) { doc.text(`GST: ${data.gstNumber}`, rightX, issuedY); }
 
   const baseAmount = Number(data.baseAmount || data.amount || 0);
   const cgst = Math.round(baseAmount * 0.09);
@@ -105,7 +95,7 @@ export async function generateInvoice(data) {
 
   await new Promise((resolve) => writeStream.on("finish", resolve));
 
-  return `/invoices/${fileName}`;
+  return fileName; // return only filename, NOT /invoices/
 }
 
 // ===== Number to Words =====
@@ -120,6 +110,7 @@ function numberToWords(num) {
   if(num<100000) return numberToWords(Math.floor(num/1000)) + " Thousand " + numberToWords(num%1000);
   return num.toString();
 }
+
 
 
 

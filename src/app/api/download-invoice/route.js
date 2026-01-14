@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
-  const file = searchParams.get("file"); // invoice_167889.pdf
+  const file = searchParams.get("file"); // only filename, e.g., invoice_167889.pdf
 
   if (!file) {
     return NextResponse.json({ error: "File not specified" }, { status: 400 });
@@ -22,7 +22,7 @@ export async function GET(req) {
     status: 200,
     headers: {
       "Content-Type": "application/pdf",
-      "Content-Disposition": `attachment; filename="${file}"`,
+      "Content-Disposition": `attachment; filename="${file}"`, // force download
     },
   });
 }
