@@ -3,17 +3,19 @@ import path from "path";
 import PDFDocument from "pdfkit/js/pdfkit.standalone.js";
 
 export async function generateInvoice(data) {
+  // Ensure invoices folder exists in public
   const publicDir = path.join(process.cwd(), "public/invoices");
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 
-  const fileName = `invoice_${Date.now()}.pdf`; // just filename
-  const publicPath = path.join(publicDir, fileName);
+  // Filename with timestamp
+  const fileName = `TZAR_Invoice_${Date.now()}.pdf`;
+  const filePath = path.join(publicDir, fileName);
 
   const doc = new PDFDocument({ size: "A4", margin: 50 });
-  const writeStream = fs.createWriteStream(publicPath);
+  const writeStream = fs.createWriteStream(filePath);
   doc.pipe(writeStream);
 
-  // ===== PDF DESIGN =====
+  // ===== PDF Content =====
   const pageWidth = doc.page.width;
   const startX = 50;
   const rightX = 350;
@@ -92,13 +94,12 @@ export async function generateInvoice(data) {
   });
 
   doc.end();
-
   await new Promise((resolve) => writeStream.on("finish", resolve));
 
- return `/invoices/${fileName}`; // return only filename, NOT /invoices/
+  // Return public path for browser/email
+  return `/invoices/${fileName}`;
 }
 
-// ===== Number to Words =====
 function numberToWords(num) {
   const a = ["","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten",
     "Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"];
@@ -110,6 +111,7 @@ function numberToWords(num) {
   if(num<100000) return numberToWords(Math.floor(num/1000)) + " Thousand " + numberToWords(num%1000);
   return num.toString();
 }
+
 
 
 
