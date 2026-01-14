@@ -1,103 +1,122 @@
-import fs from "fs";
-import path from "path";
 import PDFDocument from "pdfkit/js/pdfkit.standalone.js";
+import cloudinary from "cloudinary";
+import streamifier from "streamifier";
+
+cloudinary.v2.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 export async function generateInvoice(data) {
-  // Ensure invoices folder exists in public
-  const publicDir = path.join(process.cwd(), "public/invoices");
-  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+  return new Promise((resolve, reject) => {
+    const doc = new PDFDocument({ size: "A4", margin: 50 });
 
-  // Filename with timestamp
-  const fileName = `TZAR_Invoice_${Date.now()}.pdf`;
-  const filePath = path.join(publicDir, fileName);
+    const buffers = [];
+    doc.on("data", buffers.push.bind(buffers));
+    doc.on("end", async () => {
+      try {
+        const pdfBuffer = Buffer.concat(buffers);
 
-  const doc = new PDFDocument({ size: "A4", margin: 50 });
-  const writeStream = fs.createWriteStream(filePath);
-  doc.pipe(writeStream);
+        const uploadStream = cloudinary.v2.uploader.upload_stream(
+          {
+            folder: "invoices",
+            resource_type: "raw",
+            format: "pdf",
+            public_id: `TZAR_Invoice_${Date.now()}`,
+          },
+          (error, result) => {
+            if (error) return reject(error);
+            resolve(result.secure_url); // ✅ permanent PDF link
+          }
+        );
 
-  // ===== PDF Content =====
-  const pageWidth = doc.page.width;
-  const startX = 50;
-  const rightX = 350;
+        streamifier.createReadStream(pdfBuffer).pipe(uploadStream);
+      } catch (err) {
+        reject(err);
+      }
+    });
 
-  doc.font("Times-Bold").fontSize(20).text("TZAR", startX, 40);
-  doc.fontSize(11).text("TZAR Venture", startX, 70);
-  doc.text("DIGITAL MARKETING AGENCY", startX, 90);
+    // ===== PDF CONTENT =====
+    const pageWidth = doc.page.width;
+    const startX = 50;
+    const rightX = 350;
 
-  const invoiceNo = `2025${Date.now().toString().slice(-4)}`;
-  const invoiceDate = new Date().toLocaleDateString("en-GB");
+    doc.font("Times-Bold").fontSize(20).text("TZAR", startX, 40);
+    doc.fontSize(11).text("TZAR Venture", startX, 70);
+    doc.text("DIGITAL MARKETING AGENCY", startX, 90);
 
-  doc.fontSize(11).text(`Invoice No: ${invoiceNo}`, startX, 140);
-  doc.text(`Date Issued: ${invoiceDate}`, startX, 160);
+    const invoiceNo = `2025${Date.now().toString().slice(-4)}`;
+    const invoiceDate = new Date().toLocaleDateString("en-GB");
 
-  let issuedY = 140;
-  doc.font("Times-Bold").text("Issued to:", rightX, issuedY);
-  issuedY += 25;
+    doc.fontSize(11).text(`Invoice No: ${invoiceNo}`, startX, 140);
+    doc.text(`Date Issued: ${invoiceDate}`, startX, 160);
 
-  doc.font("Times-Roman").text(data.customerName || "-", rightX, issuedY);
-  issuedY += 18;
+    let issuedY = 140;
+    doc.font("Times-Bold").text("Issued to:", rightX, issuedY);
+    issuedY += 25;
 
-  if (data.company) { doc.text(data.company, rightX, issuedY); issuedY += 18; }
-  if (data.address) { doc.text(data.address, rightX, issuedY, { width: 200 }); issuedY += 40; }
-  if (data.gstNumber) { doc.text(`GST: ${data.gstNumber}`, rightX, issuedY); }
+    doc.font("Times-Roman").text(data.customerName || "-", rightX, issuedY);
+    issuedY += 18;
 
-  const baseAmount = Number(data.baseAmount || data.amount || 0);
-  const cgst = Math.round(baseAmount * 0.09);
-  const sgst = Math.round(baseAmount * 0.09);
-  const grandTotal = baseAmount + cgst + sgst;
+    if (data.company) { doc.text(data.company, rightX, issuedY); issuedY += 18; }
+    if (data.address) { doc.text(data.address, rightX, issuedY, { width: 200 }); issuedY += 40; }
+    if (data.gstNumber) { doc.text(`GST: ${data.gstNumber}`, rightX, issuedY); }
 
-  let tableTop = 260;
-  const rowHeight = 35;
-  const tableWidth = pageWidth - 100;
+    const baseAmount = Number(data.baseAmount || data.amount || 0);
+    const cgst = Math.round(baseAmount * 0.09);
+    const sgst = Math.round(baseAmount * 0.09);
+    const grandTotal = baseAmount + cgst + sgst;
 
-  doc.rect(startX, tableTop, tableWidth, rowHeight).stroke();
-  doc.font("Times-Bold").text("Description", startX + 10, tableTop + 10);
-  doc.text("Amount", pageWidth - 130, tableTop + 10);
+    let tableTop = 260;
+    const rowHeight = 35;
+    const tableWidth = pageWidth - 100;
 
-  tableTop += rowHeight;
+    doc.rect(startX, tableTop, tableWidth, rowHeight).stroke();
+    doc.font("Times-Bold").text("Description", startX + 10, tableTop + 10);
+    doc.text("Amount", pageWidth - 130, tableTop + 10);
 
-  const description = data.services?.join(", ") || "Service Payment";
+    tableTop += rowHeight;
 
-  doc.rect(startX, tableTop, tableWidth, rowHeight * 2).stroke();
-  doc.font("Times-Roman")
-    .text(description, startX + 10, tableTop + 10, { width: 350 })
-    .text(`Rs ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, tableTop + 10);
+    const description = data.services?.join(", ") || "Service Payment";
 
-  tableTop += rowHeight * 2;
+    doc.rect(startX, tableTop, tableWidth, rowHeight * 2).stroke();
+    doc.font("Times-Roman")
+      .text(description, startX + 10, tableTop + 10, { width: 350 })
+      .text(`Rs ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, tableTop + 10);
 
-  let totalY = tableTop + 30;
+    tableTop += rowHeight * 2;
 
-  doc.font("Times-Bold").text("SUBTOTAL", pageWidth - 220, totalY);
-  doc.text(`Rs ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
+    let totalY = tableTop + 30;
 
-  totalY += 20;
-  doc.text("CGST 9%", pageWidth - 220, totalY);
-  doc.text(`Rs ${cgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
+    doc.font("Times-Bold").text("SUBTOTAL", pageWidth - 220, totalY);
+    doc.text(`Rs ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  totalY += 20;
-  doc.text("SGST 9%", pageWidth - 220, totalY);
-  doc.text(`Rs ${sgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
+    totalY += 20;
+    doc.text("CGST 9%", pageWidth - 220, totalY);
+    doc.text(`Rs ${cgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  totalY += 25;
-  doc.fontSize(12).text("GRAND TOTAL", pageWidth - 220, totalY);
-  doc.text(`Rs ${grandTotal.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
+    totalY += 20;
+    doc.text("SGST 9%", pageWidth - 220, totalY);
+    doc.text(`Rs ${sgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  doc.fontSize(10).text(
-    `IN WORDS: Rupees ${numberToWords(grandTotal)} Only`,
-    startX,
-    totalY + 40
-  );
+    totalY += 25;
+    doc.fontSize(12).text("GRAND TOTAL", pageWidth - 220, totalY);
+    doc.text(`Rs ${grandTotal.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  doc.fontSize(18).text("Thank You !", startX, totalY + 100, {
-    align: "right",
-    width: tableWidth,
+    doc.fontSize(10).text(
+      `IN WORDS: Rupees ${numberToWords(grandTotal)} Only`,
+      startX,
+      totalY + 40
+    );
+
+    doc.fontSize(18).text("Thank You !", startX, totalY + 100, {
+      align: "right",
+      width: tableWidth,
+    });
+
+    doc.end();
   });
-
-  doc.end();
-  await new Promise((resolve) => writeStream.on("finish", resolve));
-
-  // Return public path for browser/email
-  return `/invoices/${fileName}`;
 }
 
 function numberToWords(num) {
@@ -111,6 +130,8 @@ function numberToWords(num) {
   if(num<100000) return numberToWords(Math.floor(num/1000)) + " Thousand " + numberToWords(num%1000);
   return num.toString();
 }
+
+
 
 
 

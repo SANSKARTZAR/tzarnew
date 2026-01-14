@@ -16,7 +16,7 @@ export default function PaymentPage() {
   const [loading, setLoading] = useState(false);
 
   const [paymentSuccess, setPaymentSuccess] = useState(false);
-  // const [invoiceUrl, setInvoiceUrl] = useState("");
+  const [invoiceUrl, setInvoiceUrl] = useState("");
 
   // Web Development Plan
   const [webPlan, setWebPlan] = useState("");
@@ -128,7 +128,7 @@ export default function PaymentPage() {
             const result = await verifyRes.json();
 
             if (result.success) {
-              // setInvoiceUrl(result.invoiceUrl);
+              setInvoiceUrl(result.invoiceUrl);
               setPaymentSuccess(true);
             } else {
               alert("Payment verification failed");
@@ -158,23 +158,27 @@ export default function PaymentPage() {
   };
 
   // THANK YOU PAGE
-  if (paymentSuccess) {
+ if (paymentSuccess) {
   return (
     <div className="thankyou-page">
       <div className="thankyou-card">
         <h1>🎉 Payment Successful!</h1>
-        <p>Thank you for your payment.</p>
-        <p><b>Your invoice has been sent to your email.</b></p>
+        <p>Your invoice has been sent to your email.</p>
 
-        <div className="thankyou-actions">
-          <button className="home-btn" onClick={() => window.location.reload()}>
-            Make Another Payment
-          </button>
-        </div>
+        {invoiceUrl && (
+          <a href={invoiceUrl} target="_blank" className="download-btn">
+            Download Invoice PDF
+          </a>
+        )}
+
+        <button onClick={() => window.location.reload()}>
+          Make Another Payment
+        </button>
       </div>
     </div>
   );
 }
+
 
 
   return (

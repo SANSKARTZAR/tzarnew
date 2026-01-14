@@ -24,7 +24,7 @@ export async function POST(req) {
       services,
     } = body;
 
-    // 🔐 Verify signature
+    // 🔐 Verify Razorpay signature
     const generatedSignature = crypto
       .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
       .update(`${razorpay_order_id}|${razorpay_payment_id}`)
@@ -37,64 +37,55 @@ export async function POST(req) {
       );
     }
 
-    let invoiceUrl = "";
+    // ✅ Generate invoice on Cloudinary
+    const invoiceUrl = await generateInvoice({
+      customerName,
+      company,
+      customerEmail,
+      gstNumber,
+      address,
+      baseAmount,
+      gstAmount,
+      amount,
+      services,
+    });
 
-    try {
-      // ⚠ Try invoice generation (non-blocking)
-      invoiceUrl = generateInvoice({
-        customerName,
-        company,
-        customerEmail,
-        gstNumber,
-        address,
-        baseAmount,
-        gstAmount,
-        amount,
-        services,
+    // ✅ Send email with direct PDF link
+    if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS,
+        },
       });
-    } catch (err) {
-      console.error("Invoice generation failed:", err);
+
+      await transporter.sendMail({
+        from: `"Tzar Venture" <${process.env.EMAIL_USER}>`,
+        to: `${customerEmail}, ${process.env.ADMIN_EMAIL}`,
+        subject: "Payment Successful - Invoice",
+        html: `
+          <h2>Hi ${customerName},</h2>
+          <p>Your payment of ₹${amount} was successful.</p>
+          <p>Payment ID: ${razorpay_payment_id}</p>
+          <p>
+            <a href="${invoiceUrl}" target="_blank"
+              style="padding:12px 20px;background:#000;color:#fff;
+              text-decoration:none;border-radius:6px;">
+              Download Invoice (PDF)
+            </a>
+          </p>
+          <p>Regards,<br/>Tzar Venture</p>
+        `,
+      });
     }
 
-    // ⚠ Try email (non-blocking)
-    try {
-      if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
-        const transporter = nodemailer.createTransport({
-          host: "smtp.gmail.com",
-          port: 465,
-          secure: true,
-          auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
-          },
-        });
-
-        await transporter.sendMail({
-          from: `"Tzar Venture" <${process.env.EMAIL_USER}>`,
-          to: `${customerEmail}, ${process.env.ADMIN_EMAIL}`,
-          subject: "Payment Successful - Invoice",
-          html: `
-            <p>Hi ${customerName},</p>
-            <p>Your payment of ₹${amount} was successful.</p>
-            <p>Payment ID: ${razorpay_payment_id}</p>
-            ${
-              invoiceUrl
-                ? `<p><a href="${process.env.NEXT_PUBLIC_SITE_URL}${invoiceUrl}">Download Invoice</a></p>`
-                : ""
-            }
-            <p>Regards,<br/>Tzar Venture</p>
-          `,
-        });
-      }
-    } catch (err) {
-      console.error("Email failed:", err);
-    }
-
-    // ✅ Always return success if payment is verified
+    // ✅ Send invoice link to frontend
     return NextResponse.json({
       success: true,
       invoiceUrl,
     });
+
   } catch (error) {
     console.error("Verify Payment Error:", error);
     return NextResponse.json(
@@ -103,6 +94,7 @@ export async function POST(req) {
     );
   }
 }
+
 
 
 
