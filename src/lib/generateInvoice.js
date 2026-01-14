@@ -95,7 +95,7 @@ export async function generateInvoice(data) {
 
   await new Promise((resolve) => writeStream.on("finish", resolve));
 
-  return fileName; // return only filename, NOT /invoices/
+ return `/invoices/${fileName}`; // return only filename, NOT /invoices/
 }
 
 // ===== Number to Words =====

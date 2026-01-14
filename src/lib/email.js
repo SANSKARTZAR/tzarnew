@@ -7,10 +7,11 @@ export async function POST(req) {
   try {
     const data = await req.json();
 
-    // Generate invoice and get filename only
-    const invoiceFileName = await generateInvoice(data);
+    // Generate invoice and get public path
+    const invoicePath = await generateInvoice(data); // e.g., /invoices/invoice_167889.pdf
+    const invoiceFileName = path.basename(invoicePath);
 
-    const downloadLink = `${process.env.NEXT_PUBLIC_SITE_URL}/api/download-invoice?file=${invoiceFileName}`;
+    const downloadLink = `${process.env.NEXT_PUBLIC_SITE_URL}${invoicePath}`;
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -25,7 +26,11 @@ export async function POST(req) {
       to: `${data.email}, ${process.env.ADMIN_EMAIL}`,
       subject: "Payment Invoice",
       html: `<p>Thank you for your payment.</p>
-             <p><a href="${downloadLink}">Download Invoice</a></p>`,
+             <p>
+             <a href="${downloadLink}" download="${invoiceFileName}">
+               Download Invoice
+             </a>
+             </p>`,
       attachments: [
         {
           filename: invoiceFileName,
@@ -34,7 +39,7 @@ export async function POST(req) {
       ],
     });
 
-    return NextResponse.json({ success: true, invoiceFileName });
+    return NextResponse.json({ success: true, invoicePath });
   } catch (err) {
     console.error(err);
     return NextResponse.json({ success: false, error: err.message }, { status: 500 });
