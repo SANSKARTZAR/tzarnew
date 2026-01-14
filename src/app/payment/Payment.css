@@ -502,3 +502,66 @@ html, body {
 .tc-consent a:hover {
   text-decoration: underline;
 }
+
+.thankyou-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fb;
+}
+
+.thankyou-card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  max-width: 480px;
+  width: 100%;
+}
+
+.thankyou-card h1 {
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.thankyou-card p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.thankyou-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  background: #003366;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.download-btn:hover {
+  background: #002244;
+}
+
+.secondary-btn {
+  background: #eaeef5;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #003366;
+}
+
+.secondary-btn:hover {
+  background: #dde3f0;
+}

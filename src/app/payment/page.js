@@ -165,19 +165,27 @@ export default function PaymentPage() {
         <h1>🎉 Payment Successful!</h1>
         <p>Your invoice has been sent to your email.</p>
 
-        {invoiceUrl && (
-          <a href={invoiceUrl} target="_blank" className="download-btn">
+        <div className="thankyou-actions">
+          <a
+            href={invoiceUrl}
+            target="_blank"
+            className="download-btn"
+          >
             Download Invoice PDF
           </a>
-        )}
 
-        <button onClick={() => window.location.reload()}>
-          Make Another Payment
-        </button>
+          <button
+            className="secondary-btn"
+            onClick={() => window.location.reload()}
+          >
+            Make Another Payment
+          </button>
+        </div>
       </div>
     </div>
   );
 }
+
 
 
 

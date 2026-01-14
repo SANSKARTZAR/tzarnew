@@ -1,6 +1,8 @@
 import PDFDocument from "pdfkit/js/pdfkit.standalone.js";
+import axios from "axios";
 import cloudinary from "cloudinary";
 
+// Cloudinary config
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -8,47 +10,43 @@ cloudinary.v2.config({
 });
 
 export async function generateInvoice(data) {
-  return new Promise((resolve, reject) => {
+  try {
+    // ================= LOAD LOGO =================
+    const logoUrl =
+      "https://res.cloudinary.com/dbmrcb6pt/image/upload/v1768389815/logo_iizmf4.jpg";
+
+    const logoResponse = await axios.get(logoUrl, {
+      responseType: "arraybuffer",
+    });
+
+    const logoBuffer = Buffer.from(logoResponse.data);
+
+    // ================= CREATE PDF =================
     const doc = new PDFDocument({ size: "A4", margin: 50 });
 
     const buffers = [];
     doc.on("data", buffers.push.bind(buffers));
 
-    doc.on("end", async () => {
-      try {
-        const pdfBuffer = Buffer.concat(buffers);
-
-        // ✅ Upload as Base64 (no streamifier needed)
-        const result = await cloudinary.v2.uploader.upload(
-          `data:application/pdf;base64,${pdfBuffer.toString("base64")}`,
-          {
-            folder: "invoices",
-            resource_type: "raw",
-            public_id: `TZAR_Invoice_${Date.now()}`,
-          }
-        );
-
-        resolve(result.secure_url); // ✅ permanent PDF URL
-      } catch (err) {
-        reject(err);
-      }
-    });
-
-    // ===== PDF CONTENT =====
+    // ================= PDF CONTENT =================
     const pageWidth = doc.page.width;
     const startX = 50;
     const rightX = 350;
 
-    doc.font("Times-Bold").fontSize(20).text("TZAR", startX, 40);
-    doc.fontSize(11).text("TZAR Venture", startX, 70);
-    doc.text("DIGITAL MARKETING AGENCY", startX, 90);
+    // Logo
+    doc.image(logoBuffer, 50, 30, { width: 120 });
 
-    const invoiceNo = `2025${Date.now().toString().slice(-4)}`;
+    // Company text
+    doc.font("Times-Bold").fontSize(20).text("TZAR Venture", 200, 45);
+    doc.fontSize(11).text("DIGITAL MARKETING AGENCY", 200, 75);
+
+    const invoiceNo = `2025${Date.now().toString().slice(-5)}`;
     const invoiceDate = new Date().toLocaleDateString("en-GB");
 
+    doc.fontSize(11);
     doc.text(`Invoice No: ${invoiceNo}`, startX, 140);
     doc.text(`Date Issued: ${invoiceDate}`, startX, 160);
 
+    // Issued To
     let issuedY = 140;
     doc.font("Times-Bold").text("Issued to:", rightX, issuedY);
     issuedY += 25;
@@ -56,10 +54,21 @@ export async function generateInvoice(data) {
     doc.font("Times-Roman").text(data.customerName || "-", rightX, issuedY);
     issuedY += 18;
 
-    if (data.company) { doc.text(data.company, rightX, issuedY); issuedY += 18; }
-    if (data.address) { doc.text(data.address, rightX, issuedY, { width: 200 }); issuedY += 40; }
-    if (data.gstNumber) { doc.text(`GST: ${data.gstNumber}`, rightX, issuedY); }
+    if (data.company) {
+      doc.text(data.company, rightX, issuedY);
+      issuedY += 18;
+    }
 
+    if (data.address) {
+      doc.text(data.address, rightX, issuedY, { width: 200 });
+      issuedY += 40;
+    }
+
+    if (data.gstNumber) {
+      doc.text(`GST: ${data.gstNumber}`, rightX, issuedY);
+    }
+
+    // ================= TABLE =================
     const baseAmount = Number(data.baseAmount || data.amount || 0);
     const cgst = Math.round(baseAmount * 0.09);
     const sgst = Math.round(baseAmount * 0.09);
@@ -69,6 +78,7 @@ export async function generateInvoice(data) {
     const rowHeight = 35;
     const tableWidth = pageWidth - 100;
 
+    // Header
     doc.rect(startX, tableTop, tableWidth, rowHeight).stroke();
     doc.font("Times-Bold").text("Description", startX + 10, tableTop + 10);
     doc.text("Amount", pageWidth - 130, tableTop + 10);
@@ -80,26 +90,26 @@ export async function generateInvoice(data) {
     doc.rect(startX, tableTop, tableWidth, rowHeight * 2).stroke();
     doc.font("Times-Roman")
       .text(description, startX + 10, tableTop + 10, { width: 350 })
-      .text(`Rs ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, tableTop + 10);
+      .text(`₹ ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, tableTop + 10);
 
     tableTop += rowHeight * 2;
 
     let totalY = tableTop + 30;
 
     doc.font("Times-Bold").text("SUBTOTAL", pageWidth - 220, totalY);
-    doc.text(`Rs ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
+    doc.text(`₹ ${baseAmount.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
     totalY += 20;
     doc.text("CGST 9%", pageWidth - 220, totalY);
-    doc.text(`Rs ${cgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
+    doc.text(`₹ ${cgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
     totalY += 20;
     doc.text("SGST 9%", pageWidth - 220, totalY);
-    doc.text(`Rs ${sgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
+    doc.text(`₹ ${sgst.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
     totalY += 25;
     doc.fontSize(12).text("GRAND TOTAL", pageWidth - 220, totalY);
-    doc.text(`Rs ${grandTotal.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
+    doc.text(`₹ ${grandTotal.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
     doc.fontSize(10).text(
       `IN WORDS: Rupees ${numberToWords(grandTotal)} Only`,
@@ -107,26 +117,96 @@ export async function generateInvoice(data) {
       totalY + 40
     );
 
-    doc.fontSize(18).text("Thank You !", startX, totalY + 100, {
+    doc.fontSize(18).text("Thank You!", startX, totalY + 100, {
       align: "right",
       width: tableWidth,
     });
 
     doc.end();
-  });
+
+    // ================= GET PDF BUFFER =================
+    const pdfBuffer = await new Promise((resolve) => {
+      doc.on("end", () => {
+        resolve(Buffer.concat(buffers));
+      });
+    });
+
+    // ================= UPLOAD TO CLOUDINARY =================
+    const uploadResult = await cloudinary.v2.uploader.upload(
+      `data:application/pdf;base64,${pdfBuffer.toString("base64")}`,
+      {
+        folder: "invoices",
+        resource_type: "raw",
+        public_id: `TZAR_Invoice_${Date.now()}`,
+      }
+    );
+
+    // ✅ This URL opens PDF directly in browser
+    return uploadResult.secure_url;
+
+  } catch (err) {
+    console.error("Invoice generation failed:", err);
+    throw err;
+  }
 }
 
+// ================= NUMBER TO WORDS =================
 function numberToWords(num) {
-  const a = ["","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten",
-    "Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"];
-  const b = ["","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];
-  if(num===0) return "Zero";
-  if(num<20) return a[num];
-  if(num<100) return b[Math.floor(num/10)] + " " + a[num%10];
-  if(num<1000) return a[Math.floor(num/100)] + " Hundred " + numberToWords(num%100);
-  if(num<100000) return numberToWords(Math.floor(num/1000)) + " Thousand " + numberToWords(num%1000);
+  const a = [
+    "",
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
+    "Eleven",
+    "Twelve",
+    "Thirteen",
+    "Fourteen",
+    "Fifteen",
+    "Sixteen",
+    "Seventeen",
+    "Eighteen",
+    "Nineteen",
+  ];
+  const b = [
+    "",
+    "",
+    "Twenty",
+    "Thirty",
+    "Forty",
+    "Fifty",
+    "Sixty",
+    "Seventy",
+    "Eighty",
+    "Ninety",
+  ];
+
+  if (num === 0) return "Zero";
+  if (num < 20) return a[num];
+  if (num < 100)
+    return b[Math.floor(num / 10)] + " " + a[num % 10];
+  if (num < 1000)
+    return (
+      a[Math.floor(num / 100)] +
+      " Hundred " +
+      numberToWords(num % 100)
+    );
+  if (num < 100000)
+    return (
+      numberToWords(Math.floor(num / 1000)) +
+      " Thousand " +
+      numberToWords(num % 1000)
+    );
+
   return num.toString();
 }
+
 
 
 
