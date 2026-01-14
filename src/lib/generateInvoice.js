@@ -1,26 +1,30 @@
 import fs from "fs";
 import path from "path";
+import os from "os";
 import PDFDocument from "pdfkit/js/pdfkit.standalone.js";
 
 export function generateInvoice(data) {
-  // ✅ Serverless-safe temp directory
-  const invoiceDir = path.join("/tmp", "invoices");
+  // temp folder (server safe)
+  const tempDir = path.join(os.tmpdir(), "invoices");
+  if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
 
-  if (!fs.existsSync(invoiceDir)) {
-    fs.mkdirSync(invoiceDir, { recursive: true });
-  }
+  // public folder (downloadable)
+  const publicDir = path.join(process.cwd(), "public/invoices");
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 
   const fileName = `invoice_${Date.now()}.pdf`;
-  const filePath = path.join(invoiceDir, fileName);
+
+  const tempPath = path.join(tempDir, fileName);
+  const publicPath = path.join(publicDir, fileName);
 
   const doc = new PDFDocument({ size: "A4", margin: 50 });
-  doc.pipe(fs.createWriteStream(filePath));
+  doc.pipe(fs.createWriteStream(tempPath));
+
+  /* ===== YOUR EXISTING DESIGN CODE (UNCHANGED) ===== */
 
   const pageWidth = doc.page.width;
   const startX = 50;
   const rightX = 350;
-
-  /* ================= HEADER ================= */
 
   doc.font("Times-Bold").fontSize(20).text("TZAR", startX, 40);
   doc.fontSize(11).text("TZAR Venture", startX, 70);
@@ -31,8 +35,6 @@ export function generateInvoice(data) {
 
   doc.fontSize(11).text(`Invoice No: ${invoiceNo}`, startX, 140);
   doc.text(`Date Issued: ${invoiceDate}`, startX, 160);
-
-  /* ================= ISSUED TO ================= */
 
   let issuedY = 140;
   doc.font("Times-Bold").text("Issued to:", rightX, issuedY);
@@ -55,14 +57,10 @@ export function generateInvoice(data) {
     doc.text(`GST: ${data.gstNumber}`, rightX, issuedY);
   }
 
-  /* ================= AMOUNTS ================= */
-
   const baseAmount = Number(data.baseAmount || data.amount || 0);
   const cgst = Math.round(baseAmount * 0.09);
   const sgst = Math.round(baseAmount * 0.09);
   const grandTotal = baseAmount + cgst + sgst;
-
-  /* ================= TABLE ================= */
 
   let tableTop = 260;
   const rowHeight = 35;
@@ -83,8 +81,6 @@ export function generateInvoice(data) {
 
   tableTop += rowHeight * 2;
 
-  /* ================= TOTAL SECTION ================= */
-
   let totalY = tableTop + 30;
 
   doc.font("Times-Bold").text("SUBTOTAL", pageWidth - 220, totalY);
@@ -102,15 +98,11 @@ export function generateInvoice(data) {
   doc.fontSize(12).text("GRAND TOTAL", pageWidth - 220, totalY);
   doc.text(`Rs ${grandTotal.toLocaleString("en-IN")}`, pageWidth - 130, totalY);
 
-  /* ================= AMOUNT IN WORDS ================= */
-
   doc.fontSize(10).text(
     `IN WORDS: Rupees ${numberToWords(grandTotal)} Only`,
     startX,
     totalY + 40
   );
-
-  /* ================= FOOTER ================= */
 
   doc.fontSize(18).text("Thank You !", startX, totalY + 100, {
     align: "right",
@@ -119,8 +111,13 @@ export function generateInvoice(data) {
 
   doc.end();
 
-  // ✅ return temp file path (for email attachment)
-  return filePath;
+  // wait for file to finish writing
+  return new Promise((resolve) => {
+    doc.on("end", () => {
+      fs.copyFileSync(tempPath, publicPath);
+      resolve(`/invoices/${fileName}`); // public URL
+    });
+  });
 }
 
 /* ================= NUMBER TO WORDS ================= */
