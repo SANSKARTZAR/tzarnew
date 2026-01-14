@@ -7,8 +7,9 @@ export async function POST(req) {
   try {
     const data = await req.json();
 
-    // Generate invoice and get public URL
+    // Generate invoice
     const invoicePath = await generateInvoice(data); // e.g., /invoices/invoice_167889.pdf
+    const invoiceFileName = path.basename(invoicePath);
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -18,20 +19,19 @@ export async function POST(req) {
       },
     });
 
-    // Full filesystem path for attachment
-    const attachmentPath = path.join(process.cwd(), "public", invoicePath);
-
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: `${data.email}, ${process.env.ADMIN_EMAIL}`,
       subject: "Payment Invoice",
       html: `<p>Thank you for your payment.</p>
-             <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}${invoicePath}" target="_blank">
-             Download Invoice</a></p>`,
+             <p>
+             <a href="${process.env.NEXT_PUBLIC_SITE_URL}/api/download-invoice?file=${invoiceFileName}">
+             Download Invoice</a>
+             </p>`,
       attachments: [
         {
-          filename: path.basename(invoicePath), // e.g., invoice_167889.pdf
-          path: attachmentPath, // actual file path on server
+          filename: invoiceFileName,
+          path: path.join(process.cwd(), "public", invoicePath),
         },
       ],
     });
