@@ -8,7 +8,7 @@ export async function POST(req) {
     const data = await req.json();
 
     // Generate invoice
-    const invoicePath = await generateInvoice(data); // e.g., /invoices/invoice_167889.pdf
+    const invoicePath = await generateInvoice(data);
     const invoiceFileName = path.basename(invoicePath);
 
     const transporter = nodemailer.createTransport({

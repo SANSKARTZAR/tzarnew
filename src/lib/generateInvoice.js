@@ -1,26 +1,19 @@
 import fs from "fs";
 import path from "path";
-import os from "os";
 import PDFDocument from "pdfkit/js/pdfkit.standalone.js";
 
 export async function generateInvoice(data) {
-  const tempDir = path.join(os.tmpdir(), "invoices");
   const publicDir = path.join(process.cwd(), "public/invoices");
-
-  if (!fs.existsSync(tempDir)) fs.mkdirSync(tempDir, { recursive: true });
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 
   const fileName = `invoice_${Date.now()}.pdf`;
-  const tempPath = path.join(tempDir, fileName);
   const publicPath = path.join(publicDir, fileName);
 
   const doc = new PDFDocument({ size: "A4", margin: 50 });
-  const writeStream = fs.createWriteStream(tempPath);
-
+  const writeStream = fs.createWriteStream(publicPath);
   doc.pipe(writeStream);
 
-  /* ===== YOUR EXISTING DESIGN (UNCHANGED) ===== */
-
+  // ===== Invoice Design =====
   const pageWidth = doc.page.width;
   const startX = 50;
   const rightX = 350;
@@ -110,36 +103,24 @@ export async function generateInvoice(data) {
 
   doc.end();
 
-  // 🔴 WAIT until file is fully written
   await new Promise((resolve) => writeStream.on("finish", resolve));
 
-  // Copy to public folder
-  fs.copyFileSync(tempPath, publicPath);
-
-  // Return public URL
   return `/invoices/${fileName}`;
 }
 
-/* ================= NUMBER TO WORDS ================= */
-
+// ===== Number to Words =====
 function numberToWords(num) {
-  const a = [
-    "", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
-    "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen",
-    "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"
-  ];
-
-  const b = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
-
-  if (num === 0) return "Zero";
-  if (num < 20) return a[num];
-  if (num < 100) return b[Math.floor(num / 10)] + " " + a[num % 10];
-  if (num < 1000) return a[Math.floor(num / 100)] + " Hundred " + numberToWords(num % 100);
-  if (num < 100000)
-    return numberToWords(Math.floor(num / 1000)) + " Thousand " + numberToWords(num % 1000);
-
+  const a = ["","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten",
+    "Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"];
+  const b = ["","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"];
+  if(num===0) return "Zero";
+  if(num<20) return a[num];
+  if(num<100) return b[Math.floor(num/10)] + " " + a[num%10];
+  if(num<1000) return a[Math.floor(num/100)] + " Hundred " + numberToWords(num%100);
+  if(num<100000) return numberToWords(Math.floor(num/1000)) + " Thousand " + numberToWords(num%1000);
   return num.toString();
 }
+
 
 
 // import fs from "fs";
