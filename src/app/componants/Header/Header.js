@@ -126,13 +126,13 @@ const Header = ({ pageTitle }) => {
           <div className="topbar-text">
             25,000+ Corporate Gifts Delivered Pan India — Now Order Directly from Our Website
           </div>
-          <div className="topbar-text">Trusted by 25,000+ Businesses Across India</div>
+          <div className="topbar-text">Trusted by 1500+ Businesses Across India</div>
           <div className="topbar-text">Fast Delivery • Premium Quality • Best Pricing</div>
 
           <div className="topbar-text">
             25,000+ Corporate Gifts Delivered Pan India — Now Order Directly from Our Website
           </div>
-          <div className="topbar-text">Trusted by 25,000+ Businesses Across India</div>
+          <div className="topbar-text">Trusted by 1500+ Businesses Across India</div>
           <div className="topbar-text">Fast Delivery • Premium Quality • Best Pricing</div>
         </div>
       </div>

@@ -131,7 +131,7 @@ const navItems = [
 const header = {
   logo1,
   phone: "91 730-405-6607",
-  phone1: "91 776-077-5875",
+  phone1: "91 900-425-0252",
   email: "corporate@tzar.co",
   phoneIcon,
   navItems,
