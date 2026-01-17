@@ -9,6 +9,7 @@ const footerData = {
   title: "Your Perfect Business Partner Solution",
   phone: "91 730-405-6607",
   phone1: "91 776-077-5875",
+  phone2: "91 900-425-0252",
   phoneIcon,
   mailIcon,
   googlereview,

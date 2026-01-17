@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 
-const { bg, title, phone, phone1, phoneIcon, mailIcon, googlepartner, facebook, googlereview, socials, address, city, email, links, year, author } =
+const { bg, title, phone, phone1, phone2, phoneIcon, mailIcon, googlepartner, facebook, googlereview, socials, address, city, email, links, year, author } =
   footerData;
 
 const SiteFooter = () => {
@@ -25,18 +25,29 @@ const SiteFooter = () => {
           <div className="site-footer__top-inner">
             <div className="site-footer__top-left">
               <h3 className="site-footer__top-left-title">{title}</h3>
-              <a
-                href={`tel:${phone.split(" ").join("")}`}
-                className="site-footer__top-left-phone"
-              >
-                + {phone}
-              </a> &nbsp;&nbsp;
-              <a
-                href={`tel:${phone1.split(" ").join("")}`}
-                className="site-footer__top-left-phone"
-              >
-                + {phone1}
-              </a>
+             <div className="footer-phone-group">
+  <a
+    href={`tel:${phone.split(" ").join("")}`}
+    className="site-footer__top-left-phone"
+  >
+    + {phone}
+  </a>
+
+  <a
+    href={`tel:${phone1.split(" ").join("")}`}
+    className="site-footer__top-left-phone"
+  >
+    + {phone1}
+  </a>
+
+  <a
+    href={`tel:${phone2.split(" ").join("")}`}
+    className="site-footer__top-left-phone"
+  >
+    + {phone2}
+  </a>
+</div>
+
             </div>
             <div className="site-footer__top-right">
               <div className="site-footer__top-right-social">
