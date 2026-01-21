@@ -212,7 +212,7 @@ const Header = ({ pageTitle }) => {
             </li>
 
             {/* Payment */}
-           <li style={{ display: "flex", alignItems: "center" }}>
+          <li style={{ display: "flex", alignItems: "center", marginLeft: "-15px" }}>
               <Link
                 href="/payment"
                 style={{

@@ -194,13 +194,27 @@ export default function PaymentPage() {
       <Script src="https://checkout.razorpay.com/v1/checkout.js" />
 
       <div className="checkout-page">
-        <section className="checkout-hero"> 
-          <div className="hero-overlay" /> 
-          <div className="hero-content"> 
-            <h1>Pay with Confidence</h1> 
-            <p> Secure transactions, transparent pricing, and complete data protection </p> 
-            </div> 
-            </section>
+        <section className="checkout-hero">
+  <div className="hero-badge">Trusted by millions worldwide</div>
+
+  <h1 className="hero-title">
+    Seamless Payments, Limitless <br />
+    <span>Possibilities</span>
+  </h1>
+
+  <p className="hero-subtitle">
+    Experience the future of digital transactions with our secure,
+    lightning-fast payment gateway that powers businesses across the globe.
+  </p>
+
+  {/* Floating Icons */}
+  {/* <div className="floating-icon icon-1">💳</div>
+  <div className="floating-icon icon-2">⚡</div>
+  <div className="floating-icon icon-3">🔒</div>
+  <div className="floating-icon icon-4">🌐</div>
+  <div className="floating-icon icon-5">🏦</div> */}
+</section>
+
         <h1 className="checkout-title">Checkout</h1>
         <p className="checkout-subtitle">Select your services and continue</p>
 

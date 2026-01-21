@@ -1,7 +1,20 @@
 html, body {
   margin: 0;
   padding: 0;
+   font-family: "Inter", sans-serif;
 }
+
+.hero-title,
+h1, h2, h3, h4 {
+  font-family: "Fero", sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle,
+p {
+  font-family: "Inter", sans-serif;
+}
+
 
 .checkout-page {
   min-height: 100vh;
@@ -13,6 +26,7 @@ html, body {
 }
 
 .checkout-title {
+  margin-top: 50px;
   text-align: center;
   font-size: 42px;
   font-weight: 700;
@@ -24,85 +38,166 @@ html, body {
   margin-bottom: 40px;
 }
 
-/* =========================
-   HERO BANNER WITH IMAGE
-   ========================= */
-/* =========================
-   HERO BANNER (IMAGE BG)
-   ========================= */
 .checkout-hero {
   position: relative;
-  width: 100%;
-  height: 320px;
-  background-image: url("/images/checkout-banner.jpg");
+  width: 100vw;
+  height: 360px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+
+  /* Image + gradient combo */
+  background:
+    linear-gradient(rgba(3, 27, 52, 0.75), rgba(3, 27, 52, 0.75)),
+    url("/images/hero.avif");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  /* FULL WIDTH HERO – REMOVE LEFT RIGHT GAP */
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding-left: 0;
-  padding-right: 0;
-}
 
-/* Dark overlay for text readability */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 31, 63, 0.85) 0%,
-    rgba(0, 31, 63, 0.55) 45%,
-    rgba(0, 31, 63, 0.2) 100%
-  );
-}
-
-/* Text container */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-  color: #fff;
-
-  /* CENTERING */
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 40px 20px;
 }
 
-.hero-content h1 {
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
 
-.hero-content p {
-  font-size: 16px;
+/* Badge */
+.hero-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255,255,255,0.2);
   color: #fff;
-  max-width: 480px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(6px);
+}
+
+/* Title */
+.hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-title span {
+  color: #cbd9ff;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  max-width: 720px;
+  font-size: 18px;
+  color: #cdd8e5;
+  line-height: 1.6;
+}
+
+/* Floating icons */
+.floating-icon {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Positions */
+.icon-1 { top: 40px; left: 80px; }
+.icon-2 { top: 60px; right: 120px; animation-delay: 1s; }
+.icon-3 { bottom: 60px; left: 120px; animation-delay: 2s; }
+.icon-4 { bottom: 80px; right: 140px; animation-delay: 3s; }
+.icon-5 { top: 140px; right: 40px; animation-delay: 4s; }
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
 }
 
 
 /* MOBILE */
+/* =========================
+   RESPONSIVE HERO BANNER
+   ========================= */
+
+@media (max-width: 1024px) {
+  .checkout-hero {
+    height: 300px;
+    padding: 30px 16px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .checkout-hero {
-    height: 240px;
+    height: 260px;
+    padding: 24px 14px;
   }
 
-  .hero-content h1 {
+  .hero-badge {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  .hero-title {
     font-size: 32px;
+    line-height: 1.2;
   }
 
-  .hero-content p {
+  .hero-subtitle {
     font-size: 14px;
+    line-height: 1.5;
   }
+
+  /* Hide some floating icons for clean look */
+  .icon-4,
+  .icon-5 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-hero {
+    height: 230px;
+    padding: 20px 12px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+  }
+
+  .floating-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .icon-1 { top: 20px; left: 20px; }
+  .icon-2 { top: 30px; right: 20px; }
+  .icon-3 { bottom: 20px; left: 20px; }
 }
 
 

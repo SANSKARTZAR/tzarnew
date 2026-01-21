@@ -16,25 +16,72 @@ export async function POST(req) {
     auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
   });
 
-  await transporter.sendMail({
-    from: process.env.EMAIL_USER,
-    to: `${data.email}, ${process.env.ADMIN_EMAIL}`,
-    subject: "Payment Invoice",
-    html: `<p>Hi ${data.customerName},</p>
-           <p>Thank you for your payment.</p>
-           <p>
-             <a href="${downloadLink}" download="${invoiceFileName}">
-               Download Invoice
-             </a>
-           </p>
-           <p>Regards,<br/>Tzar Venture</p>`,
-    attachments: [
-      {
-        filename: invoiceFileName,
-        path: path.join(process.cwd(), "public/invoices", invoiceFileName),
-      },
-    ],
-  });
+  const logoUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/images/logo.jpg`; // put logo in public/images/logo.png
+
+await transporter.sendMail({
+  from: process.env.EMAIL_USER,
+  to: `${data.email}, ${process.env.ADMIN_EMAIL}`,
+  subject: "Payment Invoice",
+  html: `
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f7fb;padding:30px 0;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;padding:30px;border-radius:10px;font-family:Arial,sans-serif;">
+
+          <!-- Logo -->
+          <tr>
+            <td align="center" style="padding-bottom:25px;">
+              <img src="${logoUrl}" alt="Tzar Venture" width="180" style="display:block;" />
+            </td>
+          </tr>
+
+          <!-- Greeting -->
+          <tr>
+            <td style="font-size:16px;color:#333;padding-bottom:15px;">
+              Hi ${data.customerName},
+            </td>
+          </tr>
+
+          <!-- Message -->
+          <tr>
+            <td style="font-size:15px;color:#555;padding-bottom:25px;line-height:1.6;">
+              Thank you for your payment. Your invoice has been generated successfully.
+            </td>
+          </tr>
+
+          <!-- Button -->
+          <tr>
+            <td align="center" style="padding-bottom:30px;">
+              <a href="${downloadLink}"
+                 style="background:#023878;color:#ffffff;text-decoration:none;
+                        padding:12px 28px;border-radius:6px;font-weight:600;
+                        display:inline-block;">
+                Download Invoice (PDF)
+              </a>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="font-size:15px;color:#333;padding-top:20px;">
+              Regards,<br/>
+              <strong>Tzar Venture</strong>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+  `,
+  attachments: [
+    {
+      filename: invoiceFileName,
+      path: path.join(process.cwd(), "public/invoices", invoiceFileName),
+    },
+  ],
+});
+
 
   return NextResponse.json({ success: true, invoicePath });
 }
