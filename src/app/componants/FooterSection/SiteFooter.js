@@ -213,12 +213,12 @@ const SiteFooter = () => {
       color: "#fff",
     }}
   >
-    <span>Trusted Online Payment via Razorpay</span>
+    {/* <span>Trusted Online Payment via Razorpay</span>
     <img
       src="/images.png"
       alt="Razorpay"
       style={{ height: "25px", objectFit: "contain" }}
-    />
+    /> */}
   </div>
 
         </Container>
