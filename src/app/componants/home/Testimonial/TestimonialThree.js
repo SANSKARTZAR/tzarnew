@@ -38,6 +38,10 @@ const TestimonialThree = () => {
     titleFontSize = "2.6rem";
     titleLineHeight = 1.25;
   }
+  const mid = Math.ceil(testimonials.length / 2);
+const firstRow = testimonials.slice(0, mid);
+const secondRow = testimonials.slice(mid);
+
 
   return (
     <section
@@ -87,41 +91,67 @@ const TestimonialThree = () => {
           </h2>
         </div>
 
-        {/* SLIDER */}
-        <div
-          style={{
-            overflow: "hidden",
-            width: "100%",
-          }}
-        >
-          <div
-            className="logo-slider-track"
-            style={{
-              display: "flex",
-              gap: "25px",
-              animation: "scroll 30s linear infinite",
-            }}
-          >
-            {[...testimonials, ...testimonials].map((testimonial, index) => (
-              <div
-                key={index}
-                style={{
-                  minWidth: `calc(100% / ${visible})`,
-                  background: "transparent",
-                  border: "1px solid #000",
-                  borderRadius: "8px",
-                  boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  aspectRatio: "1 / 1",
-                }}
-              >
-                <SingleTestimonial1 testimonial={testimonial} />
-              </div>
-            ))}
-          </div>
-        </div>
+       {/* SLIDER */}
+{/* SLIDER */}
+<div style={{ overflow: "hidden", width: "100%" }}>
+
+  {/* ROW 1 – LEFT */}
+  <div
+    style={{
+      display: "flex",
+      gap: "25px",
+      animation: "scroll-left 10s linear infinite",
+      marginBottom: "25px",
+    }}
+  >
+    {[...firstRow, ...firstRow].map((testimonial, index) => (
+      <div
+        key={`row1-${index}`}
+        style={{
+          minWidth: `calc(100% / ${visible})`,
+          border: "1px solid #000",
+          borderRadius: "8px",
+          boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          aspectRatio: "1 / 1",
+        }}
+      >
+        <SingleTestimonial1 testimonial={testimonial} />
+      </div>
+    ))}
+  </div>
+
+  {/* ROW 2 – RIGHT */}
+  <div
+    style={{
+      display: "flex",
+      gap: "25px",
+      animation: "scroll-right 10s linear infinite",
+    }}
+  >
+    {[...secondRow, ...secondRow].map((testimonial, index) => (
+      <div
+        key={`row2-${index}`}
+        style={{
+          minWidth: `calc(100% / ${visible})`,
+          border: "1px solid #000",
+          borderRadius: "8px",
+          boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          aspectRatio: "1 / 1",
+        }}
+      >
+        <SingleTestimonial1 testimonial={testimonial} />
+      </div>
+    ))}
+  </div>
+
+</div>
+
 
         {/* View More Button */}
         <div
@@ -139,16 +169,27 @@ const TestimonialThree = () => {
       </Container>
 
       {/* Slider Animation */}
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
+     <style jsx>{`
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+`}</style>
+
+
     </section>
   );
 };

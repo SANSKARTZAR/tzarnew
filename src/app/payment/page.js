@@ -17,6 +17,8 @@ export default function PaymentPage() {
 
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [invoiceUrl, setInvoiceUrl] = useState("");
+  const [invoiceNo, setInvoiceNo] = useState("");
+
 
   // Web Development Plan
   const [webPlan, setWebPlan] = useState("");
@@ -129,6 +131,7 @@ export default function PaymentPage() {
 
             if (result.success) {
               setInvoiceUrl(result.invoiceUrl);
+               setInvoiceNo(result.invoiceNo);  
               setPaymentSuccess(true);
             } else {
               alert("Payment verification failed");
@@ -167,12 +170,19 @@ export default function PaymentPage() {
 
         <div className="thankyou-actions">
           <a
+  href={`/api/download-invoice?invoiceNo=${invoiceNo}`}
+  className="download-btn"
+>
+  Download Invoice PDF
+</a>
+
+          {/* <a
             href={invoiceUrl}
             target="_blank"
             className="download-btn"
           >
             Download Invoice PDF
-          </a>
+          </a> */}
 
           <button
             className="secondary-btn"
@@ -314,12 +324,12 @@ export default function PaymentPage() {
 
       <div>
         <label>Billing Address</label>
-        <textarea
-          rows="3"
-          placeholder="Enter full billing address"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        />
+        <input
+  placeholder="Enter full billing address"
+  value={address}
+  onChange={(e) => setAddress(e.target.value)}
+/>
+
       </div>
 
       <div>

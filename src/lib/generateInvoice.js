@@ -133,7 +133,6 @@ function numberToWords(num) {
 
 
 
-
 // import fs from "fs";
 // import path from "path";
 // import PDFDocument from "pdfkit/js/pdfkit.standalone.js";

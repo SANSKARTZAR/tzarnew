@@ -72,7 +72,9 @@ const SiteFooter = () => {
                   <p className="footer-widget__contact-text">
                     {address} <br /> {city}
                   </p>
-                  <Link href="/payment-gateway"><h3 className="footer-widget__title">Make Online Payment</h3></Link>
+                  <Link href="/payment"><h3 className="footer-widget__title">Make Online Payment</h3></Link>
+              
+
                   {/* <div className="footer-widget__contact-email-phone">
                     <h3 className="footer-widget__title">Contact Us</h3>
                     <div className="footer-flex">
@@ -200,6 +202,25 @@ const SiteFooter = () => {
             &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-USA" className="footer-widget__contact-text">Digital Marketing Services in New York </Link>
             &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-USA" className="footer-widget__contact-text">Digital Marketing Services in New jersey </Link> */}
           </div>
+           <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: "8px",
+      marginBottom: "6px",
+      fontSize: "18px",
+      color: "#fff",
+    }}
+  >
+    <span>Trusted Online Payment via Razorpay</span>
+    <img
+      src="/images.png"
+      alt="Razorpay"
+      style={{ height: "25px", objectFit: "contain" }}
+    />
+  </div>
+
         </Container>
       </div>
       <div className="site-footer__bottom">
