@@ -115,11 +115,11 @@ const footerData = {
       title: "Consultancy",
       href: "/",
     },
-    {
-      id: 10,
-      title: "Services",
-      href: "/services",
-    },
+    // {
+    //   id: 10,
+    //   title: "Services",
+    //   href: "/services",
+    // },
   ],
 };
 

@@ -2,239 +2,230 @@
 import footerData from "@/app/data/footerData";
 import Link from "next/link";
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
-const { bg, title, phone, phone1, phone2, phoneIcon, mailIcon, googlepartner, facebook, googlereview, socials, address, city, email, links, year, author } =
-  footerData;
+const {
+  phone,
+  phone1,
+  phone2,
+  mailIcon,
+  phoneIcon,
+  googlepartner,
+  facebook,
+  googlereview,
+  socials,
+  address,
+  city,
+  email,
+  links,
+  year,
+  author,
+} = footerData;
 
 const SiteFooter = () => {
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const formData = new FormData(e.target);
-  //   console.log(formData.get("email"));
-  // };
-
   return (
-    <footer className="site-footer">
-      <div className="site-footer__top">
+    <footer
+      style={{
+        background: "linear-gradient(180deg, #141418, #0d0d11)",
+        color: "#cfcfd4",
+        paddingTop: "70px",
+        fontFamily: "Inter, sans-serif",
+      }}
+    >
+      {/* ================= MAIN FOOTER ================= */}
+      <Container>
+        <Row>
+          {/* LEFT COLUMN */}
+          <Col lg={4} md={12} style={{ marginBottom: "40px" }}>
+            <h4 style={{ color: "#fff", marginBottom: "18px" }}>
+              TZAR DIGITAL AGENCY
+            </h4>
+
+            <p style={{ lineHeight: "1.9", fontSize: "15px" }}>
+              {address}
+              <br />
+              {city}
+            </p>
+
+            {/* SOCIAL ICONS */}
+            <div
+              style={{
+                display: "flex",
+                gap: "14px",
+                marginTop: "18px",
+                marginBottom: "24px",
+              }}
+            >
+              {socials.map(({ id, icon, href }) => (
+                <a
+                  key={id}
+                  href={href}
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    background: "rgba(255,255,255,0.08)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#fff",
+                    fontSize: "16px",
+                  }}
+                >
+                  <i className={icon}></i>
+                </a>
+              ))}
+            </div>
+
+            <Link
+              href="/payment"
+              style={{
+                display: "inline-block",
+                color: "#fff",
+                fontWeight: 500,
+                letterSpacing: "0.5px",
+              }}
+            >
+              MAKE ONLINE PAYMENT
+            </Link>
+          </Col>
+
+          {/* CENTER COLUMN */}
+          <Col lg={4} md={12} style={{ marginBottom: "40px" }}>
+            <h4 style={{ color: "#fff", marginBottom: "18px" }}>LINKS</h4>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                rowGap: "12px",
+                columnGap: "30px",
+                fontSize: "15px",
+              }}
+            >
+              {links.map(({ id, title, href }) => (
+                <Link key={id} href={href} style={{ color: "#cfcfd4" }}>
+                  {title}
+                </Link>
+              ))}
+            </div>
+          </Col>
+
+          {/* RIGHT COLUMN */}
+          <Col lg={4} md={12}>
+            <h4 style={{ color: "#fff", marginBottom: "18px" }}>
+              CONTACT US
+            </h4>
+
+            {/* EMAIL */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                marginBottom: "14px",
+              }}
+            >
+              <img src={mailIcon.src} alt="" width="16" />
+              <a href={`mailto:${email}`} style={{ color: "#cfcfd4" }}>
+                {email}
+              </a>
+            </div>
+
+            {/* PHONE NUMBERS — ONE LINE */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+                marginBottom: "25px",
+                whiteSpace: "nowrap",
+                fontSize: "15px",
+              }}
+            >
+              <img src={phoneIcon.src} alt="" width="16" />
+
+              <a href={`tel:${phone}`} style={{ color: "#cfcfd4" }}>
+                {phone}
+              </a>
+
+              <span style={{ opacity: 0.4 }}>|</span>
+
+              <a href={`tel:${phone1}`} style={{ color: "#cfcfd4" }}>
+                {phone1}
+              </a>
+
+              <span style={{ opacity: 0.4 }}>|</span>
+
+              <a href={`tel:${phone2}`} style={{ color: "#cfcfd4" }}>
+                {phone2}
+              </a>
+            </div>
+
+            {/* PARTNERS */}
+            <div
+              style={{
+                display: "flex",
+                gap: "14px",
+                alignItems: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <a href="https://maps.app.goo.gl/ryxbajb4yg24TbrG8">
+                <img
+                  src={googlereview.src}
+                  alt="google-review"
+                  height="40"
+                />
+              </a>
+              <img
+                src={googlepartner.src}
+                alt="google-partner"
+                height="45"
+              />
+              <a href="https://www.facebook.com/TzarAgency">
+                <img src={facebook.src} alt="facebook" height="45" />
+              </a>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* ================= BOTTOM ================= */}
+      <div
+        style={{
+          marginTop: "50px",
+          padding: "18px 0 14px",
+          borderTop: "1px solid rgba(255,255,255,0.08)",
+          textAlign: "center",
+          fontSize: "14px",
+        }}
+      >
+        {/* TRUSTED PAYMENT */}
         <div
-          className="site-footer__top-shape"
-          style={{ backgroundImage: `url(${bg.src})` }}
-        ></div>
-        <Container>
-          <div className="site-footer__top-inner">
-            <div className="site-footer__top-left">
-              <h3 className="site-footer__top-left-title">{title}</h3>
-             <div className="footer-phone-group">
-  <a
-    href={`tel:${phone.split(" ").join("")}`}
-    className="site-footer__top-left-phone"
-  >
-    + {phone}
-  </a>
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "8px",
+            marginBottom: "6px",
+            fontSize: "12px",
+            opacity: 0.75,
+          }}
+        >
+          <span>Trusted Online Payment Partner</span>
+          <img
+            src="/images.png"
+            alt="Razorpay"
+            style={{ height: "18px", display: "block" }}
+          />
+          <span>100% Secure Payment</span>
+        </div>
 
-  <a
-    href={`tel:${phone1.split(" ").join("")}`}
-    className="site-footer__top-left-phone"
-  >
-    + {phone1}
-  </a>
-
-  <a
-    href={`tel:${phone2.split(" ").join("")}`}
-    className="site-footer__top-left-phone"
-  >
-    + {phone2}
-  </a>
-</div>
-
-            </div>
-            <div className="site-footer__top-right">
-              <div className="site-footer__top-right-social">
-                {socials.map(({ id, icon, href }) => (
-                  <a key={id} href={href}>
-                    <i className={icon}></i>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      <div className="site-footer__middle">
-        <Container>
-          <div className="site-footer__middle-inner">
-            <Row>
-              <Col xl={4} lg={4} className="animated fadeInUp">
-                <div className="footer-widget__column footer-widget__contact">
-                  <h3 className="footer-widget__title">TZAR DIGITAL AGENCY</h3>
-                  <p className="footer-widget__contact-text">
-                    {address} <br /> {city}
-                  </p>
-                  <Link href="/payment"><h3 className="footer-widget__title">Make Online Payment</h3></Link>
-              
-
-                  {/* <div className="footer-widget__contact-email-phone">
-                    <h3 className="footer-widget__title">Contact Us</h3>
-                    <div className="footer-flex">
-                      <img src={mailIcon.src} alt="" width="15px" height="15px" /> &nbsp;
-                      <a
-                        href={`mailto:${email}`}
-                        className="footer-widget__contact-text"
-                      >
-                        {email}
-                      </a>
-                    </div>
-                    <img src={phoneIcon.src} alt="" width="15px" /> &nbsp;
-                    <a
-                      href={`tel:${phone.split(" ").join("")}`}
-                      className="footer-widget__contact-text"
-                    >
-                      + {phone}
-                    </a>
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a
-                      href={`tel:${phone1.split(" ").join("")}`}
-                      className="footer-widget__contact-text"
-                    >
-                      + {phone1}
-                    </a>
-                  </div> */}
-                </div>
-              </Col>
-              <Col xl={4} lg={4} className="animated fadeInUp">
-                <div className="footer-widget__column footer-widget__links clearfix">
-                  <h3 className="footer-widget__title">Links</h3>
-                  <div>
-                    <ul className="footer-widget__links-list list-unstyled clearfix">
-                      {links.slice(0, 6).map(({ id, title, href }) => (
-                        <li key={id}>
-                          <Link href={href}>{title}</Link>
-                        </li>
-
-                      ))}
-                      <br />
-                      {/* <li>
-                        <div className="button-header-btn">
-                          <Link href="/singup-form" className="footer-widget__contact-text footerenq-btn">Enquiry Now</Link>
-                        </div>
-                      </li> */}
-                    </ul>
-
-                  </div>
-                  <ul className="footer-widget__links-list footer-widget__links-list-two list-unstyled clearfix">
-                    {links.slice(6).map(({ id, title, href }) => (
-                      <li key={id}>
-                        <Link href={href}>{title}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-              </Col>
-              <Col xl={4} lg={4} className="animated fadeInUp">
-                <div className="footer-widget__contact-email-phone">
-                  <h3 className="footer-widget__title">Contact Us</h3>
-                  <div className="footer-flex">
-                    <img src={mailIcon.src} alt="" width="15px" height="15px" /> &nbsp;
-                    <a
-                      href={`mailto:${email}`}
-                      className="footer-widget__contact-text"
-                    >
-                      {email}
-                    </a>
-                  </div>
-                  <img src={phoneIcon.src} alt="" width="15px" /> &nbsp;
-                  <a
-                    href={`tel:${phone.split(" ").join("")}`}
-                    className="footer-widget__contact-text"
-                  >
-                    + {phone} ,
-                  </a>
-                  {/* <br />*/}
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <a
-                    href={`tel:${phone1.split(" ").join("")}`}
-                    className="footer-widget__contact-text"
-                  >
-                    + {phone1}
-                  </a>
-                </div>
-                <Row>
-                  <Col xl={12}>
-                    <div className="footer-partners">
-                      <a href="https://maps.app.goo.gl/ryxbajb4yg24TbrG8">
-                        <img src={googlereview.src} alt="googlereview" width="100px" height="40px" />
-                      </a>
-
-                      <img src={googlepartner.src} alt="googlepartner" width="150px" height="55px" />
-                      <a href="https://www.facebook.com/TzarAgency">
-                        <img src={facebook.src} alt="facebook" width="130px" height="50px" />
-                      </a>
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          </div>
-          {/* <div className="singup-none">
-            <Link href="/Singup-EnquiryNow" className="footer-widget__contact-text">Enquiry Now</Link>
-          </div> */}
-          <div className="singup-none">
-            <h5 className="footer-widget__titlebranch">Most Popular Location For Our Online Digital Marketing Services: </h5>
-            <Link href="/Digital-Marketing-Services-in-Mumbai" className="footer-widget__contact-text">Digital Marketing Services in Mumbai</Link>
-            {/* &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Chennai" className="footer-widget__contact-text">Digital Marketing Services in Chennai</Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Kolkata" className="footer-widget__contact-text">Digital Marketing Services in Kolkata</Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Hyderabad" className="footer-widget__contact-text">Digital Marketing Services in Hyderabad</Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Delhi" className="footer-widget__contact-text">Digital Marketing Services in Delhi</Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Bangalore" className="footer-widget__contact-text">Digital Marketing Services in Bangalore </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Gurgaon" className="footer-widget__contact-text">Digital Marketing Services in Gurgaon</Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Ghaziabad" className="footer-widget__contact-text">Digital Marketing Services in Ghaziabad</Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Noida" className="footer-widget__contact-text">Digital Marketing Services in Noida & Greater Noida  </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Pune" className="footer-widget__contact-text">Digital Marketing Services in Pune </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Ahmedabad" className="footer-widget__contact-text">Digital Marketing Services in Ahmedabad </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Lucknow" className="footer-widget__contact-text">Digital Marketing Services in Lucknow </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Indore" className="footer-widget__contact-text">Digital Marketing Services in Indore </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-Kanpur" className="footer-widget__contact-text">Digital Marketing Services in Kanpur </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-USA" className="footer-widget__contact-text">Digital Marketing Services in USA </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-USA" className="footer-widget__contact-text">Digital Marketing Services in New York </Link>
-            &nbsp; | &nbsp; <Link href="/Digital-Marketing-Services-in-USA" className="footer-widget__contact-text">Digital Marketing Services in New jersey </Link> */}
-          </div>
-           <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      gap: "8px",
-      marginBottom: "6px",
-      fontSize: "18px",
-      color: "#fff",
-    }}
-  >
-    {/* <span>Trusted Online Payment via Razorpay</span>
-    <img
-      src="/images.png"
-      alt="Razorpay"
-      style={{ height: "25px", objectFit: "contain" }}
-    /> */}
-  </div>
-
-        </Container>
-      </div>
-      <div className="site-footer__bottom">
-        <Container>
-          <Row>
-            <Col xl={12}>
-              <div className="site-footer__bottom-inner">
-                <p className="site-footer__bottom-text">
-                  © Copyrights, {year} <a href="#">{author}</a>
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
+        {/* COPYRIGHT */}
+        <div style={{ opacity: 0.85 }}>
+          © Copyrights {year} {author}
+        </div>
       </div>
     </footer>
   );
