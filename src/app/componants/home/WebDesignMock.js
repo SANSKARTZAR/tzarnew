@@ -14,6 +14,12 @@ import MobileSlide4 from "@/assets/images/MobileShowcase/Home/Showcase-10.png"
 import MobileSlide5 from "@/assets/images/MobileShowcase/Home/Showcase-11.png"
 import MobileSlide6 from "@/assets/images/MobileShowcase/Home/Showcase-13.png"
 import MobileSlide7 from "@/assets/images/MobileShowcase/Home/Showcase-14.png"
+import MobileSlide8 from "@/assets/images/MobileShowcase/Home/Showcase-01.png"
+import MobileSlide9 from "@/assets/images/MobileShowcase/Home/Showcase-02.png"
+import MobileSlide10 from "@/assets/images/MobileShowcase/Home/Showcase-03.png"
+import MobileSlide11 from "@/assets/images/MobileShowcase/Home/Showcase-04.png"
+import MobileSlide12 from "@/assets/images/MobileShowcase/Home/Showcase-05.png"
+import MobileSlide13 from "@/assets/images/MobileShowcase/Home/Showcase-18.png"
 
 export default class WebDesignMock extends Component {
   render() {
@@ -67,7 +73,25 @@ export default class WebDesignMock extends Component {
 
           <Slider {...settings} className="ContainerWebContainer">
             <div className="mobileSlidebox">
-              <img src={MobileSlide.src} alt="" className="mobileSlidemk n" />
+              <img src={MobileSlide8.src} alt="" className="mobileSlidemk n" />
+            </div>
+            <div className="mobileSlidebox">
+              <img src={MobileSlide9.src} alt="" className="mobileSlidemk " />
+            </div>
+            <div className="mobileSlidebox">
+              <img src={MobileSlide10.src} alt="" className="mobileSlidemk " />
+            </div>
+            <div className="mobileSlidebox">
+              <img src={MobileSlide11.src} alt="" className="mobileSlidemk " />
+            </div>
+            <div className="mobileSlidebox">
+              <img src={MobileSlide12.src} alt="" className="mobileSlidemk " />
+            </div>
+            <div className="mobileSlidebox">
+              <img src={MobileSlide13.src} alt="" className="mobileSlidemk " />
+            </div>
+            <div className="mobileSlidebox">
+              <img src={MobileSlide.src} alt="" className="mobileSlidemk" />
             </div>
             <div className="mobileSlidebox">
               <img src={MobileSlide1.src} alt="" className="mobileSlidemk" />

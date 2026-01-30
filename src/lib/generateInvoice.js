@@ -39,9 +39,9 @@ export async function generateInvoice(data) {
     const startX = 50;
     const rightX = 350;
 
-    doc.font("Times-Bold").fontSize(20).text("TZAR", startX, 40);
-    doc.fontSize(11).text("TZAR Venture", startX, 70);
-    doc.text("DIGITAL MARKETING AGENCY", startX, 90);
+    // doc.font("Times-Bold").fontSize(20).text("TZAR", startX, 40);
+    doc.fontSize(11).text("TZAR Digital Agency", startX, 70);
+    // doc.text("DIGITAL MARKETING AGENCY", startX, 90);
 
     const invoiceNo = `2025${Date.now().toString().slice(-4)}`;
     const invoiceDate = new Date().toLocaleDateString("en-GB");
