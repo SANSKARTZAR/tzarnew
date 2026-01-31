@@ -18,7 +18,7 @@ import profile9 from "@/assets/images/team/sanskar11.png"
 import profile10 from "@/assets/images/team/mansi11.jpg"
 import profile11 from "@/assets/images/team/pooja11.jpg"
 // import TeamOne from '../TeamOne/TeamOne';
-import TeamTwo6 from './TeamTwo6';
+import TeamTwo6 from './TeamTwo6'
 // import TeamCard from './TeamCard';
 
 const { title, title1, name1, describe1,

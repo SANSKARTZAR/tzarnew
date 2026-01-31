@@ -78,7 +78,7 @@ const SiteFooter = () => {
             </div>
 
             <Link
-              href="/payment"
+              href="/payment-gateway"
               style={{
                 display: "inline-block",
                 color: "#fff",
